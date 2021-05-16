@@ -1,3 +1,9 @@
+include ../../components/input/input
+include ../../components/situation/void_points
+include ../../components/situation/addiction
+include ../../components/situation/cosmic_mutations
+include ../../components/situation/void_corruption
+include ../../components/situation/life_support
 
 mixin situation_page
   div.page-container
@@ -7,4 +13,8 @@ mixin situation_page
       class='situation hide-element'
       value='2')
     div.situation.showhide
-      situation
+      +void_points_block
+      +addiction_block
+      +cosmic_mutations_block
+      +void_corruption_block
+      +life_support_block

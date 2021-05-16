@@ -398,7 +398,6 @@
   display: inline-grid;
   grid-template-columns: 25% 45% 30%;
   grid-template-rows: 0.5fr repeat(7, 5em);
-  height: 480px;
   width: 100%;
 }
 
@@ -455,7 +454,7 @@
 }
 
 .charsheet .origin-radios .origin-check .origin-name {
-  font-size: 1em;
+  font-size: 0.8em;
   font-style: italic;
   font-weight: normal;
   margin-left: 5px;
@@ -650,6 +649,284 @@
   margin: 0 auto;
 }
 
+.charsheet .situation {
+  display: inline-grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 100px 1fr 1fr;
+  width: 100%;
+}
+
+.charsheet .void-points-block {
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  display: flex;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.charsheet .void-points-block .void-points-left {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.charsheet .void-points-block .void-points-right {
+  flex: 1;
+  padding: 5px;
+}
+
+.charsheet .void-points-block .void-points-radios {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  padding: 5px;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points {
+  display: flex;
+  float: left;
+  margin-top: 3px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label {
+  padding: 4px;
+  position: relative;
+  float: left;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label input[type=radio] {
+  display: none;
+  margin-left: 10px;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label input[type=radio]:checked + span {
+  background: #eb1c26;
+  color: #ffffff;
+  border: none;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label input[type=radio]:checked + span.invert {
+  background: #000000;
+  color: #eb1c26;
+  border: 1px solid #eb1c26;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label span {
+  border-radius: 100%;
+  border: 1px solid #7a7971;
+  font-size: 0.8em;
+  height: 20px;
+  left: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 20px;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label .invert {
+  background: #000000;
+  color: #ffffff;
+}
+
+.charsheet .void-points-block .void-points-roll {
+  text-align: right;
+  width: 100%;
+  font-size: 0.8em;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.charsheet .void-points-block .void-points-roll span.void-points-up-arrow {
+  font-size: 2em;
+  font-weight: 700;
+  padding-right: 1em;
+}
+
+.charsheet .void-points-block .void-points-text-top {
+  font-weight: bold;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.charsheet .void-points-block .void-points-text-bottom {
+  font-size: 0.8em;
+}
+
+.charsheet .addiction-block {
+  border-bottom: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.charsheet .addiction-block .days-without {
+  font-size: 0.8em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.charsheet .addiction-block .addiction-text {
+  padding: 5px;
+  text-align: justify;
+}
+
+.charsheet .addiction-block .substance-title {
+  text-align: center;
+}
+
+.charsheet .addiction-block .substance-row {
+  border-bottom: 2px dotted #7a7971;
+  margin: 5px 0px;
+}
+
+.charsheet .addiction-block .days-checkboxes {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  margin-top: 5px;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check {
+  text-align: center;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check label {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check label input[type=radio] {
+  display: none;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check label input[type=radio]:checked + .days-square {
+  background: #000000;
+  color: #ffffff;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check .days-square {
+  border: 2px solid #000000;
+  height: 10px;
+  width: 10px;
+  margin-left: 2px;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check .days-plus {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.charsheet .cosmic-mutations-block {
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.charsheet .void-corruption-block {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #000000;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.charsheet .life-support-block {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.charsheet .life-support-block .oxygen-tank-row {
+  display: flex;
+  flex: 0 0 100px;
+  flex-direction: column;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-numbers {
+  display: flex;
+  flex: 0 0 20px;
+  font-size: 11px;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 70px;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank {
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/roll20-character-sheets/deathinspace/Death%20In%20Space/assets/oxygen_tank.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: 0 0 58px;
+  height: 58px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments {
+  display: flex;
+  padding-left: 16px;
+  padding-top: 6px;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment {
+  height: 45px;
+  width: 21px;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment label {
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment label input[type=checkbox] {
+  display: none;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment label input[type=checkbox]:checked + .tank-section {
+  background: #eb1c26;
+  background-color: #eb1c26;
+  color: #ffffff;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment label input[type=checkbox]:checked + .tank-section:hover {
+  background-color: rgba(235, 28, 38, 0.5);
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment .tank-section {
+  border-right: 1px solid #eb1c26;
+  height: 45px;
+  width: 21px;
+  margin: -1px 0;
+  padding: 0;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment .tank-section:hover {
+  background-color: rgba(235, 28, 38, 0.5);
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment:nth-last-child(1) {
+  border-right: none;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .tank-space {
+  flex: 1;
+}
+
 .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {
   float: right;
   width: auto;
@@ -666,6 +943,7 @@
 
 input[type=text].repeating-input {
   border-bottom: 2px dotted #7a7971 !important;
+  margin: 0;
 }
 
 .sheet-rolltemplate-sheetname {

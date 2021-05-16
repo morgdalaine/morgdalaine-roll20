@@ -1,0 +1,7 @@
+
+mixin cosmic_mutations_block
+  div.cosmic-mutations-block
+    div.stat-block.mutations-title
+      label(data-i18n='cosmic-mutations')=locals['cosmic-mutations']
+    fieldset.repeating_mutations
+      +repeating_input('text', 'cosmic_mutation')

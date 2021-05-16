@@ -1,0 +1,7 @@
+
+mixin void_corruption_block
+  div.void-corruption-block
+    div.stat-block.corruption-title
+      label(data-i18n='void-corruption')=locals['void-corruption']
+    fieldset.repeating_corruptions
+      +repeating_input('text', 'void_corruption')

@@ -214,7 +214,185 @@
     <div class="page-container">
       <input class="situation hide-element" type="radio" name="attr_character_page" value="2"/>
       <div class="situation showhide">
-        <situation></situation>
+          <div class="void-points-block">
+            <div class="void-points-left">
+              <div class="stat-block">
+                <label data-i18n="void-points">Void Points</label>
+              </div>
+                <div class="void-points-radios">
+                  <div class="void-points">
+                    <label>
+                      <input type="radio" name="attr_void_points" value="0"/><span>0</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="1"/><span>1</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="2"/><span>2</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="3"/><span>3</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="4"/><span>4</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="5"/><span class="invert">5</span>
+                    </label>
+                  </div>
+                </div>
+              <div class="void-points-roll"><span><span data-i18n="roll-corruption">Roll corruption effects</span><span class="void-points-up-arrow">&amp;#8593;</span></span></div>
+            </div>
+            <div class="void-points-right">
+              <div class="void-points-text-top" data-i18n="use-void-point">The player can use 1 void point to:</div>
+              <div class="void-points-text-bottom">
+                <ul>
+                  <li data-i18n="void-point-use-1">Get advantage on an ability check</li>
+                  <li data-i18n="void-point-use-2">Activate a cosmic mutation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="addiction-block">
+            <div class="stat-block addiction-title">
+              <label data-i18n="addiction">Addiction</label>
+            </div>
+            <div class="days-without" data-i18n="days-without">Days Without Substance</div>
+              <div class="days-checkboxes">
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="1"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+1</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="2"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+2</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="3"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+3</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="4"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+4</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="5"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+5</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="6"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+6</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="7"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+7</div>
+                  </label>
+                </div>
+              </div>
+            <div class="stat-block substance-title">
+              <label data-i18n="substance">Substance</label>
+            </div>
+            <fieldset class="repeating_substances">
+                <input class="repeating-input" type="text" name="attr_substance"/>
+            </fieldset>
+            <div class="substance-row"></div>
+            <div class="addiction-text subtitle" data-i18n="addiction-subtitle">When using an addictive substance, such as virtual reality stimulants, medical drugs, or similar, roll a BODY ability check.</div>
+          </div>
+          <div class="cosmic-mutations-block">
+            <div class="stat-block mutations-title">
+              <label data-i18n="cosmic-mutations">Cosmic Mutations</label>
+            </div>
+            <fieldset class="repeating_mutations">
+                <input class="repeating-input" type="text" name="attr_cosmic_mutation"/>
+            </fieldset>
+          </div>
+          <div class="void-corruption-block">
+            <div class="stat-block corruption-title">
+              <label data-i18n="void-corruption">Void Corruption</label>
+            </div>
+            <fieldset class="repeating_corruptions">
+                <input class="repeating-input" type="text" name="attr_void_corruption"/>
+            </fieldset>
+          </div>
+          <div class="life-support-block">
+            <div class="stat-block life-support-title">
+              <label data-i18n="life-support">Life Support</label>
+            </div>
+            <div class="tank-space"></div>
+            <div class="oxygen-tank-row">
+              <div class="oxygen-numbers">
+                <div>0%</div>
+                <div>100%</div>
+              </div>
+                <div class="oxygen-tank">
+                  <div class="oxygen-increments">
+                    <div class="increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_0" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_1" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_2" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_3" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_4" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_5" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_6" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="tank-space"></div>
+          </div>
       </div>
     </div>
 </div>
@@ -265,6 +443,7 @@
   {{/rollName}}
 </rolltemplate>
 <script type="text/worker">
+  
 
 on('change:character_page_button', function(eventinfo) {
   setAttrs({
@@ -296,5 +475,29 @@ on('change:close_changelog', function() {
     'changelog_2.2.1': 'on',
   });
 });
+  // UPDATE LIFE SUPPORT
+const life_support = ['life_support_0', 'life_support_1', 'life_support_2', 'life_support_3', 'life_support_4', 'life_support_5', 'life_support_6', 'life_support_7'];
+life_support.forEach(item => on(`change:${item}`, eventInfo => updateLifeSupport(item, eventInfo.newValue)));
+
+const updateLifeSupport = (stat, new_value) => {
+  var index = parseInt(stat.slice(-1)) || 0;
+  var updateAttrs = {};
+
+  // fill everything less than stat
+  if (new_value == 1) {
+    for (let n = 0; n < index; n++) {
+      updateAttrs[`life_support_${n}`] = 1;
+    }
+  }
+  // remove everything greater than
+  else {
+    for (let n = index; n < life_support.length; n++) {
+      updateAttrs[`life_support_${n}`] = 0;
+    }
+  }
+
+  setAttrs(updateAttrs);
+  console.log(updateAttrs);
+}
 
 </script>

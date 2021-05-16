@@ -10,7 +10,7 @@ mixin label_and_input(i18n, attr, placeholder)
 mixin label_with_subtitle(i18n, ...subtitles)
   label(data-i18n=i18n)=locals[i18n]
   each sub in subtitles
-    .subtitle(data-i18n=sub)=locals[sub]
+    div.subtitle(data-i18n=sub)=locals[sub]
 
 mixin ability(attr)
   - var i18n = 'ability-' + attr

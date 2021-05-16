@@ -134,6 +134,7 @@
   @import './components/input/input';
   @import './components/nav/nav_bar';
   @import './components/personal/personal';
+  @import './components/situation/situation';
 
 }
 
@@ -162,6 +163,7 @@
 
 input[type=text].repeating-input {
   border-bottom: 2px dotted $dead-gray !important;
+  margin: 0;
 }
 
 @import './roll-templates/roll-template'

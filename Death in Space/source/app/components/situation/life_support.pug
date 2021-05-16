@@ -1,0 +1,26 @@
+mixin life_support_block
+  div.life-support-block
+    div.stat-block.life-support-title
+      label(data-i18n='life-support')=locals['life-support']
+    div.tank-space
+    div.oxygen-tank-row
+      div.oxygen-numbers
+        div='0%'
+        div='100%'
+      +oxygen_tank
+    div.tank-space
+
+mixin oxygen_tank
+  div.oxygen-tank
+    div.oxygen-increments
+      - var oxy = 0;
+      - var sections = 7;
+      - var val = 100/(sections - 1);
+      while oxy < sections
+        div.increment
+          label
+            input(
+              type='checkbox'
+              name='attr_life_support_' + oxy++
+              value=1)
+            div.tank-section

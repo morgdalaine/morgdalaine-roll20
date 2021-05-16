@@ -1,0 +1,26 @@
+
+mixin addiction_block
+  div.addiction-block
+    div.stat-block.addiction-title
+      label(data-i18n='addiction')=locals['addiction']
+    div.days-without(data-i18n='days-without')=locals['days-without']
+    +days_checkboxes
+    div.stat-block.substance-title
+      label(data-i18n='substance')=locals['substance']
+    fieldset.repeating_substances
+      +repeating_input('text', 'substance')
+    div.substance-row
+    div.addiction-text.subtitle(data-i18n='addiction-subtitle')=locals['addiction-subtitle']
+
+mixin days_checkboxes
+  div.days-checkboxes
+    - var day = 0;
+    while day++ < 7
+      div.day-check
+        label
+          input(
+            type='radio'
+            name='attr_days_without_substance'
+            value=day)
+          div.days-square
+          div.days-plus='+' + day

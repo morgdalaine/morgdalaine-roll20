@@ -1,0 +1,34 @@
+
+mixin void_points_block
+  div.void-points-block
+    div.void-points-left
+      div.stat-block
+        label(data-i18n='void-points')=locals['void-points']
+      +void_points_radios
+      div.void-points-roll
+        span
+          span(data-i18n='roll-corruption')=locals['roll-corruption']
+          span.void-points-up-arrow='&#8593;'
+    div.void-points-right
+      div.void-points-text-top(data-i18n='use-void-point')=locals['use-void-point']
+      div.void-points-text-bottom
+        ul
+          li(data-i18n='void-point-use-1')=locals['void-point-use-1']
+          li(data-i18n='void-point-use-2')=locals['void-point-use-2']
+
+mixin void_points_radios
+  div.void-points-radios
+    - var vp = 0;
+    div.void-points
+      - var max_vp = 5
+      while vp <= max_vp
+        label
+          input(
+            type='radio'
+            name='attr_void_points'
+            value=vp)
+          if vp != max_vp
+            span=vp
+          else
+            span.invert=vp
+        - vp++;
