@@ -63,9 +63,7 @@
   }
 
   input[type=text] {
-    width: -moz-available;          // WebKit-based browsers will ignore this.
-    width: -webkit-fill-available;  // Mozilla-based browsers will ignore this.
-    width: fill-available;
+    @include fill-available();
   }
 
   input[type=checkbox] {
@@ -140,6 +138,7 @@
   @import './components/personal/personal';
   @import './components/situation/situation';
   @import './components/belongings/belongings';
+  @import './components/weaponry/weaponry';
 
 }
 

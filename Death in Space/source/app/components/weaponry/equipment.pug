@@ -1,0 +1,29 @@
+
+mixin weapon_block(index)
+  div.equipment
+    div.stat-block.weapon-name
+      +stat('text', `weapon_${index}`)
+    div.stat-block.weapon-damage
+      +stat('text', 'damage')
+    div.stat-block.equipment-units
+      +stat('text', 'units')
+    div.stat-block.equipment-condition
+      +stat('text', 'condition')
+
+mixin armor_block
+  div.equipment
+    div.stat-block.armor-name
+      +stat('text', 'armor')
+    div.stat-block.armor-protects-against
+      +stat('text', 'protects_against')
+    div.stat-block.equipment-units
+      +stat('text', 'dr_bonus')
+    div.stat-block.equipment-condition
+      +stat('text', 'condition')
+
+mixin holds_debt
+  div.holds-debt
+    div.stat-block.holds
+      +stat('number', 'holds')
+    div.stat-block.debt
+      +stat('number', 'debt')
