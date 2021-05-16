@@ -1,15 +1,19 @@
 include ../../components/information/information
+include ../../components/input/input
 include ../../components/nav/nav_bar
+include ./belongings
 include ./personal
 include ./situation
 
 - var type = 'character'
 
-+information(type)
+div.header
+  +information(type)
 
-//- nav bar
-+nav_bar(type)
+  //- nav bar
+  +nav_bar(type)
 
 //- pages
 +personal_page
 +situation_page
++belongings_page

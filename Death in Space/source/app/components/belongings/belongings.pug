@@ -1,0 +1,16 @@
+
+mixin belongings_block
+  div.belongings-block
+    div.stat-block.belonging-title
+      label(data-i18n='belongings')=locals['belongings']
+    fieldset.repeating_belongings
+      +repeating_input('text', 'belongings')
+    div.belongings-note
+      div.exclamation='!'
+      div.note
+        span(data-i18n='belongings-note')=locals['belongings-note']
+        span.carry(name='attr_carry')
+
+mixin small_items_block
+  div.stat-block.small-items-block
+    +stat_area('small_items', 'small-items', 2)

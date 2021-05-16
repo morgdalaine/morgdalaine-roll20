@@ -7,6 +7,10 @@
   font-family: "IBM Plex Mono", monospace, "Comic Sans MS", monospace;
 }
 
+.charsheet .page-container {
+  display: flex;
+}
+
 .charsheet .hide-element {
   display: none;
 }
@@ -236,6 +240,7 @@
 .charsheet input[type=radio].hub:checked ~ div.hub,
 .charsheet input[type=radio].layout:checked ~ div.layout,
 .charsheet input[type=radio].notes:checked ~ div.notes {
+  display: inline-grid;
   visibility: visible;
   height: auto;
   opacity: 1;
@@ -925,6 +930,46 @@
 
 .charsheet .life-support-block .oxygen-tank-row .tank-space {
   flex: 1;
+}
+
+.charsheet .belongings {
+  display: inline-grid;
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+}
+
+.charsheet .belongings-block {
+  border-bottom: 2px solid #000000;
+}
+
+.charsheet .belongings-block .belongings-note {
+  display: flex;
+  padding: 5px;
+}
+
+.charsheet .belongings-block .belongings-note .exclamation {
+  font-size: 2.5em;
+  text-align: right;
+  width: 100%;
+  font-weight: bold;
+}
+
+.charsheet .belongings-block .belongings-note .note {
+  display: inline-block;
+  padding: 5px;
+}
+
+.charsheet .belongings-block .belongings-note .carry {
+  color: #7a7971;
+  margin-left: 2px;
+}
+
+.charsheet .belongings-block .belongings-note .carry:before {
+  content: '(';
+}
+
+.charsheet .belongings-block .belongings-note .carry:after {
+  content: ')';
 }
 
 .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {

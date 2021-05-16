@@ -23,51 +23,53 @@
 </div>
 <input class="character-mode hide-element" type="radio" name="attr_mode" value="0"/>
 <div class="character-mode hide-element">
-    <header>
-      <div class="sheet-info-character">
-        <div class="game-title" data-i18n="game-title">Death In Space</div>
-        <div class="mode-title" data-i18n="sheet-title-character">Personal Data Sheet</div>
+  <div class="header">
+      <header>
+        <div class="sheet-info-character">
+          <div class="game-title" data-i18n="game-title">Death In Space</div>
+          <div class="mode-title" data-i18n="sheet-title-character">Personal Data Sheet</div>
+        </div>
+        <div class="header-col2">
+            <div data-i18n="player-information">Section 0. Player Information</div>
+              <label data-i18n="player-name">Player Name</label>
+              <input class="dotted-line" type="text" name="attr_player_name"/>
+        </div>
+      </header>
+      <div class="nav-bar-character">
+        <div class="nav-row">
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="1" checked="checked"/>
+              <div class="page-button-character" data-i18n="nav-personal">Personal</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="2"/>
+              <div class="page-button-character" data-i18n="nav-situation">Situation</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="3"/>
+              <div class="page-button-character" data-i18n="nav-belongings">Belongings</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="4"/>
+              <div class="page-button-character" data-i18n="nav-weaponry">Weaponry</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="5"/>
+              <div class="page-button-character" data-i18n="nav-notes">Notes</div>
+            </label>
+          </div>
+        </div>
       </div>
-      <div class="header-col2">
-          <div data-i18n="player-information">Section 0. Player Information</div>
-            <label data-i18n="player-name">Player Name</label>
-            <input class="dotted-line" type="text" name="attr_player_name"/>
-      </div>
-    </header>
-    <div class="nav-bar-character">
-      <div class="nav-row">
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="1" checked="checked"/>
-            <div class="page-button-character" data-i18n="nav-personal">Personal</div>
-          </label>
-        </div>
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="2"/>
-            <div class="page-button-character" data-i18n="nav-situation">Situation</div>
-          </label>
-        </div>
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="3"/>
-            <div class="page-button-character" data-i18n="nav-belongings">Belongings</div>
-          </label>
-        </div>
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="4"/>
-            <div class="page-button-character" data-i18n="nav-weaponry">Weaponry</div>
-          </label>
-        </div>
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="5"/>
-            <div class="page-button-character" data-i18n="nav-notes">Notes</div>
-          </label>
-        </div>
-      </div>
-    </div>
+  </div>
     <div class="page-container">
       <input class="personal hide-element" type="radio" name="attr_character_page" value="1" checked="checked"/>
       <div class="personal showhide">
@@ -395,6 +397,27 @@
           </div>
       </div>
     </div>
+    <div class="page-container">
+      <input class="belongings hide-element" type="radio" name="attr_character_page" value="3" checked="checked"/>
+      <div class="belongings showhide">
+          <div class="belongings-block">
+            <div class="stat-block belonging-title">
+              <label data-i18n="belongings">Belongings</label>
+            </div>
+            <fieldset class="repeating_belongings">
+                <input class="repeating-input" type="text" name="attr_belongings"/>
+            </fieldset>
+            <div class="belongings-note">
+              <div class="exclamation">!</div>
+              <div class="note"><span data-i18n="belongings-note">Please note that the number of item slots is equal to 12+BODY</span><span class="carry" name="attr_carry"></span></div>
+            </div>
+          </div>
+          <div class="stat-block small-items-block">
+              <label data-i18n="small-items">Small Items</label>
+              <textarea class="stat-input" rows="2" name="attr_small_items"></textarea>
+          </div>
+      </div>
+    </div>
 </div>
 <input class="hub-mode hide-element" type="radio" name="attr_mode" value="1"/>
 <div class="hub-mode hide-element">
@@ -511,5 +534,16 @@ const updateLifeSupport = (stat, new_value) => {
   setAttrs(updateAttrs);
   console.log(updateAttrs);
 }
+  
+// update carry
+on('change:body sheet:opened', function() {
+  getAttrs(['body'], function(values) {
+    let body = parseInt(values.body) || 0;
+    let carry = 12 + body;
+    updateAttrs = { carry: carry };
+    setAttrs(updateAttrs);
+    console.log(updateAttrs);
+  });
+});
 
 </script>
