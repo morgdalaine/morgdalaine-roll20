@@ -14,9 +14,9 @@ mixin label_with_subtitle(i18n, ...subtitles)
 
 mixin ability(attr)
   - var i18n = 'ability-' + attr
-  .ability-row
-    .ability-name(data-i18n=i18n)=locals[i18n]
-    .ability-value
+  div.ability-row
+    div.ability-name(data-i18n=i18n)=locals[i18n]
+    div.ability-value
       input(
         type='number'
         class='stat-input'
