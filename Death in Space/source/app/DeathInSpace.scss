@@ -15,6 +15,10 @@
   font-weight: normal;
   @include std-font();
 
+  .page-container {
+    display: flex;
+  }
+
   .hide-element {
     display: none;
   }
