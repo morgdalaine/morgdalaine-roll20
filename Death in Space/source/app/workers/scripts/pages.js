@@ -1,5 +1,4 @@
 
-
 on('change:character_page_button', function(eventinfo) {
   setAttrs({
     character_page: eventinfo.newValue

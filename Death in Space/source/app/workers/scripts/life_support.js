@@ -1,4 +1,5 @@
-// UPDATE LIFE SUPPORT
+
+// update life support
 const life_support = ['life_support_0', 'life_support_1', 'life_support_2', 'life_support_3', 'life_support_4', 'life_support_5', 'life_support_6', 'life_support_7'];
 life_support.forEach(item => on(`change:${item}`, eventInfo => updateLifeSupport(item, eventInfo.newValue)));
 

@@ -444,7 +444,6 @@
 </rolltemplate>
 <script type="text/worker">
   
-
 on('change:character_page_button', function(eventinfo) {
   setAttrs({
     character_page: eventinfo.newValue
@@ -475,7 +474,20 @@ on('change:close_changelog', function() {
     'changelog_2.2.1': 'on',
   });
 });
-  // UPDATE LIFE SUPPORT
+  
+// update HP
+on('change:hp change:hp_max sheet:opened', function() {
+  getAttrs(['hp', 'hp_max'], function(values) {
+    let cur = parseInt(values.hp) || 0;
+    let max = parseInt(values.hp_max) || 0;
+    let new_hp = (cur > max) ? max : (cur < 0 ? 0 : cur);
+    updateAttrs = { hp: new_hp };
+    setAttrs(updateAttrs);
+    console.log(updateAttrs);
+  });
+});
+  
+// update life support
 const life_support = ['life_support_0', 'life_support_1', 'life_support_2', 'life_support_3', 'life_support_4', 'life_support_5', 'life_support_6', 'life_support_7'];
 life_support.forEach(item => on(`change:${item}`, eventInfo => updateLifeSupport(item, eventInfo.newValue)));
 
