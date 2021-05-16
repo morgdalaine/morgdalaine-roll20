@@ -1,7 +1,7 @@
 mixin life_support_block
   div.life-support-block
     div.stat-block.life-support-title
-      label(data-i18n='life-support')=locals['life-support']
+      label(data-i18n='life_support')=locals['life_support']
     div.tank-space
     div.oxygen-tank-row
       div.oxygen-numbers
@@ -21,6 +21,6 @@ mixin oxygen_tank
           label
             input(
               type='checkbox'
-              name='attr_life_support_' + oxy++
+              name=`attr_life_support_${oxy++}`
               value=1)
             div.tank-section

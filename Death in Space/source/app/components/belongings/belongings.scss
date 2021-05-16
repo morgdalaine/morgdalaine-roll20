@@ -2,7 +2,7 @@
 .belongings {
   display: inline-grid;
   // grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 10em auto;
   width: 100%
 }
 

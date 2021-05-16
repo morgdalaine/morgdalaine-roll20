@@ -3,14 +3,14 @@ mixin addiction_block
   div.addiction-block
     div.stat-block.addiction-title
       label(data-i18n='addiction')=locals['addiction']
-    div.days-without(data-i18n='days-without')=locals['days-without']
+    div.days-without(data-i18n='days_without')=locals['days_without']
     +days_checkboxes
     div.stat-block.substance-title
       label(data-i18n='substance')=locals['substance']
     fieldset.repeating_substances
       +repeating_input('text', 'substance')
     div.substance-row
-    div.addiction-text.subtitle(data-i18n='addiction-subtitle')=locals['addiction-subtitle']
+    div.addiction-text.subtitle(data-i18n='addiction_subtitle')=locals['addiction_subtitle']
 
 mixin days_checkboxes
   div.days-checkboxes

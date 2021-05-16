@@ -30,7 +30,7 @@ mixin nav_bar(sheet_type)
                     name=`attr_${sheet_type}_page_button`
                     class='hide-element page-button'
                     value=page.id)
-                - var translation = `nav-${page.text}`
+                - var translation = `nav_${page.text}`
                 div(
                   class=`page-button-${sheet_type}`
                   data-i18n=translation)=locals[translation]
@@ -50,7 +50,7 @@ mixin nav_bar(sheet_type)
                     name=`attr_${sheet_type}_page_button`
                     class='hide-element page-button'
                     value=page.id)
-                - var translation = `nav-${page.text}`
+                - var translation = `nav_${page.text}`
                 div(
                   class=`page-button-${sheet_type}`
                   data-i18n=translation)=locals[translation]

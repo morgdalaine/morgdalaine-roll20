@@ -1,7 +1,7 @@
 .situation {
   display: inline-grid;
   grid-template-columns: 65% 35%;
-  grid-template-rows: 100px 1fr 1fr;
+  grid-template-rows: 6em repeat(2, auto);
   width: 100%
 }
 

@@ -8,9 +8,9 @@ mixin belongings_block
     div.belongings-note
       div.exclamation='!'
       div.note
-        span(data-i18n='belongings-note')=locals['belongings-note']
+        span(data-i18n='belongings_note')=locals['belongings_note']
         span.carry(name='attr_carry')
 
 mixin small_items_block
   div.stat-block.small-items-block
-    +stat_area('small_items', 'small-items', 2)
+    +stat_area('small_items', 2)

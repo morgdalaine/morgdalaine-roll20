@@ -3,12 +3,12 @@
 input(type='checkbox' name='attr_modes_choice' class='modes-show hide-element' checked)
 div.modes-show.hide-element
   div.mode-title
-    h2.mode-title(data-i18n='page-select')=locals['page-select']
+    h2.mode-title(data-i18n='page_select')=locals['page_select']
   div.modes
     - var images = ['https://i.imgur.com/4MbmzcU.png', 'https://i.imgur.com/GqUblzj.png' ]
     each page, index in pages
       label.mode
-        h4(class=`${page}-h4` data-i18n=`page-name-${page}`)=locals[`page-name-${page}`]
+        h4(class=`${page}_h4` data-i18n=`page_name_${page}`)=locals[`page_name_${page}`]
         div.mode
           input(type='radio' name='attr_mode_button' class='hide-element' value=index)
           div.mode-image
