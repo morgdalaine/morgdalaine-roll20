@@ -1,0 +1,15 @@
+include ../../components/specifics/specifics
+
+mixin specifics_page
+  div.page-container
+    input(type='radio'
+      name='attr_hub_page'
+      class='specifics hide-element'
+      value='6'
+      checked)
+    div.specifics.showhide
+      +nickname_block
+      +hub_type_frame_block
+      +background_block
+      +appearance_block
+      +quirks_block

@@ -499,43 +499,74 @@
 </div>
 <input class="hub-mode hide-element" type="radio" name="attr_mode" value="1"/>
 <div class="hub-mode hide-element">
-    <header>
-      <div class="sheet-info-hub">
-        <div class="game-title" data-i18n="game_title">Death In Space</div>
-        <div class="mode-title" data-i18n="sheet_title_hub">Hub Data Sheet</div>
+  <div class="header">
+      <header>
+        <div class="sheet-info-hub">
+          <div class="game-title" data-i18n="game_title">Death In Space</div>
+          <div class="mode-title" data-i18n="sheet_title_hub">Hub Data Sheet</div>
+        </div>
+        <div class="header-col2">
+            <div data-i18n="owner_information">Section 0. Owner Information</div>
+              <label data-i18n="owner_signature">Owner Signature</label>
+              <input class="dotted-line" type="text" name="attr_owner_signature"/>
+        </div>
+      </header>
+      <div class="nav-bar-hub">
+        <div class="nav-row">
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="6" checked="checked"/>
+              <div class="page-button-hub" data-i18n="nav_specifics">Specifics</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="7"/>
+              <div class="page-button-hub" data-i18n="nav_hub">Hub</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="8"/>
+              <div class="page-button-hub" data-i18n="nav_layout">Layout</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="5"/>
+              <div class="page-button-hub" data-i18n="nav_notes">Notes</div>
+            </label>
+          </div>
+        </div>
       </div>
-      <div class="header-col2">
-          <div data-i18n="owner_information">Section 0. Owner Information</div>
-            <label data-i18n="owner_signature">Owner Signature</label>
-            <input class="dotted-line" type="text" name="attr_owner_signature"/>
-      </div>
-    </header>
-    <div class="nav-bar-hub">
-      <div class="nav-row">
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="6" checked="checked"/>
-            <div class="page-button-hub" data-i18n="nav_specific">Specific</div>
-          </label>
-        </div>
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="7"/>
-            <div class="page-button-hub" data-i18n="nav_hub">Hub</div>
-          </label>
-        </div>
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="8"/>
-            <div class="page-button-hub" data-i18n="nav_layout">Layout</div>
-          </label>
-        </div>
-        <div class="nav-child">
-          <label class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="5"/>
-            <div class="page-button-hub" data-i18n="nav_notes">Notes</div>
-          </label>
-        </div>
+  </div>
+    <div class="page-container">
+      <input class="specifics hide-element" type="radio" name="attr_hub_page" value="6" checked="checked"/>
+      <div class="specifics showhide">
+          <div class="nickname-row">
+            <div class="stat-block nickname-block">
+                <label data-i18n="nickname">Nickname</label>
+                <input class="stat-input" type="text" name="attr_nickname"/>
+            </div>
+          </div>
+          <div class="hub-frame-type-row">
+            <div class="stat-block hub-frame-type-block">
+                <label data-i18n="hub_type_and_frame">Hub Type and Frame</label>
+                <input class="stat-input" type="text" name="attr_hub_type_and_frame"/>
+            </div>
+          </div>
+          <div class="stat-block hub-background-block">
+              <label data-i18n="background">Background</label>
+              <textarea class="stat-input" rows="4" name="attr_background"></textarea>
+          </div>
+          <div class="stat-block appearance-block">
+              <label data-i18n="appearance">Appearance</label>
+              <textarea class="stat-input" rows="4" name="attr_appearance"></textarea>
+          </div>
+          <div class="stat-block quirks-block">
+              <label data-i18n="quirks">Quirks</label>
+              <input class="stat-input" type="text" name="attr_quirks"/>
+          </div>
       </div>
     </div>
 </div>
@@ -549,12 +580,14 @@ on('change:character_page_button', function(eventinfo) {
   setAttrs({
     character_page: eventinfo.newValue
   });
+  console.log({character_page: eventinfo.newValue});
 });
 
 on('change:hub_page_button', function(eventinfo) {
   setAttrs({
     hub_page: eventinfo.newValue
   });
+  console.log({hub_page: eventinfo.newValue});
 });
 
 on('change:mode_button', function(eventinfo) {

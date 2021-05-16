@@ -1,10 +1,15 @@
 include ../../components/information/information
+include ../../components/input/input
 include ../../components/nav/nav_bar
+include ./specifics
 
 - var type = 'hub'
 
-+information(type)
+div.header
+  +information(type)
 
-//- nav bar
-+nav_bar(type)
+  //- nav bar
+  +nav_bar(type)
 
+//- pages
++specifics_page
