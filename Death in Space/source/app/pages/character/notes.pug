@@ -1,0 +1,11 @@
+include ../../components/notes/notes
+
+mixin notes_page
+  div.page-container
+    input(
+      type='radio'
+      name='attr_character_page'
+      class='notes hide-element'
+      value='5')
+    div.notes.showhide
+      +notes_block
