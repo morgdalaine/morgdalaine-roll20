@@ -1,0 +1,259 @@
+
+.personal {
+  display: inline-grid;
+  grid-template-columns: 25% 45% 30%;
+  grid-template-rows: 0.5fr repeat(7, 5em);
+  height: 480px;
+  width: 100%;
+}
+
+.origin-row {
+  border-bottom: 2px solid $black;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  padding: 5px;
+
+  .origin-label {
+    border-right: 1px dotted #000;
+    text-transform: uppercase;
+    flex: 0 0 60px;
+    text-align: center;
+  }
+}
+
+.origin-radios {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 5px;
+
+  .origin-check {
+    text-align: center;
+    display: inline-grid;
+    grid-template-columns: repeat(6, auto);
+
+    label {
+      display: flex;
+      padding: 0;
+      margin: 0;
+
+      input[type=radio] {
+        display: none;
+
+        &:checked + .origin-square {
+          background: $black;
+          color: $white;
+        }
+      }
+    }
+
+    .origin-square {
+      border: 2px solid $black;
+      // font-family: $item-font;
+      height: 10px;
+      margin-top: 3px;
+      width: 10px;
+      text-align: center;
+    }
+
+    .origin-name {
+      font-size: 1em;
+      font-style: italic;
+      font-weight: normal;
+      margin-left: 5px;
+      text-align: left;
+      white-space: nowrap;
+    }
+  }
+}
+
+.name-row {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+
+  .name-block {
+    width: 55%;
+  }
+
+  .nickname-block {
+    width: 45%;
+  }
+}
+
+.origin-benefit-block {
+  border-bottom: 2px solid $black;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
+
+.xp-block {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  grid-column-start: 1;
+  grid-row-start: 3;
+
+  input[type=number] {
+    text-align: center;
+    width: -moz-available;          // WebKit-based browsers will ignore this.
+    width: -webkit-fill-available;  // Mozilla-based browsers will ignore this.
+    width: fill-available;
+  }
+}
+
+.background-block {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.past-allegiance-block {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+.trait-block {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.drive-block {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+
+.looks-block {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  grid-column-start: 2;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.ability-value, .defense-value, .hit-points-current-col, .hit-points-max-col {
+  input[type=number], input[type=number].stat-input  {
+    text-align: center;
+    border: 2px dotted $dead-gray;
+  }
+}
+
+.ability-block {
+  border-right: 2px solid $black;
+  grid-column-start: 1;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+  .ability-col {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-around;
+    padding: 5px;
+
+    .ability-row {
+      display: flex;
+    }
+
+    .ability-name {
+      flex: 1;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      @include std-font($title-font);
+    }
+
+    .ability-value {
+      flex: 0 0 50px;
+    }
+  }
+}
+
+.defense-row {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-start: 2;
+  grid-row-start: 7;
+  padding: 2px;
+
+  label {
+    display: block;
+    float: left;
+    text-transform: uppercase;
+  }
+
+  .defense-text {
+    border-right: 2px dotted $dead-gray;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .defense-value {
+    align-self: center;
+
+    input {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.hit-points-row {
+  border-right: 2px solid $black;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-start: 2;
+  grid-row-start: 8;
+  padding: 2px;
+
+  label {
+    display: block;
+    float: left;
+    text-transform: uppercase;
+  }
+
+  .hit-points-text {
+    grid-column-start: 1;
+    grid-column-end: 3
+  }
+
+  .hit-points-current-col {
+    border-right: 2px dotted $dead-gray;
+    flex-direction: column;
+
+    label {
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .hit-points-max-col {
+    flex-direction: column;
+
+    label {
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

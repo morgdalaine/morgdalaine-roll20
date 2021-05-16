@@ -1,0 +1,23 @@
+
+- var pages = [ 'character', 'hub' ]
+input(type='checkbox' name='attr_modes_choice' class='modes-show hide-element' checked)
+div.modes-show.hide-element
+  div.mode-title
+    h2.mode-title(data-i18n='page-select')=locals['page-select']
+  div.modes
+    - var images = ['https://i.imgur.com/4MbmzcU.png', 'https://i.imgur.com/GqUblzj.png' ]
+    each page, index in pages
+      label.mode
+        h4(class=`${page}-h4` data-i18n=`page-name-${page}`)=locals[`page-name-${page}`]
+        div.mode
+          input(type='radio' name='attr_mode_button' class='hide-element' value=index)
+          div.mode-image
+            img(src=images[index])
+
+input(type='radio' name='attr_mode' class='character-mode hide-element' value='0')
+div.character-mode.hide-element
+  include ./character/character
+
+input(type='radio' name='attr_mode' class='hub-mode hide-element' value='1')
+div.hub-mode.hide-element
+  include ./hub/hub

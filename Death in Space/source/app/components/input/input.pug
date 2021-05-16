@@ -1,0 +1,62 @@
+
+mixin label_and_input(i18n, attr, placeholder)
+  label(data-i18n=i18n)=locals[i18n]
+    input(
+      type='text'
+      name='attr_'+attr
+      spellcheck='false'
+      data-i18n-placeholder=placeholder)
+
+mixin label_with_subtitle(i18n, ...subtitles)
+  label(data-i18n=i18n)=locals[i18n]
+  each sub in subtitles
+    .subtitle(data-i18n=sub)=locals[sub]
+
+mixin ability(attr)
+  - var i18n = 'ability-' + attr
+  .ability-row
+    .ability-name(data-i18n=i18n)=locals[i18n]
+    .ability-value
+      input(
+        type='number'
+        class='stat-input'
+        name='attr_' + attr)
+
+mixin stat(inp, attr, i18n)
+  label(data-i18n=i18n)=locals[i18n]
+  input(
+    type=inp,
+    class='stat-input'
+    name='attr_' + attr
+    spellcheck=false)
+
+mixin dotted_line(inp, attr, i18n)
+  label(data-i18n=i18n)=locals[i18n]
+  input(
+    type=inp,
+    class='dotted-line'
+    name='attr_'+attr
+    spellcheck=false)
+
+mixin stat_no_label(inp, attr)
+  input(
+    type=inp,
+    class='stat-input'
+    name='attr_' + attr
+    spellcheck=false)
+
+
+mixin repeating_input(inp, attr)
+  input(
+    type=inp,
+    class='repeating-input'
+    name='attr_' + attr
+    spellcheck=false)
+
+mixin stat_area(attr, i18n, rows)
+  label(data-i18n=i18n)=locals[i18n]
+  textarea(
+    class='stat-input'
+    rows=rows
+    name='attr_' + attr
+    spellcheck=false)

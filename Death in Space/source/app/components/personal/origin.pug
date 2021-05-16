@@ -1,0 +1,15 @@
+- var origins = ['void', 'pork', 'solopod', 'chrome', 'human', 'velocity-cursed']
+
+mixin origin_block
+  .origin-row
+    .origin-label(data-i18n='origin')=locals['origin']
+    .origin-radios
+      each orig in origins
+        .origin-check
+          label
+            input(
+              type='radio'
+              name='attr_origin'
+              value=orig)
+            .origin-square
+            .origin-name(data-i18n=orig)=locals[orig]

@@ -1,0 +1,300 @@
+
+<input class="modes-show hide-element" type="checkbox" name="attr_modes_choice" checked="checked"/>
+<div class="modes-show hide-element">
+  <div class="mode-title">
+    <h2 class="mode-title" data-i18n="page-select">SELECT THE SHEET TYPE</h2>
+  </div>
+  <div class="modes">
+    <label class="mode">
+      <h4 class="character-h4" data-i18n="page-name-character">CHARACTER</h4>
+      <div class="mode">
+        <input class="hide-element" type="radio" name="attr_mode_button" value="0"/>
+        <div class="mode-image"><img src="https://i.imgur.com/4MbmzcU.png"/></div>
+      </div>
+    </label>
+    <label class="mode">
+      <h4 class="hub-h4" data-i18n="page-name-hub">HUB</h4>
+      <div class="mode">
+        <input class="hide-element" type="radio" name="attr_mode_button" value="1"/>
+        <div class="mode-image"><img src="https://i.imgur.com/GqUblzj.png"/></div>
+      </div>
+    </label>
+  </div>
+</div>
+<input class="character-mode hide-element" type="radio" name="attr_mode" value="0"/>
+<div class="character-mode hide-element">
+    <header>
+      <div class="sheet-info-character">
+        <div class="game-title" data-i18n="game-title">Death In Space</div>
+        <div class="mode-title" data-i18n="sheet-title-character">Personal Data Sheet</div>
+      </div>
+      <div class="header-col2">
+          <div data-i18n="player-information">Section 0. Player Information</div>
+            <label data-i18n="player-name">Player Name</label>
+            <input class="dotted-line" type="text" name="attr_player_name"/>
+      </div>
+    </header>
+    <div class="nav-bar-character">
+      <div class="nav-row">
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="1" checked="checked"/>
+            <div class="page-button-character" data-i18n="nav-personal">Personal</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="2"/>
+            <div class="page-button-character" data-i18n="nav-situation">Situation</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="3"/>
+            <div class="page-button-character" data-i18n="nav-belongings">Belongings</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="4"/>
+            <div class="page-button-character" data-i18n="nav-weaponry">Weaponry</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="5"/>
+            <div class="page-button-character" data-i18n="nav-notes">Notes</div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="personal hide-element" type="radio" name="attr_character_page" value="1" checked="checked"/>
+      <div class="personal showhide">
+          <div class="origin-row">
+            <div class="origin-label" data-i18n="origin">Origin</div>
+            <div class="origin-radios">
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="void"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="void">void</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="pork"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="pork">pork</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="solopod"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="solopod">solopod</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="chrome"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="chrome">chrome</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="human"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="human">human</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="velocity-cursed"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="velocity-cursed">velocity cursed</div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="name-row">
+            <div class="stat-block name-block">
+                <label data-i18n="character-name">Name</label>
+                <input class="stat-input" type="text" name="attr_character_name"/>
+            </div>
+            <div class="stat-block name-block">
+                <label data-i18n="nickname">Nickname</label>
+                <input class="stat-input" type="text" name="attr_nickname"/>
+            </div>
+          </div>
+          <div class="stat-block origin-benefit-block">
+              <label data-i18n="origin-benefit">Origin Benefit</label>
+              <textarea class="stat-input" rows="10" name="attr_origin_benefit"></textarea>
+          </div>
+          <div class="stat-block xp-block">
+              <label data-i18n="stat-xp">XP</label>
+              <input class="stat-input" type="number" name="attr_xp"/>
+          </div>
+          <div class="stat-block background-block">
+              <label data-i18n="stat-background">Background</label>
+              <input class="stat-input" type="text" name="attr_background"/>
+          </div>
+          <div class="stat-block past-allegiance-block">
+              <label data-i18n="stat-past-allegiance">Past Allegiance</label>
+              <input class="stat-input" type="text" name="attr_past"/>
+          </div>
+          <div class="stat-block trait-block">
+              <label data-i18n="stat-trait">Trait</label>
+              <input class="stat-input" type="text" name="attr_trait"/>
+          </div>
+          <div class="stat-block drive-block">
+              <label data-i18n="stat-drive">Drive</label>
+              <input class="stat-input" type="text" name="attr_drive"/>
+          </div>
+          <div class="stat-block looks-block">
+              <label data-i18n="stat-looks">Looks</label>
+              <textarea class="stat-input" rows="4" name="attr_looks"></textarea>
+          </div>
+          <div class="stat-block ability-block">
+            <label data-i18n="ability">Ability</label>
+            <div class="ability-col">
+                <div class="ability-row">
+                  <div class="ability-name" data-i18n="ability-body">Body</div>
+                  <div class="ability-value">
+                    <input class="stat-input" type="number" name="attr_body"/>
+                  </div>
+                </div>
+                <div class="ability-row">
+                  <div class="ability-name" data-i18n="ability-dexterity">Dexterity</div>
+                  <div class="ability-value">
+                    <input class="stat-input" type="number" name="attr_dexterity"/>
+                  </div>
+                </div>
+                <div class="ability-row">
+                  <div class="ability-name" data-i18n="ability-savvy">Savvy</div>
+                  <div class="ability-value">
+                    <input class="stat-input" type="number" name="attr_savvy"/>
+                  </div>
+                </div>
+                <div class="ability-row">
+                  <div class="ability-name" data-i18n="ability-tech">Tech</div>
+                  <div class="ability-value">
+                    <input class="stat-input" type="number" name="attr_tech"/>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="defense-row">
+            <div class="stat-block defense-text">
+                <label data-i18n="defense">Defense Rating</label>
+                <div class="subtitle" data-i18n="defense-subtitle">12+DEX UNARMORED</div>
+            </div>
+            <div class="stat-block defense-value">
+                <input class="stat-input" type="number" name="attr_defense"/>
+            </div>
+          </div>
+          <div class="hit-points-row">
+            <div class="stat-block hit-points-text">
+                <label data-i18n="hit-points">Hit Points</label>
+                <div class="subtitle" data-i18n="hit-points-subtitle-1">Start with 1d8</div>
+                <div class="subtitle" data-i18n="hit-points-subtitle-2">Recover 1d4+BODY</div>
+            </div>
+            <div class="stat-block hit-points-current-col">
+                <label data-i18n="hp-current">Current</label>
+                <input class="stat-input" type="number" name="attr_hp"/>
+            </div>
+            <div class="stat-block hit-points-max-col">
+                <label data-i18n="hp-max">Max</label>
+                <input class="stat-input" type="number" name="attr_hp_max"/>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="situation hide-element" type="radio" name="attr_character_page" value="2"/>
+      <div class="situation showhide">
+        <situation></situation>
+      </div>
+    </div>
+</div>
+<input class="hub-mode hide-element" type="radio" name="attr_mode" value="1"/>
+<div class="hub-mode hide-element">
+    <header>
+      <div class="sheet-info-hub">
+        <div class="game-title" data-i18n="game-title">Death In Space</div>
+        <div class="mode-title" data-i18n="sheet-title-hub">Hub Data Sheet</div>
+      </div>
+      <div class="header-col2">
+          <div data-i18n="owner-information">Section 0. Owner Information</div>
+            <label data-i18n="owner-signature">Owner Signature</label>
+            <input class="dotted-line" type="text" name="attr_owner_signature"/>
+      </div>
+    </header>
+    <div class="nav-bar-hub">
+      <div class="nav-row">
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="6" checked="checked"/>
+            <div class="page-button-hub" data-i18n="nav-specific">Specific</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="7"/>
+            <div class="page-button-hub" data-i18n="nav-hub">Hub</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="8"/>
+            <div class="page-button-hub" data-i18n="nav-layout">Layout</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="5"/>
+            <div class="page-button-hub" data-i18n="nav-notes">Notes</div>
+          </label>
+        </div>
+      </div>
+    </div>
+</div>
+<rolltemplate class="sheet-rolltemplate-sheetname">
+  {{#rollName}}
+  {{/rollName}}
+</rolltemplate>
+<script type="text/worker">
+
+on('change:character_page_button', function(eventinfo) {
+  setAttrs({
+    character_page: eventinfo.newValue
+  });
+});
+
+on('change:hub_page_button', function(eventinfo) {
+  setAttrs({
+    hub_page: eventinfo.newValue
+  });
+});
+
+on('change:mode_button', function(eventinfo) {
+  setAttrs({
+    mode: eventinfo.newValue,
+    modes_choice: 'off'
+  });
+});
+
+on('change:stat_mode_button', function(eventinfo) {
+  setAttrs({
+    stat_mode: eventinfo.newValue,
+  });
+});
+
+on('change:close_changelog', function() {
+  setAttrs({
+    'changelog_2.2.1': 'on',
+  });
+});
+
+</script>

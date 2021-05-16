@@ -1,0 +1,21 @@
+include ../input/input
+
+mixin information(sheet_type)
+  header
+    div(class=`sheet-info-${sheet_type}`)
+      div.game-title(data-i18n='game-title')=locals['game-title']
+      div.mode-title(data-i18n=`sheet-title-${sheet_type}`)=locals[`sheet-title-${sheet_type}`]
+
+    div.header-col2
+      if sheet_type == 'character'
+        +player_name
+      else
+        +owner_name
+
+mixin player_name
+  div(data-i18n='player-information')=locals['player-information']
+  +dotted_line('text', 'player_name', 'player-name')
+
+mixin owner_name
+  div(data-i18n='owner-information')=locals['owner-information']
+  +dotted_line('text', 'owner_signature', 'owner-signature')
