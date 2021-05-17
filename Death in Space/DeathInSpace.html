@@ -695,23 +695,31 @@
                 </div>
               </div>
               <div class="power-source-block">
-                <div class="stat-block power-source-text" data-i18n="power_source">Power Source</div>
+                <div class="stat-block power-source-text">
+                  <label data-i18n="power_source">Power Source</label>
+                </div>
                 <div class="stat-block power-source-radios">
-                  <label>
-                    <input class="stat-input" type="radio" name="attr_power_source" value="slow"/>
-                    <div class="power-source-state" data-i18n="slow">Slow</div>
-                  </label>
-                  <label>
-                    <input class="stat-input" type="radio" name="attr_power_source" value="fast"/>
-                    <div class="power-source-state" data-i18n="fast">Fast</div>
-                  </label>
-                  <label>
-                    <input class="stat-input" type="radio" name="attr_power_source" value="unknown"/>
-                    <div class="power-source-state" data-i18n="unknown">Unknown</div>
-                  </label>
+                  <div class="power-source-radio-row">
+                    <label><span data-i18n="slow">Slow</span>
+                      <input class="stat-input" type="radio" name="attr_power_source" value="slow"/>
+                    </label>
+                  </div>
+                  <div class="power-source-radio-row">
+                    <label><span data-i18n="fast">Fast</span>
+                      <input class="stat-input" type="radio" name="attr_power_source" value="fast"/>
+                    </label>
+                  </div>
+                  <div class="power-source-radio-row">
+                    <label><span data-i18n="unknown">Unknown</span>
+                      <input class="stat-input" type="radio" name="attr_power_source" value="unknown"/>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <p></p>
+              <div class="stat-block output-power-block">
+                  <label data-i18n="output_power">Output Power</label>
+                  <input class="stat-input" type="number" name="attr_output_power"/>
+              </div>
           </div>
       </div>
     </div>

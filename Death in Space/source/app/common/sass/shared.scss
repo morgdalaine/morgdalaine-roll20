@@ -64,7 +64,7 @@
   padding: 2px;
 
   .current-max-text {
-    grid-colun-end: span 2;
+    grid-column-end: span 2;
   }
 
   .stat-current-col, .stat-max-col {
@@ -86,7 +86,7 @@
     }
   }
 
-  .stat-current-col {
+  .stat-current-right-border {
     border-right: 2px dotted $dead-gray;
   }
 }

@@ -58,9 +58,9 @@
     text-decoration: none;
   }
 
-  // input[type=number], input[type=text] {
-  //   margin-left: 1em;
-  // }
+  input[type=number] {
+    font-size: 1.2em;
+  }
 
   input[type=text] {
     @include fill-available();
