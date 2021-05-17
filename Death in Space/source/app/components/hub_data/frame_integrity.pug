@@ -1,0 +1,38 @@
+
+mixin frame_integrity_row
+  //- first row
+  div.frame-integrity-row
+    div.frame-integrity
+      div.stat-block.frame-integrity-title
+        label(data-i18n='frame_integrity')=locals['frame_integrity']
+      div.integrity-percent='0%'
+
+    - var frame = 0
+    - var sections = 10;
+    while frame < sections
+      - var val = (1 + frame) * 10;
+      div.integrity-increment
+        label
+          div.integrity-checkbox
+            input(
+              type='checkbox'
+              name=`attr_frame_integrity_${frame}`
+              value=1)
+            //- div.frame-section
+        if val == 50 || val == 100
+          div.integrity-percent=`${val}%`
+      - frame++;
+
+    div.frame-defense-rating
+      div.stat-block.frame-defense-rating-block
+        +stat('number', 'defense')
+
+  //- second row
+  div.frame-integrity-row-bottom
+    div.frame-roll-on-damage(data-i18n='roll_damage_table')=locals['roll_damage_table']
+    div.frame-spacer
+    div.frame-spacer
+    div.frame-roll-on-damage(data-i18n='roll_damage_table')=locals['roll_damage_table']
+    div
+    div.frame-spacer
+    div.frame-all-is-calm(data-i18n='all_is_calm')=locals['all_is_calm']

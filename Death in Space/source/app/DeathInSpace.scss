@@ -58,9 +58,9 @@
     text-decoration: none;
   }
 
-  input[type=number], input[type=text] {
-    margin-left: 1em;
-  }
+  // input[type=number], input[type=text] {
+  //   margin-left: 1em;
+  // }
 
   input[type=text] {
     @include fill-available();
@@ -141,6 +141,7 @@
   @import './components/weaponry/weaponry';
   @import './components/notes/notes';
   @import './components/specifics/specifics';
+  @import './components/hub_data/hub_data';
 
 }
 

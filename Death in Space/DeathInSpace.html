@@ -348,43 +348,43 @@
               </div>
                 <div class="oxygen-tank">
                   <div class="oxygen-increments">
-                    <div class="increment">
+                    <div class="oxygen-increment">
                       <label>
                         <input type="checkbox" name="attr_life_support_0" value="1"/>
                         <div class="tank-section"></div>
                       </label>
                     </div>
-                    <div class="increment">
+                    <div class="oxygen-increment">
                       <label>
                         <input type="checkbox" name="attr_life_support_1" value="1"/>
                         <div class="tank-section"></div>
                       </label>
                     </div>
-                    <div class="increment">
+                    <div class="oxygen-increment">
                       <label>
                         <input type="checkbox" name="attr_life_support_2" value="1"/>
                         <div class="tank-section"></div>
                       </label>
                     </div>
-                    <div class="increment">
+                    <div class="oxygen-increment">
                       <label>
                         <input type="checkbox" name="attr_life_support_3" value="1"/>
                         <div class="tank-section"></div>
                       </label>
                     </div>
-                    <div class="increment">
+                    <div class="oxygen-increment">
                       <label>
                         <input type="checkbox" name="attr_life_support_4" value="1"/>
                         <div class="tank-section"></div>
                       </label>
                     </div>
-                    <div class="increment">
+                    <div class="oxygen-increment">
                       <label>
                         <input type="checkbox" name="attr_life_support_5" value="1"/>
                         <div class="tank-section"></div>
                       </label>
                     </div>
-                    <div class="increment">
+                    <div class="oxygen-increment">
                       <label>
                         <input type="checkbox" name="attr_life_support_6" value="1"/>
                         <div class="tank-section"></div>
@@ -516,13 +516,13 @@
           <div class="nav-child">
             <label class="page-label">
               <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="6" checked="checked"/>
-              <div class="page-button-hub" data-i18n="nav_specifics">Specifics</div>
+              <div class="page-button-hub" data-i18n="nav_specifics">Hub Info</div>
             </label>
           </div>
           <div class="nav-child">
             <label class="page-label">
               <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="7"/>
-              <div class="page-button-hub" data-i18n="nav_hub">Hub</div>
+              <div class="page-button-hub" data-i18n="nav_hub_data">Hub Data</div>
             </label>
           </div>
           <div class="nav-child">
@@ -569,12 +569,219 @@
           </div>
       </div>
     </div>
+    <div class="page-container">
+      <input class="hub-data hide-element" type="radio" name="attr_hub_page" value="7" checked="checked"/>
+      <div class="hub-data showhide">
+          <div class="frame-integrity-row">
+            <div class="frame-integrity">
+              <div class="stat-block frame-integrity-title">
+                <label data-i18n="frame_integrity">Frame Integrity</label>
+              </div>
+              <div class="integrity-percent">0%</div>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_0" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_1" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_2" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_3" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_4" value="1"/>
+                </div>
+              </label>
+              <div class="integrity-percent">50%</div>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_5" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_6" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_7" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_8" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_9" value="1"/>
+                </div>
+              </label>
+              <div class="integrity-percent">100%</div>
+            </div>
+            <div class="frame-defense-rating">
+              <div class="stat-block frame-defense-rating-block">
+                  <label data-i18n="defense">Defense Rating</label>
+                  <input class="stat-input" type="number" name="attr_defense"/>
+              </div>
+            </div>
+          </div>
+          <div class="frame-integrity-row-bottom">
+            <div class="frame-roll-on-damage" data-i18n="roll_damage_table">Roll on damage table</div>
+            <div class="frame-spacer"></div>
+            <div class="frame-spacer"></div>
+            <div class="frame-roll-on-damage" data-i18n="roll_damage_table">Roll on damage table</div>
+            <div></div>
+            <div class="frame-spacer"></div>
+            <div class="frame-all-is-calm" data-i18n="all_is_calm">When all is calm the hub regains 1d4+10% frame integrity on a calm night up to maximum</div>
+          </div>
+          <div class="systems-row">
+              <div class="current-max-block">
+                <div class="stat-block current-max-text">
+                  <label data-i18n="condition">Condition</label>
+                </div>
+                <div class="stat-block stat-current-col">
+                    <label data-i18n="current">Current</label>
+                    <input class="stat-input" type="number" name="attr_condition"/>
+                </div>
+                <div class="stat-block stat-max-col">
+                    <label data-i18n="max">Max</label>
+                    <input class="stat-input" type="number" name="attr_condition_max"/>
+                </div>
+              </div>
+              <div class="current-max-block">
+                <div class="stat-block current-max-text">
+                  <label data-i18n="fuel">Fuel</label>
+                </div>
+                <div class="stat-block stat-current-col">
+                    <label data-i18n="current">Current</label>
+                    <input class="stat-input" type="number" name="attr_fuel"/>
+                </div>
+                <div class="stat-block stat-max-col">
+                    <label data-i18n="max">Max</label>
+                    <input class="stat-input" type="number" name="attr_fuel_max"/>
+                </div>
+              </div>
+              <div class="power-source-block">
+                <div class="stat-block power-source-text" data-i18n="power_source">Power Source</div>
+                <div class="stat-block power-source-radios">
+                  <label>
+                    <input class="stat-input" type="radio" name="attr_power_source" value="slow"/>
+                    <div class="power-source-state" data-i18n="slow">Slow</div>
+                  </label>
+                  <label>
+                    <input class="stat-input" type="radio" name="attr_power_source" value="fast"/>
+                    <div class="power-source-state" data-i18n="fast">Fast</div>
+                  </label>
+                  <label>
+                    <input class="stat-input" type="radio" name="attr_power_source" value="unknown"/>
+                    <div class="power-source-state" data-i18n="unknown">Unknown</div>
+                  </label>
+                </div>
+              </div>
+              <p></p>
+          </div>
+      </div>
+    </div>
 </div>
 <rolltemplate class="sheet-rolltemplate-sheetname">
   {{#rollName}}
   {{/rollName}}
 </rolltemplate>
 <script type="text/worker">
+  
+// update carry
+on('change:body sheet:opened', function() {
+  getAttrs(['body'], function(values) {
+    let body = parseInt(values.body) || 0;
+    let carry = 12 + body;
+    updateAttrs = { carry: carry };
+    setAttrs(updateAttrs);
+    console.log(updateAttrs);
+  });
+});
+  
+// update life support
+const frame_integrity = ['frame_integrity_0', 'frame_integrity_1', 'frame_integrity_2', 'frame_integrity_3', 'frame_integrity_4', 'frame_integrity_5', 'frame_integrity_6', 'frame_integrity_7', 'frame_integrity_8', 'frame_integrity_9'];
+frame_integrity.forEach(item => on(`change:${item}`, eventInfo => updateFrameIntegrity(item, eventInfo.newValue)));
+
+const updateFrameIntegrity = (stat, new_value) => {
+  var index = parseInt(stat.slice(-1)) || 0;
+  var updateAttrs = {};
+
+  // fill everything less than stat
+  if (new_value == 1) {
+    for (let n = 0; n < index; n++) {
+      updateAttrs[`frame_integrity_${n}`] = 1;
+    }
+  }
+  // remove everything greater than
+  else {
+    for (let n = index; n < frame_integrity.length; n++) {
+      updateAttrs[`frame_integrity_${n}`] = 0;
+    }
+  }
+
+  setAttrs(updateAttrs);
+  console.log(updateAttrs);
+}
+  
+// update life support
+const life_support = ['life_support_0', 'life_support_1', 'life_support_2', 'life_support_3', 'life_support_4', 'life_support_5', 'life_support_6', 'life_support_7'];
+life_support.forEach(item => on(`change:${item}`, eventInfo => updateLifeSupport(item, eventInfo.newValue)));
+
+const updateLifeSupport = (stat, new_value) => {
+  var index = parseInt(stat.slice(-1)) || 0;
+  var updateAttrs = {};
+
+  // fill everything less than stat
+  if (new_value == 1) {
+    for (let n = 0; n < index; n++) {
+      updateAttrs[`life_support_${n}`] = 1;
+    }
+  }
+  // remove everything greater than
+  else {
+    for (let n = index; n < life_support.length; n++) {
+      updateAttrs[`life_support_${n}`] = 0;
+    }
+  }
+
+  setAttrs(updateAttrs);
+  console.log(updateAttrs);
+}
   
 on('change:character_page_button', function(eventinfo) {
   setAttrs({
@@ -616,42 +823,6 @@ on('change:hp change:hp_max sheet:opened', function() {
     let max = parseInt(values.hp_max) || 0;
     let new_hp = (cur > max) ? max : (cur < 0 ? 0 : cur);
     updateAttrs = { hp: new_hp };
-    setAttrs(updateAttrs);
-    console.log(updateAttrs);
-  });
-});
-  
-// update life support
-const life_support = ['life_support_0', 'life_support_1', 'life_support_2', 'life_support_3', 'life_support_4', 'life_support_5', 'life_support_6', 'life_support_7'];
-life_support.forEach(item => on(`change:${item}`, eventInfo => updateLifeSupport(item, eventInfo.newValue)));
-
-const updateLifeSupport = (stat, new_value) => {
-  var index = parseInt(stat.slice(-1)) || 0;
-  var updateAttrs = {};
-
-  // fill everything less than stat
-  if (new_value == 1) {
-    for (let n = 0; n < index; n++) {
-      updateAttrs[`life_support_${n}`] = 1;
-    }
-  }
-  // remove everything greater than
-  else {
-    for (let n = index; n < life_support.length; n++) {
-      updateAttrs[`life_support_${n}`] = 0;
-    }
-  }
-
-  setAttrs(updateAttrs);
-  console.log(updateAttrs);
-}
-  
-// update carry
-on('change:body sheet:opened', function() {
-  getAttrs(['body'], function(values) {
-    let body = parseInt(values.body) || 0;
-    let carry = 12 + body;
-    updateAttrs = { carry: carry };
     setAttrs(updateAttrs);
     console.log(updateAttrs);
   });

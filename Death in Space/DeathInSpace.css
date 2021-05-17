@@ -1,4 +1,38 @@
 @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Arsenal&family=Cairo:wght@900&display=swap);
+.current-max-block {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid #000000;
+  padding: 2px;
+}
+
+.current-max-block .current-max-text {
+  grid-colun-end: span 2;
+}
+
+.current-max-block .stat-current-col, .current-max-block .stat-max-col {
+  flex-direction: column;
+}
+
+.current-max-block .stat-current-col label, .current-max-block .stat-max-col label {
+  text-align: center;
+  font-size: 0.8em !important;
+}
+
+.current-max-block .stat-current-col input, .current-max-block .stat-max-col input {
+  display: block;
+  margin: 0 auto;
+}
+
+.current-max-block .stat-current-col input[type=number], .current-max-block .stat-current-col input[type=number].stat-input, .current-max-block .stat-max-col input[type=number], .current-max-block .stat-max-col input[type=number].stat-input {
+  text-align: center;
+  border: 2px dotted #7a7971;
+}
+
+.current-max-block .stat-current-col {
+  border-right: 2px dotted #7a7971;
+}
+
 .charsheet {
   width: 720px !important;
   margin: 0 auto !important;
@@ -46,10 +80,6 @@
   font-family: "IBM Plex Mono";
   font-size: 0.8em;
   text-decoration: none;
-}
-
-.charsheet input[type=number], .charsheet input[type=text] {
-  margin-left: 1em;
 }
 
 .charsheet input[type=text] {
@@ -237,7 +267,7 @@
 .charsheet input[type=radio].weaponry:checked ~ div.weaponry,
 .charsheet input[type=radio].notes:checked ~ div.notes,
 .charsheet input[type=radio].specifics:checked ~ div.specifics,
-.charsheet input[type=radio].hub:checked ~ div.hub,
+.charsheet input[type=radio].hub-data:checked ~ div.hub-data,
 .charsheet input[type=radio].layout:checked ~ div.layout,
 .charsheet input[type=radio].notes:checked ~ div.notes {
   display: inline-grid;
@@ -608,12 +638,12 @@
 }
 
 .charsheet .hit-points-row {
-  border-right: 2px solid #000000;
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid #000000;
+  padding: 2px;
   grid-column-start: 2;
   grid-row-start: 8;
-  padding: 2px;
 }
 
 .charsheet .hit-points-row label {
@@ -888,31 +918,31 @@
   padding-top: 6px;
 }
 
-.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment {
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment {
   height: 45px;
   width: 21px;
 }
 
-.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment label {
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment label {
   padding: 0;
   margin: 0;
 }
 
-.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment label input[type=checkbox] {
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment label input[type=checkbox] {
   display: none;
 }
 
-.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment label input[type=checkbox]:checked + .tank-section {
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment label input[type=checkbox]:checked + .tank-section {
   background: #eb1c26;
   background-color: #eb1c26;
   color: #ffffff;
 }
 
-.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment label input[type=checkbox]:checked + .tank-section:hover {
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment label input[type=checkbox]:checked + .tank-section:hover {
   background-color: rgba(235, 28, 38, 0.5);
 }
 
-.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment .tank-section {
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment .tank-section {
   border-right: 1px solid #eb1c26;
   height: 45px;
   width: 21px;
@@ -920,11 +950,11 @@
   padding: 0;
 }
 
-.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment .tank-section:hover {
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment .tank-section:hover {
   background-color: rgba(235, 28, 38, 0.5);
 }
 
-.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .increment:nth-last-child(1) {
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment:nth-last-child(1) {
   border-right: none;
 }
 
@@ -1084,6 +1114,133 @@
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 4;
+}
+
+.charsheet .hub-data {
+  display: inline-grid;
+  grid-template-rows: 1fr 0.5fr auto;
+  width: 100%;
+}
+
+.charsheet .frame-integrity-row, .charsheet .frame-integrity-row-bottom {
+  display: inline-grid;
+  grid-template-columns: repeat(15, 1fr);
+  width: 100%;
+}
+
+.charsheet .frame-integrity-row {
+  height: 5em;
+  margin-top: 0.5em;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #32a6d2;
+}
+
+.charsheet .frame-integrity-row-bottom {
+  border-bottom: 2px solid #000000;
+  height: 3em;
+}
+
+.charsheet .frame-integrity {
+  display: flex;
+  flex-direction: column;
+  grid-column-end: span 2;
+  border-right: 1px solid #000000;
+}
+
+.charsheet .frame-integrity-title {
+  margin-bottom: 6px;
+}
+
+.charsheet .integrity-increment {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #000000;
+}
+
+.charsheet .integrity-increment label {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .integrity-increment label input[type=checkbox]:checked + .frame-section {
+  background: #32a6d2;
+  background-color: #32a6d2;
+  border-left: 2px solid #000000;
+}
+
+.charsheet .integrity-increment label input[type=checkbox]:checked + .frame-section:hover {
+  background-color: rgba(50, 166, 210, 0.5);
+}
+
+.charsheet .integrity-increment .frame-section {
+  border-left: 1px solid #32a6d2;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  height: 3.5em;
+  margin: -1px 0;
+  padding: 0;
+}
+
+.charsheet .integrity-increment .frame-section:hover {
+  background-color: rgba(50, 166, 210, 0.5);
+}
+
+.charsheet .integrity-increment:nth-last-child(1) {
+  border-right: none;
+}
+
+.charsheet .integrity-percent {
+  background-color: #32a6d2;
+  color: #ffffff;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+.charsheet .frame-defense-rating {
+  grid-column-end: span 3;
+  border-left: 2px solid #000000;
+}
+
+.charsheet .frame-defense-rating input[type=number] {
+  text-align: center;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .frame-roll-on-damage {
+  font-size: 0.7em;
+  padding: 0 0.5em;
+  text-align: left;
+  text-transform: uppercase;
+  grid-column-end: span 2;
+}
+
+.charsheet .frame-spacer {
+  grid-column-end: span 2;
+}
+
+.charsheet .frame-all-is-calm {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  grid-column-end: span 4;
+}
+
+.charsheet .systems-row {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr) 0.5fr;
+  width: 100%;
+}
+
+.charsheet .power-source-block {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {

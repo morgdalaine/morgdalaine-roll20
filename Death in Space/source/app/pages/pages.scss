@@ -103,7 +103,7 @@ input[type=radio].belongings:checked ~ div.belongings,
 input[type=radio].weaponry:checked ~ div.weaponry,
 input[type=radio].notes:checked ~ div.notes,
 input[type=radio].specifics:checked ~ div.specifics,
-input[type=radio].hub:checked ~ div.hub,
+input[type=radio].hub-data:checked ~ div.hub-data,
 input[type=radio].layout:checked ~ div.layout,
 input[type=radio].notes:checked ~ div.notes {
   display: inline-grid;

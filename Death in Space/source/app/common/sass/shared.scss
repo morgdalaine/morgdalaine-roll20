@@ -49,3 +49,44 @@
   width: -webkit-fill-available;  // Mozilla-based browsers will ignore this.
   width: fill-available;
 }
+
+@mixin fill-available-height() {
+  height: -moz-available;          // WebKit-based browsers will ignore this.
+  height: -webkit-fill-available;  // Mozilla-based browsers will ignore this.
+  height: fill-available;
+  height: 40px;
+}
+
+.current-max-block {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid $black;
+  padding: 2px;
+
+  .current-max-text {
+    grid-colun-end: span 2;
+  }
+
+  .stat-current-col, .stat-max-col {
+    flex-direction: column;
+
+    label {
+      text-align: center;
+      font-size: 0.8em !important;
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+    }
+
+    input[type=number], input[type=number].stat-input  {
+      text-align: center;
+      border: 2px dotted $dead-gray;
+    }
+  }
+
+  .stat-current-col {
+    border-right: 2px dotted $dead-gray;
+  }
+}

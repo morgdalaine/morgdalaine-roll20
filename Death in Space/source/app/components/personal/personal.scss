@@ -209,12 +209,12 @@
 }
 
 .hit-points-row {
-  border-right: 2px solid $black;
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid $black;
+  padding: 2px;
   grid-column-start: 2;
   grid-row-start: 8;
-  padding: 2px;
 
   label {
     display: block;
