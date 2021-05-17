@@ -2,8 +2,8 @@ include ../../common/pug/common
 include ../../components/information/information
 include ../../components/input/input
 include ../../components/nav/nav_bar
+include ../common/notes
 include ./belongings
-include ./notes
 include ./personal
 include ./situation
 include ./weaponry
@@ -21,4 +21,4 @@ div.header
 +situation_page
 +belongings_page
 +weaponry_page
-+notes_page
++notes_page(type)

@@ -492,7 +492,7 @@
       <div class="notes showhide">
           <div class="stat-block notes-block">
               <label data-i18n="notes">Notes</label>
-              <textarea class="stat-input" rows="20" name="attr_notes"></textarea>
+              <textarea class="stat-input" rows="18" name="attr_notes"></textarea>
           </div>
       </div>
     </div>
@@ -529,6 +529,12 @@
             <label class="page-label">
               <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="8"/>
               <div class="page-button-hub" data-i18n="nav_layout">Layout</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="9"/>
+              <div class="page-button-hub" data-i18n="nav_cargo">Cargo</div>
             </label>
           </div>
           <div class="nav-child">
@@ -758,6 +764,39 @@
                   <input class="stat-input" type="number" name="attr_output_power" readonly="readonly"/>
               </div>
             </div>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="cargo hide-element" type="radio" name="attr_hub_page" value="9" checked="checked"/>
+      <div class="cargo showhide">
+          <div class="cargo-block">
+            <div class="stat-block cargo-title">
+              <label data-i18n="cargo">Cargo</label>
+            </div>
+            <fieldset class="repeating_cargo">
+                <input class="repeating-input" type="text" name="attr_cargo"/>
+            </fieldset>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="layout hide-element" type="radio" name="attr_hub_page" value="8" checked="checked"/>
+      <div class="layout showhide">
+          <div class="layout-splash">
+            <div class="stat-block cargo-title">
+              <label data-i18n="hub_design">Design your hub layout</label>
+            </div>
+          </div>
+          <div class="layout-grid"></div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="notes hide-element" type="radio" name="attr_hub_page" value="5"/>
+      <div class="notes showhide">
+          <div class="stat-block notes-block">
+              <label data-i18n="notes">Notes</label>
+              <textarea class="stat-input" rows="18" name="attr_notes"></textarea>
           </div>
       </div>
     </div>

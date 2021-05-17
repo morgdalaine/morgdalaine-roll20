@@ -289,6 +289,7 @@
 .charsheet input[type=radio].specifics:checked ~ div.specifics,
 .charsheet input[type=radio].hub-data:checked ~ div.hub-data,
 .charsheet input[type=radio].layout:checked ~ div.layout,
+.charsheet input[type=radio].cargo:checked ~ div.cargo,
 .charsheet input[type=radio].notes:checked ~ div.notes {
   display: inline-grid;
   visibility: visible;
@@ -1357,6 +1358,35 @@
   height: -webkit-fill-available;
   height: fill-available;
   height: 40px;
+}
+
+.charsheet .cargo {
+  display: inline-grid;
+  grid-template-rows: 10em auto;
+  width: 100%;
+}
+
+.charsheet .cargo-block {
+  border-bottom: 2px solid #000000;
+}
+
+.charsheet .cargo-block .cargo-note {
+  display: flex;
+  padding: 5px;
+}
+
+.charsheet .layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.charsheet .layout-grid {
+  background-image: radial-gradient(#32a6d2 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+  width: 100%;
+  height: 30em;
 }
 
 .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {

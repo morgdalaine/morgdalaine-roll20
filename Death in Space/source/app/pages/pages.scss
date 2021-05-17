@@ -105,6 +105,7 @@ input[type=radio].notes:checked ~ div.notes,
 input[type=radio].specifics:checked ~ div.specifics,
 input[type=radio].hub-data:checked ~ div.hub-data,
 input[type=radio].layout:checked ~ div.layout,
+input[type=radio].cargo:checked ~ div.cargo,
 input[type=radio].notes:checked ~ div.notes {
   display: inline-grid;
   @include show-hide();

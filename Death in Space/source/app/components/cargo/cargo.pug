@@ -1,0 +1,7 @@
+
+mixin cargo_block
+  div.cargo-block
+    div.stat-block.cargo-title
+      label(data-i18n='cargo')=locals['cargo']
+    fieldset.repeating_cargo
+      +repeating_input('text', 'cargo')
