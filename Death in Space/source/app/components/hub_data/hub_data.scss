@@ -1,7 +1,7 @@
 
 .hub-data {
   display: inline-grid;
-  grid-template-rows: 1fr 0.5fr auto;
+  grid-template-rows: 1fr 0.5fr auto auto;
   width: 100%;
 }
 
@@ -97,8 +97,7 @@
   border-left: 2px solid $black;
 
   input[type=number] {
-    text-align: center;
-    @include fill-available();
+    margin-left: 2px;
   }
 }
 
@@ -125,6 +124,7 @@
   display: inline-grid;
   grid-template-columns: repeat(2, 30%) 25% 15%;
   width: 100%;
+  border-bottom: 2px solid $black;
 }
 
 .power-source-block {
@@ -156,7 +156,67 @@
 .output-power-block {
 
   input[type=number] {
-    text-align: center;
+    margin-left: 2px
+  }
+}
+
+.modules-wrapper {
+  display: flex;
+}
+
+.modules-block {
+  @include fill-available();
+  // border-right: 2px dashed $black;
+}
+
+.modules-item {
+  display: flex;
+  margin: 2px 5px;
+
+  .modules-name {
     @include fill-available();
+  }
+
+  .modules-power-cost, .modules-total-power-cost {
+    width: 3.5em;
+    margin-left: 5px;
+
+    label {
+      text-align: center;
+      font-size: 0.8em;
+    }
+
+    input[type=number] {
+      width: 2.5em;
+      border: 2px dotted $dead-gray;
+    }
+  }
+
+  .modules-total-power-cost {
+    margin-top: 0.5em;
+  }
+}
+
+.power-output-formula-column {
+  width: 6em;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  input[type=number] {
+    width: 2.5em;
+    border: 2px dotted $dead-gray;
+    margin-bottom: 11px;
+  }
+
+  .output-power-block:before {
+    content: '\2264';
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  label {
+    @include rotate();
+    @include fill-available-height();
   }
 }

@@ -71,7 +71,7 @@
   "portrait": "Portrait",
   "power_cost": "Power Cost",
   "power_formula": "Power cost > power output = overheated",
-  "power_note": "The POWER COST sum should not exceed the output power.",
+  "power_note": "The POWER COST sum should not exceed the output power",
   "power_source": "Power Source",
   "protects_against": "Protects Against",
   "quirks": "Quirks",

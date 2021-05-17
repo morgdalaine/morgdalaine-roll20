@@ -1,0 +1,31 @@
+
+mixin modules_block
+  div.modules-wrapper
+    div.modules-block
+      div.stat-block.modules-item
+        div.modules-name
+          +label('modules')
+        div.modules-power-cost
+          +label('power_cost')
+      fieldset.repeating_modules
+        +repeating_modules
+
+      //- total power cost and formula
+      div.stat-block.modules-item
+        div.stat-block.modules-name
+          label.subtitle.align-right(data-i18n='power_formula')=locals['power_formula']
+          label.subtitle.align-right(data-i18n='power_note')=locals['power_note']
+        div.modules-total-power-cost
+          div.stat-block.modules-name
+            +const_stat_no_label('number', 'total_power_cost')
+
+    div.power-output-formula-column
+      div.stat-block.output-power-block
+        +const_stat_no_label('number', 'output_power')
+
+mixin repeating_modules
+  div.modules-item
+    div.modules-name
+      +repeating_input('text', 'module_name')
+    div.stat-block.modules-power-cost
+      +stat_no_label('number', 'power_cost')

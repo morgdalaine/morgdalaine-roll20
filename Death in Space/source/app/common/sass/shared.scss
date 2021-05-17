@@ -57,6 +57,35 @@
   height: 40px;
 }
 
+@mixin rotate($deg: -90deg) {
+  transform: rotate($deg);
+
+  /* Legacy vendor prefixes that you probably don't need... */
+
+  /* Safari */
+  -webkit-transform: rotate($deg);
+
+  /* Firefox */
+  -moz-transform: rotate($deg);
+
+  /* IE */
+  -ms-transform: rotate($deg);
+
+  /* Opera */
+  -o-transform: rotate($deg);
+}
+
+.align-left { text-align: left !important; }
+.align-center { text-align: center !important; }
+.align-right { text-align: right !important; }
+
+.dotted-number {
+
+  input[type=number], input[type=number].stat-input  {
+    border: 2px dotted $dead-gray;
+  }
+}
+
 .current-max-block {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
@@ -81,7 +110,6 @@
     }
 
     input[type=number], input[type=number].stat-input  {
-      text-align: center;
       border: 2px dotted $dead-gray;
     }
   }

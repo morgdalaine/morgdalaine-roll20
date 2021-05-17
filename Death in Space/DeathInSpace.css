@@ -1,4 +1,20 @@
 @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Arsenal&family=Cairo:wght@900&display=swap);
+.align-left {
+  text-align: left !important;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.dotted-number input[type=number], .dotted-number input[type=number].stat-input {
+  border: 2px dotted #7a7971;
+}
+
 .current-max-block {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
@@ -25,7 +41,6 @@
 }
 
 .current-max-block .stat-current-col input[type=number], .current-max-block .stat-current-col input[type=number].stat-input, .current-max-block .stat-max-col input[type=number], .current-max-block .stat-max-col input[type=number].stat-input {
-  text-align: center;
   border: 2px dotted #7a7971;
 }
 
@@ -83,6 +98,7 @@
 }
 
 .charsheet input[type=number] {
+  text-align: center;
   font-size: 1.2em;
 }
 
@@ -287,7 +303,7 @@
 }
 
 .charsheet .subtitle {
-  font-size: 0.8em;
+  font-size: 0.8em !important;
 }
 
 .charsheet .stat-block {
@@ -576,7 +592,6 @@
 }
 
 .charsheet .ability-value input[type=number], .charsheet .ability-value input[type=number].stat-input, .charsheet .defense-value input[type=number], .charsheet .defense-value input[type=number].stat-input, .charsheet .hit-points-current-col input[type=number], .charsheet .hit-points-current-col input[type=number].stat-input, .charsheet .hit-points-max-col input[type=number], .charsheet .hit-points-max-col input[type=number].stat-input {
-  text-align: center;
   border: 2px dotted #7a7971;
 }
 
@@ -1122,7 +1137,7 @@
 
 .charsheet .hub-data {
   display: inline-grid;
-  grid-template-rows: 1fr 0.5fr auto;
+  grid-template-rows: 1fr 0.5fr auto auto;
   width: 100%;
 }
 
@@ -1212,10 +1227,7 @@
 }
 
 .charsheet .frame-defense-rating input[type=number] {
-  text-align: center;
-  width: -moz-available;
-  width: -webkit-fill-available;
-  width: fill-available;
+  margin-left: 2px;
 }
 
 .charsheet .frame-roll-on-damage {
@@ -1240,6 +1252,7 @@
   display: inline-grid;
   grid-template-columns: repeat(2, 30%) 25% 15%;
   width: 100%;
+  border-bottom: 2px solid #000000;
 }
 
 .charsheet .power-source-block {
@@ -1267,10 +1280,83 @@
 }
 
 .charsheet .output-power-block input[type=number] {
-  text-align: center;
+  margin-left: 2px;
+}
+
+.charsheet .modules-wrapper {
+  display: flex;
+}
+
+.charsheet .modules-block {
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
+}
+
+.charsheet .modules-item {
+  display: flex;
+  margin: 2px 5px;
+}
+
+.charsheet .modules-item .modules-name {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .modules-item .modules-power-cost, .charsheet .modules-item .modules-total-power-cost {
+  width: 3.5em;
+  margin-left: 5px;
+}
+
+.charsheet .modules-item .modules-power-cost label, .charsheet .modules-item .modules-total-power-cost label {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.charsheet .modules-item .modules-power-cost input[type=number], .charsheet .modules-item .modules-total-power-cost input[type=number] {
+  width: 2.5em;
+  border: 2px dotted #7a7971;
+}
+
+.charsheet .modules-item .modules-total-power-cost {
+  margin-top: 0.5em;
+}
+
+.charsheet .power-output-formula-column {
+  width: 6em;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.charsheet .power-output-formula-column input[type=number] {
+  width: 2.5em;
+  border: 2px dotted #7a7971;
+  margin-bottom: 11px;
+}
+
+.charsheet .power-output-formula-column .output-power-block:before {
+  content: '\2264';
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.charsheet .power-output-formula-column label {
+  transform: rotate(-90deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
+  height: 40px;
 }
 
 .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {

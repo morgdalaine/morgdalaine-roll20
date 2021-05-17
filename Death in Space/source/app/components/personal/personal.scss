@@ -142,7 +142,6 @@
 
 .ability-value, .defense-value, .hit-points-current-col, .hit-points-max-col {
   input[type=number], input[type=number].stat-input  {
-    text-align: center;
     border: 2px dotted $dead-gray;
   }
 }

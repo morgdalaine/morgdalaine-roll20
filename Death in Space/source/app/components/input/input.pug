@@ -1,3 +1,5 @@
+mixin label(i18n)
+  label(data-i18n=i18n)=locals[i18n]
 
 mixin label_and_input(i18n, attr, placeholder)
   label(data-i18n=i18n)=locals[i18n]
@@ -44,6 +46,13 @@ mixin stat_no_label(inp, attr)
     name=`attr_${attr}`
     spellcheck=false)
 
+mixin const_stat_no_label(inp, attr)
+  input(
+    type=inp,
+    class='stat-input'
+    name=`attr_${attr}`
+    readonly
+    spellcheck=false)
 
 mixin repeating_input(inp, attr)
   input(
