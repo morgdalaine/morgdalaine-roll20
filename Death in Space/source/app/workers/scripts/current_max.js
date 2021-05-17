@@ -11,6 +11,7 @@ const currentMax = (attr) => {
     updateAttrs[attr] = fin_val;
     updateAttrs[`${attr}_max`] = Math.max(0, maximum);
     setAttrs(updateAttrs);
+    console.log(updateAttrs);
   });
 };
 

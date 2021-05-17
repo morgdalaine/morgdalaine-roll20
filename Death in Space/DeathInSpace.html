@@ -791,6 +791,7 @@ const currentMax = (attr) => {
     updateAttrs[attr] = fin_val;
     updateAttrs[`${attr}_max`] = Math.max(0, maximum);
     setAttrs(updateAttrs);
+    console.log(updateAttrs);
   });
 };
 
@@ -806,7 +807,7 @@ on('change:fuel change:fuel_max', function() {
   currentMax('fuel');
 });
   
-// update life support
+// update frame integrity
 const frame_integrity = ['frame_integrity_0', 'frame_integrity_1', 'frame_integrity_2', 'frame_integrity_3', 'frame_integrity_4', 'frame_integrity_5', 'frame_integrity_6', 'frame_integrity_7', 'frame_integrity_8', 'frame_integrity_9'];
 frame_integrity.forEach(item => on(`change:${item}`, eventInfo => updateFrameIntegrity(item, eventInfo.newValue)));
 
@@ -912,6 +913,7 @@ const repeatingSum = (destinations, section, fields) => {
                 output[destination] = idArray.reduce((total, id) => total + getValue(section, id, fields[index]) * commonMultipliers.reduce((subtotal, mult) => subtotal * getValue(section, id, mult), 1), 0);
             });
             setAttrs(output);
+            console.log(output);
         });
     });
 };

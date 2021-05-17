@@ -1,5 +1,5 @@
 
-// update life support
+// update frame integrity
 const frame_integrity = ['frame_integrity_0', 'frame_integrity_1', 'frame_integrity_2', 'frame_integrity_3', 'frame_integrity_4', 'frame_integrity_5', 'frame_integrity_6', 'frame_integrity_7', 'frame_integrity_8', 'frame_integrity_9'];
 frame_integrity.forEach(item => on(`change:${item}`, eventInfo => updateFrameIntegrity(item, eventInfo.newValue)));
 
