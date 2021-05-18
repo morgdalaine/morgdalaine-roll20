@@ -253,3 +253,20 @@
     }
   }
 }
+
+.portrait-block {
+  grid-column-start: 3;
+  grid-row-start: 6;
+  grid-row-end: 9;
+  text-transform: uppercase;
+
+  .portrait {
+    display: flex;
+    justify-content: center;
+
+    .portrait-image {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}

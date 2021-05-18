@@ -760,6 +760,23 @@
   margin: 0 auto;
 }
 
+.charsheet .portrait-block {
+  grid-column-start: 3;
+  grid-row-start: 6;
+  grid-row-end: 9;
+  text-transform: uppercase;
+}
+
+.charsheet .portrait-block .portrait {
+  display: flex;
+  justify-content: center;
+}
+
+.charsheet .portrait-block .portrait .portrait-image {
+  height: 100px;
+  width: 100px;
+}
+
 .charsheet .situation {
   display: inline-grid;
   grid-template-columns: 65% 35%;

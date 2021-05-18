@@ -26,3 +26,11 @@ mixin drive_block
 mixin looks_block
   div.stat-block.looks-block
     +stat_area('looks', 4)
+
+mixin portrait_block
+  div.stat-block.portrait-block
+    +label_with_subtitle('portrait', 'portrait_subtitle')
+    +stat_no_label('text', 'portrait')
+    div.portrait
+      div.portrait-image
+        img(name='attr_character_avatar')

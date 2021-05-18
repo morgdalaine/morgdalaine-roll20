@@ -71,6 +71,7 @@
   "player_name": "Player Name",
   "pork": "pork",
   "portrait": "Portrait",
+  "portrait_subtitle": "To show alongside chat rolls",
   "power_cost": "Power Cost",
   "power_formula": "Power cost > power output = overheated",
   "power_note": "The POWER COST sum should not exceed the output power",
