@@ -9,7 +9,7 @@
 }
 
 .changelog {
-  border: 2px solid #4C4D4F;
+  border: 2px solid $dark-gray;
   margin-bottom: 1em;
   padding: 1em;
 }
@@ -19,7 +19,7 @@
 }
 
 .close-changelog {
-  border: 2px solid #4C4D4F;
+  border: 2px solid $dark-gray;
   cursor: pointer;
   padding: 0;
   margin: 0.5em 0 0 0;
@@ -46,6 +46,7 @@ h2.mode-title {
 
 div.mode-title {
   margin-bottom: 2em;
+  @include std-font($text-font);
 }
 
 label.mode {
@@ -113,7 +114,7 @@ input[type=radio].notes:checked ~ div.notes {
 
 .sub-header {
   margin-top: 1em;
-  border-bottom: 3px solid #4C4D4F;
+  border-bottom: 3px solid $dark-gray;
 }
 
 .subtitle {

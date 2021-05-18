@@ -1,7 +1,7 @@
 @import './common/sass/variables';
 
 @mixin fontbtn() {
-  border: 2px solid #494a4c;
+  border: 2px solid $dark-gray;
   cursor: pointer;
   display: flex;
   font-size: 8em;
@@ -41,7 +41,7 @@
 }
 
 @mixin std-font($primary: $text-font) {
-  font-family: $primary, 'Comic Sans MS', monospace;
+  font-family: $primary, monospace;
 }
 
 @mixin fill-available() {

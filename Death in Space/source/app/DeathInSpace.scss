@@ -72,7 +72,7 @@
     -moz-box-sizing: border-box;
     background-color: $light-gray;
     border: none;
-    border-bottom: 1px dotted #000;
+    border-bottom: 1px dotted $black;
     border-radius: 0;
     font-family: $input-font;
     font-size: 0.8em;
@@ -95,7 +95,7 @@
   }
 
   span.showhide:checked {
-    background-color: #4C4D4F;
+    background-color: $dark-gray;
     color: white;
     transition: .5s ease;
   }
@@ -115,7 +115,7 @@
     border-radius: 4px;
     padding: 2px 4px;
     background-color: #ccc;
-    color: #4C4D4F;
+    color: $dark-gray;
     transition: .5s ease;
   }
 

@@ -5,14 +5,14 @@ div.modes-show.hide-element
   div.mode-title
     h2.mode-title(data-i18n='page_select')=locals['page_select']
   div.modes
-    - var images = ['https://i.imgur.com/4MbmzcU.png', 'https://i.imgur.com/GqUblzj.png' ]
+    - var github = 'https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/death-in-space/Death%20in%20Space/assets/'
     each page, index in pages
       label.mode
-        h4(class=`${page}_h4` data-i18n=`page_name_${page}`)=locals[`page_name_${page}`]
+        h4(class=`${page}-h4` data-i18n=`page_name_${page}`)=locals[`page_name_${page}`]
         div.mode
           input(type='radio' name='attr_mode_button' class='hide-element' value=index)
           div.mode-image
-            img(src=images[index])
+            img(src=`${github}${page}_page.png`)
 
 input(type='radio' name='attr_mode' class='character-mode hide-element' value='0')
 div.character-mode.hide-element
