@@ -1,0 +1,35 @@
+
+header {
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  text-transform: uppercase;
+  justify-content: space-evenly;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.sheet-info-character, .sheet-info-hub {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.sheet-info-character { color: $red; }
+.sheet-info-hub { color: $blue; }
+
+.game-title {
+  @include std-font($title-font);
+  font-size: 3em;
+}
+
+.header-col2 {
+  padding-top: 1em;
+  border-left: 2px solid $black;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+}

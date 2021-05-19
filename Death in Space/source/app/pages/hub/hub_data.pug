@@ -1,0 +1,15 @@
+include ../../components/hub_data/frame_integrity
+include ../../components/hub_data/modules
+include ../../components/hub_data/systems
+
+mixin hub_data_page
+  div.page-container
+    input(type='radio'
+      name='attr_hub_page'
+      class='hub-data hide-element'
+      value='7'
+      checked)
+    div.hub-data.showhide
+      +frame_integrity_row
+      +systems_row
+      +modules_block

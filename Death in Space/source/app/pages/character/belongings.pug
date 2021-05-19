@@ -1,0 +1,12 @@
+include ../../components/belongings/belongings
+
+mixin belongings_page
+  div.page-container
+    input(type='radio'
+      name='attr_character_page'
+      class='belongings hide-element'
+      value='3'
+      checked)
+    div.belongings.showhide
+      +belongings_block
+      +small_items_block

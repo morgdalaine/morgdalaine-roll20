@@ -1,0 +1,1514 @@
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Arsenal&family=Cairo:wght@900&display=swap);
+.align-left {
+  text-align: left !important;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.dotted-number input[type=number], .dotted-number input[type=number].stat-input {
+  border: 2px dotted #7a7971;
+}
+
+.current-max-block {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid #333;
+  padding: 2px;
+}
+
+.current-max-block .current-max-text {
+  grid-column-end: span 2;
+}
+
+.current-max-block .stat-current-col, .current-max-block .stat-max-col {
+  flex-direction: column;
+}
+
+.current-max-block .stat-current-col label, .current-max-block .stat-max-col label {
+  text-align: center;
+  font-size: 0.8em !important;
+}
+
+.current-max-block .stat-current-col input, .current-max-block .stat-max-col input {
+  display: block;
+  margin: 0 auto;
+}
+
+.current-max-block .stat-current-col input[type=number], .current-max-block .stat-current-col input[type=number].stat-input, .current-max-block .stat-max-col input[type=number], .current-max-block .stat-max-col input[type=number].stat-input {
+  border: 2px dotted #7a7971;
+}
+
+.current-max-block .stat-current-right-border {
+  border-right: 2px dotted #7a7971;
+}
+
+.charsheet {
+  width: 720px !important;
+  margin: 0 auto !important;
+  padding: 15px;
+  font-weight: normal;
+  font-family: "IBM Plex Mono", monospace, monospace;
+}
+
+.charsheet .page-container {
+  display: flex;
+}
+
+.charsheet .hide-element {
+  display: none;
+}
+
+.charsheet input[type='checkbox'].hide-element {
+  display: none;
+}
+
+.charsheet input[type='radio'].hide-element {
+  display: none;
+}
+
+.charsheet div.hide-element {
+  display: none;
+}
+
+.charsheet input::-webkit-outer-spin-button,
+.charsheet input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.charsheet input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.charsheet input[type=number], .charsheet input[type=text], .charsheet textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 0;
+  font-family: "IBM Plex Mono";
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.charsheet input[type=number] {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.charsheet input[type=text] {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet input[type=checkbox] {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #fafafa;
+  border: none;
+  border-bottom: 1px dotted #333;
+  border-radius: 0;
+  font-family: "IBM Plex Mono";
+  font-size: 0.8em;
+  text-decoration: none;
+  width: auto;
+}
+
+.charsheet textarea {
+  resize: none;
+  line-height: 2em;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.charsheet label {
+  margin: 0;
+}
+
+.charsheet span.showhide:checked {
+  background-color: #4c4d4f;
+  color: white;
+  transition: .5s ease;
+}
+
+.charsheet span.showhide {
+  display: inline;
+  border: 1px solid #ccc;
+  margin-right: 11px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.charsheet span.showhide:hover {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background-color: #ccc;
+  color: #4c4d4f;
+  transition: .5s ease;
+}
+
+.charsheet div.showhide {
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.charsheet .hide-element {
+  display: none;
+}
+
+.charsheet input[type='checkbox'].hide-element {
+  display: none;
+}
+
+.charsheet input[type='radio'].hide-element {
+  display: none;
+}
+
+.charsheet div.hide-element {
+  display: none;
+}
+
+.charsheet button.btn.repcontrol_edit,
+.charsheet button.btn.repcontrol_add {
+  width: auto;
+  height: auto;
+  border: 1px solid #333;
+  border-radius: 0;
+  font-size: 0em;
+  text-shadow: none;
+  text-transform: uppercase;
+  padding: 0.2em;
+  margin: 0.3em;
+  font-family: "IBM Plex Mono", monospace, monospace;
+  color: #333;
+  background: #fafafa;
+}
+
+.charsheet button.btn.repcontrol_edit:hover,
+.charsheet button.btn.repcontrol_add:hover {
+  color: #ffffff;
+  background: #7a7971;
+}
+
+.charsheet button.btn.repcontrol_edit:focus,
+.charsheet button.btn.repcontrol_add:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 1px;
+}
+
+.charsheet .repcontrol button.repcontrol_add:before {
+  font-family: pictos;
+  font-size: 13px;
+  margin: 1em;
+  content: '&';
+}
+
+.charsheet .repcontrol button.repcontrol_edit:before {
+  font-family: pictos;
+  font-size: 13px;
+  margin: 1em;
+  content: '(';
+}
+
+.charsheet .repcontainer.editmode + .repcontrol button.repcontrol_edit:before {
+  content: ')';
+}
+
+.charsheet button.btn.repcontrol_edit {
+  margin-right: 3px;
+}
+
+.charsheet button.btn.repcontrol_add {
+  margin-left: 3px;
+}
+
+.charsheet .character-mode {
+  border: 4px solid #eb1c26;
+}
+
+.charsheet .hub-mode {
+  border: 4px solid #32a6d2;
+}
+
+.charsheet .changelog {
+  border: 2px solid #4c4d4f;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.charsheet .center {
+  text-align: center;
+}
+
+.charsheet .close-changelog {
+  border: 2px solid #4c4d4f;
+  cursor: pointer;
+  padding: 0;
+  margin: 0.5em 0 0 0;
+  text-align: center;
+}
+
+.charsheet .close-changelog:hover {
+  background: #ccc;
+  transition: .5s ease;
+}
+
+.charsheet input.changelog:checked ~ div.changelog {
+  display: none;
+}
+
+.charsheet .modes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.charsheet h2.mode-title {
+  text-align: center;
+}
+
+.charsheet div.mode-title {
+  margin-bottom: 2em;
+  font-family: "IBM Plex Mono", monospace, monospace;
+}
+
+.charsheet label.mode {
+  text-align: center;
+  margin: 0.5em;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 1px 1px 19px 6px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  z-index: 5;
+  width: auto;
+}
+
+.charsheet label.mode:hover h4.character-h4 {
+  color: white;
+  background-color: #eb1c26;
+  transition: .5s ease;
+}
+
+.charsheet label.mode:hover h4.hub-h4 {
+  color: white;
+  background-color: #32a6d2;
+  transition: .5s ease;
+}
+
+.charsheet label.mode:hover .mode-image {
+  opacity: 0.7;
+  transition: .5s ease;
+}
+
+.charsheet input[type=radio].character-mode:checked ~ div.character-mode,
+.charsheet input[type=radio].hub-mode:checked ~ div.hub-mode {
+  display: block;
+}
+
+.charsheet input[type=checkbox].modes-show:checked ~ div.modes-show {
+  display: block;
+}
+
+.charsheet div.mode {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 0;
+}
+
+.charsheet .mode-image {
+  display: flex;
+}
+
+.charsheet input[type=radio].personal:checked ~ div.personal,
+.charsheet input[type=radio].situation:checked ~ div.situation,
+.charsheet input[type=radio].belongings:checked ~ div.belongings,
+.charsheet input[type=radio].weaponry:checked ~ div.weaponry,
+.charsheet input[type=radio].notes:checked ~ div.notes,
+.charsheet input[type=radio].specifics:checked ~ div.specifics,
+.charsheet input[type=radio].hub-data:checked ~ div.hub-data,
+.charsheet input[type=radio].layout:checked ~ div.layout,
+.charsheet input[type=radio].cargo:checked ~ div.cargo,
+.charsheet input[type=radio].notes:checked ~ div.notes {
+  display: inline-grid;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
+.charsheet .sub-header {
+  margin-top: 1em;
+  border-bottom: 3px solid #4c4d4f;
+}
+
+.charsheet .subtitle {
+  font-size: 0.8em !important;
+}
+
+.charsheet .stat-block {
+  padding: 2px;
+}
+
+.charsheet .stat-block label {
+  display: block;
+  float: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.charsheet header {
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  text-transform: uppercase;
+  justify-content: space-evenly;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .sheet-info-character, .charsheet .sheet-info-hub {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.charsheet .sheet-info-character {
+  color: #eb1c26;
+}
+
+.charsheet .sheet-info-hub {
+  color: #32a6d2;
+}
+
+.charsheet .game-title {
+  font-family: Cairo, monospace;
+  font-size: 3em;
+}
+
+.charsheet .header-col2 {
+  padding-top: 1em;
+  border-left: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.charsheet .dotted-line {
+  border-bottom: 2px dotted #333 !important;
+}
+
+.charsheet .nav-child {
+  width: 100%;
+  text-align-last: center;
+  margin: 0.1em;
+}
+
+.charsheet .nav-child label {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.charsheet .nav-child label:hover {
+  background: #ccc;
+  transition: 0.5s ease;
+}
+
+.charsheet .page-button-hub,
+.charsheet .page-button-character {
+  padding: 0.1em 0em 0.1em 0em;
+  font-weight: 600;
+  font-family: Helvetica;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.charsheet .page-button-hub {
+  background-color: #32a6d2;
+}
+
+.charsheet .page-button-character {
+  background-color: #eb1c26;
+}
+
+.charsheet .page-button:checked ~ div.page-button-hub {
+  background: #ffffff;
+  color: #32a6d2;
+  transition: 0.5s ease;
+}
+
+.charsheet .page-button:checked ~ div.page-button-character {
+  background: #ffffff;
+  color: #eb1c26;
+  transition: 0.5s ease;
+}
+
+.charsheet .summary {
+  margin-top: 1em;
+}
+
+.charsheet .nav-bar-character {
+  background-color: #eb1c26;
+  border-top: 3px solid #eb1c26;
+  border-bottom: 3px solid #eb1c26;
+}
+
+.charsheet .nav-bar-hub {
+  background-color: #32a6d2;
+  border-top: 3px solid #32a6d2;
+  border-bottom: 3px solid #32a6d2;
+}
+
+.charsheet .nav-row {
+  display: flex;
+}
+
+.charsheet label.page-label {
+  text-align: center;
+}
+
+.charsheet div.optional-nav-sites {
+  width: 0;
+  margin: 0;
+  border: 0;
+  transition: 0.5s ease;
+}
+
+.charsheet input.optional-nav-sites:checked ~ div.optional-nav-sites {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: 0.3s ease;
+  width: 100%;
+  margin: auto;
+}
+
+.charsheet .personal {
+  display: inline-grid;
+  grid-template-columns: 25% 45% 30%;
+  grid-template-rows: 0.5fr repeat(7, 5em);
+  width: 100%;
+}
+
+.charsheet .origin-row {
+  border-bottom: 2px solid #333;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  padding: 5px;
+}
+
+.charsheet .origin-row .origin-label {
+  border-right: 1px dotted #333;
+  text-transform: uppercase;
+  flex: 0 0 60px;
+  text-align: center;
+}
+
+.charsheet .origin-radios {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 5px;
+}
+
+.charsheet .origin-radios .origin-check {
+  text-align: center;
+  display: inline-grid;
+  grid-template-columns: repeat(6, auto);
+}
+
+.charsheet .origin-radios .origin-check label {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .origin-radios .origin-check label input[type=radio] {
+  display: none;
+}
+
+.charsheet .origin-radios .origin-check label input[type=radio]:checked + .origin-square {
+  background: #333;
+  color: #ffffff;
+}
+
+.charsheet .origin-radios .origin-check .origin-square {
+  border: 2px solid #333;
+  height: 10px;
+  margin-top: 3px;
+  width: 10px;
+  text-align: center;
+}
+
+.charsheet .origin-radios .origin-check .origin-name {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 5px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.charsheet .name-row {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+}
+
+.charsheet .name-row .name-block {
+  width: 55%;
+}
+
+.charsheet .name-row .nickname-block {
+  width: 45%;
+}
+
+.charsheet .origin-benefit-block {
+  border-bottom: 2px solid #333;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
+
+.charsheet .xp-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.charsheet .xp-block input[type=number] {
+  text-align: center;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .background-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.charsheet .past-allegiance-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+.charsheet .trait-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.charsheet .drive-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+
+.charsheet .looks-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  grid-column-start: 2;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.charsheet .ability-value input[type=number], .charsheet .ability-value input[type=number].stat-input, .charsheet .defense-value input[type=number], .charsheet .defense-value input[type=number].stat-input, .charsheet .hit-points-current-col input[type=number], .charsheet .hit-points-current-col input[type=number].stat-input, .charsheet .hit-points-max-col input[type=number], .charsheet .hit-points-max-col input[type=number].stat-input {
+  border: 2px dotted #7a7971;
+}
+
+.charsheet .ability-block {
+  border-right: 2px solid #333;
+  grid-column-start: 1;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.charsheet .ability-block .ability-col {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.charsheet .ability-block .ability-col .ability-row {
+  display: flex;
+}
+
+.charsheet .ability-block .ability-col .ability-name {
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: Cairo, monospace;
+}
+
+.charsheet .ability-block .ability-col .ability-value {
+  flex: 0 0 50px;
+}
+
+.charsheet .defense-row {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-start: 2;
+  grid-row-start: 7;
+  padding: 2px;
+}
+
+.charsheet .defense-row label {
+  display: block;
+  float: left;
+  text-transform: uppercase;
+}
+
+.charsheet .defense-row .defense-text {
+  border-right: 2px dotted #7a7971;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.charsheet .defense-row .defense-value {
+  align-self: center;
+}
+
+.charsheet .defense-row .defense-value input {
+  display: block;
+  margin: 0 auto;
+}
+
+.charsheet .hit-points-row {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid #333;
+  padding: 2px;
+  grid-column-start: 2;
+  grid-row-start: 8;
+}
+
+.charsheet .hit-points-row label {
+  display: block;
+  float: left;
+  text-transform: uppercase;
+}
+
+.charsheet .hit-points-row .hit-points-text {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.charsheet .hit-points-row .hit-points-current-col {
+  border-right: 2px dotted #7a7971;
+  flex-direction: column;
+}
+
+.charsheet .hit-points-row .hit-points-current-col label {
+  text-align: center;
+}
+
+.charsheet .hit-points-row .hit-points-current-col input {
+  display: block;
+  margin: 0 auto;
+}
+
+.charsheet .hit-points-row .hit-points-max-col {
+  flex-direction: column;
+}
+
+.charsheet .hit-points-row .hit-points-max-col label {
+  text-align: center;
+}
+
+.charsheet .hit-points-row .hit-points-max-col input {
+  display: block;
+  margin: 0 auto;
+}
+
+.charsheet .portrait-block {
+  grid-column-start: 3;
+  grid-row-start: 6;
+  grid-row-end: 9;
+  text-transform: uppercase;
+}
+
+.charsheet .portrait-block .portrait {
+  display: flex;
+  justify-content: center;
+}
+
+.charsheet .portrait-block .portrait .portrait-image {
+  height: 100px;
+  width: 100px;
+}
+
+.charsheet .situation {
+  display: inline-grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 6em repeat(2, auto);
+  width: 100%;
+}
+
+.charsheet .void-points-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  display: flex;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.charsheet .void-points-block .void-points-left {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.charsheet .void-points-block .void-points-right {
+  flex: 1;
+  padding: 5px;
+}
+
+.charsheet .void-points-block .void-points-radios {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  padding: 5px;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points {
+  display: flex;
+  float: left;
+  margin-top: 3px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label {
+  padding: 4px;
+  position: relative;
+  float: left;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label input[type=radio] {
+  display: none;
+  margin-left: 10px;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label input[type=radio]:checked + span {
+  background: #eb1c26;
+  color: #ffffff;
+  border: none;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label input[type=radio]:checked + span.invert {
+  background: #333;
+  color: #eb1c26;
+  border: 1px solid #eb1c26;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label span {
+  border-radius: 100%;
+  border: 1px solid #7a7971;
+  font-size: 0.8em;
+  height: 20px;
+  left: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 20px;
+}
+
+.charsheet .void-points-block .void-points-radios .void-points label .invert {
+  background: #333;
+  color: #ffffff;
+}
+
+.charsheet .void-points-block .void-points-roll {
+  text-align: right;
+  width: 100%;
+  font-size: 0.8em;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.charsheet .void-points-block .void-points-roll span.void-points-up-arrow {
+  font-size: 2em;
+  font-weight: 700;
+  padding-right: 1em;
+}
+
+.charsheet .void-points-block .void-points-text-top {
+  font-weight: bold;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.charsheet .void-points-block .void-points-text-bottom {
+  font-size: 0.8em;
+}
+
+.charsheet .addiction-block {
+  border-bottom: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.charsheet .addiction-block .days-without {
+  font-size: 0.8em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.charsheet .addiction-block .addiction-text {
+  padding: 5px;
+  text-align: justify;
+}
+
+.charsheet .addiction-block .substance-title {
+  text-align: center;
+}
+
+.charsheet .addiction-block .substance-row {
+  border-bottom: 2px dotted #7a7971;
+  margin: 5px 0px;
+}
+
+.charsheet .addiction-block .days-checkboxes {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  margin-top: 5px;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check {
+  text-align: center;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check label {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check label input[type=radio] {
+  display: none;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check label input[type=radio]:checked + .days-square {
+  background: #333;
+  color: #ffffff;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check .days-square {
+  border: 2px solid #333;
+  height: 10px;
+  width: 10px;
+  margin-left: 2px;
+}
+
+.charsheet .addiction-block .days-checkboxes .day-check .days-plus {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.charsheet .cosmic-mutations-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.charsheet .void-corruption-block {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #333;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.charsheet .life-support-block {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.charsheet .life-support-block .oxygen-tank-row {
+  display: flex;
+  flex: 0 0 100px;
+  flex-direction: column;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-numbers {
+  display: flex;
+  flex: 0 0 20px;
+  font-size: 11px;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 70px;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank {
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/roll20-character-sheets/deathinspace/Death%20In%20Space/assets/oxygen_tank.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: 0 0 58px;
+  height: 58px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments {
+  display: flex;
+  padding-left: 16px;
+  padding-top: 6px;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment {
+  height: 45px;
+  width: 21px;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment label {
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment label input[type=checkbox] {
+  display: none;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment label input[type=checkbox]:checked + .tank-section {
+  background: #eb1c26;
+  background-color: #eb1c26;
+  color: #ffffff;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment label input[type=checkbox]:checked + .tank-section:hover {
+  background-color: rgba(235, 28, 38, 0.5);
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment .tank-section {
+  border-right: 1px solid #eb1c26;
+  height: 45px;
+  width: 21px;
+  margin: -1px 0;
+  padding: 0;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment .tank-section:hover {
+  background-color: rgba(235, 28, 38, 0.5);
+}
+
+.charsheet .life-support-block .oxygen-tank-row .oxygen-tank .oxygen-increments .oxygen-increment:nth-last-child(1) {
+  border-right: none;
+}
+
+.charsheet .life-support-block .oxygen-tank-row .tank-space {
+  flex: 1;
+}
+
+.charsheet .belongings {
+  display: inline-grid;
+  grid-template-rows: 10em auto;
+  width: 100%;
+}
+
+.charsheet .belongings-block {
+  border-bottom: 2px solid #333;
+}
+
+.charsheet .belongings-block .belongings-note {
+  display: flex;
+  padding: 5px;
+}
+
+.charsheet .belongings-block .belongings-note .exclamation {
+  font-size: 2.5em;
+  text-align: right;
+  width: 100%;
+  font-weight: bold;
+}
+
+.charsheet .belongings-block .belongings-note .note {
+  display: inline-block;
+  padding: 5px;
+}
+
+.charsheet .belongings-block .belongings-note .carry {
+  color: #7a7971;
+  margin-left: 2px;
+}
+
+.charsheet .belongings-block .belongings-note .carry:before {
+  content: '(';
+}
+
+.charsheet .belongings-block .belongings-note .carry:after {
+  content: ')';
+}
+
+.charsheet .weaponry {
+  display: inline-grid;
+  grid-template-rows: repeat(4, 1fr);
+  width: 100%;
+}
+
+.charsheet .equipment {
+  display: inline-grid;
+  grid-template-columns: repeat(7, calc(100% / 7));
+  border-bottom: 2px solid #333;
+}
+
+.charsheet .equipment .weapon-name {
+  padding-left: 5px;
+  grid-column: span 4;
+  border-right: 2px dotted #7a7971;
+}
+
+.charsheet .equipment .weapon-damage {
+  padding-left: 5px;
+  border-right: 2px dotted #7a7971;
+}
+
+.charsheet .equipment .equipment-units {
+  padding-left: 5px;
+  border-right: 2px dotted #7a7971;
+}
+
+.charsheet .equipment .equipment-condition {
+  padding-left: 5px;
+}
+
+.charsheet .equipment .armor-name {
+  padding-left: 5px;
+  grid-column: span 3;
+}
+
+.charsheet .equipment .armor-protects-against {
+  padding-left: 5px;
+  grid-column: span 2;
+  border-right: 2px dotted #7a7971;
+}
+
+.charsheet .holds-debt {
+  display: inline-grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.charsheet .holds-debt .holds {
+  padding-left: 5px;
+  grid-column: span 2;
+  border-right: 2px dotted #7a7971;
+}
+
+.charsheet .holds-debt .debt {
+  padding-left: 5px;
+  grid-column: span 2;
+}
+
+.charsheet .holds-debt input[type=number] {
+  text-align: center;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .notes {
+  display: inline-grid;
+  grid-template-rows: auto;
+  width: 100%;
+}
+
+.charsheet .specifics {
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(4, 5em);
+  width: 100%;
+}
+
+.charsheet .nickname-row {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+}
+
+.charsheet .hub-frame-type-row {
+  border-bottom: 2px solid #333;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.charsheet .hub-background-block {
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.charsheet .appearance-block {
+  border-bottom: 2px solid #333;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.charsheet .quirks-block {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+}
+
+.charsheet .hub-data {
+  display: inline-grid;
+  grid-template-rows: 1fr 0.5fr auto auto;
+  width: 100%;
+}
+
+.charsheet .frame-integrity-row, .charsheet .frame-integrity-row-bottom {
+  display: inline-grid;
+  grid-template-columns: repeat(15, 1fr);
+  width: 100%;
+}
+
+.charsheet .frame-integrity-row {
+  height: 5em;
+  margin-top: 0.5em;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #32a6d2;
+}
+
+.charsheet .frame-integrity-row-bottom {
+  border-bottom: 2px solid #333;
+  height: 3em;
+}
+
+.charsheet .frame-integrity {
+  display: flex;
+  flex-direction: column;
+  grid-column-end: span 2;
+  border-right: 1px solid #333;
+}
+
+.charsheet .frame-integrity-title {
+  margin-bottom: 6px;
+}
+
+.charsheet .integrity-increment {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #333;
+}
+
+.charsheet .integrity-increment label {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .integrity-increment label input[type=checkbox]:checked + .frame-section {
+  background: #32a6d2;
+  background-color: #32a6d2;
+  border-left: 2px solid #333;
+}
+
+.charsheet .integrity-increment label input[type=checkbox]:checked + .frame-section:hover {
+  background-color: rgba(50, 166, 210, 0.5);
+}
+
+.charsheet .integrity-increment .frame-section {
+  border-left: 1px solid #32a6d2;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  height: 3.5em;
+  margin: -1px 0;
+  padding: 0;
+}
+
+.charsheet .integrity-increment .frame-section:hover {
+  background-color: rgba(50, 166, 210, 0.5);
+}
+
+.charsheet .integrity-increment:nth-last-child(1) {
+  border-right: none;
+}
+
+.charsheet .integrity-percent {
+  background-color: #32a6d2;
+  color: #ffffff;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+.charsheet .frame-defense-rating {
+  grid-column-end: span 3;
+  border-left: 2px solid #333;
+}
+
+.charsheet .frame-defense-rating input[type=number] {
+  margin-left: 2px;
+}
+
+.charsheet .frame-roll-on-damage {
+  font-size: 0.7em;
+  padding: 0 0.5em;
+  text-align: left;
+  text-transform: uppercase;
+  grid-column-end: span 2;
+}
+
+.charsheet .frame-spacer {
+  grid-column-end: span 2;
+}
+
+.charsheet .frame-all-is-calm {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  grid-column-end: span 4;
+}
+
+.charsheet .systems-row {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 30%) 25% 15%;
+  width: 100%;
+  border-bottom: 2px solid #333;
+}
+
+.charsheet .power-source-block {
+  border-right: 2px dotted #333;
+  display: flex;
+  padding: 2px;
+}
+
+.charsheet .power-source-block .power-source-text {
+  flex: 1;
+}
+
+.charsheet .power-source-block .power-source-radios {
+  display: flex;
+  flex: 0 0 80px;
+  flex-direction: column;
+  font-size: 0.8em;
+  justify-content: space-around;
+  text-align: right;
+}
+
+.charsheet .power-source-block .power-source-radio-row label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.charsheet .output-power-block input[type=number] {
+  margin-left: 2px;
+}
+
+.charsheet .modules-wrapper {
+  display: flex;
+}
+
+.charsheet .modules-block {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .modules-item {
+  display: flex;
+  margin: 2px 5px;
+}
+
+.charsheet .modules-item .modules-name {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .modules-item .modules-power-cost, .charsheet .modules-item .modules-total-power-cost {
+  width: 3.5em;
+  margin-left: 5px;
+}
+
+.charsheet .modules-item .modules-power-cost label, .charsheet .modules-item .modules-total-power-cost label {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.charsheet .modules-item .modules-power-cost input[type=number], .charsheet .modules-item .modules-total-power-cost input[type=number] {
+  width: 2.5em;
+  border: 2px dotted #7a7971;
+}
+
+.charsheet .modules-item .modules-total-power-cost {
+  margin-top: 0.5em;
+}
+
+.charsheet .power-output-formula-column {
+  width: 6em;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.charsheet .power-output-formula-column input[type=number] {
+  width: 2.5em;
+  border: 2px dotted #7a7971;
+  margin-bottom: 11px;
+}
+
+.charsheet .power-output-formula-column .output-power-block:before {
+  content: '\2264';
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.charsheet .power-output-formula-column label {
+  transform: rotate(-90deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
+  height: 40px;
+}
+
+.charsheet .cargo {
+  display: inline-grid;
+  grid-template-rows: 10em auto;
+  width: 100%;
+}
+
+.charsheet .cargo-block {
+  border-bottom: 2px solid #333;
+}
+
+.charsheet .cargo-block .cargo-note {
+  display: flex;
+  padding: 5px;
+}
+
+.charsheet .layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.charsheet .layout-grid {
+  background-image: radial-gradient(#32a6d2 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+  width: 100%;
+  height: 30em;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem {
+  margin: 5px;
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .btn {
+  font-size: 0.8em;
+  border-radius: 0;
+  border: 1px solid #7a7971;
+  color: #7a7971;
+  background: #ffffff;
+  text-shadow: 0;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol {
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .btn-danger {
+  background-color: #eb1c26;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del, .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {
+  float: right;
+  width: auto;
+  margin: 0;
+  height: auto;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  cursor: move;
+  width: auto;
+  margin: 0;
+  height: auto;
+}
+
+input[type=text].repeating-input {
+  border-bottom: 2px dotted #7a7971 !important;
+  margin: 0;
+}
+
+.sheet-rolltemplate-sheetname {
+  display: block;
+}

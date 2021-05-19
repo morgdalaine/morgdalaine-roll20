@@ -1,0 +1,22 @@
+
+mixin nickname_block
+  div.nickname-row
+    div.stat-block.nickname-block
+      +stat('text', 'nickname')
+
+mixin hub_type_frame_block
+  div.hub-frame-type-row
+    div.stat-block.hub-frame-type-block
+      +stat('text', 'hub_type_and_frame')
+
+mixin background_block
+  div.stat-block.hub-background-block
+    +stat_area('background', 4)
+
+mixin appearance_block
+  div.stat-block.appearance-block
+    +stat_area('appearance', 4)
+
+mixin quirks_block
+  div.stat-block.quirks-block
+    +stat('text', 'quirks')

@@ -1,0 +1,9 @@
+
+mixin hitpoint_block
+  div.hit-points-row
+    div.stat-block.hit-points-text
+      +label_with_subtitle('hit_points', 'hit_points_subtitle_1', 'hit_points_subtitle_2')
+    div.stat-block.hit-points-current-col
+      +stat('number', 'hp', 'hp_current')
+    div.stat-block.hit-points-max-col
+      +stat('number', 'hp_max')

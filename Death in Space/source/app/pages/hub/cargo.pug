@@ -1,0 +1,11 @@
+include ../../components/cargo/cargo
+
+mixin cargo_page
+  div.page-container
+    input(type='radio'
+      name='attr_hub_page'
+      class='cargo hide-element'
+      value='9'
+      checked)
+    div.cargo.showhide
+      +cargo_block

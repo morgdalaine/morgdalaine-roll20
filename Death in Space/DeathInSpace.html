@@ -1,0 +1,972 @@
+
+<input class="modes-show hide-element" type="checkbox" name="attr_modes_choice" checked="checked"/>
+<div class="modes-show hide-element">
+  <div class="mode-title">
+    <h2 class="mode-title" data-i18n="page_select">SELECT THE SHEET TYPE</h2>
+  </div>
+  <div class="modes">
+    <label class="mode">
+      <h4 class="character-h4" data-i18n="page_name_character">CHARACTER</h4>
+      <div class="mode">
+        <input class="hide-element" type="radio" name="attr_mode_button" value="0"/>
+        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/death-in-space/Death%20in%20Space/assets/character_page.png"/></div>
+      </div>
+    </label>
+    <label class="mode">
+      <h4 class="hub-h4" data-i18n="page_name_hub">HUB</h4>
+      <div class="mode">
+        <input class="hide-element" type="radio" name="attr_mode_button" value="1"/>
+        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/death-in-space/Death%20in%20Space/assets/hub_page.png"/></div>
+      </div>
+    </label>
+  </div>
+</div>
+<input class="character-mode hide-element" type="radio" name="attr_mode" value="0"/>
+<div class="character-mode hide-element">
+  <div class="header">
+      <header>
+        <div class="sheet-info-character">
+          <div class="game-title" data-i18n="game_title">Death In Space</div>
+          <div class="mode-title" data-i18n="sheet_title_character">Personal Data Sheet</div>
+        </div>
+        <div class="header-col2">
+            <div data-i18n="player_information">Section 0. Player Information</div>
+              <label data-i18n="player_name">Player Name</label>
+              <input class="dotted-line" type="text" name="attr_player_name"/>
+        </div>
+      </header>
+      <div class="nav-bar-character">
+        <div class="nav-row">
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="1" checked="checked"/>
+              <div class="page-button-character" data-i18n="nav_personal">Personal</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="2"/>
+              <div class="page-button-character" data-i18n="nav_situation">Situation</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="3"/>
+              <div class="page-button-character" data-i18n="nav_belongings">Belongings</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="4"/>
+              <div class="page-button-character" data-i18n="nav_weaponry">Weaponry</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="5"/>
+              <div class="page-button-character" data-i18n="nav_notes">Notes</div>
+            </label>
+          </div>
+        </div>
+      </div>
+  </div>
+    <div class="page-container">
+      <input class="personal hide-element" type="radio" name="attr_character_page" value="1" checked="checked"/>
+      <div class="personal showhide">
+          <div class="origin-row">
+            <div class="origin-label" data-i18n="origin">Origin</div>
+            <div class="origin-radios">
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="void"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="void">void</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="punk"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="punk">punk</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="solpod"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="solpod">solpod</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="chrome"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="chrome">chrome</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="carbon"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="carbon">carbon</div>
+                </label>
+              </div>
+              <div class="origin-check">
+                <label>
+                  <input type="radio" name="attr_origin" value="velocity_cursed"/>
+                  <div class="origin-square"></div>
+                  <div class="origin-name" data-i18n="velocity_cursed">velocity cursed</div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="name-row">
+            <div class="stat-block name-block">
+                <label data-i18n="character_name">Name</label>
+                <input class="stat-input" type="text" name="attr_character_name"/>
+            </div>
+            <div class="stat-block name-block">
+                <label data-i18n="nickname">Nickname</label>
+                <input class="stat-input" type="text" name="attr_nickname"/>
+            </div>
+          </div>
+          <div class="stat-block origin-benefit-block">
+              <label data-i18n="origin_benefit">Origin Benefit</label>
+              <textarea class="stat-input" rows="10" name="attr_origin_benefit"></textarea>
+          </div>
+          <div class="stat-block xp-block">
+              <label data-i18n="xp">XP</label>
+              <input class="stat-input" type="number" name="attr_xp"/>
+          </div>
+          <div class="stat-block background-block">
+              <label data-i18n="background">Background</label>
+              <input class="stat-input" type="text" name="attr_background"/>
+          </div>
+          <div class="stat-block past-allegiance-block">
+              <label data-i18n="past_allegiance">Past Allegiance</label>
+              <input class="stat-input" type="text" name="attr_past_allegiance"/>
+          </div>
+          <div class="stat-block trait-block">
+              <label data-i18n="trait">Trait</label>
+              <input class="stat-input" type="text" name="attr_trait"/>
+          </div>
+          <div class="stat-block drive-block">
+              <label data-i18n="drive">Drive</label>
+              <input class="stat-input" type="text" name="attr_drive"/>
+          </div>
+          <div class="stat-block looks-block">
+              <label data-i18n="looks">Looks</label>
+              <textarea class="stat-input" rows="4" name="attr_looks"></textarea>
+          </div>
+          <div class="stat-block ability-block">
+            <label data-i18n="ability">Ability</label>
+            <div class="ability-col">
+                <div class="ability-row">
+                  <div class="ability-name" data-i18n="body">Body</div>
+                  <div class="ability-value">
+                    <input class="stat-input" type="number" name="attr_body"/>
+                  </div>
+                </div>
+                <div class="ability-row">
+                  <div class="ability-name" data-i18n="dexterity">Dexterity</div>
+                  <div class="ability-value">
+                    <input class="stat-input" type="number" name="attr_dexterity"/>
+                  </div>
+                </div>
+                <div class="ability-row">
+                  <div class="ability-name" data-i18n="savvy">Savvy</div>
+                  <div class="ability-value">
+                    <input class="stat-input" type="number" name="attr_savvy"/>
+                  </div>
+                </div>
+                <div class="ability-row">
+                  <div class="ability-name" data-i18n="tech">Tech</div>
+                  <div class="ability-value">
+                    <input class="stat-input" type="number" name="attr_tech"/>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="defense-row">
+            <div class="stat-block defense-text">
+                <label data-i18n="defense">Defense Rating</label>
+                <div class="subtitle" data-i18n="defense_subtitle">12+DEX UNARMORED</div>
+            </div>
+            <div class="stat-block defense-value">
+                <input class="stat-input" type="number" name="attr_defense"/>
+            </div>
+          </div>
+          <div class="hit-points-row">
+            <div class="stat-block hit-points-text">
+                <label data-i18n="hit_points">Hit Points</label>
+                <div class="subtitle" data-i18n="hit_points_subtitle_1">Start with 1d8</div>
+                <div class="subtitle" data-i18n="hit_points_subtitle_2">Recover 1d4+BDY</div>
+            </div>
+            <div class="stat-block hit-points-current-col">
+                <label data-i18n="hp_current">Current</label>
+                <input class="stat-input" type="number" name="attr_hp"/>
+            </div>
+            <div class="stat-block hit-points-max-col">
+                <label data-i18n="hp_max">Max</label>
+                <input class="stat-input" type="number" name="attr_hp_max"/>
+            </div>
+          </div>
+          <div class="stat-block portrait-block">
+              <label data-i18n="portrait">Portrait</label>
+              <div class="subtitle" data-i18n="portrait_subtitle">To show alongside chat rolls</div>
+              <input class="stat-input" type="text" name="attr_portrait"/>
+            <div class="portrait">
+              <div class="portrait-image"><img name="attr_character_avatar" width="100" height="100"/></div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="situation hide-element" type="radio" name="attr_character_page" value="2"/>
+      <div class="situation showhide">
+          <div class="void-points-block">
+            <div class="void-points-left">
+              <div class="stat-block">
+                <label data-i18n="void_points">Void Points</label>
+              </div>
+                <div class="void-points-radios">
+                  <div class="void-points">
+                    <label>
+                      <input type="radio" name="attr_void_points" value="0"/><span>0</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="1"/><span>1</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="2"/><span>2</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="3"/><span>3</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="4"/><span>4</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attr_void_points" value="5"/><span class="invert">5</span>
+                    </label>
+                  </div>
+                </div>
+              <div class="void-points-roll"><span><span data-i18n="roll_corruption">Roll corruption effects</span><span class="void-points-up-arrow">&amp;#8593;</span></span></div>
+            </div>
+            <div class="void-points-right">
+              <div class="void-points-text-top" data-i18n="use_void_point">The player can use 1 void point to:</div>
+              <div class="void-points-text-bottom">
+                <ul>
+                  <li data-i18n="void_point_use_1">Get advantage on an ability check</li>
+                  <li data-i18n="void_point_use_2">Activate a cosmic mutation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="addiction-block">
+            <div class="stat-block addiction-title">
+              <label data-i18n="addiction">Addiction</label>
+            </div>
+            <div class="days-without" data-i18n="days_without">Days Without Substance</div>
+              <div class="days-checkboxes">
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="1"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+1</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="2"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+2</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="3"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+3</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="4"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+4</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="5"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+5</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="6"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+6</div>
+                  </label>
+                </div>
+                <div class="day-check">
+                  <label>
+                    <input type="radio" name="attr_days_without_substance" value="7"/>
+                    <div class="days-square"></div>
+                    <div class="days-plus">+7</div>
+                  </label>
+                </div>
+              </div>
+            <div class="stat-block substance-title">
+              <label data-i18n="substance">Substance</label>
+            </div>
+            <fieldset class="repeating_substances">
+                <input class="repeating-input" type="text" name="attr_substance"/>
+            </fieldset>
+            <div class="substance-row"></div>
+            <div class="addiction-text subtitle" data-i18n="addiction_subtitle">When using an addictive substance, such as virtual reality stimulants, medical drugs, or similar, roll a BDY ability check.</div>
+          </div>
+          <div class="cosmic-mutations-block">
+            <div class="stat-block mutations-title">
+              <label data-i18n="cosmic_mutations">Cosmic Mutations</label>
+            </div>
+            <fieldset class="repeating_mutations">
+                <input class="repeating-input" type="text" name="attr_cosmic_mutation"/>
+            </fieldset>
+          </div>
+          <div class="void-corruption-block">
+            <div class="stat-block corruption-title">
+              <label data-i18n="void_corruption">Void Corruption</label>
+            </div>
+            <fieldset class="repeating-corruptions">
+                <input class="repeating-input" type="text" name="attr_void_corruption"/>
+            </fieldset>
+          </div>
+          <div class="life-support-block">
+            <div class="stat-block life-support-title">
+              <label data-i18n="life_support">Life Support</label>
+            </div>
+            <div class="tank-space"></div>
+            <div class="oxygen-tank-row">
+              <div class="oxygen-numbers">
+                <div>0%</div>
+                <div>100%</div>
+              </div>
+                <div class="oxygen-tank">
+                  <div class="oxygen-increments">
+                    <div class="oxygen-increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_0" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="oxygen-increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_1" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="oxygen-increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_2" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="oxygen-increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_3" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="oxygen-increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_4" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="oxygen-increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_5" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                    <div class="oxygen-increment">
+                      <label>
+                        <input type="checkbox" name="attr_life_support_6" value="1"/>
+                        <div class="tank-section"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="tank-space"></div>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="belongings hide-element" type="radio" name="attr_character_page" value="3" checked="checked"/>
+      <div class="belongings showhide">
+          <div class="belongings-block">
+            <div class="stat-block belonging-title">
+              <label data-i18n="belongings">Belongings</label>
+            </div>
+            <fieldset class="repeating_belongings">
+                <input class="repeating-input" type="text" name="attr_belongings"/>
+            </fieldset>
+            <div class="belongings-note">
+              <div class="exclamation">!</div>
+              <div class="note"><span data-i18n="belongings_note">Please note that the number of item slots is equal to 12+BDY</span><span class="carry" name="attr_carry"></span></div>
+            </div>
+          </div>
+          <div class="stat-block small-items-block">
+              <label data-i18n="small_items">Small Items</label>
+              <textarea class="stat-input" rows="2" name="attr_small_items"></textarea>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="weaponry hide-element" type="radio" name="attr_character_page" value="4"/>
+      <div class="weaponry showhide">
+          <div class="equipment">
+            <div class="stat-block weapon-name">
+                <label data-i18n="weapon_1">Weapon 1</label>
+                <input class="stat-input" type="text" name="attr_weapon_1"/>
+            </div>
+            <div class="stat-block weapon-damage">
+                <label data-i18n="damage">Damage</label>
+                <input class="stat-input" type="text" name="attr_damage"/>
+            </div>
+            <div class="stat-block equipment-units">
+                <label data-i18n="units">Units</label>
+                <input class="stat-input" type="text" name="attr_units"/>
+            </div>
+            <div class="stat-block equipment-condition">
+                <label data-i18n="condition">Condition</label>
+                <input class="stat-input" type="text" name="attr_condition"/>
+            </div>
+          </div>
+          <div class="equipment">
+            <div class="stat-block weapon-name">
+                <label data-i18n="weapon_2">Weapon 2</label>
+                <input class="stat-input" type="text" name="attr_weapon_2"/>
+            </div>
+            <div class="stat-block weapon-damage">
+                <label data-i18n="damage">Damage</label>
+                <input class="stat-input" type="text" name="attr_damage"/>
+            </div>
+            <div class="stat-block equipment-units">
+                <label data-i18n="units">Units</label>
+                <input class="stat-input" type="text" name="attr_units"/>
+            </div>
+            <div class="stat-block equipment-condition">
+                <label data-i18n="condition">Condition</label>
+                <input class="stat-input" type="text" name="attr_condition"/>
+            </div>
+          </div>
+          <div class="equipment">
+            <div class="stat-block armor-name">
+                <label data-i18n="armor">Armor</label>
+                <input class="stat-input" type="text" name="attr_armor"/>
+            </div>
+            <div class="stat-block armor-protects-against">
+                <label data-i18n="protects_against">Protects Against</label>
+                <input class="stat-input" type="text" name="attr_protects_against"/>
+            </div>
+            <div class="stat-block equipment-units">
+                <label data-i18n="dr_bonus">DR Bonus</label>
+                <input class="stat-input" type="text" name="attr_dr_bonus"/>
+            </div>
+            <div class="stat-block equipment-condition">
+                <label data-i18n="condition">Condition</label>
+                <input class="stat-input" type="text" name="attr_condition"/>
+            </div>
+          </div>
+          <div class="holds-debt">
+            <div class="stat-block holds">
+                <label data-i18n="holds">Holds</label>
+                <input class="stat-input" type="number" name="attr_holds"/>
+            </div>
+            <div class="stat-block debt">
+                <label data-i18n="debt">Debt</label>
+                <input class="stat-input" type="number" name="attr_debt"/>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="notes hide-element" type="radio" name="attr_character_page" value="5"/>
+      <div class="notes showhide">
+          <div class="stat-block notes-block">
+              <label data-i18n="notes">Notes</label>
+              <textarea class="stat-input" rows="18" name="attr_notes"></textarea>
+          </div>
+      </div>
+    </div>
+</div>
+<input class="hub-mode hide-element" type="radio" name="attr_mode" value="1"/>
+<div class="hub-mode hide-element">
+  <div class="header">
+      <header>
+        <div class="sheet-info-hub">
+          <div class="game-title" data-i18n="game_title">Death In Space</div>
+          <div class="mode-title" data-i18n="sheet_title_hub">Hub Data Sheet</div>
+        </div>
+        <div class="header-col2">
+            <div data-i18n="owner_information">Section 0. Owner Information</div>
+              <label data-i18n="owner_signature">Owner Signature</label>
+              <input class="dotted-line" type="text" name="attr_owner_signature"/>
+        </div>
+      </header>
+      <div class="nav-bar-hub">
+        <div class="nav-row">
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="6" checked="checked"/>
+              <div class="page-button-hub" data-i18n="nav_specifics">Hub Info</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="7"/>
+              <div class="page-button-hub" data-i18n="nav_hub_data">Hub Data</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="8"/>
+              <div class="page-button-hub" data-i18n="nav_layout">Layout</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="9"/>
+              <div class="page-button-hub" data-i18n="nav_cargo">Cargo</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="5"/>
+              <div class="page-button-hub" data-i18n="nav_notes">Notes</div>
+            </label>
+          </div>
+        </div>
+      </div>
+  </div>
+    <div class="page-container">
+      <input class="specifics hide-element" type="radio" name="attr_hub_page" value="6" checked="checked"/>
+      <div class="specifics showhide">
+          <div class="nickname-row">
+            <div class="stat-block nickname-block">
+                <label data-i18n="nickname">Nickname</label>
+                <input class="stat-input" type="text" name="attr_nickname"/>
+            </div>
+          </div>
+          <div class="hub-frame-type-row">
+            <div class="stat-block hub-frame-type-block">
+                <label data-i18n="hub_type_and_frame">Hub Type and Frame</label>
+                <input class="stat-input" type="text" name="attr_hub_type_and_frame"/>
+            </div>
+          </div>
+          <div class="stat-block hub-background-block">
+              <label data-i18n="background">Background</label>
+              <textarea class="stat-input" rows="4" name="attr_background"></textarea>
+          </div>
+          <div class="stat-block appearance-block">
+              <label data-i18n="appearance">Appearance</label>
+              <textarea class="stat-input" rows="4" name="attr_appearance"></textarea>
+          </div>
+          <div class="stat-block quirks-block">
+              <label data-i18n="quirks">Quirks</label>
+              <input class="stat-input" type="text" name="attr_quirks"/>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="hub-data hide-element" type="radio" name="attr_hub_page" value="7" checked="checked"/>
+      <div class="hub-data showhide">
+          <div class="frame-integrity-row">
+            <div class="frame-integrity">
+              <div class="stat-block frame-integrity-title">
+                <label data-i18n="frame_integrity">Frame Integrity</label>
+              </div>
+              <div class="integrity-percent">0%</div>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_0" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_1" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_2" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_3" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_4" value="1"/>
+                </div>
+              </label>
+              <div class="integrity-percent">50%</div>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_5" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_6" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_7" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_8" value="1"/>
+                </div>
+              </label>
+            </div>
+            <div class="integrity-increment">
+              <label>
+                <div class="integrity-checkbox">
+                  <input type="checkbox" name="attr_frame_integrity_9" value="1"/>
+                </div>
+              </label>
+              <div class="integrity-percent">100%</div>
+            </div>
+            <div class="frame-defense-rating">
+              <div class="stat-block frame-defense-rating-block dotted-number">
+                  <label data-i18n="defense">Defense Rating</label>
+                  <input class="stat-input" type="number" name="attr_defense"/>
+              </div>
+            </div>
+          </div>
+          <div class="frame-integrity-row-bottom">
+            <div class="frame-roll-on-damage" data-i18n="roll_damage_table">Roll on damage table</div>
+            <div class="frame-spacer"></div>
+            <div class="frame-spacer"></div>
+            <div class="frame-roll-on-damage" data-i18n="roll_damage_table">Roll on damage table</div>
+            <div></div>
+            <div class="frame-spacer"></div>
+            <div class="frame-all-is-calm" data-i18n="all_is_calm">When all is calm the hub regains 1d4×10% frame integrity on a calm night up to maximum</div>
+          </div>
+          <div class="systems-row">
+              <div class="current-max-block">
+                <div class="stat-block current-max-text">
+                  <label data-i18n="condition">Condition</label>
+                </div>
+                <div class="stat-block stat-current-col">
+                    <label data-i18n="current">Current</label>
+                    <input class="stat-input" type="number" name="attr_condition"/>
+                </div>
+                <div class="stat-block stat-max-col">
+                    <label data-i18n="max">Max</label>
+                    <input class="stat-input" type="number" name="attr_condition_max"/>
+                </div>
+              </div>
+              <div class="current-max-block">
+                <div class="stat-block current-max-text">
+                  <label data-i18n="fuel">Fuel</label>
+                </div>
+                <div class="stat-block stat-current-col">
+                    <label data-i18n="current">Current</label>
+                    <input class="stat-input" type="number" name="attr_fuel"/>
+                </div>
+                <div class="stat-block stat-max-col">
+                    <label data-i18n="max">Max</label>
+                    <input class="stat-input" type="number" name="attr_fuel_max"/>
+                </div>
+              </div>
+              <div class="power-source-block">
+                <div class="stat-block power-source-text">
+                  <label data-i18n="power_source">Power Source</label>
+                </div>
+                <div class="stat-block power-source-radios">
+                  <div class="power-source-radio-row">
+                    <label><span data-i18n="slow">Slow</span>
+                      <input class="stat-input" type="radio" name="attr_power_source" value="slow"/>
+                    </label>
+                  </div>
+                  <div class="power-source-radio-row">
+                    <label><span data-i18n="fast">Fast</span>
+                      <input class="stat-input" type="radio" name="attr_power_source" value="fast"/>
+                    </label>
+                  </div>
+                  <div class="power-source-radio-row">
+                    <label><span data-i18n="unknown">Unknown</span>
+                      <input class="stat-input" type="radio" name="attr_power_source" value="unknown"/>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="stat-block output-power-block dotted-number">
+                  <label data-i18n="output_power">Output Power</label>
+                  <input class="stat-input" type="number" name="attr_output_power"/>
+              </div>
+          </div>
+          <div class="modules-wrapper">
+            <div class="modules-block">
+              <div class="stat-block modules-item">
+                <div class="modules-name">
+                    <label data-i18n="modules">Modules</label>
+                </div>
+                <div class="modules-power-cost">
+                    <label data-i18n="power_cost">Power Cost</label>
+                </div>
+              </div>
+              <fieldset class="repeating_modules">
+                  <div class="modules-item">
+                    <div class="modules-name">
+                        <input class="repeating-input" type="text" name="attr_module_name"/>
+                    </div>
+                    <div class="stat-block modules-power-cost">
+                        <input class="stat-input" type="number" name="attr_power_cost"/>
+                    </div>
+                  </div>
+              </fieldset>
+              <div class="stat-block modules-item">
+                <div class="stat-block modules-name">
+                  <label class="subtitle align-right" data-i18n="power_formula">Power cost &gt; power output = overheated</label>
+                  <label class="subtitle align-right" data-i18n="power_note">The POWER COST sum should not exceed the output power</label>
+                </div>
+                <div class="modules-total-power-cost">
+                  <div class="stat-block modules-name">
+                      <input class="stat-input" type="number" name="attr_total_power_cost" readonly="readonly"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="power-output-formula-column">
+              <div class="stat-block output-power-block">
+                  <input class="stat-input" type="number" name="attr_output_power" readonly="readonly"/>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="cargo hide-element" type="radio" name="attr_hub_page" value="9" checked="checked"/>
+      <div class="cargo showhide">
+          <div class="cargo-block">
+            <div class="stat-block cargo-title">
+              <label data-i18n="cargo">Cargo</label>
+            </div>
+            <fieldset class="repeating_cargo">
+                <input class="repeating-input" type="text" name="attr_cargo"/>
+            </fieldset>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="layout hide-element" type="radio" name="attr_hub_page" value="8" checked="checked"/>
+      <div class="layout showhide">
+          <div class="layout-splash">
+            <div class="stat-block cargo-title">
+              <label data-i18n="hub_design">Design your hub layout</label>
+            </div>
+          </div>
+          <div class="layout-grid"></div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="notes hide-element" type="radio" name="attr_hub_page" value="5"/>
+      <div class="notes showhide">
+          <div class="stat-block notes-block">
+              <label data-i18n="notes">Notes</label>
+              <textarea class="stat-input" rows="18" name="attr_notes"></textarea>
+          </div>
+      </div>
+    </div>
+</div>
+<rolltemplate class="sheet-rolltemplate-sheetname">
+  {{#rollName}}
+  {{/rollName}}
+</rolltemplate>
+<script type="text/worker">
+  
+// update carry
+on('change:body sheet:opened', function() {
+  getAttrs(['body'], function(values) {
+    let body = parseInt(values.body) || 0;
+    let carry = 12 + body;
+    updateAttrs = { carry: carry };
+    setAttrs(updateAttrs);
+    console.log(updateAttrs);
+  });
+});
+  
+// udpate any current + _max value
+const currentMax = (attr) => {
+  getAttrs([attr, `${attr}_max`], function(v) {
+    const current = parseInt(v[attr]) || 0;
+    const maximum = parseInt(v[`${attr}_max`]) || 0;
+    const fin_val = (current > maximum)
+                      ? maximum
+                      : (current < 0 ? 0 : current);
+    const updateAttrs = {};
+    updateAttrs[attr] = fin_val;
+    updateAttrs[`${attr}_max`] = Math.max(0, maximum);
+    setAttrs(updateAttrs);
+    console.log(updateAttrs);
+  });
+};
+
+on('change:hp change:hp_max', function() {
+  currentMax('hp');
+});
+
+on('change:condition change:condition_max', function() {
+  currentMax('condition');
+});
+
+on('change:fuel change:fuel_max', function() {
+  currentMax('fuel');
+});
+  
+// update frame integrity
+const frame_integrity = ['frame_integrity_0', 'frame_integrity_1', 'frame_integrity_2', 'frame_integrity_3', 'frame_integrity_4', 'frame_integrity_5', 'frame_integrity_6', 'frame_integrity_7', 'frame_integrity_8', 'frame_integrity_9'];
+frame_integrity.forEach(item => on(`change:${item}`, eventInfo => updateFrameIntegrity(item, eventInfo.newValue)));
+
+const updateFrameIntegrity = (stat, new_value) => {
+  var index = parseInt(stat.slice(-1)) || 0;
+  var updateAttrs = {};
+
+  // fill everything less than stat
+  if (new_value == 1) {
+    for (let n = 0; n < index; n++) {
+      updateAttrs[`frame_integrity_${n}`] = 1;
+    }
+  }
+  // remove everything greater than
+  else {
+    for (let n = index; n < frame_integrity.length; n++) {
+      updateAttrs[`frame_integrity_${n}`] = 0;
+    }
+  }
+
+  setAttrs(updateAttrs);
+  console.log(updateAttrs);
+}
+  
+// update life support
+const life_support = ['life_support_0', 'life_support_1', 'life_support_2', 'life_support_3', 'life_support_4', 'life_support_5', 'life_support_6', 'life_support_7'];
+life_support.forEach(item => on(`change:${item}`, eventInfo => updateLifeSupport(item, eventInfo.newValue)));
+
+const updateLifeSupport = (stat, new_value) => {
+  var index = parseInt(stat.slice(-1)) || 0;
+  var updateAttrs = {};
+
+  // fill everything less than stat
+  if (new_value == 1) {
+    for (let n = 0; n < index; n++) {
+      updateAttrs[`life_support_${n}`] = 1;
+    }
+  }
+  // remove everything greater than
+  else {
+    for (let n = index; n < life_support.length; n++) {
+      updateAttrs[`life_support_${n}`] = 0;
+    }
+  }
+
+  setAttrs(updateAttrs);
+  console.log(updateAttrs);
+}
+  
+on('change:character_page_button', function(eventinfo) {
+  setAttrs({
+    character_page: eventinfo.newValue
+  });
+  console.log({character_page: eventinfo.newValue});
+});
+
+on('change:hub_page_button', function(eventinfo) {
+  setAttrs({
+    hub_page: eventinfo.newValue
+  });
+  console.log({hub_page: eventinfo.newValue});
+});
+
+on('change:mode_button', function(eventinfo) {
+  setAttrs({
+    mode: eventinfo.newValue,
+    modes_choice: 'off'
+  });
+});
+
+on('change:stat_mode_button', function(eventinfo) {
+  setAttrs({
+    stat_mode: eventinfo.newValue,
+  });
+});
+
+on('change:close_changelog', function() {
+  setAttrs({
+    'changelog_2.2.1': 'on',
+  });
+});
+  
+// ===== PARAMETERS ==========
+// destinations : the name of the attribute that stores the total quantity
+//                can be a single attribute, or an array: ['total_cost', 'total_weight']
+//                If more than one, the matching fields must be in the same order.
+//
+// section      : name of repeating fieldset, without the repeating_
+//
+// fields       : the name of the attribute field to be summed
+//                destination and fields both can be a single attribute: 'weight'
+//                or an array of attributes: ['weight','number','equipped']
+const repeatingSum = (destinations, section, fields) => {
+    if (!Array.isArray(destinations)) destinations = [destinations.replace(/\s/g, '').split(',')];
+    if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split(',')];
+    getSectionIDs(`repeating_${section}`, idArray => {
+        const attrArray = idArray.reduce((m, id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))], []);
+        getAttrs([...attrArray], v => {
+            const getValue = (section, id, field) => v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : parseFloat(v[`repeating_${section}_${id}_${field}`]) || 0;
+            const commonMultipliers = (fields.length <= destinations.length) ? [] : fields.splice(destinations.length, fields.length - destinations.length);
+            const output = {};
+            destinations.forEach((destination, index) => {
+                output[destination] = idArray.reduce((total, id) => total + getValue(section, id, fields[index]) * commonMultipliers.reduce((subtotal, mult) => subtotal * getValue(section, id, mult), 1), 0);
+            });
+            setAttrs(output);
+            console.log(output);
+        });
+    });
+};
+
+on('change:repeating_modules:power_cost remove:repeating_modules', function() {
+  repeatingSum('total_power_cost','modules','power_cost');
+});
+
+</script>

@@ -1,0 +1,289 @@
+.situation {
+  display: inline-grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 6em repeat(2, auto);
+  width: 100%
+}
+
+.void-points-block {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  display: flex;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-start: 1;
+
+  .void-points-left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .void-points-right {
+    flex: 1;
+    padding: 5px;
+  }
+
+  .void-points-radios {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    padding: 5px;
+
+    .void-points {
+      display: flex;
+      float: left;
+      margin-top: 3px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      label {
+        padding: 4px;
+        position: relative;
+        float: left;
+
+        input[type=radio] {
+          display: none;
+          margin-left: 10px;
+
+          &:checked + span {
+            background: $red;
+            color: $white;
+            border: none;
+
+          }
+
+          &:checked + span.invert {
+            background: $black;
+            color: $red;
+            border: 1px solid $red;
+          }
+        }
+
+        span {
+          border-radius: 100%;
+          border: 1px solid $dead-gray;
+          // font-family: $item-font;
+          font-size: 0.8em;
+          height: 20px;
+          left: 0;
+          line-height: 1.5;
+          overflow: hidden;
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          width: 20px;
+        }
+
+        .invert {
+          background: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .void-points-roll {
+    text-align: right;
+    width: 100%;
+    font-size: 0.8em;
+    white-space: nowrap;
+    padding: 5px;
+
+    span.void-points-up-arrow {
+      font-size: 2em;
+      font-weight: 700;
+      // padding-left: 2px;
+      padding-right: 1em;
+    }
+  }
+
+  .void-points-text-top {
+    font-weight: bold;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+
+  .void-points-text-bottom {
+    font-size: 0.8em;
+  }
+}
+
+.addiction-block {
+  border-bottom: 2px solid $black;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  // height: 100px;
+
+  .addiction-title {  }
+
+  .days-without {
+    font-size: 0.8em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .addiction-text {
+    padding: 5px;
+    text-align: justify;
+  }
+
+  .substance-title {
+    text-align: center;
+  }
+
+
+  .substance-row {
+    border-bottom: 2px dotted $dead-gray;
+    margin: 5px 0px;
+  }
+
+  .days-checkboxes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    margin-top: 5px;
+
+    .day-check {
+      text-align: center;
+
+      label {
+        display: block;
+        padding: 0;
+        margin: 0;
+
+        input[type=radio] {
+          display: none;
+
+          &:checked + .days-square {
+            background: $black;
+            color: $white;
+          }
+        }
+      }
+
+      .days-square {
+        border: 2px solid $black;
+        // font-family: $item-font;
+        height: 10px;
+        width: 10px;
+        margin-left: 2px;
+      }
+
+      .days-plus {
+        text-align: center;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+.cosmic-mutations-block {
+  border-bottom: 2px solid $black;
+  border-right: 2px solid $black;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  // grid-row-end: 4;
+}
+
+.void-corruption-block {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid $black;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  // grid-row-end: 6;
+}
+
+.life-support-block {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-row-start: 3;
+  // grid-row-end: 6;
+
+  .oxygen-tank-row {
+    display: flex;
+    flex: 0 0 100px;
+    flex-direction: column;
+
+    .oxygen-numbers {
+      display: flex;
+      flex: 0 0 20px;
+      font-size: 11px;
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 70px;
+    }
+
+    .oxygen-tank {
+      background-image: url('https://raw.githubusercontent.com/morgdalaine/roll20-character-sheets/deathinspace/Death%20In%20Space/assets/oxygen_tank.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex: 0 0 58px;
+      height: 58px;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 220px;
+
+      .oxygen-increments {
+        display: flex;
+        padding-left: 16px;
+        padding-top: 6px;
+
+        .oxygen-increment {
+          height: 45px;
+          width: 21px;
+
+          label {
+            padding: 0;
+            margin: 0;
+
+            input[type=checkbox] {
+              display: none;
+
+              &:checked + .tank-section {
+                background: $red;
+                background-color: $red;
+                color: $white;
+
+                &:hover {
+                  background-color: rgba($red, 0.5);
+                }
+              }
+            }
+          }
+
+          .tank-section {
+            border-right: 1px solid $red;
+            // font-family: $item-font;
+            height: 45px;
+            width: 21px;
+            margin: -1px 0;
+            padding: 0;
+
+            &:hover {
+              background-color: rgba($red, 0.5);
+            }
+          }
+
+          &:nth-last-child(1) {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    .tank-space {
+      flex: 1;
+    }
+  }
+}

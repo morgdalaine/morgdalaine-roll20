@@ -1,0 +1,29 @@
+include ../../components/personal/personal
+include ../../components/personal/origin
+include ../../components/personal/name
+include ../../components/personal/ability
+include ../../components/personal/defense
+include ../../components/personal/hitpoints
+
+
+mixin personal_page
+  div.page-container
+    input(type='radio'
+      name='attr_character_page'
+      class='personal hide-element'
+      value='1'
+      checked)
+    div.personal.showhide
+      +origin_block
+      +name_block
+      +origin_benefit_block
+      +xp_block
+      +background_block
+      +past_allegiance_block
+      +trait_block
+      +drive_block
+      +looks_block
+      +ability_block
+      +defense_block
+      +hitpoint_block
+      +portrait_block

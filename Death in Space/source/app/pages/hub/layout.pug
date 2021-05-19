@@ -1,0 +1,11 @@
+include ../../components/layout/layout
+
+mixin layout_page
+  div.page-container
+    input(type='radio'
+      name='attr_hub_page'
+      class='layout hide-element'
+      value='8'
+      checked)
+    div.layout.showhide
+      +layout_splash

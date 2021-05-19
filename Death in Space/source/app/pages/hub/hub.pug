@@ -1,0 +1,24 @@
+include ../../common/pug/common
+include ../../components/information/information
+include ../../components/input/input
+include ../../components/nav/nav_bar
+include ../common/notes
+include ./cargo
+include ./hub_data
+include ./specifics
+include ./layout
+
+- var type = 'hub'
+
+div.header
+  +information(type)
+
+  //- nav bar
+  +nav_bar(type)
+
+//- pages
++specifics_page
++hub_data_page
++cargo_page
++layout_page
++notes_page(type)

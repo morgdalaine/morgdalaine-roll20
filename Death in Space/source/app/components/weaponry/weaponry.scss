@@ -1,0 +1,64 @@
+.weaponry {
+  display: inline-grid;
+  grid-template-rows: repeat(4, 1fr);
+  width: 100%;
+}
+
+.equipment {
+  display: inline-grid;
+  grid-template-columns: repeat(7, calc(100% / 7));
+  border-bottom: 2px solid $black;
+
+  .weapon-name {
+    padding-left: 5px;
+    grid-column: span 4;
+    border-right: 2px dotted $dead-gray;
+  }
+
+  .weapon-damage {
+    padding-left: 5px;
+    border-right: 2px dotted $dead-gray;
+  }
+
+  .equipment-units {
+    padding-left: 5px;
+    border-right: 2px dotted $dead-gray;
+  }
+
+  .equipment-condition {
+    padding-left: 5px;
+  }
+
+  .armor-name {
+    padding-left: 5px;
+    grid-column: span 3;
+  }
+
+  .armor-protects-against {
+    padding-left: 5px;
+    grid-column: span 2;
+    border-right: 2px dotted $dead-gray;
+  }
+}
+
+.holds-debt {
+  display: inline-grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  .holds {
+    padding-left: 5px;
+    grid-column: span 2;
+    border-right: 2px dotted $dead-gray;
+  }
+
+  .debt {
+    padding-left: 5px;
+    grid-column: span 2;
+  }
+
+  input[type=number] {
+    text-align: center;
+    @include fill-available();
+  }
+
+}

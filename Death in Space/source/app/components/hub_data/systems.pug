@@ -1,0 +1,27 @@
+include ../../data/power_source
+
+mixin systems_row
+  div.systems-row
+    +current_max_block('condition')
+    +current_max_block('fuel')
+    +power_source_block
+    +output_power_block
+
+mixin power_source_block
+  div.power-source-block
+    div.stat-block.power-source-text
+      label(data-i18n='power_source')=locals['power_source']
+    div.stat-block.power-source-radios
+      each state in powerSourceRadios
+        div.power-source-radio-row
+          label
+            span(data-i18n=state)=locals[state]
+            input(
+              type='radio'
+              class='stat-input'
+              name='attr_power_source'
+              value=state)
+
+mixin output_power_block
+  div.stat-block.output-power-block.dotted-number
+    +stat('number', 'output_power')

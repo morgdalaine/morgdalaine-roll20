@@ -1,0 +1,9 @@
+mixin current_max_block(attr, ...subtitles)
+  div.current-max-block
+    div.stat-block.current-max-text
+      label(data-i18n=attr)=locals[attr]
+      //- +label_with_subtitle(attr, subtitles)
+    div.stat-block.stat-current-col
+      +stat('number', attr, 'current')
+    div.stat-block.stat-max-col
+      +stat('number', `${attr}_max`, 'max')

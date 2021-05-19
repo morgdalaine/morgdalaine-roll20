@@ -1,0 +1,11 @@
+include ../../components/notes/notes
+
+mixin notes_page(sheet_type)
+  div.page-container
+    input(
+      type='radio'
+      name=`attr_${sheet_type}_page`
+      class='notes hide-element'
+      value='5')
+    div.notes.showhide
+      +notes_block

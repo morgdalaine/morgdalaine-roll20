@@ -1,0 +1,9 @@
+
+mixin ability_block
+  div.stat-block.ability-block
+    label(data-i18n='ability')=locals['ability']
+    div.ability-col
+      +ability('body')
+      +ability('dexterity')
+      +ability('savvy')
+      +ability('tech')

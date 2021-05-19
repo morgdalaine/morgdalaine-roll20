@@ -1,0 +1,15 @@
+
+.cargo {
+  display: inline-grid;
+  grid-template-rows: 10em auto;
+  width: 100%
+}
+
+.cargo-block {
+  border-bottom: 2px solid $black;
+
+  .cargo-note {
+    display: flex;
+    padding: 5px;
+  }
+}
