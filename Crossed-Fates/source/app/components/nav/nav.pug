@@ -1,0 +1,48 @@
+include ../../data/nav
+
+mixin nav_bar
+  div.nav-bar
+    each row in navigation
+      div.nav-row
+        each page in row.pages
+          if page.optional
+            input(
+              type='checkbox'
+              class=`optional-nav-${page.optional} hide-element`
+              name=`attr_optional_nav_${page.optional}`
+              checked)
+            div(class=`nav-child optional-nav-${page.optional} showhide`)
+              label.page-label
+                if page.checked
+                  input(
+                    type='radio'
+                    name='attr_page_button'
+                    class='hide-element page-button'
+                    value=page.id
+                    checked)
+                else
+                  input(
+                    type='radio'
+                    name='attr_page_button'
+                    class='hide-element page-button'
+                    value=page.id)
+                - var translation = `${page.text}`
+                div.page-button(data-i18n=translation)=locals[translation]
+          else
+            div.nav-child
+              label.page-label
+                if page.checked
+                  input(
+                    type='radio'
+                    name='attr_page_button'
+                    class='hide-element page-button'
+                    value=page.id
+                    checked)
+                else
+                  input(
+                    type='radio'
+                    name='attr_page_button'
+                    class='hide-element page-button'
+                    value=page.id)
+                - var translation = `${page.text}`
+                div.page-button(data-i18n=translation)=locals[translation]

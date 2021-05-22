@@ -1,0 +1,73 @@
+
+.nav-child {
+  width: 100%;
+  text-align-last: center;
+  margin: 0.1em;
+
+  label {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      background: $dark-gray;
+      color: $white;
+      transition: 0.5s ease;
+    }
+  }
+}
+
+.page-button {
+  padding: 0.1em 0em 0.1em 0em;
+  font-weight: 600;
+  font-family: $tab-font;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.page-button {
+  background-color: $red;
+}
+
+.page-button {
+  &:checked {
+    & ~ div {
+      &.page-button {
+        background: $white;
+        color: $red;
+        transition: 0.5s ease;
+      }
+    }
+  }
+}
+
+.summary {
+  margin-top: 1em;
+}
+
+.nav-bar {
+  background-color: $red;
+  border-top: 3px solid $red;
+  border-bottom: 3px solid $red;
+}
+
+.nav-row {
+  display: flex;
+}
+
+label.page-label {
+  text-align: center;
+}
+
+div.optional-nav-sites {
+  width: 0;
+  margin: 0;
+  border: 0;
+  transition: 0.5s ease;
+}
+
+input.optional-nav-sites:checked ~ div.optional-nav-sites {
+  @include show-hide(0.3s);
+  width: 100%;
+  margin: auto;
+}

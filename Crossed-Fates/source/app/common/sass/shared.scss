@@ -41,7 +41,7 @@
 }
 
 @mixin std-font($primary: $text-font) {
-  font-family: $primary, monospace;
+  font-family: $primary, $text-font, sans-serif;
 }
 
 @mixin fill-available() {
@@ -82,7 +82,7 @@
 .dotted-number {
 
   input[type=number], input[type=number].stat-input  {
-    border: 2px dotted $dead-gray;
+    border: 2px dotted $dark-gray;
   }
 }
 
@@ -110,11 +110,11 @@
     }
 
     input[type=number], input[type=number].stat-input  {
-      border: 2px dotted $dead-gray;
+      border: 2px dotted $dark-gray;
     }
   }
 
   .stat-current-right-border {
-    border-right: 2px dotted $dead-gray;
+    border-right: 2px dotted $dark-gray;
   }
 }

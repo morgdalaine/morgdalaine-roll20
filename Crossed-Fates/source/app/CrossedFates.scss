@@ -2,7 +2,7 @@
 @import './common/sass/variables';
 
 // fonts
-@import url(https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=PT+Sans&family=PT+Sans+Narrow:wght@400;700&display=swap');
 
 // common
 @import './common/sass/shared';
@@ -14,6 +14,18 @@
   padding: 15px;
   font-weight: normal;
   @include std-font();
+
+  p {
+    @include std-font($text-font);
+  }
+
+  h2 {
+    @include std-font($title-font);
+  }
+
+  label {
+    @include std-font($label-font);
+  }
 
   .page-container {
     display: flex;
@@ -54,7 +66,7 @@
     border: none;
     border-radius: 0;
     font-family: $input-font;
-    font-size: 0.8em;
+    font-size: 1em;
     text-decoration: none;
   }
 
@@ -147,7 +159,7 @@
 
       &:hover {
         color: $white;
-        background: $dead-gray;
+        background: $dark-red;
       }
 
       &:focus { @include input-highlight(1px); }
@@ -183,6 +195,11 @@
 
   // Components
   @import './components/component';
+  @import './components/header/header';
+  @import './components/input/input';
+  @import './components/nav/nav';
+  @import './components/acts/acts';
+  @import './components/encounter_report/encounter_report';
 
 }
 
@@ -196,8 +213,8 @@
         .btn {
           font-size: 0.8em;
           border-radius: 0;
-          border: 1px solid $dead-gray;
-          color: $dead-gray;
+          border: 1px solid $dark-red;
+          color: $dark-red;
           background: $white;
           text-shadow: 0;
         }
@@ -234,7 +251,7 @@
 }
 
 input[type=text].repeating-input {
-  border-bottom: 2px dotted $dead-gray !important;
+  border-bottom: 2px dotted $dark-red !important;
   margin: 0;
 }
 

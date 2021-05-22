@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=PT+Sans&family=PT+Sans+Narrow:wght@400;700&display=swap");
+.align-left {
+  text-align: left !important;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.dotted-number input[type=number], .dotted-number input[type=number].stat-input {
+  border: 2px dotted #6d6c70;
+}
+
+.current-max-block {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid #040404;
+  padding: 2px;
+}
+
+.current-max-block .current-max-text {
+  grid-column-end: span 2;
+}
+
+.current-max-block .stat-current-col, .current-max-block .stat-max-col {
+  flex-direction: column;
+}
+
+.current-max-block .stat-current-col label, .current-max-block .stat-max-col label {
+  text-align: center;
+  font-size: 0.8em !important;
+}
+
+.current-max-block .stat-current-col input, .current-max-block .stat-max-col input {
+  display: block;
+  margin: 0 auto;
+}
+
+.current-max-block .stat-current-col input[type=number], .current-max-block .stat-current-col input[type=number].stat-input, .current-max-block .stat-max-col input[type=number], .current-max-block .stat-max-col input[type=number].stat-input {
+  border: 2px dotted #6d6c70;
+}
+
+.current-max-block .stat-current-right-border {
+  border-right: 2px dotted #6d6c70;
+}
+
+.charsheet {
+  width: 720px !important;
+  margin: 0 auto !important;
+  padding: 15px;
+  font-weight: normal;
+  font-family: "PT Sans", "PT Sans", sans-serif;
+}
+
+.charsheet p {
+  font-family: "PT Sans", "PT Sans", sans-serif;
+}
+
+.charsheet h2 {
+  font-family: "Share Tech Mono", "PT Sans", sans-serif;
+}
+
+.charsheet label {
+  font-family: "PT Sans Narrow", "PT Sans", sans-serif;
+}
+
+.charsheet .page-container {
+  display: flex;
+}
+
+.charsheet .hide-element {
+  display: none;
+}
+
+.charsheet input[type='checkbox'].hide-element {
+  display: none;
+}
+
+.charsheet input[type='radio'].hide-element {
+  display: none;
+}
+
+.charsheet div.hide-element {
+  display: none;
+}
+
+.charsheet input::-webkit-outer-spin-button,
+.charsheet input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.charsheet input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.charsheet input[type=number], .charsheet input[type=text], .charsheet textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #f3f4f5;
+  border: none;
+  border-radius: 0;
+  font-family: "PT Sans";
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.charsheet input[type=number] {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.charsheet input[type=text] {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet input[type=checkbox] {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #f3f4f5;
+  border: none;
+  border-bottom: 1px dotted #040404;
+  border-radius: 0;
+  font-family: "PT Sans";
+  font-size: 0.8em;
+  text-decoration: none;
+  width: auto;
+}
+
+.charsheet textarea {
+  resize: none;
+  line-height: 2em;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.charsheet label {
+  margin: 0;
+}
+
+.charsheet span.showhide:checked {
+  background-color: #6d6c70;
+  color: white;
+  transition: .5s ease;
+}
+
+.charsheet span.showhide {
+  display: inline;
+  border: 1px solid #ccc;
+  margin-right: 11px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.charsheet span.showhide:hover {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background-color: #ccc;
+  color: #6d6c70;
+  transition: .5s ease;
+}
+
+.charsheet div.showhide {
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.charsheet .hide-element {
+  display: none;
+}
+
+.charsheet input[type='checkbox'].hide-element {
+  display: none;
+}
+
+.charsheet input[type='radio'].hide-element {
+  display: none;
+}
+
+.charsheet div.hide-element {
+  display: none;
+}
+
+.charsheet button.btn.repcontrol_edit,
+.charsheet button.btn.repcontrol_add {
+  width: auto;
+  height: auto;
+  border: 1px solid #040404;
+  border-radius: 0;
+  font-size: 0em;
+  text-shadow: none;
+  text-transform: uppercase;
+  padding: 0.2em;
+  margin: 0.3em;
+  font-family: "PT Sans", "PT Sans", sans-serif;
+  color: #040404;
+  background: #f3f4f5;
+}
+
+.charsheet button.btn.repcontrol_edit:hover,
+.charsheet button.btn.repcontrol_add:hover {
+  color: #ffffff;
+  background: #c01b1e;
+}
+
+.charsheet button.btn.repcontrol_edit:focus,
+.charsheet button.btn.repcontrol_add:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 1px;
+}
+
+.charsheet .repcontrol button.repcontrol_add:before {
+  font-family: pictos;
+  font-size: 13px;
+  margin: 1em;
+  content: '&';
+}
+
+.charsheet .repcontrol button.repcontrol_edit:before {
+  font-family: pictos;
+  font-size: 13px;
+  margin: 1em;
+  content: '(';
+}
+
+.charsheet .repcontainer.editmode + .repcontrol button.repcontrol_edit:before {
+  content: ')';
+}
+
+.charsheet button.btn.repcontrol_edit {
+  margin-right: 3px;
+}
+
+.charsheet button.btn.repcontrol_add {
+  margin-left: 3px;
+}
+
+.charsheet .character-mode {
+  border: 4px solid #d80f17;
+}
+
+.charsheet .center {
+  text-align: center;
+}
+
+.charsheet .close-changelog {
+  border: 2px solid #6d6c70;
+  cursor: pointer;
+  padding: 0;
+  margin: 0.5em 0 0 0;
+  text-align: center;
+}
+
+.charsheet .close-changelog:hover {
+  background: #ccc;
+  transition: .5s ease;
+}
+
+.charsheet input.changelog:checked ~ div.changelog {
+  display: none;
+}
+
+.charsheet .modes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.charsheet h2.mode-title {
+  text-align: center;
+}
+
+.charsheet div.mode-title {
+  margin-bottom: 2em;
+  font-family: "PT Sans", "PT Sans", sans-serif;
+}
+
+.charsheet label.mode {
+  text-align: center;
+  margin: 0.5em;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 1px 1px 19px 6px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  z-index: 5;
+  width: auto;
+}
+
+.charsheet label.mode:hover h4 {
+  color: white;
+  background-color: #d80f17;
+  transition: .5s ease;
+}
+
+.charsheet label.mode:hover .mode-image {
+  opacity: 0.7;
+  transition: .5s ease;
+}
+
+.charsheet input[type=radio].character-mode:checked ~ div.character-mode,
+.charsheet input[type=radio].hub-mode:checked ~ div.hub-mode {
+  display: block;
+}
+
+.charsheet input[type=checkbox].modes-show:checked ~ div.modes-show {
+  display: block;
+}
+
+.charsheet div.mode {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 0;
+}
+
+.charsheet .mode-image {
+  display: flex;
+}
+
+.charsheet input[type=radio].acts:checked ~ div.acts,
+.charsheet input[type=radio].encounter-report:checked ~ div.encounter-report {
+  display: inline-grid;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
+.charsheet .sub-header {
+  margin-top: 1em;
+  border-bottom: 3px solid #6d6c70;
+}
+
+.charsheet .subtitle {
+  font-size: 0.8em !important;
+  text-transform: uppercase;
+}
+
+.charsheet .stat-block {
+  padding: 2px;
+}
+
+.charsheet .stat-block label {
+  display: block;
+  float: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.charsheet .component {
+  display: block;
+}
+
+.charsheet .rivals, .charsheet .rivals-header {
+  display: inline-grid;
+  grid-template-columns: auto 2em auto;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .rivals .rival, .charsheet .rivals-header .rival {
+  display: flex;
+  flex-direction: column;
+}
+
+.charsheet .rivals .rival input, .charsheet .rivals-header .rival input {
+  margin-bottom: 9px;
+}
+
+.charsheet .rivals .rival .subtitle, .charsheet .rivals-header .rival .subtitle {
+  color: #c01b1e;
+  margin-top: -5px;
+}
+
+.charsheet .rivals .rival-right label, .charsheet .rivals-header .rival-right label {
+  text-align: right;
+}
+
+.charsheet .rivals .rival-right input, .charsheet .rivals-header .rival-right input {
+  text-align: right;
+}
+
+.charsheet .rivals .rival-right .subtitle, .charsheet .rivals-header .rival-right .subtitle {
+  text-align: right;
+}
+
+.charsheet .rivals-header {
+  grid-template-columns: auto 100px auto;
+  background-color: #f3f4f5;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.charsheet .rivals-header .rival-left label:after,
+.charsheet .rivals-header .rival-right label:before {
+  content: ':';
+}
+
+.charsheet .rivals-header .rival input {
+  border-bottom: 4px solid #6d6c70;
+}
+
+.charsheet .rivals-header .logo {
+  background-image: url("https://fakeimg.pl/100/000,0/6d6c70");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.charsheet .dotted-line {
+  border-bottom: 2px dotted #040404 !important;
+}
+
+.charsheet .nav-child {
+  width: 100%;
+  text-align-last: center;
+  margin: 0.1em;
+}
+
+.charsheet .nav-child label {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.charsheet .nav-child label:hover {
+  background: #6d6c70;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.charsheet .page-button {
+  padding: 0.1em 0em 0.1em 0em;
+  font-weight: 600;
+  font-family: "Share Tech Mono";
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.charsheet .page-button {
+  background-color: #d80f17;
+}
+
+.charsheet .page-button:checked ~ div.page-button {
+  background: #ffffff;
+  color: #d80f17;
+  transition: 0.5s ease;
+}
+
+.charsheet .summary {
+  margin-top: 1em;
+}
+
+.charsheet .nav-bar {
+  background-color: #d80f17;
+  border-top: 3px solid #d80f17;
+  border-bottom: 3px solid #d80f17;
+}
+
+.charsheet .nav-row {
+  display: flex;
+}
+
+.charsheet label.page-label {
+  text-align: center;
+}
+
+.charsheet div.optional-nav-sites {
+  width: 0;
+  margin: 0;
+  border: 0;
+  transition: 0.5s ease;
+}
+
+.charsheet input.optional-nav-sites:checked ~ div.optional-nav-sites {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: 0.3s ease;
+  width: 100%;
+  margin: auto;
+}
+
+.charsheet .acts {
+  width: 100%;
+}
+
+.charsheet .acts .nav-bar {
+  margin-top: 0.5em;
+  background-color: #f3f4f5;
+  border-top: 3px solid #f3f4f5;
+  border-bottom: 3px solid #f3f4f5;
+}
+
+.charsheet .act-title-block {
+  text-align: right;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+.charsheet .act-title-block label {
+  font-family: "Share Tech Mono", "PT Sans", sans-serif;
+  text-align: right;
+}
+
+.charsheet .act-title-block .subtitle {
+  font-family: "Share Tech Mono", "PT Sans", sans-serif;
+}
+
+.charsheet .journaling-block {
+  margin: 2em 0.5em;
+  margin-left: 2em;
+  padding: 0.5em;
+  background-color: #f3f4f5;
+  border-right: 8px solid #d80f17;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.charsheet .journaling-block label {
+  font-family: "Share Tech Mono", "PT Sans", sans-serif;
+  text-align: right;
+}
+
+.charsheet .disagreement {
+  text-align: justify;
+}
+
+.charsheet .encounter-report {
+  width: 100%;
+}
+
+.charsheet .encounter-label-row {
+  display: inline-grind;
+  grid-template-column: 3em repeat(6, 10em) 3em;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem {
+  margin: 5px;
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .btn {
+  font-size: 0.8em;
+  border-radius: 0;
+  border: 1px solid #c01b1e;
+  color: #c01b1e;
+  background: #ffffff;
+  text-shadow: 0;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol {
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .btn-danger {
+  background-color: #d80f17;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del, .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {
+  float: right;
+  width: auto;
+  margin: 0;
+  height: auto;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  cursor: move;
+  width: auto;
+  margin: 0;
+  height: auto;
+}
+
+input[type=text].repeating-input {
+  border-bottom: 2px dotted #c01b1e !important;
+  margin: 0;
+}
+
+.sheet-rolltemplate-sheetname {
+  display: block;
+}

@@ -1,0 +1,280 @@
+
+<h2 data-i18n="crossed_fates">CROSSED / FATES</h2>
+<div class="crossed-fates">
+  <div class="header">
+    <div class="rivals-header">
+      <div class="rival rival-left">
+        <label data-i18n="side">Side</label>
+        <input class="stat-input" type="text" name="attr_left_side" spellcheck="false"/>
+        <label data-i18n="name">Name</label>
+        <input class="stat-input" type="text" name="attr_left_name" spellcheck="false"/>
+        <label data-i18n="pronouns">Pronouns</label>
+        <input class="stat-input" type="text" name="attr_left_pronouns" spellcheck="false"/>
+      </div>
+      <div class="logo"></div>
+      <div class="rival rival-right">
+        <label data-i18n="side">Side</label>
+        <input class="stat-input" type="text" name="attr_right_side" spellcheck="false"/>
+        <label data-i18n="name">Name</label>
+        <input class="stat-input" type="text" name="attr_right_name" spellcheck="false"/>
+        <label data-i18n="pronouns">Pronouns</label>
+        <input class="stat-input" type="text" name="attr_right_pronouns" spellcheck="false"/>
+      </div>
+    </div>
+    <div class="nav-bar">
+      <div class="nav-row">
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_page_button" value="0"/>
+            <div class="page-button" data-i18n="acts">Acts</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_page_button" value="1"/>
+            <div class="page-button" data-i18n="encounter_report_sheet">Encounter Report Sheet</div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-container">
+  <input class="acts hide-element" type="radio" name="attr_page" value="0" checked="checked"/>
+  <div class="acts showhide">
+    <div class="nav-bar">
+      <div class="nav-row">
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_act_page_button" value="0"/>
+            <div class="page-button-back" data-i18n="nav_zero">ACT 0</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_act_page_button" value="1"/>
+            <div class="page-button-back" data-i18n="nav_one">ACT 1</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_act_page_button" value="2"/>
+            <div class="page-button-back" data-i18n="nav_two">ACT 2</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_act_page_button" value="3"/>
+            <div class="page-button-back" data-i18n="nav_three">ACT 3</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_act_page_button" value="4"/>
+            <div class="page-button-back" data-i18n="nav_final">FINAL ACT</div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="act-zero-block">
+      <div class="act-title-block">
+        <label data-i18n="act_zero">ACT 0: WHAT BROUGHT YOU TOGETHER</label>
+        <div class="subtitle" data-i18n="before_you_were_born">Before you were born.</div>
+        <div class="subtitle" data-i18n="act_zero_subtitle">A conflict swallowed the world.</div>
+      </div>
+      <div class="stat-block conflict">
+        <label data-i18n="conflict">conflict</label>
+        <textarea class="stat-input" name="attr_2" spellcheck="false"></textarea>
+      </div>
+      <div class="stat-block origin">
+        <label data-i18n="origin">Origin</label>
+        <textarea class="stat-input" name="attr_2" spellcheck="false"></textarea>
+      </div>
+      <div class="stat-block rival-block">
+        <div class="rivals">
+          <div class="rival rival-left">
+            <label data-i18n="what_is_at_stake">What is at stake?</label>
+            <textarea class="stat-input" rows="2" name="attr_left_what_is_at_stake" spellcheck="false"></textarea>
+            <label data-i18n="side">Side</label>
+            <input class="stat-input" type="text" name="attr_left_side" spellcheck="false"/>
+          </div>
+          <div class="diamond"></div>
+          <div class="rival rival-right">
+            <label data-i18n="what_is_at_stake">What is at stake?</label>
+            <textarea class="stat-input" rows="2" name="attr_right_what_is_at_stake" spellcheck="false"></textarea>
+            <label data-i18n="side">Side</label>
+            <input class="stat-input" type="text" name="attr_right_side" spellcheck="false"/>
+          </div>
+        </div>
+      </div>
+      <div class="stat-block conflict-fought-by">
+        <label data-i18n="conflict_fought_by">How is the Conflict fought?</label>
+        <textarea class="stat-input" name="attr_2" spellcheck="false"></textarea>
+      </div>
+      <div class="journaling-block">
+        <label data-i18n="journaling">Journaling</label>
+        <div class="subtitle" data-i18n="act_zero_journal">You have once found a letter detailing how your Side of the Conflict perceives it. Who wrote the letter, and why? What do they say about the Conflict and the people involved in it? What did they hope that letter would accomplish? Write the letter you’ve found. Once you’re done - or if you choose to write the letter later by yourself - move on to the next act.</div>
+      </div>
+    </div>
+    <div class="act-zero-block">
+      <div class="act-title-block">
+        <label data-i18n="act_one">ACT 1: ORIGINS</label>
+        <div class="subtitle" data-i18n="before_you_were_born">Before you were born.</div>
+        <div class="subtitle" data-i18n="act_one_subtitle">The conflict called your name.</div>
+      </div>
+      <div class="stat-block rival-block">
+        <div class="rivals">
+          <div class="rival rival-left">
+            <label data-i18n="name">Name</label>
+            <input class="stat-input" type="text" name="attr_left_name" spellcheck="false"/>
+            <label data-i18n="pronouns">Pronouns</label>
+            <input class="stat-input" type="text" name="attr_left_pronouns" spellcheck="false"/>
+            <label data-i18n="introduction">How were you introduced to the conflict?</label>
+            <input class="stat-input" type="text" name="attr_left_introduction" spellcheck="false"/>
+            <label data-i18n="chosen_by_fate">Why were you chosen by fate?</label>
+            <input class="stat-input" type="text" name="attr_left_chosen_by_fate" spellcheck="false"/>
+            <label data-i18n="stand_for">What do you stand for?</label>
+            <div class="subtitle" data-i18n="risk_to_lose">These are the things you risk to lose</div>
+            <input class="stat-input" type="text" name="attr_left_stand_for" spellcheck="false"/>
+            <label data-i18n="how_do_you_feel">How do you feel about being the only lasting hope?</label>
+            <textarea class="stat-input" rows="2" name="attr_left_background" spellcheck="false"></textarea>
+          </div>
+          <div class="diamond"></div>
+          <div class="rival rival-right">
+            <label data-i18n="name">Name</label>
+            <input class="stat-input" type="text" name="attr_right_name" spellcheck="false"/>
+            <label data-i18n="pronouns">Pronouns</label>
+            <input class="stat-input" type="text" name="attr_right_pronouns" spellcheck="false"/>
+            <label data-i18n="introduction">How were you introduced to the conflict?</label>
+            <input class="stat-input" type="text" name="attr_right_introduction" spellcheck="false"/>
+            <label data-i18n="chosen_by_fate">Why were you chosen by fate?</label>
+            <input class="stat-input" type="text" name="attr_right_chosen_by_fate" spellcheck="false"/>
+            <label data-i18n="stand_for">What do you stand for?</label>
+            <div class="subtitle" data-i18n="risk_to_lose">These are the things you risk to lose</div>
+            <input class="stat-input" type="text" name="attr_right_stand_for" spellcheck="false"/>
+            <label data-i18n="how_do_you_feel">How do you feel about being the only lasting hope?</label>
+            <textarea class="stat-input" rows="2" name="attr_right_background" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="journaling-block">
+        <label data-i18n="journaling">Journaling</label>
+        <div class="subtitle" data-i18n="act_one_journal">You once sent a letter to someone you loved, detailing your own feelings about the Conflict and how you got involved in its madness. You shared your hopes and dreams - or maybe you didn’t share a thing, for feelings are too dangerous to someone in your position. Either way, write the letter you sent. Once you’re done - or if you choose to write the letter later by yourself - move on to the next act.</div>
+      </div>
+    </div>
+    <div class="act-zero-block">
+      <div class="act-title-block">
+        <label data-i18n="act_two">ACT 2: FIRST ENCOUNTER</label>
+        <div class="subtitle" data-i18n="before_you_were_born">Before you were born.</div>
+        <div class="subtitle" data-i18n="act_two_subtitle">Your paths were destined to cross.</div>
+      </div>
+      <div class="stat-block first-contact-battle">
+        <label data-i18n="first_battle">Describe the battle in which you met for the first time.</label>
+        <textarea class="stat-input" name="attr_2" spellcheck="false"></textarea>
+      </div>
+      <div class="stat-block rival-block">
+        <div class="rivals">
+          <div class="rival rival-left">
+            <label data-i18n="looks">What do you look like?</label>
+            <div class="subtitle" data-i18n="looks_subtitle">Choose at least two words to describe yourself and your mecha</div>
+            <input class="stat-input" type="text" name="attr_left_looks" spellcheck="false"/>
+          </div>
+          <div class="diamond"></div>
+          <div class="rival rival-right">
+            <label data-i18n="looks">What do you look like?</label>
+            <div class="subtitle" data-i18n="looks_subtitle">Choose at least two words to describe yourself and your mecha</div>
+            <input class="stat-input" type="text" name="attr_right_looks" spellcheck="false"/>
+          </div>
+        </div>
+      </div>
+      <div class="stat-block first-contact-meeting">
+        <label data-i18n="circumstances">Describe the circumstances surrounding your meeting.</label>
+        <textarea class="stat-input" name="attr_2" spellcheck="false"></textarea>
+      </div>
+      <div class="disagreement subtitle" data-i18n="when_you_disagree">Whenever you disagree on how the story should unfold, you may each draw a card from the deck. Whoever draws the card with the highest value gets to decide what happens - and whoever draws the card with the lowest value gets to frame the fact, describing its consequences.</div>
+      <div class="journaling-block">
+        <label data-i18n="journaling">Journaling</label>
+        <div class="subtitle" data-i18n="act_two_journal">After the battle, you sent a letter to your Superior Officers, detailing your encounter with your Rival. Describe how you first perceived them. What was striking about their presence and the choices they made? How did they fight and behave in battle? Can you defeat them? Write the letter you sent. Once you’re done - or if you choose to write the letter later by yourself - move on to the next act.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-container">
+  <input class="encounter-report hide-element" type="radio" name="attr_page" value="1"/>
+  <div class="encounter-report showhide">
+    <div class="encounter-block">
+      <div class="encounter-label-row">
+        <div class="stat-block encounter-cross-check">
+          <label>X/C</label>
+        </div>
+        <div class="stat-block encounter-date">
+          <label data-i18n="encounter_date">encounter date</label>
+        </div>
+        <div class="stat-block encounter-taken-recovered">
+          <label data-i18n="taken_or_recovered">what was taken or recovered</label>
+        </div>
+        <div class="encounter-center">
+          <label>diamond</label>
+        </div>
+        <div class="stat-block encounter-taken-recovered">
+          <label data-i18n="taken_or_recovered">what was taken or recovered</label>
+        </div>
+        <div class="stat-block encounter-date">
+          <label data-i18n="encounter_date">encounter date</label>
+        </div>
+        <div class="stat-block encounter-cross-check">
+          <label>X/C</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<rolltemplate class="sheet-rolltemplate-sheetname">
+  {{#rollName}}
+  {{/rollName}}
+</rolltemplate>
+<script type="text/worker">
+on('change:page_button', function(eventinfo) {
+  setAttrs({
+    page: eventinfo.newValue
+  });
+  console.log({page: eventinfo.newValue});
+});
+
+on('change:act_page_button', function(eventinfo) {
+  setAttrs({
+    act_page: eventinfo.newValue
+  });
+  console.log({act_page: eventinfo.newValue});
+});
+
+on('change:mode_button', function(eventinfo) {
+  setAttrs({
+    mode: eventinfo.newValue,
+    modes_choice: 'off'
+  });
+});
+
+on('change:stat_mode_button', function(eventinfo) {
+  setAttrs({
+    stat_mode: eventinfo.newValue,
+  });
+});
+
+on('change:left_side change:right_side', function(eventinfo) {
+  setAttrs({
+    character_name: eventinfo.newValue,
+  });
+});
+
+// update character sheet name
+on('change:left_side change:right_side', function() {
+  getAttrs(['left_side', 'right_side'], function(values) {
+    const name = values.left_side + ' × ' + values.right_side;
+    updateAttrs = { character_name: name };
+    setAttrs(updateAttrs);
+    console.log(updateAttrs);
+  });
+});
+
+</script>

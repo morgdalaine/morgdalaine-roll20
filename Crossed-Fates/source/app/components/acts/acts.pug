@@ -1,0 +1,68 @@
+
+mixin act_title_block(act)
+  div.act-title-block
+    +label_with_subtitle(`act_${act}`, 'before_you_were_born', `act_${act}_subtitle`)
+
+mixin journaling-block(act)
+  div.journaling-block
+    +label_with_subtitle('journaling', `act_${act}_journal`)
+
+mixin act_zero_block
+  div.act-zero-block
+    +act_title_block('zero')
+    div.stat-block.conflict
+      +stat_area('conflict', 2)
+    div.stat-block.origin
+      +stat_area('origin', 2)
+    div.stat-block.rival-block
+      div.rivals
+        div.rival.rival-left
+          +stat_area('what_is_at_stake', 'left_what_is_at_stake', 2)
+          +stat('text', 'left_side', 'side')
+        div.diamond
+        div.rival.rival-right
+          +stat_area('what_is_at_stake', 'right_what_is_at_stake', 2)
+          +stat('text', 'right_side', 'side')
+    div.stat-block.conflict-fought-by
+      +stat_area('conflict_fought_by', 2)
+    +journaling-block('zero')
+
+mixin act_one_block
+  div.act-zero-block
+    +act_title_block('one')
+    div.stat-block.rival-block
+      div.rivals
+        div.rival.rival-left
+          +stat('text', 'left_name', 'name')
+          +stat('text', 'left_pronouns', 'pronouns')
+          +stat('text', 'left_introduction', 'introduction')
+          +stat('text', 'left_chosen_by_fate', 'chosen_by_fate')
+          +stat_with_subtitle('text', 'left_stand_for', 'stand_for', 'risk_to_lose')
+          +stat_area('how_do_you_feel', 'left_background', 2)
+        div.diamond
+        div.rival.rival-right
+          +stat('text', 'right_name', 'name')
+          +stat('text', 'right_pronouns', 'pronouns')
+          +stat('text', 'right_introduction', 'introduction')
+          +stat('text', 'right_chosen_by_fate', 'chosen_by_fate')
+          +stat_with_subtitle('text', 'right_stand_for', 'stand_for', 'risk_to_lose')
+          +stat_area('how_do_you_feel', 'right_background', 2)
+    +journaling-block('one')
+
+mixin act_two_block
+  div.act-zero-block
+    +act_title_block('two')
+    div.stat-block.first-contact-battle
+      +stat_area('first_battle', 2)
+    div.stat-block.rival-block
+      div.rivals
+        div.rival.rival-left
+          +stat_with_subtitle('text', 'left_looks', 'looks', 'looks_subtitle')
+        div.diamond
+        div.rival.rival-right
+          +stat_with_subtitle('text', 'right_looks', 'looks', 'looks_subtitle')
+    div.stat-block.first-contact-meeting
+      +stat_area('circumstances', 2)
+    div.disagreement.subtitle(data-i18n='when_you_disagree')=locals['when_you_disagree']
+    +journaling-block('two')
+

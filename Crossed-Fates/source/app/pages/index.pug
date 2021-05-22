@@ -1,5 +1,40 @@
 //- include ../common/file
 include ../components/component
+include ../components/nav/nav
+include ../components/input/input
+include ../components/header/header
+include ./acts/acts
+include ./encounter_report/encounter_report
 
-.page-container
-  +component
+h2(data-i18n='crossed_fates')=locals['crossed_fates']
+div.crossed-fates
+  div.header
+    +header
+
+    //- nav bar
+    +nav_bar
+
++acts_page
++encounter_report_page
+
+//- p(data-i18n='act_final')=locals['act_final']
+//- p(data-i18n='act_final_title')=locals['act_final_title']
+//- p(data-i18n='act_one')=locals['act_one']
+//- p(data-i18n='act_one_title')=locals['act_one_title']
+//- p(data-i18n='act_three')=locals['act_three']
+//- p(data-i18n='act_three_title')=locals['act_three_title']
+//- p(data-i18n='act_two')=locals['act_two']
+//- p(data-i18n='act_two_title')=locals['act_two_title']
+//- p(data-i18n='act_zero')=locals['act_zero']
+//- p(data-i18n='act_zero_title')=locals['act_zero_title']
+//- p(data-i18n='conflict')=locals['conflict']
+//- p(data-i18n='emerged_victorious')=locals['emerged_victorious']
+//- p(data-i18n='encounter_date')=locals['encounter_date']
+//- p(data-i18n='encounter_report_sheet')=locals['encounter_report_sheet']
+//- p(data-i18n='losses_counter')=locals['losses_counter']
+//- p(data-i18n='name')=locals['name']
+//- p(data-i18n='pronouns')=locals['pronouns']
+//- p(data-i18n='side')=locals['side']
+//- p(data-i18n='sword_rivals')=locals['sword_rivals']
+//- p(data-i18n='taken_or_recovered')=locals['taken_or_recovered']
+//- p(data-i18n='was_defeated')=locals['was_defeated']

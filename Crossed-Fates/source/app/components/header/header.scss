@@ -1,0 +1,52 @@
+
+.rivals, .rivals-header {
+  display: inline-grid;
+  grid-template-columns: auto 2em auto;
+  @include fill-available();
+
+  .rival {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-bottom: 9px;
+    }
+
+    .subtitle {
+      color: $dark-red;
+      margin-top: -5px;
+    }
+  }
+
+  .rival-right {
+    label { text-align: right; }
+
+    input { text-align: right; }
+
+    .subtitle { text-align: right; }
+  }
+}
+
+.square { }
+
+.rivals-header {
+  grid-template-columns: auto 100px auto;
+  background-color: $light-gray;
+  padding: 0.5em;
+  margin-bottom: 1em;
+
+  .rival-left label:after,
+  .rival-right label:before {
+    content: ':';
+  }
+
+  .rival input {
+    border-bottom: 4px solid $dark-gray;
+  }
+
+  .logo {
+    background-image: url('https://fakeimg.pl/100/000,0/6d6c70');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
