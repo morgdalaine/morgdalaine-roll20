@@ -13,13 +13,39 @@
     }
 
     .subtitle {
-      color: $dark-red;
+      color: $dark-gray;
+      // font-style: italic;
       margin-top: -5px;
+      @include std-font($title-font);
     }
   }
 
+  .rival-stat {
+    display: inline-grid;
+    grid-template-columns: 5em auto;
+    border-bottom: 4px solid $dark-gray;
+    align-items: center;
+    @include fill-available();
+
+    input {
+      margin-bottom: 0;
+      border: none;
+    }
+  }
+
+  .rival-left .subtitle {
+  }
+
   .rival-right {
-    label { text-align: right; }
+    .rival-stat {
+      grid-template-columns: auto 5em;
+    }
+
+    label {
+      text-align: right;
+      width: fit-content;
+      align-self: flex-end;
+     }
 
     input { text-align: right; }
 
@@ -41,12 +67,11 @@
   }
 
   .rival input {
-    border-bottom: 4px solid $dark-gray;
   }
 
   .logo {
     background-image: url('https://fakeimg.pl/100/000,0/6d6c70');
     background-repeat: no-repeat;
-    background-position: bottom center;
+    // background-position: bottom center;
   }
 }

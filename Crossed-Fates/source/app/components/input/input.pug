@@ -49,11 +49,12 @@ mixin dotted_line(inp, attr, i18n=attr)
     name=`attr_${attr}`
     spellcheck='false')
 
-mixin stat_no_label(inp, attr)
+mixin stat_no_label(inp, attr, placeholder)
   input(
     type=inp,
     class='stat-input'
     name=`attr_${attr}`
+    data-i18n-placeholder=placeholder
     spellcheck='false')
 
 mixin const_stat_no_label(inp, attr)

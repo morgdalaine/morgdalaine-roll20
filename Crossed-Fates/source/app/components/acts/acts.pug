@@ -28,7 +28,7 @@ mixin act_zero_block
     +journaling-block('zero')
 
 mixin act_one_block
-  div.act-zero-block
+  div.act-one-block
     +act_title_block('one')
     div.stat-block.rival-block
       div.rivals
@@ -50,7 +50,7 @@ mixin act_one_block
     +journaling-block('one')
 
 mixin act_two_block
-  div.act-zero-block
+  div.act-two-block
     +act_title_block('two')
     div.stat-block.first-contact-battle
       +stat_area('first_battle', 2)
@@ -66,3 +66,23 @@ mixin act_two_block
     div.disagreement.subtitle(data-i18n='when_you_disagree')=locals['when_you_disagree']
     +journaling-block('two')
 
+mixin act_three_block
+  div.act-three-block
+    +act_title_block('three')
+    div.stat-block.rival-block
+      div.rivals
+        div.rival.rival-left
+          +stat('text', 'left_taken_from_you', 'taken_from_you')
+          +stat('text', 'left_why_stop_them', 'why_stop_them')
+          +stat('text', 'left_rival_reputation', 'rival_reputation')
+        div.diamond
+        div.rival.rival-right
+          +stat('text', 'right_taken_from_you', 'taken_from_you')
+          +stat('text', 'right_why_stop_them', 'why_stop_them')
+          +stat('text', 'right_rival_reputation', 'rival_reputation')
+    +journaling-block('three')
+
+mixin act_final_block
+  div.act-final-block
+    +act_title_block('final')
+  div.rules.subtitle(data-i18n='rules_must_be_followed')=locals['rules_must_be_followed']

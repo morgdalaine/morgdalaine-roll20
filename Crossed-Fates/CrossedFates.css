@@ -53,6 +53,8 @@
   margin: 0 auto !important;
   padding: 15px;
   font-weight: normal;
+  border: 4px solid #d80f17;
+  border-bottom: none;
   font-family: "PT Sans", "PT Sans", sans-serif;
 }
 
@@ -62,6 +64,7 @@
 
 .charsheet h2 {
   font-family: "Share Tech Mono", "PT Sans", sans-serif;
+  text-align: center;
 }
 
 .charsheet label {
@@ -98,7 +101,7 @@
   -moz-appearance: textfield;
 }
 
-.charsheet input[type=number], .charsheet input[type=text], .charsheet textarea {
+.charsheet input, .charsheet textarea {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   background-color: #f3f4f5;
@@ -114,7 +117,7 @@
   font-size: 1.2em;
 }
 
-.charsheet input[type=text] {
+.charsheet input[type=text], .charsheet input[type=date] {
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
@@ -352,17 +355,15 @@
   text-transform: uppercase;
 }
 
-.charsheet .stat-block {
-  padding: 2px;
-}
-
 .charsheet .stat-block label {
-  display: block;
-  float: left;
+  padding: 0 1em;
   font-size: 1em;
   text-transform: uppercase;
   margin-bottom: 5px;
   font-weight: normal;
+  width: fit-content;
+  background-color: #c01b1e;
+  color: #ffffff;
 }
 
 .charsheet .component {
@@ -387,12 +388,34 @@
 }
 
 .charsheet .rivals .rival .subtitle, .charsheet .rivals-header .rival .subtitle {
-  color: #c01b1e;
+  color: #6d6c70;
   margin-top: -5px;
+  font-family: "Share Tech Mono", "PT Sans", sans-serif;
+}
+
+.charsheet .rivals .rival-stat, .charsheet .rivals-header .rival-stat {
+  display: inline-grid;
+  grid-template-columns: 5em auto;
+  border-bottom: 4px solid #6d6c70;
+  align-items: center;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .rivals .rival-stat input, .charsheet .rivals-header .rival-stat input {
+  margin-bottom: 0;
+  border: none;
+}
+
+.charsheet .rivals .rival-right .rival-stat, .charsheet .rivals-header .rival-right .rival-stat {
+  grid-template-columns: auto 5em;
 }
 
 .charsheet .rivals .rival-right label, .charsheet .rivals-header .rival-right label {
   text-align: right;
+  width: fit-content;
+  align-self: flex-end;
 }
 
 .charsheet .rivals .rival-right input, .charsheet .rivals-header .rival-right input {
@@ -415,14 +438,9 @@
   content: ':';
 }
 
-.charsheet .rivals-header .rival input {
-  border-bottom: 4px solid #6d6c70;
-}
-
 .charsheet .rivals-header .logo {
   background-image: url("https://fakeimg.pl/100/000,0/6d6c70");
   background-repeat: no-repeat;
-  background-position: bottom center;
 }
 
 .charsheet .dotted-line {
@@ -431,37 +449,36 @@
 
 .charsheet .nav-child {
   width: 100%;
-  text-align-last: center;
+  align-self: center;
   margin: 0.1em;
 }
 
-.charsheet .nav-child label {
+.charsheet .nav-child div {
   margin: 0;
   padding: 0;
   cursor: pointer;
 }
 
-.charsheet .nav-child label:hover {
+.charsheet .nav-child div:hover {
   background: #6d6c70;
   color: #ffffff;
   transition: 0.5s ease;
 }
 
-.charsheet .page-button {
+.charsheet .page-button-back {
   padding: 0.1em 0em 0.1em 0em;
   font-weight: 600;
   font-family: "Share Tech Mono";
-  color: #ffffff;
+  background-color: #d6d7db;
+  color: #6d6c70;
   text-transform: uppercase;
 }
 
-.charsheet .page-button {
-  background-color: #d80f17;
-}
-
-.charsheet .page-button:checked ~ div.page-button {
+.charsheet .page-button:checked ~ div.page-button-back {
   background: #ffffff;
   color: #d80f17;
+  font-size: 1.5em;
+  padding-top: 2px;
   transition: 0.5s ease;
 }
 
@@ -469,14 +486,12 @@
   margin-top: 1em;
 }
 
-.charsheet .nav-bar {
-  background-color: #d80f17;
-  border-top: 3px solid #d80f17;
-  border-bottom: 3px solid #d80f17;
-}
-
 .charsheet .nav-row {
   display: flex;
+}
+
+.charsheet .nav-bar {
+  align-items: center;
 }
 
 .charsheet label.page-label {
@@ -486,7 +501,6 @@
 .charsheet div.optional-nav-sites {
   width: 0;
   margin: 0;
-  border: 0;
   transition: 0.5s ease;
 }
 
@@ -499,21 +513,79 @@
   margin: auto;
 }
 
+.charsheet input.act-zero:checked ~ div.act-zero,
+.charsheet input.act-one:checked ~ div.act-one,
+.charsheet input.act-two:checked ~ div.act-two,
+.charsheet input.act-three:checked ~ div.act-three,
+.charsheet input.act-final:checked ~ div.act-final {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: 0.7s ease;
+}
+
 .charsheet .acts {
   width: 100%;
 }
 
+.charsheet .acts .nav-child {
+  width: 100%;
+  align-self: center;
+  margin: 0;
+}
+
+.charsheet .acts .nav-child div {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.charsheet .acts .nav-child div:hover {
+  background: transparent;
+  color: #6d6c70;
+}
+
+.charsheet .acts .page-button-back {
+  padding: 0;
+  font-weight: 600;
+  font-family: "Share Tech Mono";
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #d6d7db;
+}
+
+.charsheet .acts .page-button {
+  padding: 0;
+}
+
+.charsheet .acts .page-button:checked ~ div.page-button-back {
+  padding: 0;
+  background: transparent;
+  font-size: 1em;
+  color: #c01b1e;
+}
+
+.charsheet .acts .page-button:checked ~ div.page-button-back.final {
+  background-color: #d80f17;
+  color: #ffffff;
+}
+
+.charsheet .acts .nav-row {
+  display: flex;
+  background: none;
+  margin-top: 1em;
+}
+
 .charsheet .acts .nav-bar {
-  margin-top: 0.5em;
-  background-color: #f3f4f5;
-  border-top: 3px solid #f3f4f5;
-  border-bottom: 3px solid #f3f4f5;
+  align-items: center;
 }
 
 .charsheet .act-title-block {
   text-align: right;
   font-size: 1.2em;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .charsheet .act-title-block label {
@@ -542,6 +614,60 @@
 
 .charsheet .disagreement {
   text-align: justify;
+}
+
+.charsheet .encounter-block {
+  display: inline-grid;
+  grid-template-columns: 5% repeat(4, 11%) 2% repeat(4, 11%) 5%;
+  grid-template-rows: auto auto;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .encounter-block .right input {
+  text-align: right;
+}
+
+.charsheet .encounter-block .encounter-success-defeat {
+  grid-row: span 2;
+  align-self: center;
+  text-align: center;
+}
+
+.charsheet .encounter-block .middle {
+  grid-row: span 2;
+}
+
+.charsheet .encounter-block .encounter-taken-recovered {
+  grid-column: span 3;
+}
+
+.charsheet .encounter-block .encounter-date input {
+  text-align: center;
+}
+
+.charsheet .encounter-block .encounter-date.left {
+  margin-right: 0.5em;
+}
+
+.charsheet .encounter-block .encounter-date.right {
+  margin-left: 0.5em;
+}
+
+.charsheet .encounter-block .encounter-details {
+  grid-row-start: 2;
+  margin-top: 5px;
+}
+
+.charsheet .encounter-block .encounter-details.left {
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+
+.charsheet .encounter-block .encounter-details.right {
+  grid-column-start: 7;
+  grid-column-end: 11;
 }
 
 .charsheet .encounter-report {

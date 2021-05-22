@@ -1,4 +1,56 @@
 
+.encounter-block {
+  display: inline-grid;
+  grid-template-columns: 5% repeat(4, 11%) 2% repeat(4, 11%) 5%;
+  grid-template-rows: auto auto;
+  @include fill-available();
+
+  .right {
+    input {text-align: right; }
+  }
+
+  .encounter-success-defeat {
+    grid-row: span 2;
+    align-self: center;
+    text-align: center;
+  }
+
+  .middle {
+    grid-row: span 2;
+  }
+
+  .encounter-taken-recovered {
+    grid-column: span 3;
+  }
+
+  .encounter-date {
+    input { text-align: center; }
+
+    &.left {
+      margin-right: 0.5em;
+    }
+    &.right {
+      margin-left: 0.5em;
+    }
+  }
+
+  .encounter-details {
+    grid-row-start: 2;
+    margin-top: 5px;
+
+    &.left {
+      grid-column-start: 2;
+      grid-column-end: 6;
+    }
+    &.right {
+      grid-column-start: 7;
+      grid-column-end: 11;
+    }
+  }
+
+}
+
+
 .encounter-report {
   width: 100%;
 }

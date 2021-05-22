@@ -100,14 +100,16 @@ input[type=radio].encounter-report:checked ~ div.encounter-report {
 }
 
 .stat-block {
-  padding: 2px;
 
   label {
-    display: block;
-    float: left;
+    // display: block;
+    padding: 0 1em;
     font-size: 1em;
     text-transform: uppercase;
     margin-bottom: 5px;
     font-weight: normal;
+    width: fit-content;
+    background-color: $dark-red;
+    color: $white;
   }
 }

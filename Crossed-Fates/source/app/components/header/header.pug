@@ -2,11 +2,53 @@
 mixin header
   div.rivals-header
     div.rival.rival-left
-      +stat('text', 'left_side', 'side')
-      +stat('text', 'left_name', 'name')
-      +stat('text', 'left_pronouns', 'pronouns')
+      div.rival-stat
+        label(data-i18n='side')=locals['side']
+        input(
+          type=inp,
+          class='stat-input'
+          name='attr_left_side'
+          readonly
+          spellcheck='false')
+      div.rival-stat
+        label(data-i18n='name')=locals['name']
+        input(
+          type=inp,
+          class='stat-input'
+          name='attr_left_name'
+          readonly
+          spellcheck='false')
+      div.rival-stat
+        label(data-i18n='pronouns')=locals['pronouns']
+        input(
+          type=inp,
+          class='stat-input'
+          name='attr_left_pronouns'
+          readonly
+          spellcheck='false')
     div.logo
     div.rival.rival-right
-      +stat('text', 'right_side', 'side')
-      +stat('text', 'right_name', 'name')
-      +stat('text', 'right_pronouns', 'pronouns')
+      div.rival-stat
+        input(
+          type=inp,
+          class='stat-input'
+          name='attr_right_side'
+          readonly
+          spellcheck='false')
+        label(data-i18n='side')=locals['side']
+      div.rival-stat
+        input(
+          type=inp,
+          class='stat-input'
+          name='attr_right_name'
+          readonly
+          spellcheck='false')
+        label(data-i18n='name')=locals['name']
+      div.rival-stat
+        input(
+          type=inp,
+          class='stat-input'
+          name='attr_right_pronouns'
+          readonly
+          spellcheck='false')
+        label(data-i18n='pronouns')=locals['pronouns']
