@@ -698,8 +698,9 @@
 
 .charsheet .encounter-block {
   display: inline-grid;
-  grid-template-columns: 7% 86% 7%;
-  height: 10em;
+  grid-template-columns: 5% 90% 5%;
+  height: auto;
+  margin-top: 0.5em;
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
@@ -707,8 +708,8 @@
 
 .charsheet .encounter-block input {
   font-family: "Share Tech Mono", "PT Sans", sans-serif;
-  border: 2px solid #c01b1e;
-  background-color: #ffffff;
+  border: 2px solid transparent;
+  background-color: transparent;
 }
 
 .charsheet .encounter-block input::placeholder {
@@ -728,18 +729,53 @@
   padding: 0 1em;
 }
 
-.charsheet .encounter-block .encounter-inputs {
+.charsheet .encounter-block .encounter-row-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 1em 0;
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
 }
 
-.charsheet .encounter-block .encounter-inputs .encounter-row-1 {
+.charsheet .encounter-block .encounter-row-1 input {
+  border: none;
+  padding: 0;
+}
+
+.charsheet .encounter-block .gray-diamond {
+  grid-column-start: 1;
+  grid-column-end: 4;
   display: flex;
+  justify-content: space-evenly;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .encounter-block .gray-diamond span {
+  width: 20px;
+  height: 20px;
+  background-color: #6d6c70;
+  border: 2px solid #6d6c70;
+  margin: -10px 0 5px;
+  transform: rotate(45deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(45deg);
+  /* Firefox */
+  -moz-transform: rotate(45deg);
+  /* IE */
+  -ms-transform: rotate(45deg);
+  /* Opera */
+  -o-transform: rotate(45deg);
+}
+
+.charsheet .encounter-block .encounter-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #ffffff;
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
@@ -757,6 +793,28 @@
   text-align: right;
 }
 
+.charsheet .encounter-block .encounter-taken-recovered.left,
+.charsheet .encounter-block .encounter-details.right {
+  background-color: #f3f4f5;
+  transform: skew(45deg, 0deg);
+}
+
+.charsheet .encounter-block .encounter-taken-recovered.left .reverse-skew,
+.charsheet .encounter-block .encounter-details.right .reverse-skew {
+  transform: skew(-45deg, 0deg);
+}
+
+.charsheet .encounter-block .encounter-taken-recovered.right,
+.charsheet .encounter-block .encounter-details.left {
+  background-color: #f3f4f5;
+  transform: skew(-45deg, 0deg);
+}
+
+.charsheet .encounter-block .encounter-taken-recovered.right .reverse-skew,
+.charsheet .encounter-block .encounter-details.left .reverse-skew {
+  transform: skew(45deg, 0deg);
+}
+
 .charsheet .encounter-block .encounter-context {
   margin-bottom: 5px;
   width: -moz-available;
@@ -770,7 +828,6 @@
 }
 
 .charsheet .encounter-block .encounter-success-defeat.left {
-  margin-right: 4px;
   transform: rotate(-45deg);
   /* Legacy vendor prefixes that you probably don't need... */
   /* Safari */
@@ -784,7 +841,6 @@
 }
 
 .charsheet .encounter-block .encounter-success-defeat.right {
-  margin-left: 4px;
   transform: rotate(45deg);
   /* Legacy vendor prefixes that you probably don't need... */
   /* Safari */
@@ -813,7 +869,7 @@
 }
 
 .charsheet .encounter-block .encounter-taken-recovered, .charsheet .encounter-block .encounter-details {
-  width: 49%;
+  width: 47%;
 }
 
 .charsheet .encounter-block .encounter-date.left {
@@ -822,6 +878,9 @@
 
 .charsheet .encounter-block .encounter-date input {
   text-align: center;
+  color: #d80f17;
+  font-weight: bold;
+  width: 8em;
 }
 
 .charsheet .encounter-block .encounter-details {
@@ -866,11 +925,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 4px solid #6d6c70;
-  margin-top: 1em;
+  padding: 0 10px;
+  height: 100px;
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
+}
+
+.charsheet .losses-block .losses-label {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-family: "Share Tech Mono", "PT Sans", sans-serif;
 }
 
 .charsheet .losses-block .losses-counter {
@@ -884,6 +950,7 @@
 .charsheet .losses-block .losses-counter .loss-increments {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
@@ -892,6 +959,16 @@
 .charsheet .losses-block .losses-counter .loss-increments label {
   display: flex;
   justify-content: space-evenly;
+  transform: rotate(45deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(45deg);
+  /* Firefox */
+  -moz-transform: rotate(45deg);
+  /* IE */
+  -ms-transform: rotate(45deg);
+  /* Opera */
+  -o-transform: rotate(45deg);
 }
 
 .charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'] {
@@ -904,9 +981,147 @@
   height: 20px;
 }
 
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-2 {
+  width: 26px;
+  height: 26px;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-2:checked {
+  border: 5px solid #d6d7db;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-3 {
+  width: 32px;
+  height: 32px;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-3:checked {
+  border: 6px solid #d6d7db;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-4 {
+  width: 38px;
+  height: 38px;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-4:checked {
+  border: 7px solid #d6d7db;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-5 {
+  width: 42px;
+  height: 42px;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-5:checked {
+  border: 8px solid #d6d7db;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-6 {
+  width: 54px;
+  height: 54px;
+}
+
+.charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox'].checkbox-size-6:checked {
+  border: 9px solid #d6d7db;
+}
+
 .charsheet .losses-block .losses-counter .loss-increments label input[type='checkbox']:checked {
   background: #040404;
   border: 4px solid #d6d7db;
+}
+
+.charsheet .final-result-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  height: 6em;
+  margin-top: 1em;
+  font-family: "Share Tech Mono", "PT Sans", sans-serif;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .final-result-block .final-win-row, .charsheet .final-result-block .final-loss-row {
+  display: inline-grid;
+  justify-content: space-between;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .final-result-block .final-win-row {
+  grid-template-columns: 5% 40% 40% 5%;
+}
+
+.charsheet .final-result-block .final-loss-row {
+  grid-template-columns: 10% 35% 35% 10%;
+  margin-top: 10px;
+}
+
+.charsheet .final-result-block .result-label, .charsheet .final-result-block .result-radio {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .final-result-block .result-label {
+  border-bottom: 4px solid #d6d7db;
+}
+
+.charsheet .final-result-block .result-label.left {
+  text-align: left;
+}
+
+.charsheet .final-result-block .result-label.right {
+  text-align: right;
+}
+
+.charsheet .final-result-block .result-radio {
+  text-align-last: center;
+}
+
+.charsheet .final-result-block .result-radio.left {
+  transform: rotate(-45deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-45deg);
+  /* Firefox */
+  -moz-transform: rotate(-45deg);
+  /* IE */
+  -ms-transform: rotate(-45deg);
+  /* Opera */
+  -o-transform: rotate(-45deg);
+}
+
+.charsheet .final-result-block .result-radio.right {
+  transform: rotate(45deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(45deg);
+  /* Firefox */
+  -moz-transform: rotate(45deg);
+  /* IE */
+  -ms-transform: rotate(45deg);
+  /* Opera */
+  -o-transform: rotate(45deg);
+}
+
+.charsheet .final-result-block .result-radio input[type=radio] {
+  box-sizing: border-box;
+  appearance: none;
+  outline: 4px solid #d6d7db;
+  background: #d6d7db;
+  border: 4px solid #d6d7db;
+  width: 20px;
+  height: 20px;
+}
+
+.charsheet .final-result-block .result-radio input[type=radio]:checked {
+  background: #040404;
 }
 
 .ui-dialog .charsheet .repcontainer .repitem {

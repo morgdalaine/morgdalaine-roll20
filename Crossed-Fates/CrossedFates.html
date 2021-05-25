@@ -417,113 +417,149 @@
   <div class="encounter-report showhide">
     <fieldset class="repeating_encounters">
       <div class="encounter-block">
+        <div class="encounter-row-1">
+          <div class="encounter-date left">
+            <input class="stat-input" type="text" name="attr_encounter_date" data-i18n-placeholder="encounter_date" spellcheck="false"/>
+          </div>
+          <div class="encounter-context">
+            <input class="stat-input" type="text" name="attr_encounter_context" data-i18n-placeholder="encounter_context" spellcheck="false"/>
+          </div>
+        </div>
         <div class="encounter-success-defeat left">
           <input type="radio" name="attr_encounter_victor" value="left"/>
         </div>
         <div class="encounter-inputs">
-          <div class="encounter-row-1">
-            <div class="encounter-date left">
-              <input class="stat-input" type="text" name="attr_encounter_date" data-i18n-placeholder="encounter_date" spellcheck="false"/>
-            </div>
-            <div class="encounter-context">
-              <input class="stat-input" type="text" name="attr_encounter_context" data-i18n-placeholder="encounter_context" spellcheck="false"/>
-            </div>
-          </div>
           <div class="encounter-row-2">
             <div class="encounter-taken-recovered left">
-              <input class="stat-input" type="text" name="attr_left_taken_or_recovered" data-i18n-placeholder="taken_or_recovered" spellcheck="false"/>
+              <div class="reverse-skew">
+                <input class="stat-input" type="text" name="attr_left_taken_or_recovered" data-i18n-placeholder="taken_or_recovered" spellcheck="false"/>
+              </div>
             </div>
             <div class="encounter-taken-recovered right">
-              <input class="stat-input" type="text" name="attr_right_taken_or_recovered" data-i18n-placeholder="taken_or_recovered" spellcheck="false"/>
+              <div class="reverse-skew">
+                <input class="stat-input" type="text" name="attr_right_taken_or_recovered" data-i18n-placeholder="taken_or_recovered" spellcheck="false"/>
+              </div>
             </div>
           </div>
           <div class="encounter-row-3">
             <div class="encounter-details left">
-              <input class="stat-input" type="text" name="attr_left_encounter_details" data-i18n-placeholder="encounter_details" spellcheck="false"/>
+              <div class="reverse-skew">
+                <input class="stat-input" type="text" name="attr_left_encounter_details" data-i18n-placeholder="encounter_details" spellcheck="false"/>
+              </div>
             </div>
             <div class="encounter-details right">
-              <input class="stat-input" type="text" name="attr_right_encounter_details" data-i18n-placeholder="encounter_details" spellcheck="false"/>
+              <div class="reverse-skew">
+                <input class="stat-input" type="text" name="attr_right_encounter_details" data-i18n-placeholder="encounter_details" spellcheck="false"/>
+              </div>
             </div>
           </div>
         </div>
         <div class="encounter-success-defeat right">
           <input type="radio" name="attr_encounter_victor" value="right"/>
         </div>
+        <div class="gray-diamond"><span></span></div>
       </div>
     </fieldset>
     <div class="losses-block">
+      <div class="losses-label" data-i18n="losses_counter">losses counter</div>
       <div class="losses-counter">
         <div class="loss-increments">
           <div class="loss-increment left">
             <label>
-              <input type="checkbox" name="attr_left_loss_1" value="1"/>
-              <div class="loss-section">1</div>
+              <input class="checkbox-size-1" type="checkbox" name="attr_left_loss_1" value="1"/>
+              <div class="loss-section"></div>
             </label>
           </div>
           <div class="loss-increment left">
             <label>
-              <input type="checkbox" name="attr_left_loss_2" value="1"/>
-              <div class="loss-section">2</div>
+              <input class="checkbox-size-2" type="checkbox" name="attr_left_loss_2" value="1"/>
+              <div class="loss-section"></div>
             </label>
           </div>
           <div class="loss-increment left">
             <label>
-              <input type="checkbox" name="attr_left_loss_3" value="1"/>
-              <div class="loss-section">3</div>
+              <input class="checkbox-size-3" type="checkbox" name="attr_left_loss_3" value="1"/>
+              <div class="loss-section"></div>
             </label>
           </div>
           <div class="loss-increment left">
             <label>
-              <input type="checkbox" name="attr_left_loss_4" value="1"/>
-              <div class="loss-section">4</div>
+              <input class="checkbox-size-4" type="checkbox" name="attr_left_loss_4" value="1"/>
+              <div class="loss-section"></div>
             </label>
           </div>
           <div class="loss-increment left">
             <label>
-              <input type="checkbox" name="attr_left_loss_5" value="1"/>
-              <div class="loss-section">5</div>
+              <input class="checkbox-size-5" type="checkbox" name="attr_left_loss_5" value="1"/>
+              <div class="loss-section"></div>
             </label>
           </div>
-        </div>
-        <div class="loss-increments">
           <div class="loss-increment final">
             <label>
-              <input type="checkbox" name="attr_loss_6" value="1"/>
-              <div class="loss-section"><span data-i18n="losses-counter"></span></div>
+              <input class="checkbox-size-6" type="checkbox" name="attr_loss_6" value="1"/>
+              <div class="loss-section"></div>
+            </label>
+          </div>
+          <div class="loss-increment right">
+            <label>
+              <input class="checkbox-size-5" type="checkbox" name="attr_right_loss_5" value="1"/>
+              <div class="loss-section"></div>
+            </label>
+          </div>
+          <div class="loss-increment right">
+            <label>
+              <input class="checkbox-size-4" type="checkbox" name="attr_right_loss_4" value="1"/>
+              <div class="loss-section"></div>
+            </label>
+          </div>
+          <div class="loss-increment right">
+            <label>
+              <input class="checkbox-size-3" type="checkbox" name="attr_right_loss_3" value="1"/>
+              <div class="loss-section"></div>
+            </label>
+          </div>
+          <div class="loss-increment right">
+            <label>
+              <input class="checkbox-size-2" type="checkbox" name="attr_right_loss_2" value="1"/>
+              <div class="loss-section"></div>
+            </label>
+          </div>
+          <div class="loss-increment right">
+            <label>
+              <input class="checkbox-size-1" type="checkbox" name="attr_right_loss_1" value="1"/>
+              <div class="loss-section"></div>
             </label>
           </div>
         </div>
-        <div class="loss-increments">
-          <div class="loss-increment right">
-            <label>
-              <input type="checkbox" name="attr_right_loss_5" value="1"/>
-              <div class="loss-section">5</div>
-            </label>
-          </div>
-          <div class="loss-increment right">
-            <label>
-              <input type="checkbox" name="attr_right_loss_4" value="1"/>
-              <div class="loss-section">4</div>
-            </label>
-          </div>
-          <div class="loss-increment right">
-            <label>
-              <input type="checkbox" name="attr_right_loss_3" value="1"/>
-              <div class="loss-section">3</div>
-            </label>
-          </div>
-          <div class="loss-increment right">
-            <label>
-              <input type="checkbox" name="attr_right_loss_2" value="1"/>
-              <div class="loss-section">2</div>
-            </label>
-          </div>
-          <div class="loss-increment right">
-            <label>
-              <input type="checkbox" name="attr_right_loss_1" value="1"/>
-              <div class="loss-section">1</div>
-            </label>
-          </div>
+      </div>
+    </div>
+    <div class="final-result-block">
+      <div class="final-win-row">
+        <div class="result-radio left">
+          <input class="left" type="radio" name="attr_left_result" value="win"/>
+        </div>
+        <div class="result-label left">
+          <div data-i18n="emerged_victorious">I emerged victorious</div>
+        </div>
+        <div class="result-label right">
+          <div data-i18n="emerged_victorious">I emerged victorious</div>
+        </div>
+        <div class="result-radio right">
+          <input class="right" type="radio" name="attr_right_result" value="win"/>
+        </div>
+      </div>
+      <div class="final-loss-row">
+        <div class="result-radio left">
+          <input class="left" type="radio" name="attr_left_result" value="loss"/>
+        </div>
+        <div class="result-label left">
+          <div data-i18n="was_defeated">I was defeated</div>
+        </div>
+        <div class="result-label right">
+          <div data-i18n="was_defeated">I was defeated</div>
+        </div>
+        <div class="result-radio right">
+          <input class="right" type="radio" name="attr_right_result" value="loss"/>
         </div>
       </div>
     </div>
