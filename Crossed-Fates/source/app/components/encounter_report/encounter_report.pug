@@ -1,48 +1,77 @@
 
 mixin encounter_block
-  //- div.encounter-labels
-  //-   div.encounter-block
-  //-     div.encounter-success-defeat.left
-  //-     div.encounter-date.left
-  //-       div(data-i18n='encounter_date')=locals['encounter_date']
-  //-     div.encounter-taken-recovered.left
-  //-       div(data-i18n='taken_or_recovered')=locals['taken_or_recovered']
-  //-     div.encounter-details.left
-  //-       div(data-i18n='encounter_details')=locals['encounter_details']
-  //-     div.middle
-  //-     div.encounter-details.right
-  //-       div(data-i18n='encounter_details')=locals['encounter_details']
-  //-     div.encounter-taken-recovered.right
-  //-       div(data-i18n='taken_or_recovered')=locals['taken_or_recovered']
-  //-     div.encounter-date.right
-  //-       div(data-i18n='encounter_date')=locals['encounter_date']
-  //-     div.encounter-success-defeat.right
-
   fieldset.repeating_encounters
     +encounter_entry
+  +losses_counter
 
 mixin encounter_entry
   div.encounter-block
-      div.encounter-success-defeat.left
-        input(
-          type='radio'
-          name='attr_encounter_victor'
-          value='left')
-      div.encounter-date.left
-        +stat_no_label('text', 'left_encounter_date', 'encounter_date')
-      div.encounter-taken-recovered.left
-        +stat_no_label('text', 'left_taken_or_recovered', 'taken_or_recovered')
-      div.encounter-details.left
-        +stat_no_label('text', 'left_encounter_details', 'encounter_details')
-      div.middle
-      div.encounter-details.right
-        +stat_no_label('text', 'right_encounter_details', 'encounter_details')
-      div.encounter-taken-recovered.right
-        +stat_no_label('text', 'right_taken_or_recovered', 'taken_or_recovered')
-      div.encounter-date.right
-        +stat_no_label('text', 'right_encounter_date', 'encounter_date')
-      div.encounter-success-defeat.right
-        input(
-          type='radio'
-          name='attr_encounter_victor'
-          value='right')
+    div.encounter-success-defeat.left
+      input(type='radio' name='attr_encounter_victor' value='left')
+      //- span.success-defeat-label='/'
+      //- div.encounter-check
+      //-   label.checkbox
+      //-     input(type='radio' name='attr_encounter_victor' value='left')
+      //-     span.encounter-square
+      //-     div.encounter-display
+    
+    div.encounter-inputs
+      div.encounter-row-1
+        div.encounter-date.left
+          +stat_no_label('text', 'encounter_date', 'encounter_date')
+        div.encounter-context
+          +stat_no_label('text', 'encounter_context', 'encounter_context')
+      
+      div.encounter-row-2
+        div.encounter-taken-recovered.left
+          +stat_no_label('text', 'left_taken_or_recovered', 'taken_or_recovered')
+        div.encounter-taken-recovered.right
+          +stat_no_label('text', 'right_taken_or_recovered', 'taken_or_recovered')
+
+      div.encounter-row-3
+        div.encounter-details.left
+          +stat_no_label('text', 'left_encounter_details', 'encounter_details')
+        div.encounter-details.right
+          +stat_no_label('text', 'right_encounter_details', 'encounter_details')
+    
+    div.encounter-success-defeat.right
+      input(type='radio' name='attr_encounter_victor' value='right')
+      //- span.success-defeat-label='/'
+      //- div.encounter-check
+      //-   label.checkbox
+      //-     input(type='radio' name='attr_encounter_victor' value='right')
+      //-     span.encounter-square
+      //-     div.encounter-display
+
+mixin losses_counter
+  div.losses-block
+    div.losses-counter
+      div.loss-increments
+        - var left = 1;
+        while left <= 5
+          div.loss-increment.left
+            label
+              input(
+                type='checkbox'
+                name=`attr_left_loss_${left}`
+                value=1)
+              div.loss-section=left++
+      div.loss-increments
+        div.loss-increment.final
+          label
+            input(
+              type='checkbox'
+              name='attr_loss_6'
+              value=1)
+            div.loss-section
+              span(data-i18n='losses-counter')=locals['losses-counter']
+      div.loss-increments
+        - var right = 5;
+        while right > 0
+          div.loss-increment.right
+            label
+              input(
+                type='checkbox'
+                name=`attr_right_loss_${right}`
+                value=1)
+              div.loss-section=right--

@@ -1,77 +1,62 @@
 
-.rivals, .rivals-header {
+
+.rivals-header {
   display: inline-grid;
-  grid-template-columns: auto 2em auto;
+  grid-template-columns: auto 100px auto;
+  background-color: $light-gray;
   @include fill-available();
+  height: 100px;
+  padding: 0.5em;
+  margin-bottom: 1em;
 
   .rival {
     display: flex;
     flex-direction: column;
-
-    input {
-      margin-bottom: 9px;
-    }
-
-    .subtitle {
-      color: $dark-gray;
-      // font-style: italic;
-      margin-top: -5px;
-      @include std-font($title-font);
-    }
-  }
-
-  .rival-stat {
-    display: inline-grid;
-    grid-template-columns: 5em auto;
-    border-bottom: 4px solid $dark-gray;
-    align-items: center;
-    @include fill-available();
-
-    input {
-      margin-bottom: 0;
-      border: none;
-    }
-  }
-
-  .rival-left .subtitle {
-  }
-
-  .rival-right {
-    .rival-stat {
-      grid-template-columns: auto 5em;
-    }
-
-    label {
-      text-align: right;
-      width: fit-content;
-      align-self: flex-end;
-     }
-
-    input { text-align: right; }
-
-    .subtitle { text-align: right; }
-  }
-}
-
-.square { }
-
-.rivals-header {
-  grid-template-columns: auto 100px auto;
-  background-color: $light-gray;
-  padding: 0.5em;
-  margin-bottom: 1em;
-
-  .rival-left label:after,
-  .rival-right label:before {
-    content: ':';
-  }
-
-  .rival input {
+    justify-content: space-between;
   }
 
   .logo {
     background-image: url('https://fakeimg.pl/100/000,0/6d6c70');
     background-repeat: no-repeat;
     // background-position: bottom center;
+  }
+
+  .header-left, .header-right {
+    .rival-stat {
+      display: inline-grid;
+      grid-template-columns: 20% 80%;
+      border-bottom: 4px solid $dark-gray;
+      align-items: center;
+      @include fill-available();
+
+      .header-value {
+        margin-bottom: 0;
+        border: none;
+      }
+
+      .header-label {
+        font-weight: bold;
+        font-size: 1.2em;
+        @include std-font($narrow-font);
+      }
+    }
+  }
+
+  .header-right {
+    .rival-stat {
+      grid-template-columns: 80% 20%;
+    }
+
+    .header-label {
+      text-align: right;
+     }
+
+    .header-value { text-align: right; }
+  }
+
+  .header-left .header-label:after,
+  .header-right .header-label:before {
+    content: ' : ';
+    @include std-font($narrow-font);
   }
 }

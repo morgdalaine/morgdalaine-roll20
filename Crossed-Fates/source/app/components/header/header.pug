@@ -1,54 +1,24 @@
 
 mixin header
   div.rivals-header
-    div.rival.rival-left
+    div.rival.header-left
       div.rival-stat
-        label(data-i18n='side')=locals['side']
-        input(
-          type=inp,
-          class='stat-input'
-          name='attr_left_side'
-          readonly
-          spellcheck='false')
+        span.header-label(data-i18n='header_side')=locals['header_side']
+        span.header-value(name='attr_left_side')
       div.rival-stat
-        label(data-i18n='name')=locals['name']
-        input(
-          type=inp,
-          class='stat-input'
-          name='attr_left_name'
-          readonly
-          spellcheck='false')
+        span.header-label(data-i18n='name')=locals['name']
+        span.header-value(name='attr_left_name')
       div.rival-stat
-        label(data-i18n='pronouns')=locals['pronouns']
-        input(
-          type=inp,
-          class='stat-input'
-          name='attr_left_pronouns'
-          readonly
-          spellcheck='false')
+        span.header-label(data-i18n='pronouns')=locals['pronouns']
+        span.header-value(name='attr_left_pronouns')
     div.logo
-    div.rival.rival-right
+    div.rival.header-right
       div.rival-stat
-        input(
-          type=inp,
-          class='stat-input'
-          name='attr_right_side'
-          readonly
-          spellcheck='false')
-        label(data-i18n='side')=locals['side']
+        span.header-value(name='attr_right_side')
+        span.header-label(data-i18n='header_side')=locals['header_side']
       div.rival-stat
-        input(
-          type=inp,
-          class='stat-input'
-          name='attr_right_name'
-          readonly
-          spellcheck='false')
-        label(data-i18n='name')=locals['name']
+        span.header-value(name='attr_right_name')
+        span.header-label(data-i18n='name')=locals['name']
       div.rival-stat
-        input(
-          type=inp,
-          class='stat-input'
-          name='attr_right_pronouns'
-          readonly
-          spellcheck='false')
-        label(data-i18n='pronouns')=locals['pronouns']
+        span.header-value(name='attr_right_pronouns')
+        span.header-label(data-i18n='pronouns')=locals['pronouns']

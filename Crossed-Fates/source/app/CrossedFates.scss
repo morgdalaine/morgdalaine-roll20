@@ -7,15 +7,17 @@
 // common
 @import './common/sass/shared';
 
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
 // sheet core
 .charsheet {
-  width: 720px !important;
+  // width: 720px !important;
+  min-width: 480;
   margin: 0 auto !important;
   padding: 15px;
   font-weight: normal;
-  border: 4px solid $red;
-  border-bottom: none;
-
 
   @include std-font();
 
@@ -24,12 +26,13 @@
   }
 
   h2 {
-    @include std-font($title-font);
+    @include std-font($mono-font);
+    color: $dark-red;
     text-align: center;
   }
 
   label {
-    @include std-font($label-font);
+    @include std-font($narrow-font);
   }
 
   .page-container {
@@ -70,7 +73,7 @@
     background-color: $light-gray;
     border: none;
     border-radius: 0;
-    font-family: $input-font;
+    @include std-font($input-font);
     font-size: 1em;
     text-decoration: none;
   }
@@ -91,7 +94,7 @@
     border: none;
     border-bottom: 1px dotted $black;
     border-radius: 0;
-    font-family: $input-font;
+    @include std-font($input-font);
     font-size: 0.8em;
     text-decoration: none;
     width: auto;

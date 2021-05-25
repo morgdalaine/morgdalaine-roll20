@@ -72,16 +72,18 @@ mixin repeating_input(inp, attr)
     name=`attr_${attr}`
     spellcheck='false')
 
-mixin stat_area(attr, rows)
-  label(data-i18n=attr)=locals[attr]
+mixin stat_area(attr, i18n, rows)
+  label(data-i18n=i18n)=locals[i18n]
   textarea(
     class='stat-input'
     rows=rows
     name=`attr_${attr}`
     spellcheck='false')
 
-mixin stat_area(i18n, attr, rows)
-  label(data-i18n=i18n)=locals[i18n]
+mixin stat_area_with_subtitle(attr, rows, ...subtitles)
+  label(data-i18n=attr)=locals[attr]
+  each sub in subtitles
+    div.subtitle(data-i18n=sub)=locals[sub]
   textarea(
     class='stat-input'
     rows=rows

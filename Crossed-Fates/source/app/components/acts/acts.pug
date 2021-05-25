@@ -1,3 +1,4 @@
+include ..\..\data\acts
 
 mixin act_title_block(act)
   div.act-title-block
@@ -7,82 +8,80 @@ mixin journaling-block(act)
   div.journaling-block
     +label_with_subtitle('journaling', `act_${act}_journal`)
 
-mixin act_zero_block
-  div.act-zero-block
-    +act_title_block('zero')
-    div.stat-block.conflict
-      +stat_area('conflict', 2)
-    div.stat-block.origin
-      +stat_area('origin', 2)
-    div.stat-block.rival-block
-      div.rivals
-        div.rival.rival-left
-          +stat_area('what_is_at_stake', 'left_what_is_at_stake', 2)
-          +stat('text', 'left_side', 'side')
-        div.diamond
-        div.rival.rival-right
-          +stat_area('what_is_at_stake', 'right_what_is_at_stake', 2)
-          +stat('text', 'right_side', 'side')
-    div.stat-block.conflict-fought-by
-      +stat_area('conflict_fought_by', 2)
-    +journaling-block('zero')
-
-mixin act_one_block
-  div.act-one-block
-    +act_title_block('one')
-    div.stat-block.rival-block
-      div.rivals
-        div.rival.rival-left
-          +stat('text', 'left_name', 'name')
-          +stat('text', 'left_pronouns', 'pronouns')
-          +stat('text', 'left_introduction', 'introduction')
-          +stat('text', 'left_chosen_by_fate', 'chosen_by_fate')
-          +stat_with_subtitle('text', 'left_stand_for', 'stand_for', 'risk_to_lose')
-          +stat_area('how_do_you_feel', 'left_background', 2)
-        div.diamond
-        div.rival.rival-right
-          +stat('text', 'right_name', 'name')
-          +stat('text', 'right_pronouns', 'pronouns')
-          +stat('text', 'right_introduction', 'introduction')
-          +stat('text', 'right_chosen_by_fate', 'chosen_by_fate')
-          +stat_with_subtitle('text', 'right_stand_for', 'stand_for', 'risk_to_lose')
-          +stat_area('how_do_you_feel', 'right_background', 2)
-    +journaling-block('one')
-
-mixin act_two_block
-  div.act-two-block
-    +act_title_block('two')
-    div.stat-block.first-contact-battle
-      +stat_area('first_battle', 2)
-    div.stat-block.rival-block
-      div.rivals
-        div.rival.rival-left
-          +stat_with_subtitle('text', 'left_looks', 'looks', 'looks_subtitle')
-        div.diamond
-        div.rival.rival-right
-          +stat_with_subtitle('text', 'right_looks', 'looks', 'looks_subtitle')
-    div.stat-block.first-contact-meeting
-      +stat_area('circumstances', 2)
+mixin generate_act_input_blocks(act)
+  div(class=`act-${act}-block`)
+    +act_title_block(act)
+  if act != 'final'
+    div.act-prompt
+      div.prompt-text(data-i18n=`act_${act}_prompt`)=locals[`act_${act}_prompt`]
+    div.act-block
+    each inp in act_inputs[act]
+      if inp.is_together
+        div.stat-block.together-block
+          label
+            span(data-i18n=inp.prompt)=locals[inp.prompt]
+          if inp.subtitles
+            each sub in inp.subtitles
+              div.subtitle(data-i18n=sub)=locals[sub]
+          if inp.placeholder
+            textarea(
+              class='stat-input'
+              name=`attr_${inp.prompt}`
+              data-i18n-placeholder=inp.placeholder
+              rows=2
+              spellcheck='false')
+          else
+            textarea(
+              class='stat-input'
+              name=`attr_${inp.prompt}`
+              rows=2
+              spellcheck='false')
+      else
+        div.stat-block.rival-block
+          div.rival.label-left
+            label
+              span(data-i18n=inp.prompt)=locals[inp.prompt]
+          div.rival.diamond
+          div.rival.label-right
+            label
+              span(data-i18n=inp.prompt)=locals[inp.prompt]
+          div.rival-subtitle
+            if inp.subtitles
+              each sub in inp.subtitles
+                div.subtitle(data-i18n=sub)=locals[sub]
+          div.rival.rival-left
+            if inp.placeholder
+              textarea(
+                class='stat-input'
+                name=`attr_left_${inp.prompt}`
+                data-i18n-placeholder=inp.placeholder
+                rows=2
+                spellcheck='false')
+            else
+              textarea(
+                class='stat-input'
+                name=`attr_left_${inp.prompt}`
+                rows=2
+                spellcheck='false')
+          div.rival.rival-right
+            if inp.placeholder
+              textarea(
+                class='stat-input'
+                name=`attr_right_${inp.prompt}`
+                data-i18n-placeholder=inp.placeholder
+                rows=2
+                spellcheck='false')
+            else
+              textarea(
+                class='stat-input'
+                name=`attr_right_${inp.prompt}`
+                rows=2
+                spellcheck='false')
     div.disagreement.subtitle(data-i18n='when_you_disagree')=locals['when_you_disagree']
-    +journaling-block('two')
-
-mixin act_three_block
-  div.act-three-block
-    +act_title_block('three')
-    div.stat-block.rival-block
-      div.rivals
-        div.rival.rival-left
-          +stat('text', 'left_taken_from_you', 'taken_from_you')
-          +stat('text', 'left_why_stop_them', 'why_stop_them')
-          +stat('text', 'left_rival_reputation', 'rival_reputation')
-        div.diamond
-        div.rival.rival-right
-          +stat('text', 'right_taken_from_you', 'taken_from_you')
-          +stat('text', 'right_why_stop_them', 'why_stop_them')
-          +stat('text', 'right_rival_reputation', 'rival_reputation')
-    +journaling-block('three')
-
-mixin act_final_block
-  div.act-final-block
-    +act_title_block('final')
-  div.rules.subtitle(data-i18n='rules_must_be_followed')=locals['rules_must_be_followed']
+    +journaling-block(act)
+  else
+    each inp in act_inputs[act]
+      div.final-instructions(data-i18n=`${inp.prompt}`)=locals[`${inp.prompt}`]
+    div.warning
+      span(data-i18n='warning')=locals['warning']
+      div(data-i18n='shuffle_your_deck')=locals['shuffle_your_deck']
