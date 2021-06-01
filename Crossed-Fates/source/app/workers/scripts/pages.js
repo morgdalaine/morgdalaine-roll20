@@ -33,7 +33,7 @@ on('change:left_side change:right_side', function(eventinfo) {
 });
 
 // update character sheet name
-on('change:left_side change:right_side', function() {
+on('sheet:opened change:left_side change:right_side', function() {
   getAttrs(['left_side', 'right_side'], function(values) {
     const name = values.left_side + ' × ' + values.right_side;
     updateAttrs = { character_name: name };

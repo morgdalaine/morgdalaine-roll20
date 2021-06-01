@@ -117,14 +117,6 @@ input.act-final:checked ~ div.act-final {
     // gap: 10px;
     @include fill-available();
 
-    .diamond {
-      // grid-row-start: 1;
-      // grid-column-start: 2;
-      // grid-row-end: 4;
-      // background-color: $dark-gray;
-      // border: 2px solid $dark-gray;
-    }
-
     .label-left, .rival-left {
         grid-column-start: 1;
     }

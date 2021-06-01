@@ -82,11 +82,11 @@
   display: none;
 }
 
-.charsheet input[type='checkbox'].hide-element {
+.charsheet input[type=checkbox].hide-element {
   display: none;
 }
 
-.charsheet input[type='radio'].hide-element {
+.charsheet input[type=radio].hide-element {
   display: none;
 }
 
@@ -190,11 +190,11 @@
   display: none;
 }
 
-.charsheet input[type='checkbox'].hide-element {
+.charsheet input[type=checkbox].hide-element {
   display: none;
 }
 
-.charsheet input[type='radio'].hide-element {
+.charsheet input[type=radio].hide-element {
   display: none;
 }
 
@@ -390,7 +390,7 @@
 }
 
 .charsheet .rivals-header .logo {
-  background-image: url("https://fakeimg.pl/100/000,0/6d6c70");
+  background-image: url();
   background-repeat: no-repeat;
 }
 
@@ -1122,6 +1122,41 @@
 
 .charsheet .final-result-block .result-radio input[type=radio]:checked {
   background: #040404;
+}
+
+.ui-dialog .charsheet .button-container {
+  display: flex;
+}
+
+.ui-dialog .charsheet .button-container span {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: "Share Tech Mono", "PT Sans", sans-serif;
+  padding-left: 5px;
+}
+
+.ui-dialog .charsheet button[type=roll] {
+  align-items: left;
+  color: #c01b1e;
+  font-weight: normal;
+  text-decoration: none;
+  background: none;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.ui-dialog .charsheet button[type=roll]:hover {
+  transition: .5s ease;
+}
+
+.ui-dialog .charsheet button[type=roll]::before {
+  font-family: 'dicefontd6';
+  content: 'L';
 }
 
 .ui-dialog .charsheet .repcontainer .repitem {

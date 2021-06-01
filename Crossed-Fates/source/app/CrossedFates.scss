@@ -43,11 +43,11 @@
     display: none;
   }
 
-  input[type='checkbox'].hide-element {
+  input[type=checkbox].hide-element {
     display: none;
   }
 
-  input[type='radio'].hide-element {
+  input[type=radio].hide-element {
     display: none;
   }
 
@@ -143,9 +143,9 @@
 
   .hide-element { display: none; }
 
-  input[type='checkbox'].hide-element { display: none; }
+  input[type=checkbox].hide-element { display: none; }
 
-  input[type='radio'].hide-element { display: none; }
+  input[type=radio].hide-element { display: none; }
 
   div.hide-element { display: none; }
 
@@ -213,6 +213,40 @@
 
 .ui-dialog {
   .charsheet {
+
+    .button-container {
+      display: flex;
+
+      span {
+        font-size: 13px;
+        text-transform: uppercase;
+        @include std-font($mono-font);
+        padding-left: 5px;
+      }
+    }
+
+    button[type=roll] {
+      align-items: left;
+      color: $dark-red;
+      font-weight: normal;
+      text-decoration: none;
+      background: none;
+      background-image: none;
+      border: none;
+      box-shadow: none;
+      text-shadow: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      
+      &:hover { transition: .5s ease; }
+
+      &::before {
+        font-family: 'dicefontd6';
+        content: 'L';
+      }
+    }
+
     .repcontainer {
       .repitem {
         margin: 5px;

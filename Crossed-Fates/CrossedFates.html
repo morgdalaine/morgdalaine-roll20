@@ -97,7 +97,6 @@
         <div class="rival label-left">
           <label><span data-i18n="side_stands_for">What does each Side of the Conflict stand for?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="side_stands_for">What does each Side of the Conflict stand for?</span></label>
         </div>
@@ -114,7 +113,6 @@
         <div class="rival label-left">
           <label><span data-i18n="conflict_fought_by">How is the Conflict fought?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="conflict_fought_by">How is the Conflict fought?</span></label>
         </div>
@@ -132,7 +130,6 @@
         <div class="rival label-left">
           <label><span data-i18n="side">Create a name for your Side</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="side">Create a name for your Side</span></label>
         </div>
@@ -168,7 +165,6 @@
         <div class="rival label-left">
           <label><span data-i18n="name">Name</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="name">Name</span></label>
         </div>
@@ -185,7 +181,6 @@
         <div class="rival label-left">
           <label><span data-i18n="pronouns">Pronouns</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="pronouns">Pronouns</span></label>
         </div>
@@ -202,7 +197,6 @@
         <div class="rival label-left">
           <label><span data-i18n="introduction">How were you introduced to the conflict?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="introduction">How were you introduced to the conflict?</span></label>
         </div>
@@ -219,7 +213,6 @@
         <div class="rival label-left">
           <label><span data-i18n="chosen_by_fate">Why were you chosen by fate?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="chosen_by_fate">Why were you chosen by fate?</span></label>
         </div>
@@ -236,7 +229,6 @@
         <div class="rival label-left">
           <label><span data-i18n="stand_for">What do you stand for?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="stand_for">What do you stand for?</span></label>
         </div>
@@ -254,7 +246,6 @@
         <div class="rival label-left">
           <label><span data-i18n="background">How do you feel about being the only lasting hope?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="background">How do you feel about being the only lasting hope?</span></label>
         </div>
@@ -296,7 +287,6 @@
         <div class="rival label-left">
           <label><span data-i18n="looks">When you arrive in battle, what does your Rival see?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="looks">When you arrive in battle, what does your Rival see?</span></label>
         </div>
@@ -338,7 +328,6 @@
         <div class="rival label-left">
           <label><span data-i18n="taken_from_you">What did your Sworn Rival take from you?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="taken_from_you">What did your Sworn Rival take from you?</span></label>
         </div>
@@ -356,7 +345,6 @@
         <div class="rival label-left">
           <label><span data-i18n="why_stop_them">Why must you Stop them?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="why_stop_them">Why must you Stop them?</span></label>
         </div>
@@ -374,7 +362,6 @@
         <div class="rival label-left">
           <label><span data-i18n="rival_reputation">What is your Sworn Rival's Reputation on the battlefield?</span></label>
         </div>
-        <div class="rival diamond"></div>
         <div class="rival label-right">
           <label><span data-i18n="rival_reputation">What is your Sworn Rival's Reputation on the battlefield?</span></label>
         </div>
@@ -604,7 +591,7 @@ on('change:left_side change:right_side', function(eventinfo) {
 });
 
 // update character sheet name
-on('change:left_side change:right_side', function() {
+on('sheet:opened change:left_side change:right_side', function() {
   getAttrs(['left_side', 'right_side'], function(values) {
     const name = values.left_side + ' × ' + values.right_side;
     updateAttrs = { character_name: name };
