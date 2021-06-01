@@ -1,0 +1,1 @@
+{"C:\\Users\\morgdalaine\\Documents\\GitHub\\morgdalaine\\morgdalaine-roll20\\Crossed-Fates\\source\\gulpfile.js":{"sha1":"f0b443834c11370834e1511eca570e830a90896a","tasks":{"sass":{"name":"sass","dependencies":""},"html":{"name":"html","dependencies":""},"watch":{"name":"watch","dependencies":"sass html "},"build":{"name":"build","dependencies":"sass html"}}}}
