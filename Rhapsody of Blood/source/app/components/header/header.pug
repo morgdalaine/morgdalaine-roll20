@@ -1,0 +1,41 @@
+
+mixin header(mode)
+  header.nav-bar
+    input(type='hidden' class='tab-toggle' value='playbook')
+    h2(data-i18n=mode)=locals[mode]
+    div.nav-row
+      - var tabs = [ 'playbook', 'moves' ]
+      each tab in tabs
+        div.nav-child
+          lable.page-label
+            input(
+              type='radio'
+              name='attr_page_mode'
+              class='hide-element page-button'
+              value=tab)
+            div(
+              class=`page-button-${tab}`
+              data-i18n=`${mode}_${tab}`)=locals[`${mode}_${tab}`]
+
+    //- ul(class=`${mode} tabs`)
+    //-     li(class=`${mode} tab-${tab}`)
+    //-       label
+    //-         input(
+    //-           type='radio'
+    //-           name='attr_page_mode'
+    //-           class='tab-${tab}')
+    //-         div(
+    //-           class=`${mode} tab-${tab}`
+    //-           data-i18n=`${mode}_${tab}`)=locals[`${mode}_${tab}`]
+
+    //- ul(class=`${mode} tabs`)
+    //-   li(class=`${mode} tab-playbook`)
+    //-     button(
+    //-       type='action'
+    //-       name='act_playbook'
+    //-       data-i18n=`${mode}_playbook`)
+    //-   li(class=`${mode} tab-moves`)
+    //-     button(
+    //-       type='action'
+    //-       name='act_moves'
+    //-       data-i18n=`${mode}_moves`)

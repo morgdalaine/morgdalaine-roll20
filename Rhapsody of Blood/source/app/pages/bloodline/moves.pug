@@ -1,0 +1,22 @@
+include ..\..\components\moves\moves
+
+mixin bloodline_moves
+  div.tab-moves
+    h2(data-i18n='bloodline_moves')=locals['bloodline_moves']
+    div.moves-container-alt
+      +shared_move('arcane_power')
+      +shared_move('lend_aid')
+      +shared_move('rest_and_relaxation')
+      +shared_move('resist_doom')
+      +shared_move('forward_base')
+      +shared_move('reinforcements')
+
+    //- div.moves-container
+    //-   div.moves-left
+    //-     +shared_move('arcane_power')
+    //-     +shared_move('rest_and_relaxation')
+    //-     +shared_move('forward_base')
+    //-   div.moves-right
+    //-     +shared_move('lend_aid')
+    //-     +shared_move('resist_doom')
+    //-     +shared_move('reinforcements')

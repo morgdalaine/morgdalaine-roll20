@@ -1,5 +1,102 @@
-//- include ../common/file
+include ../common/pug/common
 include ../components/component
 
-.page-container
-  +component
+//- sheet version
+input(type='hidden' name='attr_sheet_version' version='')
+
+- var pages = [ 'bloodline', 'explorer' ]
+input(
+  type='checkbox'
+  name='attr_modes_choice'
+  class='modes-show hide-element'
+  checked)
+div.modes-show.hide-element
+  div.mode-title
+    div.mode-title
+      img(
+        src='https://img.itch.zone/aW1nLzMxMzE2ODgucG5n/original/XMiee1.png'
+        data-i18n-title='rhapsody_of_blood'
+        data-i18n-alt='wol_rhapsody_of_blood')
+    h2.mode-title(data-i18n='page_select')=locals['page_select']
+  div.modes
+    each page in pages
+      label.mode
+        h4(class=`${page}` data-i18n=`${page}_mode`)=locals[`${page}_mode`]
+        div.mode
+          input(type='radio' name='attr_mode_button' class='hide-element' value=page)
+          div.move-image
+            img(src=`https://via.placeholder.com/200x60?text=${page}_mode`)
+            //- h7(data-i18n=`${page}`)=locals[`${page}`]
+
+input(type='radio' name='attr_mode' class='bloodline-mode hide-element' value='bloodline')
+div.bloodline-mode.hide-element
+  include ./bloodline/bloodline
+
+input(type='radio' name='attr_mode' class='explorer-mode hide-element' value='explorer')
+div.explorer-mode.hide-element
+  include ./explorer/explorer
+
+
+//- div
+//-   input(
+//-     type='hidden'
+//-     name='attr_rolltype_query'
+//-     value='?{Roll Type|Standard, [[2d6]]|Advantage, [[3d6kh2]]|Disadvantage, [[3d6kl2]]}')
+//-   input(
+//-     type='hidden'
+//-     name='attr_modifier_query'
+//-     value='?{Modifiers|None, |+2, 2|+1, 1|-1, -1|-2, -2}')
+//-   input(
+//-     type='hidden'
+//-     name='attr_position_query'
+//-     value='?{Position|Standard,position=Standard|Advantage,position=Advantage|Disadvantage,position=Disadvantage')
+//-   input(
+//-     type='hidden'
+//-     name='attr_rollstat_query'
+//-     value='?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}| Iron, @{Iron}| Glass, @{Glass}| Sulphur, @{Sulphur}| Mercury, @{Mercury}| Blood, @{Blood}}')
+//-   input(
+//-     type='hidden'
+//-     name='attr_title_text'
+//-     value='')
+//-   input(
+//-     type='hidden'
+//-     name='attr_sheet_version'
+//-     version='')
+
+//- input(type='checkbox' name='attr_sheet_type' class='hidden' value='bloodline' checked)
+//- input(type='hidden' name='attr_page_mode' class='tab-toggle' value='sheet')
+//- input(type='radio' name='attr_sheet_type' class='mode-selector' value='bloodline' checked)
+//- input(type='radio' name='attr_sheet_type' class='mode-selector' value='explorer')
+
+//- div.header
+//-   span.mode-selector-bloodline(data-i18n='bloodline_mode')=locals['bloodline_mode']
+//-   span.mode-selector-explorer(data-i18n='explorer_mode')=locals['explorer_mode']
+//-   span.mode-selector
+
+//-   ul.bloodline-tabs
+//-     li.bloodline.tab-bloodline-sheet
+//-       button(
+//-         type='action'
+//-         name='act_sheet'
+//-         data-i18n='bloodline_sheet')=locals['bloodline_sheet']
+//-     li.bloodline.tab-bloodline-moves
+//-       button(
+//-         type='action'
+//-         name='act_moves'
+//-         data-i18n='bloodline_moves')=locals['bloodline_moves']
+//-     li.explorer.tab-bloodline-sheet
+//-       button(
+//-         type='action'
+//-         name='act_sheet'
+//-         data-i18n='explorer_sheet')=locals['explorer_sheet']
+//-     li.explorer.tab-bloodline-moves
+//-       button(
+//-         type='action'
+//-         name='act_moves'
+//-         data-i18n='explorer_moves')=locals['explorer_moves']
+
+
+//- +bloodlines
+
+//- .page-container
+//-   +component

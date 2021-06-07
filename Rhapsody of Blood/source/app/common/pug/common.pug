@@ -1,1 +1,15 @@
-//- include ./file.pug
+
+mixin roll_action(action)
+  span=`&nbsp;`
+  span(data-i18n='roll')=locals['roll']
+  span.plus-action(data-i18n=action)=locals[action]
+  span=`.&nbsp;`
+
+mixin move_trigger(translation)
+  span.move-trigger(data-i18n=translation)=locals[translation]
+
+mixin simple_span(translation)
+  span(data-i18n=translation)=locals[translation]
+
+mixin simple_li(translation)
+  li(data-i18n=translation)=locals[translation]

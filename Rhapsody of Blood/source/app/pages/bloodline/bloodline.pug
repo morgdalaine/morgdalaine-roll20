@@ -1,0 +1,11 @@
+include ../../components/header/header
+include ./playbook
+include ./moves
+
+- var mode = 'bloodline'
+
++header(mode)
+
+div.bloodline-mode
+  +bloodline_playbook
+  +bloodline_moves

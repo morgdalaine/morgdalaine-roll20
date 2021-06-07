@@ -1,0 +1,25 @@
+
+.moves-container
+  display: flex
+
+.moves-container-alt
+  display: inline-grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(3, auto)
+
+.moves-left, .moves-right
+  width: 50%
+  margin: 0 5px
+
+.shared-move
+  h3
+    margin-bottom: 0.5em
+
+    button[type=roll]
+      display: inline
+      background-image: none
+
+      span
+        font-size: 18px
+        font-weight: bold
+        margin-left: 0.5em

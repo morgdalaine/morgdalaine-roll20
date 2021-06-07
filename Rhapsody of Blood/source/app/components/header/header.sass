@@ -1,0 +1,73 @@
+.header
+  @include fill-available()
+
+.nav-bar
+  display: flex
+  flex-direction: row
+  @include fill-available()
+
+  .nav-row
+    display: flex
+    flex-direction: row
+
+
+  *
+    border: 2px solid magenta
+
+// Playbook and Moves Tabs
+.bloodline .playbook,
+.bloodline .moves,
+.explorer .playbook,
+.explorer .moves,
+  display: none
+
+// Show Selected Tab
+.tab-toggle[value='playbook'] ~ div.tab-playbook,
+.tab-toggle[value='playbook'] ~ div.tab-moves
+  display: block
+
+.tab-toggle[value='playbook'] ~ div div.tab-playbook,
+.tab-toggle[value='playbook'] ~ div div.tab-moves
+  display: block
+
+.tabs
+  position: relative
+  display: table
+  padding-left: 0
+  margin-right: 20px
+  float: right
+
+  &:before, &:after
+    content: ''
+    border-bottom: 1px solid $black
+    bottom: 0
+    position: absolute
+    width: 10px
+    left: -10%
+    right: -10%
+
+  li
+    color: magenta
+    cursor: pointer
+    float: left
+    padding: 10px 15px
+    border-bottom: 1px solid $black
+
+    button
+      color: $dark-gray
+      border: none
+      background: transparent
+
+.tab-toggle[value='playbook'] ~ div .tabs .tab-playbook,
+.tab-toggle[value='moves'] ~ div .tabs .tab-moves
+  border: 1px solid $black
+  border-bottom: none
+
+.tab-toggle[value='playbook'] ~ div .tabs .tab-playbook button,
+.tab-toggle[value='moves'] ~ div .tabs .tab-moves button
+  border: 1px solid $red
+  border-bottom: none
+
+
+
+

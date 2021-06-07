@@ -2,18 +2,54 @@
 @import './common/sass/variables'
 
 // fonts
-@import url(https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap)
+@import url(https://fonts.googleapis.com/css2?family=Adamina&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Inknut+Antiqua:wght@400;600;700&family=Oswald:wght@400;700&family=Spectral:ital,wght@0,400;0,700;1,400&display=swap)
 
 // common
 @import './common/sass/shared'
 
 // sheet core
 .charsheet
-  width: 720px !important
+  // width: 720px !important
   margin: 0 auto !important
   padding: 15px
   font-weight: normal
-  @include std-font()
+  background-color: whitesmoke
+  @include std-font($text-font)
+
+  h2, h3
+    font-variant: small-caps
+
+  p
+    @include std-font($text-font)
+
+  .move-trigger
+    font-style: italic
+    font-weight: bold
+    @include std-font()
+
+  .thecastle
+    color: $red
+    font-weight: bold
+    font-size: 1.2em;
+    @include std-font($castle-font)
+
+  // Roll Buttons
+  button[type=roll].roll-button
+      display: flex
+      border: none
+      margin: 0
+      padding: 0
+
+  .plus-action
+    font-weight: bold
+
+    &:before
+      content: ' +'
+
+  // BOILER PLATE
+  // BOILER PLATE
+  // BOILER PLATE
+  // BOILER PLATE
 
   .page-container
     display: flex
@@ -166,6 +202,9 @@
 
   // Components
   @import './components/component'
+  @import './components/header/header';
+  @import './components/moves/moves';
+  @import './components/details/details';
 
 
 .ui-dialog

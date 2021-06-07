@@ -1,5 +1,91 @@
-@import './common/sass/variables';
-
 .page-container
   display: block
+
+.modes
+  display: flex
+  justify-content: space-evenly
+
+h2.mode-title
+  text-align: center
+
+div.mode-title
+  margin-bottom: 2em
+  @include std-font($text-font)
+
+label.mode
+  text-align: center
+  margin: 0.5em
+  padding: 0
+  cursor: pointer
+  box-shadow: 1px 1px 19px 6px rgba(0,0,0,0.15)
+  opacity: 1
+  z-index: 5
+  width: auto
+
+  &:hover
+    h4
+      color: white
+      background-color: $red
+      transition: .5s ease
+
+    .mode-image
+      opacity: 0.7
+      transition: .5s ease
+
+input[type=radio].bloodline-mode:checked ~ div.bloodline-mode,
+input[type=radio].explorer-mode:checked ~ div.explorer-mode
+  display: block
+
+input[type=checkbox].modes-show:checked ~ div.modes-show
+  display: block
+
+div.mode
+  display: flex
+  margin: 0
+  justify-content: center
+  width: fit-content
+  width: -moz-fit-content
+
+.mode-image
+  display: flex
+
+// // explorers
+// .null, .slayer, .mystic, .bonded, .reckoner, .packrat, .assassin, .captain,
+// .joker, .knight, .mascot, .not-mascot, .medic, .professor, .empty-explorer, .b-null,
+
+// // bloodlines
+// .legendary-heroes, .half-damned, .holy-church, .hidden-hand,
+// .magi, .guardians-of-nature, .fate-dealers, .defenders-of-tomorrow, .open-bloodline,
+
+// // modes
+// .bloodline, .explorer
+//    display: none
+
+// input[type=radio][value='bloodline']:checked ~ .bloodline,
+// input[type=radio][value='bloodline']:checked ~ div ul .bloodline,
+// input[type=radio][value='explorer']:checked ~ .explorer,
+// input[type=radio][value='explorer']:checked ~ div ul .explorer
+//   display: block
+
+// Begin tab
+// input.mode-selector[value="explorer"]:checked ~ span.mode-selector::before
+//   content: "Explorer Mode"
+
+// input.mode-selector[value="bloodline"]:checked ~ span.mode-selector::before
+//   content: "Bloodline Mode"
+
+// input.mode-selector[value='explorer']:checked ~ span.mode-selector::before
+// input.mode-selector[value='bloodline']:checked ~ span.mode-selector::before
+
+// .bloodline .bloodline-details,
+// .bloodline .bloodline-moves
+//   display: none
+
+// .tab-toggle[value=sheet] ~ div.bloodline-details,
+// .tab-toggle[value=moves] ~ div.bloodline-moves
+//   display: block
+
+// .tab-toggle[value=sheet] ~ div.bloodline-details,
+// .tab-toggle[value=moves] ~ div.bloodline-moves
+//   display: block
 

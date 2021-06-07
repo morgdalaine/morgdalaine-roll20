@@ -1,1206 +1,520 @@
-@import url('https://fonts.googleapis.com/css?family=Adamina|Oswald|Inknut+Antiqua|Spectral|Almendra');
+@import url(https://fonts.googleapis.com/css2?family=Adamina&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Inknut+Antiqua:wght@400;600;700&family=Oswald:wght@400;700&family=Spectral:ital,wght@0,400;0,700;1,400&display=swap);
+.align-left {
+  text-align: left !important;
+}
 
-* {
-  font-family: Adamina, Georgia, serif;
+.align-center {
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.dotted-number input[type=number], .dotted-number input[type=number].stat-input {
+  border: 2px dotted #ff00ff;
+}
+
+.current-max-block {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid #333;
+  padding: 2px;
+}
+
+.current-max-block .current-max-text {
+  grid-column-end: span 2;
+}
+
+.current-max-block .stat-current-col, .current-max-block .stat-max-col {
+  flex-direction: column;
+}
+
+.current-max-block .stat-current-col label, .current-max-block .stat-max-col label {
+  text-align: center;
+  font-size: 0.8em !important;
+}
+
+.current-max-block .stat-current-col input, .current-max-block .stat-max-col input {
+  display: block;
+  margin: 0 auto;
+}
+
+.current-max-block .stat-current-col input[type=number], .current-max-block .stat-current-col input[type=number].stat-input, .current-max-block .stat-max-col input[type=number], .current-max-block .stat-max-col input[type=number].stat-input {
+  border: 2px dotted #ff00ff;
+}
+
+.current-max-block .stat-current-right-border {
+  border-right: 2px dotted #ff00ff;
 }
 
 .charsheet {
+  margin: 0 auto !important;
+  padding: 15px;
+  font-weight: normal;
   background-color: whitesmoke;
+  font-family: Adamina, serif, serif;
 }
 
-input[type="text"], textarea {
-  background-color: snow; 
-}
-
-h2 {
+.charsheet h2, .charsheet h3 {
   font-variant: small-caps;
 }
 
-h3 {
-  font-variant: small-caps;
+.charsheet p {
+  font-family: Adamina, serif, serif;
 }
 
-/* Basic sheet show/hide control */
-.sheet-Null,
-.sheet-Slayer,
-.sheet-Mystic,
-.sheet-Bonded,
-.sheet-Reckoner,
-.sheet-Packrat,
-.sheet-Assassin,
-.sheet-Captain,
-.sheet-Joker,
-.sheet-Knight,
-.sheet-Mascot,
-.sheet-notMascot,
-.sheet-Medic,
-.sheet-Professor,
-.sheet-EmptyExplorer,
-.sheet-bNull,
-
-.sheet-LegendaryHeroes,
-.sheet-HalfDamned,
-.sheet-HolyChurch,
-.sheet-HiddenHand,
-.sheet-Magi,
-.sheet-GuardiansOfNature,
-.sheet-FateDealers,
-.sheet-DefendersOfTomorrow,
-.sheet-OpenBloodline,
-
-.sheet-Bloodline,
-.sheet-Explorer
-{
-   display: none;
+.charsheet .move-trigger {
+  font-style: italic;
+  font-weight: bold;
+  font-family: Adamina, serif, serif;
 }
 
-
-input[type="checkbox"][value="null"]:checked ~ .sheet-Null,
-input[type="checkbox"][value="slayer"]:checked ~ .sheet-Slayer,
-input[type="checkbox"][value="mystic"]:checked ~ .sheet-Mystic,
-input[type="checkbox"][value="bonded"]:checked ~ .sheet-Bonded,
-input[type="checkbox"][value="reckoner"]:checked ~ .sheet-Reckoner,
-input[type="checkbox"][value="packrat"]:checked ~ .sheet-Packrat,
-input[type="checkbox"][value="assassin"]:checked ~ .sheet-Assassin,
-input[type="checkbox"][value="captain"]:checked ~ .sheet-Captain,
-input[type="checkbox"][value="joker"]:checked ~ .sheet-Joker,
-input[type="checkbox"][value="knight"]:checked ~ .sheet-Knight,
-input[type="checkbox"][value="mascot"]:checked ~ .sheet-Mascot,
-input[type="checkbox"][value="mascot"]:not(:checked) ~ .sheet-notMascot,
-input[type="checkbox"][value="medic"]:checked ~ .sheet-Medic,
-input[type="checkbox"][value="professor"]:checked ~ .sheet-Professor,
-input[type="checkbox"][value="empty_explorer"]:checked ~ .sheet-EmptyExplorer,
-
-input[type="checkbox"][value="bNull"]:checked ~ .sheet-bNull,
-input[type="checkbox"][value="legendary_heroes"]:checked ~ .sheet-LegendaryHeroes,
-input[type="checkbox"][value="half_damned"]:checked ~ .sheet-HalfDamned,
-input[type="checkbox"][value="holy_church"]:checked ~ .sheet-HolyChurch,
-input[type="checkbox"][value="hidden_hand"]:checked ~ .sheet-HiddenHand,
-input[type="checkbox"][value="magi"]:checked ~ .sheet-Magi,
-input[type="checkbox"][value="guardians_of_nature"]:checked ~ .sheet-GuardiansOfNature,
-input[type="checkbox"][value="fate_dealers"]:checked ~ .sheet-FateDealers,
-input[type="checkbox"][value="defenders_of_tomorrow"]:checked ~ .sheet-DefendersOfTomorrow,
-input[type="checkbox"][value="open_bloodline"]:checked ~ .sheet-OpenBloodline,
-
-input[type="radio"][value="bloodline"]:checked ~ .sheet-Bloodline,
-input[type="radio"][value="bloodline"]:checked ~ div ul .sheet-Bloodline,
-
-input[type="radio"][value="explorer"]:checked ~ .sheet-Explorer,
-input[type="radio"][value="explorer"]:checked ~ div ul .sheet-Explorer
-{
-    display: block;
+.charsheet .thecastle {
+  color: #be1716;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: Almendra, serif, serif;
 }
 
-
-.sheet-hidden{
-  display: none !important;
-}
-
-input.sheet-type-selector {
-  width: 180px;
-  height: 30px;
-  display: none;
-  opacity: 0;
-  z-index: 1;
+.charsheet button[type=roll].roll-button {
+  display: flex;
+  border: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-}
-.sheet-3waybox:checked + .sheet-3waybox {
-  display: inline-block;
 }
 
-/* Styling of the span common to all states */
-span.sheet-type-selector {
-  padding-top: 6px;
-  border: solid 1px #a7a7a7;
+.charsheet .plus-action {
+  font-weight: bold;
+}
+
+.charsheet .plus-action:before {
+  content: ' +';
+}
+
+.charsheet .page-container {
+  display: flex;
+}
+
+.charsheet .hide-element {
+  display: none;
+}
+
+.charsheet input[type='checkbox'].hide-element {
+  display: none;
+}
+
+.charsheet input[type='radio'].hide-element {
+  display: none;
+}
+
+.charsheet div.hide-element {
+  display: none;
+}
+
+.charsheet input::-webkit-outer-spin-button,
+.charsheet input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.charsheet input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.charsheet input[type=number], .charsheet input[type=text], .charsheet textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 0;
+  font-family: "IBM Plex Mono";
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.charsheet input[type=number] {
   text-align: center;
-  display: inline-block;
-  background: #cccccc;
-  color: #3holy_churchholy_churchf;
-  width: 180px;
-  height: 30px;
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-family: serif;
-  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.charsheet input[type=text] {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet input[type=checkbox] {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #fafafa;
+  border: none;
+  border-bottom: 1px dotted #333;
+  border-radius: 0;
+  font-family: "IBM Plex Mono";
+  font-size: 0.8em;
+  text-decoration: none;
+  width: auto;
+}
+
+.charsheet textarea {
+  resize: none;
+  line-height: 2em;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.charsheet label {
+  margin: 0;
+}
+
+.charsheet span.showhide:checked {
+  background-color: #575756;
+  color: white;
+  transition: .5s ease;
+}
+
+.charsheet span.showhide {
+  display: inline;
+  border: 1px solid #ccc;
+  margin-right: 11px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.charsheet span.showhide:hover {
   cursor: pointer;
-  
-    
-  border: 5px solid black;
-  border-radius: 10px;
-  background-color: white;
- 
-}
-input.sheet-type-selector:hover ~ span {
-  color: red;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background-color: #ccc;
+  color: #575756;
+  transition: .5s ease;
 }
 
-/* Here you can style the span depending on what state is toggled */
-input.sheet-type-selector[value="explorer"]:checked ~ div span.sheet-type-selector::before {
-  content: "Explorer Mode";
-}
-input.sheet-type-selector[value="bloodline"]:checked ~ div span.sheet-type-selector::before {
-  content: "Bloodline Mode";
-}
-
-/* --- Tabs start here --- */
-/*Configure the tab buttons*/
-.sheet-Bloodline .sheet-bloodline-sheet,
-.sheet-Bloodline .sheet-bloodline-moves{
-	display: none;
+.charsheet div.showhide {
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
-/* --- Tabs start here --- */
-/*Configure the tab buttons*/
-.sheet-Explorer .sheet-bloodline-sheet,
-.sheet-Explorer .sheet-bloodline-moves{
-	display: none;
+.charsheet .hide-element {
+  display: none;
 }
 
-/* show the selected tab */
-.sheet-tabstogglebloodline[value="bloodline-sheet"] ~ div.sheet-bloodline-sheet,
-.sheet-tabstogglebloodline[value="bloodline-moves"] ~ div.sheet-bloodline-moves{
-	display: block;
+.charsheet input[type='checkbox'].hide-element {
+  display: none;
 }
 
-.sheet-tabstogglebloodline[value="bloodline-sheet"] ~ div div.sheet-bloodline-sheet,
-.sheet-tabstogglebloodline[value="bloodline-moves"] ~ div div.sheet-bloodline-moves{
-	display: block;
+.charsheet input[type='radio'].hide-element {
+  display: none;
 }
 
+.charsheet div.hide-element {
+  display: none;
+}
 
-.sheet-bloodline-tabs{
-  position: relative; /* Needed for absolutely positioned pseudo elements */
-  display: table; /* Needed to clear floats */
-  padding-left: 0px; /* Needs to be reset to 0 so left border doesn't get "pushed" away */
+.charsheet button.btn.repcontrol_edit,
+.charsheet button.btn.repcontrol_add {
+  width: auto;
+  height: auto;
+  border: 1px solid #333;
+  border-radius: 0;
+  font-size: 0em;
+  text-shadow: none;
+  text-transform: uppercase;
+  padding: 0.2em;
+  margin: 0.3em;
+  font-family: Adamina, serif, serif;
+  color: #333;
+  background: #fafafa;
+}
+
+.charsheet button.btn.repcontrol_edit:hover,
+.charsheet button.btn.repcontrol_add:hover {
+  color: #ffffff;
+  background: #ff00ff;
+}
+
+.charsheet button.btn.repcontrol_edit:focus,
+.charsheet button.btn.repcontrol_add:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 1px;
+}
+
+.charsheet .repcontrol button.repcontrol_add:before {
+  font-family: pictos;
+  font-size: 13px;
+  margin: 1em;
+  content: '&';
+}
+
+.charsheet .repcontrol button.repcontrol_edit:before {
+  font-family: pictos;
+  font-size: 13px;
+  margin: 1em;
+  content: '(';
+}
+
+.charsheet .repcontainer.editmode + .repcontrol button.repcontrol_edit:before {
+  content: ')';
+}
+
+.charsheet button.btn.repcontrol_edit {
+  margin-right: 3px;
+}
+
+.charsheet button.btn.repcontrol_add {
+  margin-left: 3px;
+}
+
+.charsheet .page-container {
+  display: block;
+}
+
+.charsheet .modes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.charsheet h2.mode-title {
+  text-align: center;
+}
+
+.charsheet div.mode-title {
+  margin-bottom: 2em;
+  font-family: Adamina, serif, serif;
+}
+
+.charsheet label.mode {
+  text-align: center;
+  margin: 0.5em;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 1px 1px 19px 6px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  z-index: 5;
+  width: auto;
+}
+
+.charsheet label.mode:hover h4 {
+  color: white;
+  background-color: #be1716;
+  transition: .5s ease;
+}
+
+.charsheet label.mode:hover .mode-image {
+  opacity: 0.7;
+  transition: .5s ease;
+}
+
+.charsheet input[type=radio].bloodline-mode:checked ~ div.bloodline-mode,
+.charsheet input[type=radio].explorer-mode:checked ~ div.explorer-mode {
+  display: block;
+}
+
+.charsheet input[type=checkbox].modes-show:checked ~ div.modes-show {
+  display: block;
+}
+
+.charsheet div.mode {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.charsheet .mode-image {
+  display: flex;
+}
+
+.charsheet .component {
+  display: block;
+}
+
+.charsheet .header {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .nav-bar {
+  display: flex;
+  flex-direction: row;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .nav-bar .nav-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.charsheet .nav-bar * {
+  border: 2px solid magenta;
+}
+
+.charsheet .bloodline .playbook,
+.charsheet .bloodline .moves,
+.charsheet .explorer .playbook,
+.charsheet .explorer .moves {
+  display: none;
+}
+
+.charsheet .tab-toggle[value='playbook'] ~ div.tab-playbook,
+.charsheet .tab-toggle[value='playbook'] ~ div.tab-moves {
+  display: block;
+}
+
+.charsheet .tab-toggle[value='playbook'] ~ div div.tab-playbook,
+.charsheet .tab-toggle[value='playbook'] ~ div div.tab-moves {
+  display: block;
+}
+
+.charsheet .tabs {
+  position: relative;
+  display: table;
+  padding-left: 0;
   margin-right: 20px;
   float: right;
 }
 
-.sheet-bloodline-tabs:before,
-.sheet-bloodline-tabs:after {
-    /* These styles set the bottom border that are "outside" of the menu */
-    content: "";
-    border-bottom: 1px solid #000;
-    bottom: 0;
-    position: absolute;
-    width: 10%;
+.charsheet .tabs:before, .charsheet .tabs:after {
+  content: '';
+  border-bottom: 1px solid #333;
+  bottom: 0;
+  position: absolute;
+  width: 10px;
+  left: -10%;
+  right: -10%;
 }
 
-.sheet-bloodline-tabs:before {
-    left: -10%; /* Extend the left border beyond the its parent container */
+.charsheet .tabs li {
+  color: magenta;
+  cursor: pointer;
+  float: left;
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
 }
 
-.sheet-bloodline-tabs:after {
-    right: -10%; /* Extend the right border beyond the its parent container */
-}
-
-.sheet-bloodline-tabs li{
-  color:#000; 
-  cursor:pointer; 
-  float: left; 
-  padding: 10px 15px; 
-  border-bottom: 1px solid #000;
-}
-
-.sheet-tabstogglebloodline[value="bloodline-sheet"] ~ div .sheet-bloodline-tabs .sheet-tab-bloodline-sheet,
-.sheet-tabstogglebloodline[value="bloodline-moves"] ~ div .sheet-bloodline-tabs .sheet-tab-bloodline-moves{
-  border: 1px solid black; 
-  border-bottom: none;
-}
-.sheet-tabstogglebloodline[value="bloodline-sheet"] ~ div .sheet-bloodline-tabs .sheet-tab-bloodline-sheet button,
-.sheet-tabstogglebloodline[value="bloodline-moves"] ~ div .sheet-bloodline-tabs .sheet-tab-bloodline-moves button{
-  color: black;
-}
-
-.sheet-bloodline-tabs li button{
-  color: darkgray;
+.charsheet .tabs li button {
+  color: #575756;
   border: none;
   background: transparent;
 }
 
-/* --- Tabs end here --- */
-
-
-select.sheet-SkinSelect
-{
-    position: relative;
-    top: 4px;
+.charsheet .tab-toggle[value='playbook'] ~ div .tabs .tab-playbook,
+.charsheet .tab-toggle[value='moves'] ~ div .tabs .tab-moves {
+  border: 1px solid #333;
+  border-bottom: none;
 }
 
-select.sheet-bloodline-playbook-select
-{
-    position: relative;
+.charsheet .tab-toggle[value='playbook'] ~ div .tabs .tab-playbook button,
+.charsheet .tab-toggle[value='moves'] ~ div .tabs .tab-moves button {
+  border: 1px solid #be1716;
+  border-bottom: none;
 }
 
-.sheet-fSkinCheck,
-.sheet-charSkinCheck {
-  display: none;
-}
-
-label.sheet-option-select {
-  font-weight: normal;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.sheet-starting-collapsible,
-.sheet-treaty-classic,
-.sheet-sueplus-classic {
-  padding:1rem 1.5rem;
-  /* background-color:lightgray; */
-}
-
-.sheet-collapsible {
-  display: none;
-}
-
-.sheet-toggle-label {
-  color:gray;
-  cursor: pointer;
-}
-
-.sheet-toggle-label::after {
-  content:"";
-  display: inline-block;
-  margin-left: 0.5rem;
-  height:0px;
-  width:0px;
-  border:4px solid;
-  border-color: gray gray transparent transparent;
-  transform: rotate(-45deg);
-}
-
-input[type="checkbox"]:checked ~ .sheet-collapsible {
-  display: block;
-}
-
-input[type="checkbox"]:checked + .sheet-toggle-label {
-  color:#000;
-}
-
-input[type="checkbox"]:checked + .sheet-toggle-label::after {
-  transform: rotate(135deg);
-}
-
-.sheet-help {
-  font-size: 0.5em;
-  color:gray;
-}
-
-.sheet-starterStats h2, .sheet-starterTraditions h2 {
-  font-size: 0.8rem;
-}
-
-.sheet-row.sheet-bloodline-details-section {
-  display: flex;
-  margin-top:1rem;
-  padding-top:1rem;
-  margin-bottom:1rem;
-  padding-bottom:1rem;
-  border-top:2px solid gray;
-}
-
-.sheet-bloodline-stats,
-.sheet-bloodline-secondary-stats {
-  padding-top:1rem;
-  width:100px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  border-right: 1px solid gray;
-}
-
-.sheet-lifestyles, .sheet-doctrines {
-  flex-grow: 1;
-  flex-shrink: 1;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.sheet-lifestyles {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  flex-basis: 0;
-}
-
-.sheet-doctrines {
-  padding-left: 1rem;
-  flex-basis: 1;
-}
-
-.sheet-assets-bloodline-wrapper,
-.sheet-bloodline-resources-wrapper {
-  width:100%;
-}
-
-.sheet-bloodline-resources-wrapper {
+.charsheet .moves-container {
   display: flex;
 }
 
-.sheet-assets-bloodline-row {
-  display: flex;
-  width:100%;
+.charsheet .moves-container-alt {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
 }
 
-.sheet-asset-bloodline-set {
-  max-width: 50%;
-  width:50%;
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding-left:1rem;
-  padding-right: 1rem;
+.charsheet .moves-left, .charsheet .moves-right {
+  width: 50%;
+  margin: 0 5px;
 }
 
-.sheet-resources-pact-value {
-  margin-top: 4rem;
+.charsheet .shared-move h3 {
+  margin-bottom: 0.5em;
 }
 
-.sheet-resources-pact-value .repcontainer input[type="text"] {
-  width:auto;
-  max-width:100%;
-}
-
-.sheet-resources-col-wrapper,
-.sheet-device-notes {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-}
-
-.sheet-resources-col-wrapper {
-  padding-left:1rem;
-  padding-right: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  border-right: 1px solid gray;
-}
-
-.sheet-device-notes {
-  padding-left:1rem;
-  padding-right: 1rem;
-}
-
-/* Sheet General Layout */
-.sheet-Bloodline .sheet-row {
-  margin-top:1rem;
-  padding-top:1rem;
-  margin-bottom:1rem;
-  border-top:2px solid gray;
-}
-
-.sheet-bloodline-Basics .sheet-row,
-.sheet-moves-columns .sheet-bloodline-custom-moves {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-top: 0px !important;
-  border-top: 0px !important;
-}
-
-.sheet-bloodline-custom-moves .sheet-bloodline-move {
-  flex: 0 0 .5;
-  width: calc(50% - 21px);
-}
-
-.sheet-bloodline-move {
-  padding-top:1rem;
-  padding-left:1rem;
-  padding-right:1rem;
-  border-right:1px solid gray;
-  border-bottom:1px solid gray;
-}
-
-.sheet-bloodline-Basics .sheet-bloodline-name-wrapper,
-.sheet-bloodline-Basics .sheet-bloodline-playbook-wrapper,
-.sheet-bloodline-Basics .sheet-bloodline-traditions-wrapper,
-.sheet-bloodline-Basics .sheet-bloodline-context-wrapper {
-  padding-left:0.5rem;
-  padding-right:0.5rem;
-}
-
-.sheet-bloodline-Basics .sheet-bloodline-playbook-wrapper {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-.sheet-bloodline-Basics .sheet-bloodline-name-wrapper label,
-.sheet-bloodline-Basics .sheet-bloodline-playbook-wrapper label,
-.sheet-bloodline-Basics .sheet-bloodline-traditions-wrapper label,
-.sheet-bloodline-Basics .sheet-bloodline-context-wrapper label {
-  margin-bottom: 0px;
-}
-
-.sheet-bloodline-Basics .sheet-bloodline-playbook-wrapper select{
-  top:0px;  
-  margin-bottom: 0px;
-}
-
-.sheet-bloodline-Basics .sheet-bloodline-name-wrapper,
-.sheet-bloodline-Basics .sheet-bloodline-traditions-wrapper,
-.sheet-bloodline-Basics .sheet-bloodline-context-wrapper {
-  flex-grow: 1;
-  flex-shrink: 1;
-  margin-bottom: .5rem;
-}
-
- .sheet-bloodline-Basics .sheet-bloodline-traditions-wrapper,
- .sheet-bloodline-Basics .sheet-bloodline-context-wrapper {
-	 width: 100%;
- }
-
-.sheet-bloodline-Basics .sheet-bloodline-name-wrapper input,
-.sheet-bloodline-Basics .sheet-bloodline-playbook-wrapper input,
-.sheet-bloodline-Basics .sheet-bloodline-traditions-wrapper input,
-.sheet-bloodline-Basics .sheet-bloodline-context-wrapper input {
-  width:100%;
-}
-
-.sheet-bloodline-move-body {
-  padding-left: 1.8rem;
-  padding-right:1.8rem;
-}
-
-.sheet-bloodline-move-body .repitem,
-.sheet-treaty-wrapper .repitem {
-  display: flex;
-  margin-bottom: 0.5rem;
-}
-
-.sheet-bloodline-move-title-wrapper{
-  background-color: gray;
-  padding-left: 1rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-
-.sheet-bloodline-move-title-wrapper input,
-.sheet-bloodline-move-title-wrapper h3,
-.sheet-bloodline-move-title-wrapper h2,
-.sheet-bloodline-move-title-wrapper button {
+.charsheet .shared-move h3 button[type=roll] {
   display: inline;
-  color: white !important;
+  background-image: none;
 }
 
-.sheet-bloodline-move-title-wrapper input{
-  margin-bottom: .5rem;
-}
-
-.sheet-bloodline-move-title-wrapper .sheet-custom-checkbox span.sheet-checkmark{
-  margin-top: 1rem;
-}
-
-.sheet-bloodline-move-title-wrapper .sheet-custom-checkbox{
-  margin-bottom: 0px;
-}
-
-.sheet-bloodline-move-title-wrapper input[type="text"]{
-  display: block;
-  position: relative;
-  background-color: gray;
-  font-weight: bold;
-  margin-left: 25px;
-  margin-bottom: 0px;
-  font-size: 24px;
-  font-variant: small-caps;
-  font-family: Adamina, Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  line-height: 28px;
-  width: calc(100% - 42px);
-}
-
-.repitem .sheet-bloodline-move-title-wrapper {
-  padding-bottom: 1rem;
-}
-
-.repitem .sheet-bloodline-move-title-wrapper label {
-  width: auto;
-  line-height: 5px;
-}
-
-.repitem .sheet-bloodline-move textarea {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: calc(100% - 42px);
-}
-
-.repitem .sheet-bloodline-move .sheet-bloodline-move-title-wrapper .sheet-custom-checkbox span.sheet-checkmark{
-  margin-top: 1.5rem;
-}
-
-.sheet-move-options {
-  color:gray;
-  font-style: italic;
-}
-
-.sheet-move-trigger {
-  font-style: italic;
-  font-weight: bold;
-  font-family: Adamina, Georgia, serif;
-}
-
-.sheet-thecastle {
-    color:  red;
-    font-weight: bold;
-    font-family: Almendra, serif;
-}
-
-.sheet-treaty-history-wrapper {
-  display: flex;
-}
-
-.sheet-treaty {
-  max-width: 50%;
-  padding-right: 2rem;
-  border-right: 2px solid gray;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 50%;
-}
-
-.sheet-history {
-  max-width: 50%;
-  padding-left: 2rem;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 50%;
-}
-
-.sheet-treaty-head,
-.sheet-pact-value-head {
-  width:100%;
-  font-weight: bold;
-}
-
-.sheet-pact-value-body {
-  display: flex;
-}
-
-.sheet-treaty-on-us {
-  width: 6rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-.sheet-treaty-faction {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.sheet-treaty-onthem {
-  width: 6rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-.sheet-treaty-wrapper {
-  padding-bottom: 1rem;
-}
-
-.sheet-treaty-classic-inner,
-.sheet-pact-value-classic-inner {
-  display: flex;
-}
-
-.sheet-treaty-classic-inner div,
-.sheet-pact-value-classic-inner div {
-  flex-grow:1;
-}
-
-.sheet-pact-value-head span {
-  flex-grow: 1;
-  display: block;
-}
-
-.pact-value-body {
-  display: flex;
-  flex-direction: row;
-}
-
-.sheet-pact-values-title {
-  margin-right: 0px !important;
-}
-
-.sheet-pact-value-col {
-  margin-right: 0px !important;
-  width: 300px;
-}
-
-.sheet-pact-value-col input {
-  width: 100% !important;
-}
-
-.sheet-textarea-fix {
-  max-width:90%;
-}
-
-.sheet-bloodline-section {
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-
-.sheet-stat, .sheet-secondary-stat {
-  margin-bottom: 2rem !important;
-  display: block;
-}
-
-.sheet-stat label, .sheet-secondary-stat label {
-  margin-bottom:0.5rem;
-  font-size: 2rem;
-}
-
-.sheet-bloodline-inhertance-section-wrapper {
-  display: flex;
-}
-
-.sheet-inhertance-col {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-}
-
-.sheet-inhertance-col:first-of-type {
-  padding-right: 1rem;
-  margin-right: 1rem;
-  border-right: 1px solid gray;
-}
-
-.sheet-inhertance-col:last-of-type {
-  padding-left: 1rem;
-}
-
-/* End Sheet General bloodline Layout */
-
-/* Begin Bloodline Moves Layout */
-.sheet-shared-move h3{
-  display: inline;
-}
-
-.sheet-shared-move h3 button[type="roll"]{
-  display: inline;
-  background-image:none;
-}
-
-.sheet-shared-move h3 button[type="roll"] span{
+.charsheet .shared-move h3 button[type=roll] span {
   font-size: 18px;
   font-weight: bold;
+  margin-left: 0.5em;
 }
 
-
-/* End Bloodline Moves Layout */
-
-/* Begin Sheet General explorer Layout */
-.sheet-Explorer .sheet-row {
-  margin-top:1rem;
-  padding-top:1rem;
-  margin-bottom:1rem;
-  border-top:2px solid gray;
-}
-
-.sheet-explorer-stat-block {
-  display: flex;
-  flex-wrap: wrap;
-
-  padding-top: 1rem;
-  border-right: 1px solid gray;
-}
-
-.sheet-explorer-stat-block-row {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-
-.sheet-explorer-harm{
-  padding-left: 1rem;
-  padding-top: 1rem;
-}
-
-.sheet-explorer-harm-boxes{
-  display: flex;
-  padding-top: 1rem;
-  height: 70px;
-}
-
-.charsheet .sheet-custom-checkbox.sheet-harm{
-  padding-left: 0px;
-  padding-right: 20px;
-}
-
-.sheet-explorer-death-move{
-  padding-left: 1rem;
-  padding-top: 1rem;
-}
-
-.sheet-gear-list label{
-  font-weight: normal;
-}
-
-.sheet-moves-columns .sheet-explorer-custom-moves {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.sheet-explorer-custom-moves .sheet-explorer-move {
-  flex: 0 0 .5;
-  width: calc(50% - 21px);
-}
-
-.sheet-moves-columns .repcontainer {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.sheet-moves-columns .repcontainer .repitem {
-  flex: 0 0 .5;
-  width: calc(50%);
-}
-
-.sheet-explorer-move {
-  padding-top:1rem;
-  padding-left:1rem;
-  padding-right:1rem;
-  border-right:1px solid gray;
-  border-bottom:1px solid gray;
-}
-
-.sheet-explorer-move-title-wrapper{
-  background-color: gray;
-  padding-left: 1rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-
-.sheet-explorer-move-title-wrapper input,
-.sheet-explorer-move-title-wrapper h3,
-.sheet-explorer-move-title-wrapper h2,
-.sheet-explorer-move-title-wrapper button {
-  display: inline;
-  color: white;
-}
-
-.sheet-explorer-move-title-wrapper input{
-  margin-bottom: .5rem;
-}
-
-.sheet-explorer-move-title-wrapper .sheet-custom-checkbox span.sheet-checkmark{
-  margin-top: 1rem;
-}
-
-.sheet-explorer-move-title-wrapper .sheet-custom-checkbox{
-  margin-bottom: 0px;
-}
-
-.sheet-explorer-move-title-wrapper input[type="text"]{
-  display: block;
-  position: relative;
-  background-color: gray;
-  font-weight: bold;
-  margin-left: 25px;
-  margin-bottom: 0px;
-  font-size: 24px;
-  font-variant: small-caps;
-  font-family: Adamina, Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  line-height: 28px;
-  width: calc(100% - 42px);
-}
-
-.repitem .sheet-explorer-move-title-wrapper {
-  padding-bottom: 1rem;
-}
-
-.repitem .sheet-explorer-move-title-wrapper label {
-  width: auto;
-  line-height: 5px;
-}
-
-.repitem .sheet-explorer-move textarea {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: calc(100% - 42px) !important;
-}
-
-.repitem .sheet-explorer-move .sheet-explorer-move-title-wrapper .sheet-custom-checkbox span.sheet-checkmark{
-  margin-top: 1.5rem;
-}
-
-.sheet-explorer-contamination-boxes{
-  display: flex;
-}
-
-.sheet-explorer-move.sheet-blood-move .sheet-explorer-move-title-wrapper label {
-  width: auto;
-  line-height: 0px;
-}
-
-.sheet-explorer-move.sheet-blood-move textarea{
-  height: 40px;
-  width: calc(100% - 10px) !important;
-}
-
-/* 4col */
-.sheet-4colrow {
-    display: block;
-    clear: both;
-}
-
-.sheet-4colrow .sheet-col {
-    width: calc(25% - 21px);
-    margin-right: 5px;
-}
-
-.sheet-4colrow .sheet-col input{
-  width: 100%;
-}
-
-.sheet-4colrow .sheet-col.sheet-small-col {
-  width: calc(10% - 21px);
-}
-
-.sheet-4colrow .sheet-col.sheet-large-col {
-  width: calc(35% - 21px);
-  margin-right: 0px;
-}
-
-
-/* Colors */
-/* Standard template */
-.sheet-rolltemplate-legacy {
-  /* Header */
-  /* Image */
-  /* Title */
-  /* Position and Effect */
-  /* Dice */
-  /* Zerodice dice holder */
-  /* Zerodice text */
-  /* Inlinerolls */
-  /* Instructions and Notes */
-}
-
-/* Specific to the roll template */
-.sheet-rolltemplate-legacy {
-  font-size: 16px;
-  border:2px dashed black;
-  background-color:#fff;
-}
-.sheet-rolltemplate-legacy .sheet-template-action {
-  font-weight: bold;
-  padding:1rem;
-}
-.sheet-rolltemplate-legacy .sheet-template-result {
-  font-size: 20px;
-  padding:2rem;
-}
-
-/* Custom Checkboxes */
-/* Customize the label (the container) */
-.sheet-custom-checkbox {
-  display: block;
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 5px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.sheet-armor.sheet-custom-checkbox {
-  margin-bottom: 20px;
-}
-
-/* Hide the browser's default checkbox */
-.sheet-custom-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.sheet-checkmark {
-  position: absolute;
-  left: 0px;
-  height: 15px;
-  width: 15px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-.sheet-harm .sheet-checkmark {
-  height: 70px;
-  width: 28px;
-  background-color: transparent;
-  border-width: 0px;
-  background-image: url(https://i.imgur.com/5JrDVjn.png);
-}
-
-.sheet-armor .sheet-checkmark {
-  border: 1px dashed darkgray;
-  height: 30px;
-  border-radius: 0px 0px 10px 10px;
-}
-
-/* On mouse-over, add a grey background color */
-.sheet-custom-checkbox:hover input ~ .sheet-checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a red background */
-.sheet-custom-checkbox input:checked ~ .sheet-checkmark {
-  background-color: black;
-}
-
-.sheet-custom-checkbox.sheet-armor input:checked ~ .sheet-checkmark {
-  background-color: #bbeeff;
-}
-
-.sheet-explorer-contamination-boxes .sheet-custom-checkbox input:checked ~ .sheet-checkmark {
-  background-color: red;
-}
-
-.sheet-custom-checkbox.sheet-harm input:checked ~ .sheet-checkmark {
-  background-color: transparent;
-  background-image: url(https://i.imgur.com/5RbQpSz.png);
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.sheet-checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.sheet-custom-checkbox input:checked ~ .sheet-checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.sheet-custom-checkbox .sheet-checkmark:after {
-  left: 3px;
-  top: 0px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.sheet-harm.sheet-custom-checkbox .sheet-checkmark:after,
-.sheet-armor.sheet-custom-checkbox .sheet-checkmark:after{
-  border: solid transparent
-}
-
-/* Colors */
-/* Standard template */
-.sheet-rolltemplate-rhapsody {
-  /* Header */
-  /* Image */
-  /* Title */
-  /* Position and Effect */
-  /* Dice */
-  /* Zerodice dice holder */
-  /* Zerodice text */
-  /* Inlinerolls */
-  /* Instructions and Notes */
-}
-
-.sheet-rolltemplate-rhapsody .sheet-holder {
-  display: grid;
-  max-width: 290px;
-  font-family: Adamina, Georgia, serif;
+.charsheet .bloodline-info, .charsheet .explorer-info {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
-  overflow: hidden;
-  padding: 5px;
 }
 
-.sheet-rolltemplate-rhapsody .sheet-grid-item {
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  text-align: center;
-  padding: 5px;
+.charsheet .bloodline-info .bloodline-name, .charsheet .explorer-info .bloodline-name {
+  grid-column: span 3;
 }
 
-.sheet-rolltemplate-rhapsody .sheet-action {
-  height: 200px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 30px 30px 50px 30px 30px;
-  background-image: url("https://i.imgur.com/fIbeLGe.png");
-
-}
-
-.sheet-rolltemplate-rhapsody .sheet-action.sheet-short {
-  height: 195px;
-}
-
-.sheet-rolltemplate-rhapsody .sheet-header {
+.charsheet .bloodline-info .bloodline-style, .charsheet .bloodline-info .bloodline-lore, .charsheet .explorer-info .bloodline-style, .charsheet .explorer-info .bloodline-lore {
   grid-column: span 2;
-  font-size: 1em;
-  text-align: left;
-  overflow: hidden;
-  font-variant: small-caps;
 }
 
-.sheet-rolltemplate-rhapsody .sheet-action .sheet-header {
-  color: snow;
-  letter-spacing: 2px;
-  font-weight: 800;
+.ui-dialog .charsheet .repcontainer .repitem {
+  margin: 5px;
+  text-shadow: none;
 }
 
-.sheet-rolltemplate-rhapsody .sheet-title {
-  padding-left: 0px;
-  padding-top: 12px;
-  grid-column: span 2;
-  text-align: left;
-  color: snow;
-  text-transform: uppercase;
-  font-weight: bold;  
-  overflow: hidden;
-  transform: rotate(1deg);
+.ui-dialog .charsheet .repcontainer .repitem .btn {
+  font-size: 0.8em;
+  border-radius: 0;
+  border: 1px solid #ff00ff;
+  color: #ff00ff;
+  background: #ffffff;
+  text-shadow: 0;
 }
 
-.sheet-rolltemplate-rhapsody .sheet-action .sheet-title,
-.sheet-rolltemplate-rhapsody .sheet-fortune .sheet-title {
-  font-size: 1.2em;
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol {
+  text-shadow: none;
 }
 
-.sheet-rolltemplate-rhapsody .sheet-position,
-.sheet-rolltemplate-rhapsody .sheet-modifier,
-.sheet-rolltemplate-rhapsody .sheet-effect {
-  color: white;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .btn-danger {
+  background-color: #be1716;
+  color: #ffffff;
+  border: 1px solid transparent;
 }
 
-.sheet-rolltemplate-rhapsody .sheet-roll-result {
-  grid-column: span 2;
-  text-align: left;
-  font-size: 1.4em;
-  font-style: italic;
-  padding-top: 10px;
-  padding-left: 10px;
-  margin-top: 5px;
-  width:210px;
-  transform: rotate(5deg);
-  text-align: center
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del, .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  text-shadow: none;
 }
 
-.sheet-rolltemplate-rhapsody .sheet-action .sheet-roll-result {
-  text-shadow: 0 0 6px #ff9e00;
-  color: #ffd8ca;
-}
-
-.sheet-rolltemplate-rhapsody .sheet-dice {
-  grid-row: span 2;
-  font-size: 3em;
-  color: white;
-  padding-top: 20px
-}
-
-.sheet-rolltemplate-rhapsody .sheet-fumble {
-  font-size: 1em;
-  color: white;
-  letter-spacing: 5px;
-}
-
-.sheet-rolltemplate-rhapsody .sheet-painful {
-  font-size: 1em;
-  color: white;
-  letter-spacing: 5px;
-}
-
-.sheet-rolltemplate-rhapsody .inlinerollresult {
-  border: none !important;
-  background-color: transparent;
-  padding: 0em .5em;
-  font-weight: normal;
-}
-
-.sheet-rolltemplate-rhapsody .inlinerollresult.fullfail {
-  background-color: transparent;
-  font-weight: normal;
-}
-
-.sheet-rolltemplate-rhapsody .inlinerollresult.fullcrit {
-  background-color: transparent;
-  font-weight: normal;
-}
-
-/* ROLL BUTTONS */
-button[type=roll].sheet-rollbutton {
-  display: flex;
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sheet-attribute-title button[type=roll].sheet-rollbutton {
-  max-width: calc(100% - 97px);
-  line-height: inherit;
-  color: inherit;
-  font-size: 13px;
-}
-
-.sheet-action button[type=roll].sheet-rollbutton {
-  letter-spacing: 1px;
-  line-height: 13px;
-  flex: 0 0 86px;
-  font-size: 13px;
-}
-
-.sheet-coinrow button[type=roll].sheet-rollbutton {
-  font-size: 11px;
-  color: #777;
-}
-
-.sheet-blackheader button[type=roll].sheet-rollbutton {
-  margin: auto;
-}
-
-button[type=roll].sheet-borderbutton {
-  color: #777;
-  font-size: 13px;
-  border-color: #b4b4b4;
-}
-
-button[type=roll].sheet-vicebutton {
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {
   float: right;
-  margin: 5px 3px -5px auto;
-  line-height: 13px;
-  padding: 4px;
+  width: auto;
+  margin: 0;
+  height: auto;
 }
 
-button[type=roll].sheet-fortunebutton {
-  width: 100%;
-  height: 30px;
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  cursor: move;
+  width: auto;
+  margin: 0;
+  height: auto;
+}
+
+input[type=text].repeating-input {
+  border-bottom: 2px dotted #ff00ff !important;
   margin: 0;
 }
 
-.sheet-type-faction button[type=roll].sheet-fortunebutton {
-  width: 100px;
-}
-
-button[type=roll].sheet-engagementbutton {
-  width: calc(100% - 20px);
-  padding: 2px 5px;
-  height: 30px;
-  margin: 10px 10px 0;
-}
-
-button[type=roll].sheet-rollbutton:hover {
-  color: red;
-}
-
-button[type=roll].sheet-borderbutton:hover {
-  color: black;
-  border-color: black;
+.sheet-rolltemplate-sheetname {
+  display: block;
 }

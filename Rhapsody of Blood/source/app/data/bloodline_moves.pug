@@ -1,0 +1,70 @@
+-
+  var
+    bloodline_shared_rolls = {
+      arcane_power: '',
+      rest_and_relaxation: '&{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_rest_and_relaxation=1}} {{title=^{bloodline_move_rest_and_relaxation}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}',
+      forward_base: '&{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_forward_base=1}} {{title=^{bloodline_move_forward_base}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}',
+      lend_aid: '',
+      resist_doom: '&{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_resist_doom=1}} {{title=^{bloodline_move_resist_doom}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}',
+      reinforcements: '&{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_reinforcements=1}} {{title=^{bloodline_move_reinforcements}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}',
+    }
+
+-
+  var
+    bloodline_shared_moves = {
+      arcane_power: {
+        move_trigger: 'bloodline_move_arcane_power_move_trigger',
+        move_text: 'bloodline_move_arcane_power_move_text',
+      },
+      rest_and_relaxation: {
+        move_trigger: 'bloodline_move_rest_and_relaxation_move_trigger',
+        action: 'chalices',
+        results: 'pick_two_pick_three',
+        li: [
+          'bloodline_move_rest_and_relaxation_move_li_1',
+          'bloodline_move_rest_and_relaxation_move_li_2',
+          'bloodline_move_rest_and_relaxation_move_li_3',
+          'bloodline_move_rest_and_relaxation_move_li_4',
+          'bloodline_move_rest_and_relaxation_move_li_5'
+        ],
+        final: 'bloodline_move_rest_and_relaxation_move_final'
+      },
+      forward_base: {
+        move_trigger: 'bloodline_move_forward_base_move_trigger',
+        action: 'swords',
+        move_text: 'bloodline_move_forward_base_move_text',
+        results: 'pick_one_bonus',
+        li: [
+          'bloodline_move_forward_base_move_li_1',
+          'bloodline_move_forward_base_move_li_2',
+          'bloodline_move_forward_base_move_li_3'
+        ],
+        final: 'bloodline_move_forward_base_move_final'
+      },
+      lend_aid: {
+        move_trigger: 'bloodline_move_lend_aid_move_trigger',
+        move_text: 'bloodline_move_lend_aid_move_text',
+      },
+      resist_doom: {
+        move_trigger: 'bloodline_move_resist_doom_move_trigger',
+        action: 'wands',
+        move_text: 'bloodline_move_resist_doom_move_text',
+        results: 'bloodline_move_resist_doom_move_on_hit',
+        li: [
+          'bloodline_move_resist_doom_move_li_1',
+          'bloodline_move_resist_doom_move_li_2',
+          'bloodline_move_resist_doom_move_li_3'
+        ],
+        final: 'bloodline_move_resist_doom_move_final'
+      },
+      reinforcements: {
+        move_trigger: 'bloodline_move_reinforcements_move_trigger',
+        action: 'coins',
+        results: 'pick_one_pick_two',
+        li: [
+          'bloodline_move_reinforcements_move_li_1',
+          'bloodline_move_reinforcements_move_li_2',
+          'bloodline_move_reinforcements_move_li_3'
+        ],
+      },
+    }
