@@ -1,5 +1,4 @@
 
-
 .rivals-header {
   display: inline-grid;
   grid-template-columns: calc((100% - 100px)/2) 100px calc((100% - 100px)/2);
@@ -16,7 +15,7 @@
   }
 
   .logo {
-    background-image: url(https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/main/Crossed-Fates/assets/square.png);
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/main/Crossed-Fates/assets/square.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100px 100px;

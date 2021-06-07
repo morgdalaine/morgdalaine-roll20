@@ -1,4 +1,4 @@
-# Roll20 Character Sheet Boilerplate
+# CROSSED / FATES Roll20 Character Sheet
 ## Prerequisites
 - [Nodejs](https://nodejs.org/en/) installed
 - [git](https://git-scm.com/) installed
@@ -15,8 +15,9 @@
 - copy all files into the roll20-character-sheets directory (aside from the `.git/` files), under a folder of the sheet name
 - Run the following commands from either the terminal or command line:
 ```bash
+
 # Go to the source for your sheet
-$ cd  /<path_to>/roll20-character-sheets/<sheet-name>/source
+$ cd  /<path_to>/roll20-character-sheets/Crossed-Fates/source
 
 # Install all of the npm packages
 $ npm install
@@ -24,4 +25,5 @@ $ npm install
 # Run the build process
 $ npm run gulp:watch
 ```
-This will create 2 files <sheet-name>.html and <sheet-name>.css. The watch command allows for any saved changes to automatically build the html and css from the pug and stylus files.
+
+This will create 2 files CrossedFates.html and CrossedFates.css. The watch command allows for any saved changes to automatically build the html and css from the pug and stylus files.
