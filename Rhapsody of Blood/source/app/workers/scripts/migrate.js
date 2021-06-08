@@ -32,7 +32,7 @@ update_version_2_0 = function(attr, setObj) {
   console.log('updating to version 2.0');
   setObj.mode = attr.sheet_type;
   setObj.page_mode = attr.sheetBloodlineTab
-  setObj.bloodline_name = attr.FamName;
+  setObj.character_name = attr.FamName;
   setObj.bloodline_select = attr.fSkinName
 
   attr = {...attr,...setObj};

@@ -52,12 +52,14 @@
   margin: 0 auto !important;
   padding: 15px;
   font-weight: normal;
-  background-color: whitesmoke;
+  background-color: none;
   font-family: Adamina, serif, serif;
 }
 
-.charsheet h2, .charsheet h3 {
-  font-variant: small-caps;
+.charsheet h2, .charsheet h3, .charsheet h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Oswald, sans-serif, serif;
 }
 
 .charsheet p {
@@ -78,10 +80,18 @@
 }
 
 .charsheet button[type=roll].roll-button {
+  background: none;
+  background-color: none;
+  text-shadow: none;
   display: flex;
   border: none;
   margin: 0;
   padding: 0;
+}
+
+.charsheet h2.roll-button, .charsheet h3.roll-button {
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .charsheet .plus-action {
@@ -100,75 +110,10 @@
   display: none;
 }
 
-.charsheet input[type='checkbox'].hide-element {
-  display: none;
-}
-
-.charsheet input[type='radio'].hide-element {
-  display: none;
-}
-
+.charsheet input[type='checkbox'].hide-element,
+.charsheet input[type='radio'].hide-element,
 .charsheet div.hide-element {
   display: none;
-}
-
-.charsheet input::-webkit-outer-spin-button,
-.charsheet input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.charsheet input[type=number] {
-  -moz-appearance: textfield;
-}
-
-.charsheet input[type=number], .charsheet input[type=text], .charsheet textarea {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  background-color: #fafafa;
-  border: none;
-  border-radius: 0;
-  font-family: "IBM Plex Mono";
-  font-size: 0.8em;
-  text-decoration: none;
-}
-
-.charsheet input[type=number] {
-  text-align: center;
-  font-size: 1.2em;
-}
-
-.charsheet input[type=text] {
-  width: -moz-available;
-  width: -webkit-fill-available;
-  width: fill-available;
-}
-
-.charsheet input[type=checkbox] {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  background-color: #fafafa;
-  border: none;
-  border-bottom: 1px dotted #333;
-  border-radius: 0;
-  font-family: "IBM Plex Mono";
-  font-size: 0.8em;
-  text-decoration: none;
-  width: auto;
-}
-
-.charsheet textarea {
-  resize: none;
-  line-height: 2em;
-  height: auto;
-  overflow: hidden;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-.charsheet label {
-  margin: 0;
 }
 
 .charsheet span.showhide:checked {
@@ -204,20 +149,62 @@
   overflow: hidden;
 }
 
-.charsheet .hide-element {
-  display: none;
+.charsheet input::-webkit-outer-spin-button,
+.charsheet input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.charsheet input[type='checkbox'].hide-element {
-  display: none;
+.charsheet input[type=number] {
+  -moz-appearance: textfield;
 }
 
-.charsheet input[type='radio'].hide-element {
-  display: none;
+.charsheet input[type=number], .charsheet input[type=text], .charsheet textarea, .charsheet select {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 0;
+  font-family: Oswald, sans-serif, serif;
+  font-size: 1em;
+  text-decoration: none;
 }
 
-.charsheet div.hide-element {
-  display: none;
+.charsheet input[type=number] {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.charsheet input[type=text] {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet input[type=checkbox] {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #fafafa;
+  border: none;
+  border-bottom: 1px dotted #333;
+  border-radius: 0;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 0.8em;
+  text-decoration: none;
+  width: auto;
+}
+
+.charsheet textarea {
+  resize: none;
+  line-height: 2em;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.charsheet label {
+  margin: 0;
 }
 
 .charsheet button.btn.repcontrol_edit,
@@ -273,10 +260,6 @@
 
 .charsheet button.btn.repcontrol_add {
   margin-left: 3px;
-}
-
-.charsheet .page-container {
-  display: block;
 }
 
 .charsheet .modes {
@@ -336,92 +319,90 @@
   display: flex;
 }
 
+.charsheet input[type=radio].playbook:checked ~ div.playbook,
+.charsheet input[type=radio].moves:checked ~ div.moves {
+  display: inline-grid;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
 .charsheet .component {
   display: block;
 }
 
-.charsheet .header {
-  width: -moz-available;
-  width: -webkit-fill-available;
-  width: fill-available;
-}
-
-.charsheet .nav-bar {
+.charsheet .nav-row {
   display: flex;
-  flex-direction: row;
-  width: -moz-available;
-  width: -webkit-fill-available;
-  width: fill-available;
 }
 
-.charsheet .nav-bar .nav-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.charsheet .nav-bar * {
-  border: 2px solid magenta;
-}
-
-.charsheet .bloodline .playbook,
-.charsheet .bloodline .moves,
-.charsheet .explorer .playbook,
-.charsheet .explorer .moves {
-  display: none;
-}
-
-.charsheet .tab-toggle[value='playbook'] ~ div.tab-playbook,
-.charsheet .tab-toggle[value='playbook'] ~ div.tab-moves {
-  display: block;
-}
-
-.charsheet .tab-toggle[value='playbook'] ~ div div.tab-playbook,
-.charsheet .tab-toggle[value='playbook'] ~ div div.tab-moves {
-  display: block;
-}
-
-.charsheet .tabs {
-  position: relative;
-  display: table;
-  padding-left: 0;
-  margin-right: 20px;
-  float: right;
-}
-
-.charsheet .tabs:before, .charsheet .tabs:after {
-  content: '';
-  border-bottom: 1px solid #333;
-  bottom: 0;
-  position: absolute;
-  width: 10px;
-  left: -10%;
-  right: -10%;
-}
-
-.charsheet .tabs li {
-  color: magenta;
-  cursor: pointer;
-  float: left;
-  padding: 10px 15px;
-  border-bottom: 1px solid #333;
-}
-
-.charsheet .tabs li button {
-  color: #575756;
+.charsheet .nav-bar-bloodline,
+.charsheet .nav-bar-explorer {
+  background-color: none;
   border: none;
-  background: transparent;
+  margin: 1em 0;
 }
 
-.charsheet .tab-toggle[value='playbook'] ~ div .tabs .tab-playbook,
-.charsheet .tab-toggle[value='moves'] ~ div .tabs .tab-moves {
-  border: 1px solid #333;
-  border-bottom: none;
+.charsheet .nav-child {
+  width: 100%;
+  text-align-last: center;
+  margin: 0.1em;
 }
 
-.charsheet .tab-toggle[value='playbook'] ~ div .tabs .tab-playbook button,
-.charsheet .tab-toggle[value='moves'] ~ div .tabs .tab-moves button {
-  border: 1px solid #be1716;
-  border-bottom: none;
+.charsheet .nav-child label {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 36px;
+  line-height: 36px;
+}
+
+.charsheet .nav-child label:hover {
+  background: #fafafa;
+  transform: rotate(-2.5deg);
+  -webkit-transform: rotate(-2.5deg);
+  -moz-transform: rotate(-2.5deg);
+  -ms-transform: rotate(-2.5deg);
+  -o-transform: rotate(-2.5deg);
+}
+
+.charsheet .nav-title {
+  width: 100%;
+  font-family: Spectral, serif, serif;
+}
+
+.charsheet .nav-title .reverse-skew h2 {
+  color: #be1716;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.charsheet .page-button-bloodline,
+.charsheet .page-button-explorer {
+  padding: 0.1em 0em 0.1em 0em;
+  font-weight: 600;
+  font-family: "Inknut Antiqua", serif, serif;
+  color: #be1716;
+  text-transform: uppercase;
+}
+
+.charsheet .page-button-bloodline,
+.charsheet .page-button-explorer {
+  background-color: none;
+}
+
+.charsheet .page-button:checked ~ div.page-button-bloodline, .charsheet .page-button:checked ~ div.page-button-explorer {
+  color: #ffffff;
+  background-color: #333;
+  transform: rotate(-0.5deg);
+  -webkit-transform: rotate(-0.5deg);
+  -moz-transform: rotate(-0.5deg);
+  -ms-transform: rotate(-0.5deg);
+  -o-transform: rotate(-0.5deg);
+}
+
+.charsheet label.page-label {
+  text-align: center;
 }
 
 .charsheet .moves-container {
@@ -441,6 +422,8 @@
 
 .charsheet .shared-move h3 {
   margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .charsheet .shared-move h3 button[type=roll] {
@@ -452,12 +435,41 @@
   font-size: 18px;
   font-weight: bold;
   margin-left: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.charsheet .legendary-heroes, .charsheet .half-damned, .charsheet .holy-church, .charsheet .hidden-hand,
+.charsheet .magi, .charsheet .guardians-of-nature, .charsheet .fate-dealers, .charsheet .defenders-of-tomorrow,
+.charsheet .open-bloodline, .charsheet .bnull {
+  display: none;
+}
+
+.charsheet input[type=checkbox][value='bnull']:checked ~ .bnull,
+.charsheet input[type=checkbox][value='legendary_heroes']:checked ~ .legendary-heroes,
+.charsheet input[type=checkbox][value='half_damned']:checked ~ .half-damned,
+.charsheet input[type=checkbox][value='holy_church']:checked ~ .holy-church,
+.charsheet input[type=checkbox][value='hidden_hand']:checked ~ .hidden-hand,
+.charsheet input[type=checkbox][value='magi']:checked ~ .magi,
+.charsheet input[type=checkbox][value='guardians_of_nature']:checked ~ .guardians-of-nature,
+.charsheet input[type=checkbox][value='fate_dealers']:checked ~ .fate-dealers,
+.charsheet input[type=checkbox][value='defenders_of_tomorrow']:checked ~ .defenders-of-tomorrow,
+.charsheet input[type=checkbox][value='open_bloodline']:checked ~ .open-bloodline {
+  display: block;
+}
+
+.charsheet details > summary {
+  display: list-item;
+}
+
+.charsheet details > summary h2, .charsheet details > summary h3 {
+  float: left;
+  font-family: Oswald, sans-serif, serif;
 }
 
 .charsheet .bloodline-info, .charsheet .explorer-info {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
 }
 
 .charsheet .bloodline-info .bloodline-name, .charsheet .explorer-info .bloodline-name {
@@ -466,6 +478,221 @@
 
 .charsheet .bloodline-info .bloodline-style, .charsheet .bloodline-info .bloodline-lore, .charsheet .explorer-info .bloodline-style, .charsheet .explorer-info .bloodline-lore {
   grid-column: span 2;
+}
+
+.charsheet .bloodline-creation {
+  margin: 1em 0;
+  padding: 1em;
+  text-align: justify;
+}
+
+.charsheet .bloodline-creation h2, .charsheet .bloodline-creation h3 {
+  font-family: Oswald, sans-serif, serif;
+}
+
+.charsheet .bloodline-creation .bnull {
+  margin: 3em;
+  background-color: #be1716;
+  transform: skew(0deg, 3deg);
+  -webkit-transform: skew(0deg, 3deg);
+  -moz-transform: skew(0deg, 3deg);
+  -ms-transform: skew(0deg, 3deg);
+  -o-transform: skew(0deg, 3deg);
+}
+
+.charsheet .bloodline-creation .bnull h2, .charsheet .bloodline-creation .bnull h3 {
+  color: #ffffff;
+  background-color: #333;
+  padding: 1em;
+  text-align: center;
+  width: fit-content;
+  width: -moz-fit-content;
+  font-family: Adamina, serif, serif;
+  transform: skew(0deg, -3deg);
+  -webkit-transform: skew(0deg, -3deg);
+  -moz-transform: skew(0deg, -3deg);
+  -ms-transform: skew(0deg, -3deg);
+  -o-transform: skew(0deg, -3deg);
+}
+
+.charsheet .bloodline-creation .help {
+  font-family: Adamina, serif, serif;
+  text-transform: none;
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #ffffff;
+  font-style: italic;
+  margin-left: 0.5em;
+}
+
+.charsheet .creation-container {
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  background-color: #be1716;
+}
+
+.charsheet .creation-container .creation-right {
+  display: flex;
+  flex-direction: column;
+  color: #fafafa;
+  padding: 1em;
+}
+
+.charsheet .creation-container h2, .charsheet .creation-container h3 {
+  color: #ffffff;
+}
+
+.charsheet .starting-stats {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  background-color: #333;
+  padding: 1em;
+  transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+}
+
+.charsheet .starting-stats h2, .charsheet .starting-stats h3 {
+  color: #ffffff;
+}
+
+.charsheet .starting-stats .help {
+  color: #ffffff;
+}
+
+.charsheet .starting-stats .starting-stat {
+  margin: 0 0.5em;
+  font-weight: bold;
+}
+
+.charsheet .starting-stats .stat-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.charsheet .starting-traditions {
+  margin-left: -1em;
+}
+
+.charsheet .starting-traditions .tradition {
+  font-weight: bold;
+}
+
+.charsheet .starting-traditions .tradition:after {
+  content: ':';
+  margin-right: 0.5em;
+}
+
+.charsheet .bloodline-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.charsheet .stat {
+  display: flex;
+  flex-direction: row;
+  margin-left: -1em;
+}
+
+.charsheet .stat h3, .charsheet .stat h4 {
+  margin-bottom: 0.5em;
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  background-color: #333;
+}
+
+.charsheet .stat h3 button[type=roll], .charsheet .stat h4 button[type=roll] {
+  display: inline;
+  background-image: none;
+  color: magenta;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+.charsheet .stat h3 button[type=roll] span, .charsheet .stat h4 button[type=roll] span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.charsheet .stat input[type=number] {
+  margin-left: -0.5em;
+  background-color: #575756;
+  background: #575756;
+  border: none;
+  color: #ffffff;
+  width: 3em;
+}
+
+.charsheet .bloodline-pacts {
+  padding: 1em;
+}
+
+.charsheet .pact-container {
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+}
+
+.charsheet .pact-container .prizes, .charsheet .pact-container .at-camp {
+  padding: 1em;
+  text-align: justify;
+}
+
+.charsheet .pact-with-container, .charsheet .pact-with-container-title {
+  display: inline-grid;
+  grid-template-columns: 45% 10% 45%;
+  margin-bottom: 0.5em;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .pact-with-container-title {
+  background-color: #be1716;
+}
+
+.charsheet .pact-with-container-title h2, .charsheet .pact-with-container-title h3, .charsheet .pact-with-container-title h4 {
+  color: #ffffff;
+}
+
+.charsheet .pact-rating-title h2, .charsheet .pact-rating-title h3, .charsheet .pact-rating-title h4, .charsheet .pact-with-them-title h2, .charsheet .pact-with-them-title h3, .charsheet .pact-with-them-title h4 {
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.charsheet .with-bloodline-title {
+  transform: rotate(-1.5deg);
+  -webkit-transform: rotate(-1.5deg);
+  -moz-transform: rotate(-1.5deg);
+  -ms-transform: rotate(-1.5deg);
+  -o-transform: rotate(-1.5deg);
+  background-color: #333;
+}
+
+.charsheet .with-bloodline-title h2, .charsheet .with-bloodline-title h3, .charsheet .with-bloodline-title h4 {
+  padding: 0.5em 0;
+  padding-left: 1.2em;
+}
+
+.charsheet .pact-rating {
+  text-align: center;
+}
+
+.charsheet .bloodline-moves-container {
+  margin-bottom: 1em;
+  padding: 1em;
 }
 
 .ui-dialog .charsheet .repcontainer .repitem {

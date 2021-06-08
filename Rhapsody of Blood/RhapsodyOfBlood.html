@@ -25,36 +25,44 @@
 </div>
 <input class="bloodline-mode hide-element" type="radio" name="attr_mode" value="bloodline"/>
 <div class="bloodline-mode hide-element">
-    <header class="nav-bar">
-      <input class="tab-toggle" type="hidden" value="playbook"/>
-      <h2 data-i18n="bloodline">Bloodline</h2>
+  <div class="header">
+    <div class="nav-bar-bloodline">
       <div class="nav-row">
         <div class="nav-child">
-          <lable class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_page_mode" value="playbook"/>
-            <div class="page-button-playbook" data-i18n="bloodline_playbook">Bloodline Playbook</div>
-          </lable>
+          <div class="nav-title">
+            <div class="reverse-skew">
+              <h2 data-i18n="bloodline">Bloodline</h2>
+            </div>
+          </div>
         </div>
         <div class="nav-child">
-          <lable class="page-label">
-            <input class="hide-element page-button" type="radio" name="attr_page_mode" value="moves"/>
-            <div class="page-button-moves" data-i18n="bloodline_moves">Bloodline Moves</div>
-          </lable>
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_bloodline_page_button" value="playbook" checked="checked"/>
+            <div class="page-button-bloodline" data-i18n="playbook">Playbook</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_bloodline_page_button" value="moves"/>
+            <div class="page-button-bloodline" data-i18n="moves">Moves</div>
+          </label>
         </div>
       </div>
-    </header>
-  <div class="bloodline-mode">
-      <div class="tab-playbook">
+    </div>
+  </div>
+    <div class="page-container">
+      <input class="playbook hide-element" type="radio" name="attr_bloodline_page" value="playbook" checked="checked"/>
+      <div class="playbook showhide">
           <div class="bloodline-basics">
             <div class="bloodline-info">
               <div class="bloodline-name">
                 <label class="blood-name" data-i18n="bloodline_name">Bloodline Name</label>
-                <input type="text" name="attr_bloodline_name"/>
+                <input type="text" name="attr_character_name"/>
               </div>
               <div class="bloodline-select">
                 <label class="blood-select" data-i18n="playbook">Playbook</label>
                 <select class="playbook-select" name="attr_bloodline_select">
-                  <option value="null">Choose a Bloodline</option>
+                  <option value="bnull">Choose a Bloodline</option>
                   <option value="legendary_heroes">The Legendary Heroes</option>
                   <option value="half_damned">The Half-Damned</option>
                   <option value="holy_church">The Holy Church</option>
@@ -76,17 +84,522 @@
               </div>
             </div>
           </div>
+          <div class="bloodline-creation">
+            <details open="open">
+              <summary>
+                <h3 data-i18n="making_your_heroes">Making Your Heroes</h3>
+              </summary>
+              <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+              <div class="bnull">
+                <h2 data-i18n="select_playbook">Select a Playbook to get started</h2>
+              </div>
+              <div class="legendary-heroes">
+                <div class="creation-container">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="starting_stats_help">Pick One</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="legendary_heroes_starting_array_1">Chalices 1 Swords 1 Coins 0 Wands -1</span><span data-i18n="legendary_heroes_starting_array_1_desc">if fate and coincidence keep bringing your bloodline to &lt;span class=&quot;sheet-thecastle&quot;&gt;the castle&lt;/span&gt; despite their ignorance of mystical matters.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="legendary_heroes_starting_array_2">Chalices 0 Swords 1 Coins -1 Wands 1</span><span data-i18n="legendary_heroes_starting_array_2_desc">if your bloodline is tested from childhood for martial aptitude and trained to face &lt;span class=&quot;sheet-thecastle&quot;&gt;the castle&lt;/span&gt;.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="legendary_heroes_starting_array_3">Chalices 0 Swords 1 Coins 1 Wands -1</span><span data-i18n="legendary_heroes_starting_array_3_desc">if your bloodline are world travellers with a fortune built on castle raids.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="legendary_heroes_style">Stylish contemporary fashion; bloodline crests and heirlooms; rustic or utilitarian clothing.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="legendary_heroes_lore">Picking it up as they go along; ancestor’s crumbling journals; oral history passed from parent to child.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="legendary_heroes_bloodline_name">A noble title; an inherited naming convention; bearers of the ________.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="legendary_heroes_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline’s legends taught you how to be heroes.&lt;/span&gt; Set your pact with them to 1. You say what legend you’ve heard, they say what secret failure the legend left out.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="half-damned">
+                <div class="creation-container">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="starting_stats_help">Pick One</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="half_damned_starting_array_1">Chalices 0 Swords 1 Coins -1 Wands 1</span><span data-i18n="half_damned_starting_array_1_desc">if your bloodline is cursed with obvious signs of damnation and must live on the fringes of society.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="half_damned_starting_array_2">Chalices -1 Swords 1 Coins 1 Wands 0</span><span data-i18n="half_damned_starting_array_2_desc">if your bloodline is cursed with terrible hungers or a lingering blight, even as they appear completely human.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="half_damned_starting_array_3">Chalices 1 Swords 0 Coins -1 Wands 1</span><span data-i18n="half_damned_starting_array_3_desc">if one bloodline member in each generation shows the physical gifts of the curse, while the rest suffer the frailties imposed.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="half_damned_style">Ragged fabrics and animal skins; fastidiously clean and modern clothing; anonymous peasant or low class clothing.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="half_damned_lore">Ancient immortals with flawed memories; a voice whispering in your nightmares; religious texts that damn you but offer advice.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="half_damned_bloodline_name">A shared mark or feature; after your progenitor; what zealots and bigots call you.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="half_damned_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline hunted you as monsters before you forged a treaty.&lt;/span&gt; Set your pact each other to 1. You say how you proved your humanity, they say how they made amends.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="holy-church">
+                <div class="creation-container">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="starting_stats_help">Pick One</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="holy_church_starting_array_1">Chalices 1 Swords 0 Coins -1 Wands 1</span><span data-i18n="holy_church_starting_array_1_desc">if you act as a mystery cult, revealing deeper truths to those who have earned them.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="holy_church_starting_array_2">Chalices 1 Swords 0 Coins 1 Wands -1</span><span data-i18n="holy_church_starting_array_2_desc">if you are part of a grander church, trading freedom to dabble in the occult for temporal influence.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="holy_church_starting_array_3">Chalices 1 Swords 1 Coins -1 Wands 0</span><span data-i18n="holy_church_starting_array_3_desc">if you're a scattered group of devotees resisting persecution in pursuit of righteousness.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="holy_church_style">A simple symbol of faith, fastidious clerical robes, joyous flowing colours.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="holy_church_lore">Dreams of whispering martyrs, a holy book filled with ecstatic visions, accumulated folkGlass from your flock.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="holy_church_bloodline_name">The virtue you follow, the mark you wear, your hope for the future.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="holy_church_history">&lt;span class=&quot;move-trigger&quot;&gt;You saved another bloodline from falling to darkness.&lt;/span&gt; Set your pact with them to 1. They say what dark temptation was twisting them into servants of &lt;span class=&quot;sheet-thecastle&quot;&gt;the castle&lt;/span&gt;; you say what you did to redeem them.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden-hand">
+                <div class="creation-container">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="starting_stats_help">Pick One</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="hidden_hand_starting_array_1">Chalices 1 Swords 0 Coins 1 Wands -1</span><span data-i18n="hidden_hand_starting_array_1_desc">if you live lives of luxury and try not to think too hard about the source of your wealth.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="hidden_hand_starting_array_2">Chalices -1 Swords 1 Coins 1 Wands 0</span><span data-i18n="hidden_hand_starting_array_2_desc">if you act as a mercenary group, guiding the world’s conflicts in a direction that benefits you.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="hidden_hand_starting_array_3">Chalices 0 Swords -1 Coins 1 Wands 1</span><span data-i18n="hidden_hand_starting_array_3_desc">if you’ve suborned the world’s elite into a secret society bound by occult rituals and mutual blackmail.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="hidden_hand_style">Formal wear and subtle marks of membership, opulent clothes and impractical accessories, state-of-the-art arms and armour.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="hidden_hand_lore">Reports from agents scattered around the world, an iron grip on the rare book market, a private institution of scholars probing the boundaries of knowledge.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="hidden_hand_bloodline_name">a mythical creature, an alchemical process, a feudal role.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="hidden_hand_history">&lt;span class=&quot;move-trigger&quot;&gt;You split the fabulous wealth you found with another bloodline.&lt;/span&gt; Gain 1 pact on them. They say what they used the wealth for; you say how entropy and betrayal robbed them of it.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="magi">
+                <div class="creation-container">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="starting_stats_help">Pick One</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="magi_starting_array_1">Chalices 0 Swords -1 Coins 1 Wands 1</span><span data-i18n="magi_starting_array_1_desc">if you’re a selective academic institution teaching occult rituals to those that can afford your fees.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="magi_starting_array_2">Chalices 0 Swords 1 Coins -1 Wands 1</span><span data-i18n="magi_starting_array_2_desc">if you’re hands-on learners, extracting occult wisdom from the beasts and devils you hunt.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="magi_starting_array_3">Chalices 1 Swords 0 Coins -1 Wands 1</span><span data-i18n="magi_starting_array_3_desc">if you’re occultists without borders, travelling the world and pushing back blights wherever you find them.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="magi_style">Skin covered in arcane glyphs, thick robes of strange fabrics, bags and bandoleers loaded with reagents.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="magi_lore">A bag full of scholarly texts, drilled-in mnemonics, a chorus of spirits bound into your gear to offer advice.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="magi_bloodline_name">The name of your school, The ____ Way, The Path of ______ .</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="magi_history">&lt;span class=&quot;move-trigger&quot;&gt;You taught another bloodline how to use &lt;span class=&quot;sheet-thecastle&quot;&gt;the castle&lt;/span&gt;’s power safely.&lt;/span&gt; Gain 1 pact on them. They say what the ritual allows them to do; you say what it costs them instead of their souls. </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guardians-of-nature">
+                <div class="creation-container">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="starting_stats_help">Pick One</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="guardians_of_nature_starting_array_1">Chalices 1 Swords -1 Coins 0 Wands 1</span><span data-i18n="guardians_of_nature_starting_array_1_desc">if you focus on caring for people while &lt;span class=&quot;sheet-thecastle&quot;&gt;the castle&lt;/span&gt; corrupts the outskirts.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="guardians_of_nature_starting_array_2">Chalices 0 Swords 1 Coins -1 Wands 0</span><span data-i18n="guardians_of_nature_starting_array_2_desc">if you focus on fighting the corruption at the source, caring little for material gain.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="guardians_of_nature_starting_array_3">Chalices -1 Swords 1 Coins 0 Wands 1</span><span data-i18n="guardians_of_nature_starting_array_3_desc">if you focus on defending your territory at the cost of personal relations.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="guardians_of_nature_style">Rustic clothing; furs and pelts; barely any clothing.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="guardians_of_nature_lore">Secret meetings; whispers of nature; hidden enclaves.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="guardians_of_nature_bloodline_name">A sacred tree or animal; the name the whispers give you; no given name.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="guardians_of_nature_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline taught you how to fit in with the rest of society.&lt;/span&gt; Set your pact with them to 1. You say what social expectation they taught you. They say how it has changed since.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fate-dealers">
+                <div class="creation-container">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="starting_stats_help">Pick One</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="fate_dealers_starting_array_1">Chalices 1 Swords -1 Coins 0 Wands 1</span><span data-i18n="fate_dealers_starting_array_1_desc">if you advise people against the coming harm but lack the military strength to save them alone.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="fate_dealers_starting_array_2">Chalices -1 Swords 0 Coins 1 Wands 1</span><span data-i18n="fate_dealers_starting_array_2_desc">if you defy Fate by gathering as many resources as possible at the expense of others.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="fate_dealers_starting_array_3">Chalices -1 Swords 1 Coins 0 Wands 1</span><span data-i18n="fate_dealers_starting_array_3_desc">if you stare death in the face, everything else be damned.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="fate_dealers_style">Ostentatious clothing; simple robes; unrecognizable from common folk.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="fate_dealers_lore">Cartomancy; astrology; runecasting.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="fate_dealers_bloodline_name">A mystical name; a defiant name; Keepers of ________.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="fate_dealers_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline goes to you for prophecies and omens.&lt;/span&gt; Raise your pact with them by 1. They say what fate you saved them from. You say what ill fortune you haven’t told them about yet.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="defenders-of-tomorrow">
+                <div class="creation-container">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="starting_stats_help">Pick One</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="defenders_of_tomorrow_starting_array_1">Chalices -1 Swords 1 Coins 1 Wands 0</span><span data-i18n="defenders_of_tomorrow_starting_array_1_desc">if your military might is unparalleled, but you stick out like a sore thumb.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="defenders_of_tomorrow_starting_array_2">Chalices 1 Swords 1 Coins -1 Wands 0</span><span data-i18n="defenders_of_tomorrow_starting_array_2_desc">if you’re stranded in this world with no resources to get back.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="defenders_of_tomorrow_starting_array_3">Chalices 0 Swords 1 Coins 1 Wands -1</span><span data-i18n="defenders_of_tomorrow_starting_array_3_desc">if your knowledge of technology is vast, but know next to nothing about the supernatural.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="defenders_of_tomorrow_style">Flowing robes; skin-tight suits; trench coats.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="defenders_of_tomorrow_lore">Notes on the other Bloodlines; technology of a time to be; scraps of knowledge.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="defenders_of_tomorrow_bloodline_name">The name of a future organization; a numeric designation; an unknown name.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="defenders_of_tomorrow_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline told you about current events… to them.&lt;/span&gt; Raise your pact with them by 1. They say how this event is significant now. You say why it doesn’t matter in the future. </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="bloodline-stats">
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_chalices" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-chalices=1}} {{title=^{chalices}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Chalices}}]]}}"><span data-i18n="chalices">Chalices</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_chalices" min="-1" max="3"/>
+            </div>
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_swords" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-swords=1}} {{title=^{swords}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Swords}}]]}}"><span data-i18n="swords">Swords</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_swords" min="-1" max="3"/>
+            </div>
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_coins" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-coins=1}} {{title=^{coins}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Coins}}]]}}"><span data-i18n="coins">Coins</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_coins" min="-1" max="3"/>
+            </div>
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_wands" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-wands=1}} {{title=^{wands}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Wands}}]]}}"><span data-i18n="wands">Wands</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_wands" min="-1" max="3"/>
+            </div>
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_relics" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-relics=1}} {{title=^{relics}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Relics}}]]}}"><span data-i18n="relics">Relics</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_relics" min="0" max="99"/>
+            </div>
+          </div>
+          <div class="bloodline-pacts">
+            <details open="open">
+              <summary>
+                <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+                <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+                <h3 class="legendary-heroes"><span data-i18n="pact">Pact: </span><span data-i18n="legendary_heroes_pact_name">The Way of Gold</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+                <h3 class="half-damned"><span data-i18n="pact">Pact: </span><span data-i18n="half_damned_pact_name">The Way of Red</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+                <h3 class="holy-church"><span data-i18n="pact">Pact: </span><span data-i18n="holy_church_pact_name">The Way of White</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+                <h3 class="hidden-hand"><span data-i18n="pact">Pact: </span><span data-i18n="hidden_hand_pact_name">The Way of Silver</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+                <h3 class="magi"><span data-i18n="pact">Pact: </span><span data-i18n="magi_pact_name">The Way of Blue</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+                <h3 class="guardians-of-nature"><span data-i18n="pact">Pact: </span><span data-i18n="guardians_of_nature_pact_name">The Way of Green</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+                <h3 class="fate-dealers"><span data-i18n="pact">Pact: </span><span data-i18n="fate_dealers_pact_name">The Way of Violet</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+                <h3 class="defenders-of-tomorrow"><span data-i18n="pact">Pact: </span><span data-i18n="defenders_of_tomorrow_pact_name">The Way of Chrome</span>
+                </h3>
+              </summary>
+              <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+              <div class="legendary-heroes">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="legendary_heroes_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize heroism and valour.&lt;/span&gt; At the end of each play session, pick the explorer whose heroism most impressed you and raise their pact with your bloodline by 1.</span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="legendary_heroes_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; members of other bloodlines can spend 1-pact to gain a weapon from your stores. Give it two perks and a flaw, and describe its history.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+              <div class="half-damned">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="half_damned_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize integrity and sacrifice.&lt;/span&gt; At the end of each play session, pick the explorer whose mercy most impressed you and raise their bloodline’s pact with you by 1.</span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="half_damned_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1-pact to transfer a point of contamination to a member of your bloodline. Say how the recipient is further twisted.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+              <div class="holy-church">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="holy_church_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize self-sacrifice.&lt;/span&gt; At the end of each play session, pick the explorer who risked the most to help others and raise their bloodline’s pact with you by 1. </span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="holy_church_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1-pact on you to take a Relic from your stores. Describe it, and suggest how it came to be owned by your order.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+              <div class="hidden-hand">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="hidden_hand_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize entrepreneurship.&lt;/span&gt; At the end of each play session, pick the explorer who most increased their wealth or power and raise their bloodline’s pact with you by 1.</span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="hidden_hand_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1-pact on you to get access to more luxurious supplies, giving them advantage on Shelter until they return to a safe camp.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+              <div class="magi">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="magi_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize arcane insight.&lt;/span&gt; At the end of each session, pick the explorer who wielded the most supernatural power and raise their pact with your bloodline by 1. </span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="magi_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1 pact on you to get an item of power from your stores. They can destroy it to cast a spell as per &lt;span class=&quot;move-trigger&quot;&gt;Drink Deep&lt;/span&gt;.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+              <div class="guardians-of-nature">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="guardians_of_nature_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize the natural order.&lt;/span&gt; At the end of each session, pick the explorer who went out of their way to destroy &lt;span class=&quot;sheet-thecastle&quot;&gt;the castle&lt;/span&gt;, and raise their pact with your bloodline by 1.</span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="guardians_of_nature_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; members of other bloodlines can spend 1-pact to gain an animal companion. While the animal is alive, they share one of your explorer’s moves.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+              <div class="fate-dealers">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="fate_dealers_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize the struggle against Fate.&lt;/span&gt; At the end of each session, pick the explorer who had the worst luck and yet prevailed against it, and raise their pact with your bloodline by 1. </span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="fate_dealers_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1-pact on you to get a glimpse of what might kill them. They hold 1. They may spend that hold to declare that this is the vision that they saw, and gain advantage on the roll. On a miss, they cannot avoid the noose: they die.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+              <div class="defenders-of-tomorrow">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="defenders_of_tomorrow_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize the preservation of the future.&lt;/span&gt; At the end of each session, pick the explorer who was most interested in events to come and raise their pact with your bloodline by 1. </span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="defenders_of_tomorrow_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; members of other bloodlines can spend 1-pact to gain a strange, yet useful device. They hold 2. They may spend hold 1-for-1 to ask any question in the &lt;span class=&quot;move-trigger&quot;&gt;See Clear&lt;/span&gt; list.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pact-with-container-title">
+                <div class="with-bloodline-title">
+                  <h4 data-i18n="bloodline">Bloodline</h4>
+                </div>
+                <div class="pact-rating-title">
+                  <h4 data-i18n="rating"></h4>
+                </div>
+                <div class="pact-with-them-title">
+                  <h4 data-i18n="pact_with_them">Pact With Them</h4>
+                </div>
+              </div>
+              <fieldset class="repeating_pacts">
+                  <div class="pact-with-container">
+                    <div class="with-bloodline">
+                      <input type="text" name="attr_pact_with_bloodline"/>
+                    </div>
+                    <div class="pact-rating">
+                      <input type="number" name="attr_pact_rating"/>
+                    </div>
+                    <div class="pact-with-them">
+                      <input type="text" name="attr_pact_with_them"/>
+                    </div>
+                  </div>
+              </fieldset>
+            </details>
+          </div>
+          <div class="bloodline-moves-container">
+            <h3 data-i18n="bloodline_moves">Bloodline Moves</h3>
+            <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+            <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+            <div class="legendary-heroes"><span>legendary-heroes</span></div>
+            <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+            <div class="half-damned"><span>half-damned</span></div>
+            <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+            <div class="holy-church"><span>holy-church</span></div>
+            <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+            <div class="hidden-hand"><span>hidden-hand</span></div>
+            <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+            <div class="magi"><span>magi</span></div>
+            <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+            <div class="guardians-of-nature"><span>guardians-of-nature</span></div>
+            <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+            <div class="fate-dealers"><span>fate-dealers</span></div>
+            <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+            <div class="defenders-of-tomorrow"><span>defenders-of-tomorrow</span></div>
+            <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+            <div class="open-bloodline"><span>open-bloodline</span></div>
+          </div>
       </div>
-      <div class="tab-moves">
-        <h2 data-i18n="bloodline_moves">Bloodline Moves</h2>
+    </div>
+    <div class="page-container">
+      <input class="moves hide-element" type="radio" name="attr_bloodline_page" value="moves"/>
+      <div class="moves showhide">
         <div class="moves-container-alt">
             <div class="shared-move">
-                <h3 data-i18n="bloodline_move_arcane_power">Arcane Power</h3>
+                <h3 class="roll-button" data-i18n="bloodline_move_arcane_power">Arcane Power</h3>
               <p><span class="move-trigger" data-i18n="bloodline_move_arcane_power_move_trigger">When you use &lt;span class=&quot;thecastle&quot;&gt;the castle&lt;/span&gt;’s cast-offs to empower your bloodline’s actions,</span><span data-i18n="bloodline_move_arcane_power_move_text"> spend 1 Relic and get advantage on a roll.</span>
               </p>
             </div>
             <div class="shared-move">
-                <h3 data-i18n="bloodline_move_lend_aid">Lend Aid</h3>
+                <h3 class="roll-button" data-i18n="bloodline_move_lend_aid">Lend Aid</h3>
               <p><span class="move-trigger" data-i18n="bloodline_move_lend_aid_move_trigger">When you help another bloodline with a move,</span><span data-i18n="bloodline_move_lend_aid_move_text"> offer them a dice. If they take it, they roll it with their own as if they had advantage. If your dice is the highest, say how you made the difference and gain 1-Pact on them. If it’s the lowest, the GM will say how helping them hurt you.</span>
               </p>
             </div>
@@ -160,29 +673,34 @@
             </div>
         </div>
       </div>
-  </div>
+    </div>
 </div>
 <input class="explorer-mode hide-element" type="radio" name="attr_mode" value="explorer"/>
 <div class="explorer-mode hide-element">
   <div class="header">
-      <header class="nav-bar">
-        <input class="tab-toggle" type="hidden" value="playbook"/>
-        <h2 data-i18n="explorer">Explorer</h2>
+      <div class="nav-bar-explorer">
         <div class="nav-row">
           <div class="nav-child">
-            <lable class="page-label">
-              <input class="hide-element page-button" type="radio" name="attr_page_mode" value="playbook"/>
-              <div class="page-button-playbook" data-i18n="explorer_playbook">Explorer Playbook</div>
-            </lable>
+            <div class="nav-title">
+              <div class="reverse-skew">
+                <h2 data-i18n="explorer">Explorer</h2>
+              </div>
+            </div>
           </div>
           <div class="nav-child">
-            <lable class="page-label">
-              <input class="hide-element page-button" type="radio" name="attr_page_mode" value="moves"/>
-              <div class="page-button-moves" data-i18n="explorer_moves">Explorer Moves</div>
-            </lable>
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_explorer_page_button" value="playbook" checked="checked"/>
+              <div class="page-button-explorer" data-i18n="playbook">Playbook</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_explorer_page_button" value="moves"/>
+              <div class="page-button-explorer" data-i18n="moves">Moves</div>
+            </label>
           </div>
         </div>
-      </header>
+      </div>
   </div>
   <div class="explorer-mode">
     <div class="explorer">
@@ -195,30 +713,27 @@
   {{/rollName}}
 </rolltemplate>
 <script type="text/worker">
-// const button_list = ['playbook', 'moves'];
-// button_list.forEach(button => {
-//   on(`clicked:${button}`, function() {
-//     console.log({
-//       button: button,
-//       value: eventinfo.newValue})
-//     setAttrs({
-//       page_mode: button
-//     });
-//   });
-// });
+on('change:bloodline_page_button', function(eventinfo) {
+  console.log({bloodline_page: eventinfo.newValue})
+  setAttrs({
+    bloodline_page: eventinfo.newValue
+  });
+});
+
+
+on('change:explorer_page_button', function(eventinfo) {
+  console.log({explorer_page: eventinfo.newValue})
+  setAttrs({
+    explorer_page: eventinfo.newValue
+  });
+});
+
 
 on('change:mode_button', function(eventinfo) {
   console.log('mode fired')
   setAttrs({
     mode: eventinfo.newValue,
     modes_choice: 'off'
-  });
-});
-
-on('change:page_mode', function(eventinfo) {
-  console.log({page_mode: eventinfo.newValue})
-  setAttrs({
-    page_mode: eventinfo.newValue
   });
 });
 

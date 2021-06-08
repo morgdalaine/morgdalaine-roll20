@@ -1,0 +1,218 @@
+
+
+// Bloodlines and Explorers
+.legendary-heroes, .half-damned, .holy-church, .hidden-hand,
+.magi, .guardians-of-nature, .fate-dealers, .defenders-of-tomorrow,
+.open-bloodline, .bnull
+   display: none
+// .slayer, .mystic, .bonded, .reckoner, .packrat, .assassin, .captain,
+// .joker, .knight, .mascot, .not-mascot, .medic, .professor, .empty-explorer, .b-null,
+
+// input[type=checkbox][value='null']:checked ~ .Null,
+// input[type=checkbox][value='slayer']:checked ~ .Slayer,
+// input[type=checkbox][value='mystic']:checked ~ .Mystic,
+// input[type=checkbox][value='bonded']:checked ~ .Bonded,
+// input[type=checkbox][value='reckoner']:checked ~ .Reckoner,
+// input[type=checkbox][value='packrat']:checked ~ .Packrat,
+// input[type=checkbox][value='assassin']:checked ~ .Assassin,
+// input[type=checkbox][value='captain']:checked ~ .Captain,
+// input[type=checkbox][value='joker']:checked ~ .Joker,
+// input[type=checkbox][value='knight']:checked ~ .Knight,
+// input[type=checkbox][value='mascot']:checked ~ .Mascot,
+// input[type=checkbox][value='mascot']:not(:checked) ~ .notMascot,
+// input[type=checkbox][value='medic']:checked ~ .Medic,
+// input[type=checkbox][value='professor']:checked ~ .Professor,
+// input[type=checkbox][value='empty_explorer']:checked ~ .EmptyExplorer,
+
+input[type=checkbox][value='bnull']:checked ~ .bnull,
+input[type=checkbox][value='legendary_heroes']:checked ~ .legendary-heroes,
+input[type=checkbox][value='half_damned']:checked ~ .half-damned,
+input[type=checkbox][value='holy_church']:checked ~ .holy-church,
+input[type=checkbox][value='hidden_hand']:checked ~ .hidden-hand,
+input[type=checkbox][value='magi']:checked ~ .magi,
+input[type=checkbox][value='guardians_of_nature']:checked ~ .guardians-of-nature,
+input[type=checkbox][value='fate_dealers']:checked ~ .fate-dealers,
+input[type=checkbox][value='defenders_of_tomorrow']:checked ~ .defenders-of-tomorrow,
+input[type=checkbox][value='open_bloodline']:checked ~ .open-bloodline
+  display: block
+
+details > summary
+  display: list-item
+
+  h2, h3
+    float: left
+    @include std-font($oswald)
+
+.bloodline-info, .explorer-info
+  display: inline-grid
+  grid-template-columns: repeat(4, 1fr)
+  // grid-gap: 5px
+
+  .bloodline-name
+    grid-column: span 3
+
+  .bloodline-style, .bloodline-lore
+    grid-column: span 2
+
+.bloodline-creation
+  margin: 1em 0
+  padding: 1em
+  text-align: justify
+
+  h2, h3
+    @include std-font($oswald)
+
+  .bnull
+    margin: 3em
+    background-color: $red
+    @include skew(0deg, 3deg)
+
+    h2, h3
+      color: $white
+      background-color: $black
+      padding: 1em
+      text-align: center
+      width: fit-content
+      width: -moz-fit-content
+      @include std-font()
+      @include skew(0deg, -3deg)
+      // @include rotate(3deg)
+
+  .help
+    @include std-font()
+    text-transform: none
+    font-size: 0.8em
+    font-weight: normal
+    color: $white
+    font-style: italic
+    margin-left: 0.5em
+
+.creation-container
+  display: inline-grid
+  grid-template-columns: 50% 50%
+  background-color: $red
+
+  .creation-right
+    display: flex
+    flex-direction: column
+    color: $light-gray
+    padding: 1em
+
+  h2, h3
+    color: $white
+
+.starting-stats
+  display: flex
+  flex-direction: column
+  color: $white
+  background-color: $black
+  padding: 1em
+  @include rotate(-3deg)
+
+  h2, h3
+    color: $white
+
+  .help
+    color: $white
+
+  .starting-stat
+    margin: 0 0.5em
+    font-weight: bold
+
+  .stat-options
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    height: 100%
+
+.starting-traditions
+  margin-left: -1em
+
+  .tradition
+    font-weight: bold
+
+    &:after
+      content: ':'
+      margin-right: 0.5em
+
+
+.bloodline-stats
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+
+.stat
+  display: flex
+  flex-direction: row
+  margin-left: -1em
+
+  h3, h4
+    margin-bottom: 0.5em
+    @include rotate(-5deg)
+    background-color: $black
+
+    button[type=roll]
+      display: inline
+      background-image: none
+      color: magenta
+      padding: 0.5em
+      font-weight: bold
+
+      span
+        font-size: 18px
+        font-weight: bold
+        margin-left: 0.5em
+        text-transform: uppercase
+        letter-spacing: 2px
+        color: $white
+
+  input[type=number]
+    margin-left: -0.5em
+    background-color: $dark-gray
+    background: $dark-gray
+    border: none
+    // text-align: right
+    color: $white
+    width: 3em
+
+.bloodline-pacts
+  padding: 1em
+
+.pact-container
+  display: inline-grid
+  grid-template-columns: 50% 50%
+
+  .prizes, .at-camp
+    padding: 1em
+    text-align: justify
+
+.pact-with-container, .pact-with-container-title
+  display: inline-grid
+  grid-template-columns: 45% 10% 45%
+  margin-bottom: 0.5em
+  @include fill-available()
+
+.pact-with-container-title
+  background-color: $red
+  h2, h3, h4
+    color: $white
+
+.pact-rating-title, .pact-with-them-title
+  h2, h3, h4
+    text-align: center
+    padding: 0.5em 0
+
+.with-bloodline-title
+  @include rotate(-1.5deg)
+  background-color: $black
+
+  h2, h3, h4
+    padding: 0.5em 0
+    padding-left: 1.2em
+
+.pact-rating
+  text-align: center
+
+.bloodline-moves-container
+  margin-bottom: 1em
+  padding: 1em

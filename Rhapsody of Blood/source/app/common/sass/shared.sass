@@ -50,20 +50,19 @@
 
 @mixin rotate($deg: -90deg)
   transform: rotate($deg)
+  // Legacy vendor prefixes
+  -webkit-transform: rotate($deg) // Safari
+  -moz-transform: rotate($deg)    // Firefox
+  -ms-transform: rotate($deg)     // IE
+  -o-transform: rotate($deg)      // Opera
 
-  /* Legacy vendor prefixes that you probably don't need... */
-
-  /* Safari */
-  -webkit-transform: rotate($deg)
-
-  /* Firefox */
-  -moz-transform: rotate($deg)
-
-  /* IE */
-  -ms-transform: rotate($deg)
-
-  /* Opera */
-  -o-transform: rotate($deg)
+@mixin skew($deg: -90deg, $skew: 0deg)
+  transform: skew($deg, $skew)
+  // Legacy vendor prefixes
+  -webkit-transform: skew($deg, $skew) // Safari
+  -moz-transform: skew($deg, $skew)    // Firefox
+  -ms-transform: skew($deg, $skew)     // IE
+  -o-transform: skew($deg, $skew)      // Opera
 
 .align-left
   text-align: left !important

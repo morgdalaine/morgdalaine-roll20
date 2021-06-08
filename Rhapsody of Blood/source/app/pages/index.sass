@@ -1,5 +1,3 @@
-.page-container
-  display: block
 
 .modes
   display: flex
@@ -49,17 +47,11 @@ div.mode
 .mode-image
   display: flex
 
-// // explorers
-// .null, .slayer, .mystic, .bonded, .reckoner, .packrat, .assassin, .captain,
-// .joker, .knight, .mascot, .not-mascot, .medic, .professor, .empty-explorer, .b-null,
+input[type=radio].playbook:checked ~ div.playbook,
+input[type=radio].moves:checked ~ div.moves
+  display: inline-grid
+  @include show-hide()
 
-// // bloodlines
-// .legendary-heroes, .half-damned, .holy-church, .hidden-hand,
-// .magi, .guardians-of-nature, .fate-dealers, .defenders-of-tomorrow, .open-bloodline,
-
-// // modes
-// .bloodline, .explorer
-//    display: none
 
 // input[type=radio][value='bloodline']:checked ~ .bloodline,
 // input[type=radio][value='bloodline']:checked ~ div ul .bloodline,
@@ -68,11 +60,11 @@ div.mode
 //   display: block
 
 // Begin tab
-// input.mode-selector[value="explorer"]:checked ~ span.mode-selector::before
-//   content: "Explorer Mode"
+// input.mode-selector[value=explorer]:checked ~ span.mode-selector::before
+//   content: Explorer Mode
 
-// input.mode-selector[value="bloodline"]:checked ~ span.mode-selector::before
-//   content: "Bloodline Mode"
+// input.mode-selector[value=bloodline]:checked ~ span.mode-selector::before
+//   content: Bloodline Mode
 
 // input.mode-selector[value='explorer']:checked ~ span.mode-selector::before
 // input.mode-selector[value='bloodline']:checked ~ span.mode-selector::before

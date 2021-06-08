@@ -1,73 +1,84 @@
-.header
-  @include fill-available()
+// header
+//   display: inline-grid
+//   text-transform: uppercase
+//   justify-content: space-evenly
+//   @include fill-available()
 
-.nav-bar
+.nav-row
   display: flex
-  flex-direction: row
-  @include fill-available()
 
-  .nav-row
-    display: flex
-    flex-direction: row
+.nav-bar-bloodline,
+.nav-bar-explorer
+  background-color: none
+  border: none
+  margin: 1em 0
+  // border-top: 2px solid transparent
+  // border-bottom: 2px solid transparent
 
+// .nav-bar-explorer
+//   background-color: $blue
+//   border-top: 3px solid $blue
+//   border-bottom: 3px solid $blue
 
-  *
-    border: 2px solid magenta
+.nav-child
+  width: 100%
+  text-align-last: center
+  margin: 0.1em
 
-// Playbook and Moves Tabs
-.bloodline .playbook,
-.bloodline .moves,
-.explorer .playbook,
-.explorer .moves,
-  display: none
-
-// Show Selected Tab
-.tab-toggle[value='playbook'] ~ div.tab-playbook,
-.tab-toggle[value='playbook'] ~ div.tab-moves
-  display: block
-
-.tab-toggle[value='playbook'] ~ div div.tab-playbook,
-.tab-toggle[value='playbook'] ~ div div.tab-moves
-  display: block
-
-.tabs
-  position: relative
-  display: table
-  padding-left: 0
-  margin-right: 20px
-  float: right
-
-  &:before, &:after
-    content: ''
-    border-bottom: 1px solid $black
-    bottom: 0
-    position: absolute
-    width: 10px
-    left: -10%
-    right: -10%
-
-  li
-    color: magenta
+  label
+    margin: 0
+    padding: 0
     cursor: pointer
-    float: left
-    padding: 10px 15px
-    border-bottom: 1px solid $black
+    height: 36px
+    line-height: 36px
 
-    button
-      color: $dark-gray
-      border: none
-      background: transparent
+    &:hover
+      background: $light-gray
+      @include rotate(-2.5deg)
+      // transition: 0.5s ease
 
-.tab-toggle[value='playbook'] ~ div .tabs .tab-playbook,
-.tab-toggle[value='moves'] ~ div .tabs .tab-moves
-  border: 1px solid $black
-  border-bottom: none
+.nav-title
+  width: 100%
+  // background-color: $red
+  @include std-font($spectral)
+  // @include skew(-45deg, 0deg)
 
-.tab-toggle[value='playbook'] ~ div .tabs .tab-playbook button,
-.tab-toggle[value='moves'] ~ div .tabs .tab-moves button
-  border: 1px solid $red
-  border-bottom: none
+  .reverse-skew
+    // @include skew(45deg, 0deg)
+
+    h2
+      color: $red
+      letter-spacing: 4px
+      text-transform: uppercase
+
+.page-button-bloodline,
+.page-button-explorer
+  padding: 0.1em 0em 0.1em 0em
+  font-weight: 600
+  @include std-font($inknut)
+  color: $red
+  text-transform: uppercase
+  // border: none
+  // border-bottom: 2px solid $black
 
 
+.page-button-bloodline,
+.page-button-explorer
+  background-color: none
 
 
+.page-button
+  &:checked
+    & ~ div
+      &.page-button-bloodline,
+      &.page-button-explorer
+        color: $white
+        background-color: $black
+        @include rotate(-0.5deg)
+
+        // border: 2px solid $black
+        // border-bottom: 2px solid transparent
+        // transition: 0.5s ease
+
+label.page-label
+  text-align: center

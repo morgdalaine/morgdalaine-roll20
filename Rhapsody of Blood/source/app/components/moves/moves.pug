@@ -9,7 +9,7 @@ mixin shared_move_title(move)
         value=bloodline_shared_rolls[move])
         +simple_span(`bloodline_move_${move}`)
   else
-    h3(data-i18n=`bloodline_move_${move}`)=locals[`bloodline_move_${move}`]
+    h3.roll-button(data-i18n=`bloodline_move_${move}`)=locals[`bloodline_move_${move}`]
 
 mixin shared_move(move)
   - var move_object = bloodline_shared_moves[move]

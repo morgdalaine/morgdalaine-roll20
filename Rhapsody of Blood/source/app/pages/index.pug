@@ -1,5 +1,6 @@
 include ../common/pug/common
 include ../components/component
+include ../components/header/header
 
 //- sheet version
 input(type='hidden' name='attr_sheet_version' version='')
@@ -54,49 +55,3 @@ div.explorer-mode.hide-element
 //-     type='hidden'
 //-     name='attr_rollstat_query'
 //-     value='?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}| Iron, @{Iron}| Glass, @{Glass}| Sulphur, @{Sulphur}| Mercury, @{Mercury}| Blood, @{Blood}}')
-//-   input(
-//-     type='hidden'
-//-     name='attr_title_text'
-//-     value='')
-//-   input(
-//-     type='hidden'
-//-     name='attr_sheet_version'
-//-     version='')
-
-//- input(type='checkbox' name='attr_sheet_type' class='hidden' value='bloodline' checked)
-//- input(type='hidden' name='attr_page_mode' class='tab-toggle' value='sheet')
-//- input(type='radio' name='attr_sheet_type' class='mode-selector' value='bloodline' checked)
-//- input(type='radio' name='attr_sheet_type' class='mode-selector' value='explorer')
-
-//- div.header
-//-   span.mode-selector-bloodline(data-i18n='bloodline_mode')=locals['bloodline_mode']
-//-   span.mode-selector-explorer(data-i18n='explorer_mode')=locals['explorer_mode']
-//-   span.mode-selector
-
-//-   ul.bloodline-tabs
-//-     li.bloodline.tab-bloodline-sheet
-//-       button(
-//-         type='action'
-//-         name='act_sheet'
-//-         data-i18n='bloodline_sheet')=locals['bloodline_sheet']
-//-     li.bloodline.tab-bloodline-moves
-//-       button(
-//-         type='action'
-//-         name='act_moves'
-//-         data-i18n='bloodline_moves')=locals['bloodline_moves']
-//-     li.explorer.tab-bloodline-sheet
-//-       button(
-//-         type='action'
-//-         name='act_sheet'
-//-         data-i18n='explorer_sheet')=locals['explorer_sheet']
-//-     li.explorer.tab-bloodline-moves
-//-       button(
-//-         type='action'
-//-         name='act_moves'
-//-         data-i18n='explorer_moves')=locals['explorer_moves']
-
-
-//- +bloodlines
-
-//- .page-container
-//-   +component

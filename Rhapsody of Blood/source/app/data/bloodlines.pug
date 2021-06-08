@@ -1,3 +1,4 @@
+
 -
   var
     bloodlines_list = [
@@ -11,3 +12,57 @@
       'defenders_of_tomorrow',
       'open_bloodline',
     ]
+
+-
+  var
+    bloodlines_class_list = {
+      legendary_heroes: 'legendary-heroes',
+      half_damned: 'half-damned',
+      holy_church: 'holy-church',
+      hidden_hand: 'hidden-hand',
+      magi: 'magi',
+      guardians_of_nature: 'guardians-of-nature',
+      fate_dealers: 'fate-dealers',
+      defenders_of_tomorrow: 'defenders-of-tomorrow',
+      open_bloodline: 'open-bloodline',
+    }
+
+-
+  var
+    bloodline_stat_list = [
+      'chalices',
+      'swords',
+      'coins',
+      'wands',
+      'relics',
+    ]
+
+-
+  var
+    bloodline_stat_details = {
+      chalices: {
+        roll: '&{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-chalices=1}} {{title=^{chalices}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Chalices}}]]}}',
+        min_val: -1,
+        max_val: 3
+      },
+      swords: {
+        roll: '&{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-swords=1}} {{title=^{swords}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Swords}}]]}}',
+        min_val: -1,
+        max_val: 3
+      },
+      coins: {
+        roll: '&{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-coins=1}} {{title=^{coins}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Coins}}]]}}',
+        min_val: -1,
+        max_val: 3
+      },
+      wands: {
+        roll: '&{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-wands=1}} {{title=^{wands}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Wands}}]]}}',
+        min_val: -1,
+        max_val: 3
+      },
+      relics: {
+        roll: '&{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-relics=1}} {{title=^{relics}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Relics}}]]}}',
+        min_val: 0,
+        max_val: 99
+      },
+    }

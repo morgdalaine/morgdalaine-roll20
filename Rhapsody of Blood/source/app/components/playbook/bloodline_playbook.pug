@@ -1,0 +1,145 @@
+include ..\..\data\bloodlines
+include ..\..\data\creation
+
+mixin bloodline_basics
+  div.bloodline-basics
+    div.bloodline-info
+      div.bloodline-name
+        label.blood-name(data-i18n='bloodline_name')=locals['bloodline_name']
+        input(
+          type='text'
+          name='attr_character_name')
+      div.bloodline-select
+        label.blood-select(data-i18n='playbook')=locals['playbook']
+        select.playbook-select(name='attr_bloodline_select')
+          option(value='bnull')=locals['choose_bloodline']
+          each line in bloodlines_list
+            option(value=line)=locals[line]
+      div.bloodline-style
+        label(data-i18n='style')=locals['style']
+        input(
+          type='text'
+          name='attr_style')
+      div.bloodline-lore
+        label(data-i18n='lore')=locals['lore']
+        input(
+          type='text'
+          name='attr_lore')
+
+mixin bloodline_creation
+  div.bloodline-creation
+    details(open)
+      summary
+        h3(data-i18n='making_your_heroes')=locals['making_your_heroes']
+      input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+      each bloodline in bloodlines_list
+        input(type='checkbox' name='attr_bloodline_select' value=bloodline hidden)
+      div.bnull
+        h2(data-i18n='select_playbook')=locals['select_playbook']
+      each bloodline in bloodline_creation_list
+        div(class=bloodline.class_name)
+          div.creation-container
+            div.starting-stats
+              h3(data-i18n='starting_stats')=locals['starting_stats']
+              span.help(data-i18n='starting_stats_help')=locals['starting_stats_help']
+              div.stat-options
+                each stat in bloodline.starting_stats
+                  div
+                    input(
+                      type='radio'
+                      name='attr_starting_stat'
+                      value=index)
+                    span.starting-stat(data-i18n=stat)=locals[stat]
+                    +simple_span(`${stat}_desc`)
+            div.creation-right
+              div.starting-traditions
+                h3
+                  +simple_span('traditions')
+                span.help(data-i18n='traditions_help')=locals['traditions_help']
+                ul
+                  li
+                    span.tradition(data-i18n='style')=locals['style']
+                    +simple_span(bloodline.style)
+                  li
+                    span.tradition(data-i18n='lore')=locals['lore']
+                    +simple_span(bloodline.lore)
+                  li
+                    span.tradition(data-i18n='name')=locals['name']
+                    +simple_span(bloodline.bloodline_name)
+              div.starting-history
+                h3(data-i18n='history')=locals['history']
+                p
+                  +simple_span(bloodline.history)
+
+mixin stat_title(stat)
+  h4
+    button.roll-button(
+      type='roll'
+      name=`roll_${stat}`
+      value=bloodline_stat_details[stat].roll)
+      +simple_span(stat)
+
+mixin bloodline_stats
+  div.bloodline-stats
+    each stat in bloodline_stat_list
+      div.stat
+        +stat_title(stat)
+        input(
+          type='number'
+          name=`attr_${stat}`
+          min=bloodline_stat_details[stat].min_val
+          max=bloodline_stat_details[stat].max_val)
+
+mixin bloodline_pact
+  div.bloodline-pacts
+    details(open)
+      summary
+        input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+        each bloodline in bloodline_creation_list
+          input(type='checkbox' name='attr_bloodline_select' value=bloodline.bloodline hidden)
+          h3(class=bloodline.class_name)
+            +simple_span('pact')
+            +simple_span(bloodline.pact)
+      input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+      each bloodline in bloodline_creation_list
+        input(type='checkbox' name='attr_bloodline_select' value=bloodline.bloodline hidden)
+        div(class=bloodline.class_name)
+          div.pact-container
+            div.prizes
+              +simple_span(bloodline.prizes)
+            div.at-camp
+              +simple_span(bloodline.at_camp)
+      div.pact-with-container-title
+        div.with-bloodline-title
+          h4(data-i18n='bloodline')=locals['bloodline']
+        div.pact-rating-title
+          h4(data-i18n='rating')=locals['rating']
+        div.pact-with-them-title
+          h4(data-i18n='pact_with_them')=locals['pact_with_them']
+      fieldset.repeating_pacts
+        +pact_with
+
+mixin pact_with
+  div.pact-with-container
+    div.with-bloodline
+      input(
+        type='text'
+        name='attr_pact_with_bloodline')
+    div.pact-rating
+      input(
+        type='number'
+        name='attr_pact_rating')
+    div.pact-with-them
+      input(
+        type='text'
+        name='attr_pact_with_them')
+
+mixin bloodline_moves
+  div.bloodline-moves-container
+    h3(data-i18n='bloodline_moves')=locals['bloodline_moves']
+    input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+    each bloodline in bloodlines_list
+      input(type='checkbox' name='attr_bloodline_select' value=bloodline hidden)
+      div(class=bloodlines_class_list[bloodline])
+        span=bloodlines_class_list[bloodline]
+

@@ -1,11 +1,10 @@
-include ../../components/header/header
 include ./playbook
 include ./moves
 
 - var mode = 'bloodline'
+div.header
+  +nav_bar(mode)
 
-+header(mode)
-
-div.bloodline-mode
-  +bloodline_playbook
-  +bloodline_moves
+//- pages
++bloodline_playbook
++bloodline_shared_moves

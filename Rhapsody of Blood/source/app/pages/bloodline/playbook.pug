@@ -1,5 +1,16 @@
-include ..\..\components\details\bloodline_details
+include ..\..\components\playbook\bloodline_playbook
 
 mixin bloodline_playbook
-  div.tab-playbook
-    +bloodline_basics
+  div.page-container
+    input(
+      type='radio'
+      name='attr_bloodline_page'
+      class='playbook hide-element'
+      value='playbook'
+      checked)
+    div.playbook.showhide
+      +bloodline_basics
+      +bloodline_creation
+      +bloodline_stats
+      +bloodline_pact
+      +bloodline_moves

@@ -1,11 +1,9 @@
-// variables
+// shared variables and mixins
+@import './common/sass/shared'
 @import './common/sass/variables'
 
 // fonts
 @import url(https://fonts.googleapis.com/css2?family=Adamina&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Inknut+Antiqua:wght@400;600;700&family=Oswald:wght@400;700&family=Spectral:ital,wght@0,400;0,700;1,400&display=swap)
-
-// common
-@import './common/sass/shared'
 
 // sheet core
 .charsheet
@@ -13,11 +11,14 @@
   margin: 0 auto !important
   padding: 15px
   font-weight: normal
-  background-color: whitesmoke
+  background-color: none
   @include std-font($text-font)
 
-  h2, h3
-    font-variant: small-caps
+  h2, h3, h4
+    text-transform: uppercase
+    letter-spacing: 2px
+    @include std-font($oswald)
+    // font-variant: small-caps
 
   p
     @include std-font($text-font)
@@ -30,15 +31,22 @@
   .thecastle
     color: $red
     font-weight: bold
-    font-size: 1.2em;
+    font-size: 1.2em
     @include std-font($castle-font)
 
   // Roll Buttons
   button[type=roll].roll-button
-      display: flex
-      border: none
-      margin: 0
-      padding: 0
+    background: none
+    background-color: none
+    text-shadow: none
+    display: flex
+    border: none
+    margin: 0
+    padding: 0
+
+  h2.roll-button, h3.roll-button
+    text-transform: none
+    letter-spacing: normal
 
   .plus-action
     font-weight: bold
@@ -46,25 +54,41 @@
     &:before
       content: ' +'
 
-  // BOILER PLATE
-  // BOILER PLATE
-  // BOILER PLATE
-  // BOILER PLATE
-
   .page-container
     display: flex
 
   .hide-element
     display: none
 
-  input[type='checkbox'].hide-element
-    display: none
-
-  input[type='radio'].hide-element
-    display: none
-
+  input[type='checkbox'].hide-element,
+  input[type='radio'].hide-element,
   div.hide-element
     display: none
+
+  span.showhide:checked
+    background-color: $dark-gray
+    color: white
+    transition: .5s ease
+
+  span.showhide
+    display: inline
+    border: 1px solid #ccc
+    margin-right: 11px
+    border-radius: 4px
+    padding: 2px 4px
+    font-weight: bold
+    font-size: 1em
+
+  span.showhide:hover
+    cursor: pointer
+    border-radius: 4px
+    padding: 2px 4px
+    background-color: #ccc
+    color: $dark-gray
+    transition: .5s ease
+
+  div.showhide
+    @include hide()
 
   // Chrome, Safari, Edge, Opera
   input::-webkit-outer-spin-button,
@@ -76,14 +100,14 @@
   input[type=number]
     -moz-appearance: textfield
 
-  input[type=number], input[type=text], textarea
+  input[type=number], input[type=text], textarea, select
     box-sizing: border-box
     -moz-box-sizing: border-box
-    background-color: $light-gray
-    border: none
+    background-color: $white // $light-gray
+    // border: 1px solid $dark-gray
     border-radius: 0
-    font-family: $input-font
-    font-size: 0.8em
+    @include std-font($oswald)
+    font-size: 1em
     text-decoration: none
 
   input[type=number]
@@ -116,43 +140,6 @@
 
   label
     margin: 0
-
-  span.showhide:checked
-    background-color: $dark-gray
-    color: white
-    transition: .5s ease
-
-  span.showhide
-    display: inline
-    border: 1px solid #ccc
-    margin-right: 11px
-    border-radius: 4px
-    padding: 2px 4px
-    font-weight: bold
-    font-size: 1em
-
-  span.showhide:hover
-    cursor: pointer
-    border-radius: 4px
-    padding: 2px 4px
-    background-color: #ccc
-    color: $dark-gray
-    transition: .5s ease
-
-  div.showhide
-    @include hide()
-
-  .hide-element
-    display: none
-
-  input[type='checkbox'].hide-element
-    display: none
-
-  input[type='radio'].hide-element
-    display: none
-
-  div.hide-element
-    display: none
 
   button.btn.repcontrol_edit,
   button.btn.repcontrol_add
@@ -202,10 +189,9 @@
 
   // Components
   @import './components/component'
-  @import './components/header/header';
-  @import './components/moves/moves';
-  @import './components/details/details';
-
+  @import './components/header/header'
+  @import './components/moves/moves'
+  @import './components/playbook/playbook'
 
 .ui-dialog
   .charsheet
