@@ -1,0 +1,10 @@
+
+mixin bloodline_moves
+  div.bloodline-moves-container
+    h3(data-i18n='bloodline_moves')=locals['bloodline_moves']
+    input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+    each bloodline in bloodlines_list
+      input(type='checkbox' name='attr_bloodline_select' value=bloodline hidden)
+      div(class=bloodlines_class_list[bloodline])
+        span=bloodlines_class_list[bloodline]
+

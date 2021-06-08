@@ -1,0 +1,44 @@
+
+mixin bloodline_pact
+  div.bloodline-pacts
+    details(open)
+      summary
+        input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+        each bloodline in bloodline_creation_list
+          input(type='checkbox' name='attr_bloodline_select' value=bloodline.name hidden)
+          h3(class=bloodlines_class_list[bloodline.name])
+            +simple_span('pact')
+            +simple_span(bloodline.pact)
+      input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+      each bloodline in bloodline_creation_list
+        input(type='checkbox' name='attr_bloodline_select' value=bloodline.name hidden)
+        div(class=bloodlines_class_list[bloodline.name])
+          div.pact-container
+            div.prizes
+              +simple_span(bloodline.prizes)
+            div.at-camp
+              +simple_span(bloodline.at_camp)
+      div.pact-with-container-title
+        div.with-bloodline-title
+          h4(data-i18n='bloodline')=locals['bloodline']
+        div.pact-rating-title
+          h4(data-i18n='rating')=locals['rating']
+        div.pact-with-them-title
+          h4(data-i18n='pact_with_them')=locals['pact_with_them']
+      fieldset.repeating_pacts
+        +pact_with
+
+mixin pact_with
+  div.pact-with-container
+    div.with-bloodline
+      input(
+        type='text'
+        name='attr_pact_with_bloodline')
+    div.pact-rating
+      input(
+        type='number'
+        name='attr_pact_rating')
+    div.pact-with-them
+      input(
+        type='text'
+        name='attr_pact_with_them')
