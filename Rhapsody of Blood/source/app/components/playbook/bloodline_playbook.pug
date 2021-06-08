@@ -37,7 +37,7 @@ mixin bloodline_creation
       div.bnull
         h2(data-i18n='select_playbook')=locals['select_playbook']
       each bloodline in bloodline_creation_list
-        div(class=bloodline.class_name)
+        div(class=bloodlines_class_list[bloodline.name])
           div.creation-container
             div.starting-stats
               h3(data-i18n='starting_stats')=locals['starting_stats']
@@ -65,7 +65,7 @@ mixin bloodline_creation
                     +simple_span(bloodline.lore)
                   li
                     span.tradition(data-i18n='name')=locals['name']
-                    +simple_span(bloodline.bloodline_name)
+                    +simple_span(bloodline.names)
               div.starting-history
                 h3(data-i18n='history')=locals['history']
                 p
@@ -96,14 +96,14 @@ mixin bloodline_pact
       summary
         input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
         each bloodline in bloodline_creation_list
-          input(type='checkbox' name='attr_bloodline_select' value=bloodline.bloodline hidden)
-          h3(class=bloodline.class_name)
+          input(type='checkbox' name='attr_bloodline_select' value=bloodline.name hidden)
+          h3(class=bloodlines_class_list[bloodline.name])
             +simple_span('pact')
             +simple_span(bloodline.pact)
       input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
       each bloodline in bloodline_creation_list
-        input(type='checkbox' name='attr_bloodline_select' value=bloodline.bloodline hidden)
-        div(class=bloodline.class_name)
+        input(type='checkbox' name='attr_bloodline_select' value=bloodline.name hidden)
+        div(class=bloodlines_class_list[bloodline.name])
           div.pact-container
             div.prizes
               +simple_span(bloodline.prizes)
