@@ -35,6 +35,33 @@
     display: none;
   }
 
+  span.showhide:checked {
+    background-color: $dark-gray;
+    color: white;
+    transition: .5s ease;
+  }
+
+  span.showhide {
+    display: inline;
+    border: 1px solid #ccc;
+    margin-right: 11px;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+  span.showhide:hover {
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 2px 4px;
+    background-color: #ccc;
+    color: $dark-gray;
+    transition: .5s ease;
+  }
+
+  div.showhide { @include hide(); }
+
   // Chrome, Safari, Edge, Opera
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -93,41 +120,6 @@
   label {
     margin: 0;
   }
-
-  span.showhide:checked {
-    background-color: $dark-gray;
-    color: white;
-    transition: .5s ease;
-  }
-
-  span.showhide {
-    display: inline;
-    border: 1px solid #ccc;
-    margin-right: 11px;
-    border-radius: 4px;
-    padding: 2px 4px;
-    font-weight: bold;
-    font-size: 1em;
-  }
-
-  span.showhide:hover {
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 2px 4px;
-    background-color: #ccc;
-    color: $dark-gray;
-    transition: .5s ease;
-  }
-
-  div.showhide { @include hide(); }
-
-  .hide-element { display: none; }
-
-  input[type='checkbox'].hide-element { display: none; }
-
-  input[type='radio'].hide-element { display: none; }
-
-  div.hide-element { display: none; }
 
   button.btn.repcontrol_edit,
   button.btn.repcontrol_add {

@@ -1,3 +1,18 @@
+.nav-row {
+  display: flex;
+}
+
+.nav-bar-character {
+  background-color: $red;
+  border-top: 3px solid $red;
+  border-bottom: 3px solid $red;
+}
+
+.nav-bar-hub {
+  background-color: $blue;
+  border-top: 3px solid $blue;
+  border-bottom: 3px solid $blue;
+}
 
 .nav-child {
   width: 100%;
@@ -52,23 +67,6 @@
 
 .summary {
   margin-top: 1em;
-}
-
-.nav-bar-character {
-  background-color: $red;
-  border-top: 3px solid $red;
-  border-bottom: 3px solid $red;
-}
-
-.nav-bar-hub {
-  background-color: $blue;
-  border-top: 3px solid $blue;
-  border-bottom: 3px solid $blue;
-}
-
-
-.nav-row {
-  display: flex;
 }
 
 label.page-label {
