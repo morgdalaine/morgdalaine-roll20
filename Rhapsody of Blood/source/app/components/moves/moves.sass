@@ -27,3 +27,72 @@
         margin-left: 0.5em
         text-transform: uppercase
         letter-spacing: 2px
+
+.bloodline-moves-container
+  margin-bottom: 1em
+  padding: 1em
+
+
+.bloodline-moves-container
+  h2, h3, h4
+    margin-bottom: 1em
+
+.bloodline-move-container
+  display: inline-grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 2em
+
+.playbook-move
+  background-color: $dark-gray
+  @include fit-content-height
+  @include rotate(-2deg)
+  @include playbook-background-color
+
+  .playbook-move-title
+    display: flex
+    width: 100%
+    justify-content: space-around
+    margin-top: -1em
+    margin-left: -1em
+    // background-color: $red
+
+    h2, h3, h4
+      color: $white
+      white-space: nowrap
+      background-color: $black
+      padding: 0.25em 1em
+      @include rotate(2deg)
+      @include fit-content
+
+  .playbook-reverse-rotate
+    padding: 0.5em 1em
+    margin-top: -1em
+    color: $white
+    @include rotate(2deg)
+
+.move-select
+  @include rotate(2deg)
+  @include fill-available
+  margin-top: 1em
+
+  label
+    display: block
+    text-align: right
+    padding: 0
+    margin: 0
+
+    input[type=checkbox]
+      display: none
+
+      &:checked + .move-square
+        background-color: $black
+
+  .move-square
+    border: 4px solid $black
+    background-color: $white
+    height: 10px
+    width: 10px
+    padding: 0.25em 1em
+    margin-right: 1em
+
+

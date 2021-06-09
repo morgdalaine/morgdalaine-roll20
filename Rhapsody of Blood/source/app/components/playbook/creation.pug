@@ -12,10 +12,10 @@ mixin bloodline_creation
         h2(data-i18n='select_playbook')=locals['select_playbook']
       each bloodline in bloodline_creation_list
         div(class=bloodlines_class_list[bloodline.name])
-          div.creation-container
+          div(class=`creation-container ${bloodlines_class_list[bloodline.name]}-color`)
             div.starting-stats
               h3(data-i18n='starting_stats')=locals['starting_stats']
-              span.help(data-i18n='starting_stats_help')=locals['starting_stats_help']
+              span.help(data-i18n='pick_one')=locals['pick_one']
               div.stat-options
                 each stat in bloodline.starting_stats
                   div

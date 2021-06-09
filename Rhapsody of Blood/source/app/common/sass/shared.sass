@@ -1,13 +1,48 @@
 @import './common/sass/variables'
 
-@mixin fontbtn()
-  border: 2px solid $dark-gray
-  cursor: pointer
-  display: flex
-  font-size: 8em
-  padding: 0
+@mixin playbook-color()
+  &.legendary-heroes-color
+    color: $legendary-heroes
+  &.half-damned-color
+    color: $half-damned
+  &.holy-church-color
+    color: $holy-church
+  &.hidden-hand-color
+    color: $hidden-hand
+  &.magi-color
+    color: $magi
+  &.guardians-of-nature-color
+    color: $guardians-of-nature
+  &.fate-dealers-color
+    color: $fate-dealers
+  &.defenders-of-tomorrow-color
+    color: $defenders-of-tomorrow
+
+@mixin playbook-background-color()
+  &.legendary-heroes-color
+    background-color: $legendary-heroes
+  &.half-damned-color
+    background-color: $half-damned
+  &.holy-church-color
+    background-color: $holy-church
+  &.hidden-hand-color
+    background-color: $hidden-hand
+  &.magi-color
+    background-color: $magi
+  &.guardians-of-nature-color
+    background-color: $guardians-of-nature
+  &.fate-dealers-color
+    background-color: $fate-dealers
+  &.defenders-of-tomorrow-color
+    background-color: $defenders-of-tomorrow
+
+@mixin fit-content
   width: -moz-fit-content
   width: fit-content
+
+@mixin fit-content-height
+  height: -moz-fit-content
+  height: fit-content
 
 @mixin input-highlight($shadow)
   outline: 3px solid #fd0

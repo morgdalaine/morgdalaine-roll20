@@ -16,11 +16,11 @@ mixin shared_move(move)
   div.shared-move
     +shared_move_title(move)
     p
-      +move_trigger(move_object.move_trigger)
+      +move_trigger(move_object.trigger)
       if move_object.action
         +roll_action(move_object.action)
-      if move_object.move_text
-        +simple_span(move_object.move_text)
+      if move_object.text
+        +simple_span(move_object.text)
     if move_object.results
       p
         +simple_span(move_object.results)
@@ -32,84 +32,3 @@ mixin shared_move(move)
       p
         +simple_span(move_object.final)
 
-mixin arcane_power
-  //- obsolete in favor of +shared_move(arcane_power)
-  div.shared-move
-    +shared_move_title('arcane_power')
-    p
-      +move_trigger('bloodline_move_arcane_power_move_trigger')
-      +simple_span('bloodline_move_arcane_power_move_text')
-
-mixin rest_and_relaxation
-  //- obsolete in favor of +shared_move(rest_and_relaxation)
-  div.shared-move
-    +shared_move_title('rest_and_relaxation')
-    p
-      +move_trigger('bloodline_move_rest_and_relaxation_move_trigger')
-      +roll_action('chalices')
-    p
-      +simple_span('pick_two_pick_three')
-    ul
-      +simple_li('bloodline_move_rest_and_relaxation_move_li_1')
-      +simple_li('bloodline_move_rest_and_relaxation_move_li_2')
-      +simple_li('bloodline_move_rest_and_relaxation_move_li_3')
-      +simple_li('bloodline_move_rest_and_relaxation_move_li_4')
-      +simple_li('bloodline_move_rest_and_relaxation_move_li_5')
-    p
-      +simple_span('bloodline_move_rest_and_relaxation_move_final')
-
-mixin forward_base
-  //- obsolete in favor of +shared_move(forward_base)
-  div.shared-move
-    +shared_move_title('forward_base')
-    p
-      +move_trigger('bloodline_move_forward_base_move_trigger')
-      +roll_action('swords')
-      +simple_span('bloodline_move_forward_base_move_text')
-    p
-      +simple_span('pick_one_bonus')
-    ul
-      +simple_li('bloodline_move_forward_base_move_li_1')
-      +simple_li('bloodline_move_forward_base_move_li_2')
-      +simple_li('bloodline_move_forward_base_move_li_3')
-    p
-      +simple_span('bloodline_move_forward_base_move_final')
-
-mixin lend_aid
-  //- obsolete in favor of +shared_move(lend_aid)
-  div.shared-move
-    +shared_move_title('lend_aid')
-    p
-      +move_trigger('bloodline_move_lend_aid_move_trigger')
-      +simple_span('bloodline_move_lend_aid_move_text')
-
-mixin resist_doom
-  //- obsolete in favor of +shared_move(resist_doom)
-  div.shared-move
-    +shared_move_title('resist_doom')
-    p
-      +move_trigger('bloodline_move_resist_doom_move_trigger')
-      +roll_action('wands')
-      +simple_span('bloodline_move_resist_doom_move_text')
-    p
-      +simple_span('bloodline_move_resist_doom_move_on_hit')
-    ul
-      +simple_li('bloodline_move_resist_doom_move_li_1')
-      +simple_li('bloodline_move_resist_doom_move_li_2')
-      +simple_li('bloodline_move_resist_doom_move_li_3')
-    p
-      +simple_span('bloodline_move_resist_doom_move_final')
-
-mixin reinforcements
-  //- obsolete in favor of +shared_move(reinforcements)
-  div.shared-move
-    +shared_move_title('reinforcements')
-    p
-      +move_trigger('bloodline_move_reinforcements_move_trigger')
-      +roll_action('coins')
-    p
-      +simple_span('pick_one_pick_two')
-    ul
-      +simple_li('bloodline_move_reinforcements_move_li_1')
-      +simple_li('bloodline_move_reinforcements_move_li_2')
-      +simple_li('bloodline_move_reinforcements_move_li_3')

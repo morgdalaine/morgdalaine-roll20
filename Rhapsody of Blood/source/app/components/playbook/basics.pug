@@ -4,12 +4,12 @@ mixin bloodline_basics
   div.bloodline-basics
     div.bloodline-info
       div.bloodline-name
-        label.blood-name(data-i18n='bloodline_name')=locals['bloodline_name']
+        label(data-i18n='bloodline_name')=locals['bloodline_name']
         input(
           type='text'
           name='attr_character_name')
       div.bloodline-select
-        label.blood-select(data-i18n='playbook')=locals['playbook']
+        label(data-i18n='playbook')=locals['playbook']
         select.playbook-select(name='attr_bloodline_select')
           option(value='bnull')=locals['choose_bloodline']
           each line in bloodlines_list

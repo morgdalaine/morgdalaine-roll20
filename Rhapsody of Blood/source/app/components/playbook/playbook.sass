@@ -43,13 +43,36 @@ details > summary
     float: left
     @include std-font($oswald)
 
+.bloodline-basics, .explorer-basics
+  background-color: $black
+  @include skew(0deg, 4deg)
+
 .bloodline-info, .explorer-info
   display: inline-grid
   grid-template-columns: repeat(4, 1fr)
-  // grid-gap: 5px
+  padding: 1em
+  grid-gap: 1em
+  @include skew(0deg, -4deg)
+
+  input[type='text'], select
+    border: 2px solid $black
+    @include std-font
+
+  label
+    @include std-font($oswald)
+    color: $white
+    text-transform: uppercase
+    letter-spacing: 2px
+    margin-left: 0.5em
+    margin-bottom: 0.5em
 
   .bloodline-name
     grid-column: span 3
+
+  .bloodline-select
+    padding: 0.5em
+    margin-top: -1em
+    background-color: $dark-gray
 
   .bloodline-style, .bloodline-lore
     grid-column: span 2
@@ -64,7 +87,7 @@ details > summary
 
   .bnull
     margin: 3em
-    background-color: $red
+    background-color: $dark-gray
     @include skew(0deg, 3deg)
 
     h2, h3
@@ -74,12 +97,12 @@ details > summary
       text-align: center
       width: fit-content
       width: -moz-fit-content
-      @include std-font()
+      @include std-font
       @include skew(0deg, -3deg)
       // @include rotate(3deg)
 
   .help
-    @include std-font()
+    @include std-font
     text-transform: none
     font-size: 0.8em
     font-weight: normal
@@ -90,7 +113,8 @@ details > summary
 .creation-container
   display: inline-grid
   grid-template-columns: 50% 50%
-  background-color: $red
+  background-color: $dark-gray
+  @include playbook-background-color
 
   .creation-right
     display: flex
@@ -154,7 +178,7 @@ details > summary
     button[type=roll]
       display: inline
       background-image: none
-      color: magenta
+      color: $white
       padding: 0.5em
       font-weight: bold
 
@@ -190,10 +214,11 @@ details > summary
   display: inline-grid
   grid-template-columns: 45% 10% 45%
   margin-bottom: 0.5em
-  @include fill-available()
+  @include fill-available
 
 .pact-with-container-title
-  background-color: $red
+  background-color: $dark-gray
+  @include playbook-background-color
   h2, h3, h4
     color: $white
 
@@ -213,6 +238,37 @@ details > summary
 .pact-rating
   text-align: center
 
-.bloodline-moves-container
-  margin-bottom: 1em
+.bloodline-context
+  summary
+    margin-bottom: 2em
+
+.context-container
+  display: inline-grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 1em
   padding: 1em
+
+  .context-column
+    @include playbook-background-color
+    @include skew(0deg, 2deg)
+    // @include fit-content-height
+
+    h2, h3, h4
+      background-color: $black
+      padding: 0.5em 0
+      padding-left: 0.5em
+      margin-top: -1em
+      color: $white
+      @include skew(0deg, -2deg)
+
+  .context-reverse
+    @include skew(0deg, -2deg)
+
+    ul
+      color: $white
+      padding: 0.5em
+
+      li
+        padding: 0.5em 0
+
+

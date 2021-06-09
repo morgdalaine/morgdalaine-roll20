@@ -439,6 +439,133 @@
   letter-spacing: 2px;
 }
 
+.charsheet .bloodline-moves-container {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.charsheet .bloodline-moves-container h2, .charsheet .bloodline-moves-container h3, .charsheet .bloodline-moves-container h4 {
+  margin-bottom: 1em;
+}
+
+.charsheet .bloodline-move-container {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+}
+
+.charsheet .playbook-move {
+  background-color: #575756;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+}
+
+.charsheet .playbook-move.legendary-heroes-color {
+  background-color: #34748c;
+}
+
+.charsheet .playbook-move.half-damned-color {
+  background-color: #a76559;
+}
+
+.charsheet .playbook-move.holy-church-color {
+  background-color: #385d5c;
+}
+
+.charsheet .playbook-move.hidden-hand-color {
+  background-color: #a76559;
+}
+
+.charsheet .playbook-move.magi-color {
+  background-color: #194641;
+}
+
+.charsheet .playbook-move.guardians-of-nature-color {
+  background-color: #2e572f;
+}
+
+.charsheet .playbook-move.fate-dealers-color {
+  background-color: #6834ac;
+}
+
+.charsheet .playbook-move.defenders-of-tomorrow-color {
+  background-color: #575756;
+}
+
+.charsheet .playbook-move .playbook-move-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: -1em;
+  margin-left: -1em;
+}
+
+.charsheet .playbook-move .playbook-move-title h2, .charsheet .playbook-move .playbook-move-title h3, .charsheet .playbook-move .playbook-move-title h4 {
+  color: #ffffff;
+  white-space: nowrap;
+  background-color: #333;
+  padding: 0.25em 1em;
+  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.charsheet .playbook-move .playbook-reverse-rotate {
+  padding: 0.5em 1em;
+  margin-top: -1em;
+  color: #ffffff;
+  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+}
+
+.charsheet .move-select {
+  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  margin-top: 1em;
+}
+
+.charsheet .move-select label {
+  display: block;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .move-select label input[type=checkbox] {
+  display: none;
+}
+
+.charsheet .move-select label input[type=checkbox]:checked + .move-square {
+  background-color: #333;
+}
+
+.charsheet .move-select .move-square {
+  border: 4px solid #333;
+  background-color: #ffffff;
+  height: 10px;
+  width: 10px;
+  padding: 0.25em 1em;
+  margin-right: 1em;
+}
+
 .charsheet .legendary-heroes, .charsheet .half-damned, .charsheet .holy-church, .charsheet .hidden-hand,
 .charsheet .magi, .charsheet .guardians-of-nature, .charsheet .fate-dealers, .charsheet .defenders-of-tomorrow,
 .charsheet .open-bloodline, .charsheet .bnull {
@@ -467,13 +594,49 @@
   font-family: Oswald, sans-serif, serif;
 }
 
+.charsheet .bloodline-basics, .charsheet .explorer-basics {
+  background-color: #333;
+  transform: skew(0deg, 4deg);
+  -webkit-transform: skew(0deg, 4deg);
+  -moz-transform: skew(0deg, 4deg);
+  -ms-transform: skew(0deg, 4deg);
+  -o-transform: skew(0deg, 4deg);
+}
+
 .charsheet .bloodline-info, .charsheet .explorer-info {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
+  padding: 1em;
+  grid-gap: 1em;
+  transform: skew(0deg, -4deg);
+  -webkit-transform: skew(0deg, -4deg);
+  -moz-transform: skew(0deg, -4deg);
+  -ms-transform: skew(0deg, -4deg);
+  -o-transform: skew(0deg, -4deg);
+}
+
+.charsheet .bloodline-info input[type='text'], .charsheet .bloodline-info select, .charsheet .explorer-info input[type='text'], .charsheet .explorer-info select {
+  border: 2px solid #333;
+  font-family: Adamina, serif, serif;
+}
+
+.charsheet .bloodline-info label, .charsheet .explorer-info label {
+  font-family: Oswald, sans-serif, serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .charsheet .bloodline-info .bloodline-name, .charsheet .explorer-info .bloodline-name {
   grid-column: span 3;
+}
+
+.charsheet .bloodline-info .bloodline-select, .charsheet .explorer-info .bloodline-select {
+  padding: 0.5em;
+  margin-top: -1em;
+  background-color: #575756;
 }
 
 .charsheet .bloodline-info .bloodline-style, .charsheet .bloodline-info .bloodline-lore, .charsheet .explorer-info .bloodline-style, .charsheet .explorer-info .bloodline-lore {
@@ -492,7 +655,7 @@
 
 .charsheet .bloodline-creation .bnull {
   margin: 3em;
-  background-color: #be1716;
+  background-color: #575756;
   transform: skew(0deg, 3deg);
   -webkit-transform: skew(0deg, 3deg);
   -moz-transform: skew(0deg, 3deg);
@@ -528,7 +691,39 @@
 .charsheet .creation-container {
   display: inline-grid;
   grid-template-columns: 50% 50%;
-  background-color: #be1716;
+  background-color: #575756;
+}
+
+.charsheet .creation-container.legendary-heroes-color {
+  background-color: #34748c;
+}
+
+.charsheet .creation-container.half-damned-color {
+  background-color: #a76559;
+}
+
+.charsheet .creation-container.holy-church-color {
+  background-color: #385d5c;
+}
+
+.charsheet .creation-container.hidden-hand-color {
+  background-color: #a76559;
+}
+
+.charsheet .creation-container.magi-color {
+  background-color: #194641;
+}
+
+.charsheet .creation-container.guardians-of-nature-color {
+  background-color: #2e572f;
+}
+
+.charsheet .creation-container.fate-dealers-color {
+  background-color: #6834ac;
+}
+
+.charsheet .creation-container.defenders-of-tomorrow-color {
+  background-color: #575756;
 }
 
 .charsheet .creation-container .creation-right {
@@ -613,7 +808,7 @@
 .charsheet .stat h3 button[type=roll], .charsheet .stat h4 button[type=roll] {
   display: inline;
   background-image: none;
-  color: magenta;
+  color: #ffffff;
   padding: 0.5em;
   font-weight: bold;
 }
@@ -660,7 +855,39 @@
 }
 
 .charsheet .pact-with-container-title {
-  background-color: #be1716;
+  background-color: #575756;
+}
+
+.charsheet .pact-with-container-title.legendary-heroes-color {
+  background-color: #34748c;
+}
+
+.charsheet .pact-with-container-title.half-damned-color {
+  background-color: #a76559;
+}
+
+.charsheet .pact-with-container-title.holy-church-color {
+  background-color: #385d5c;
+}
+
+.charsheet .pact-with-container-title.hidden-hand-color {
+  background-color: #a76559;
+}
+
+.charsheet .pact-with-container-title.magi-color {
+  background-color: #194641;
+}
+
+.charsheet .pact-with-container-title.guardians-of-nature-color {
+  background-color: #2e572f;
+}
+
+.charsheet .pact-with-container-title.fate-dealers-color {
+  background-color: #6834ac;
+}
+
+.charsheet .pact-with-container-title.defenders-of-tomorrow-color {
+  background-color: #575756;
 }
 
 .charsheet .pact-with-container-title h2, .charsheet .pact-with-container-title h3, .charsheet .pact-with-container-title h4 {
@@ -690,9 +917,85 @@
   text-align: center;
 }
 
-.charsheet .bloodline-moves-container {
-  margin-bottom: 1em;
+.charsheet .bloodline-context summary {
+  margin-bottom: 2em;
+}
+
+.charsheet .context-container {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
   padding: 1em;
+}
+
+.charsheet .context-container .context-column {
+  transform: skew(0deg, 2deg);
+  -webkit-transform: skew(0deg, 2deg);
+  -moz-transform: skew(0deg, 2deg);
+  -ms-transform: skew(0deg, 2deg);
+  -o-transform: skew(0deg, 2deg);
+}
+
+.charsheet .context-container .context-column.legendary-heroes-color {
+  background-color: #34748c;
+}
+
+.charsheet .context-container .context-column.half-damned-color {
+  background-color: #a76559;
+}
+
+.charsheet .context-container .context-column.holy-church-color {
+  background-color: #385d5c;
+}
+
+.charsheet .context-container .context-column.hidden-hand-color {
+  background-color: #a76559;
+}
+
+.charsheet .context-container .context-column.magi-color {
+  background-color: #194641;
+}
+
+.charsheet .context-container .context-column.guardians-of-nature-color {
+  background-color: #2e572f;
+}
+
+.charsheet .context-container .context-column.fate-dealers-color {
+  background-color: #6834ac;
+}
+
+.charsheet .context-container .context-column.defenders-of-tomorrow-color {
+  background-color: #575756;
+}
+
+.charsheet .context-container .context-column h2, .charsheet .context-container .context-column h3, .charsheet .context-container .context-column h4 {
+  background-color: #333;
+  padding: 0.5em 0;
+  padding-left: 0.5em;
+  margin-top: -1em;
+  color: #ffffff;
+  transform: skew(0deg, -2deg);
+  -webkit-transform: skew(0deg, -2deg);
+  -moz-transform: skew(0deg, -2deg);
+  -ms-transform: skew(0deg, -2deg);
+  -o-transform: skew(0deg, -2deg);
+}
+
+.charsheet .context-container .context-reverse {
+  transform: skew(0deg, -2deg);
+  -webkit-transform: skew(0deg, -2deg);
+  -moz-transform: skew(0deg, -2deg);
+  -ms-transform: skew(0deg, -2deg);
+  -o-transform: skew(0deg, -2deg);
+}
+
+.charsheet .context-container .context-reverse ul {
+  color: #ffffff;
+  padding: 0.5em;
+}
+
+.charsheet .context-container .context-reverse ul li {
+  padding: 0.5em 0;
 }
 
 .ui-dialog .charsheet .repcontainer .repitem {

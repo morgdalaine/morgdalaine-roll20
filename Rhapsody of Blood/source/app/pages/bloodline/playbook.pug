@@ -3,6 +3,8 @@ include ..\..\components\playbook\creation
 include ..\..\components\playbook\moves
 include ..\..\components\playbook\pacts
 include ..\..\components\playbook\stats
+include ..\..\components\playbook\context
+include ..\..\components\moves\custom
 
 mixin bloodline_playbook
   div.page-container
@@ -18,3 +20,5 @@ mixin bloodline_playbook
       +bloodline_stats
       +bloodline_pact
       +bloodline_moves
+      +custom_moves
+      +bloodline_context

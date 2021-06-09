@@ -50,34 +50,4 @@ div.mode
 input[type=radio].playbook:checked ~ div.playbook,
 input[type=radio].moves:checked ~ div.moves
   display: inline-grid
-  @include show-hide()
-
-
-// input[type=radio][value='bloodline']:checked ~ .bloodline,
-// input[type=radio][value='bloodline']:checked ~ div ul .bloodline,
-// input[type=radio][value='explorer']:checked ~ .explorer,
-// input[type=radio][value='explorer']:checked ~ div ul .explorer
-//   display: block
-
-// Begin tab
-// input.mode-selector[value=explorer]:checked ~ span.mode-selector::before
-//   content: Explorer Mode
-
-// input.mode-selector[value=bloodline]:checked ~ span.mode-selector::before
-//   content: Bloodline Mode
-
-// input.mode-selector[value='explorer']:checked ~ span.mode-selector::before
-// input.mode-selector[value='bloodline']:checked ~ span.mode-selector::before
-
-// .bloodline .bloodline-details,
-// .bloodline .bloodline-moves
-//   display: none
-
-// .tab-toggle[value=sheet] ~ div.bloodline-details,
-// .tab-toggle[value=moves] ~ div.bloodline-moves
-//   display: block
-
-// .tab-toggle[value=sheet] ~ div.bloodline-details,
-// .tab-toggle[value=moves] ~ div.bloodline-moves
-//   display: block
-
+  @include show-hide
