@@ -1,0 +1,1 @@
+{"C:\\Users\\morgdalaine\\Documents\\GitHub\\morgdalaine\\morgdalaine-roll20\\Rhapsody of Blood\\source\\gulpfile.js":{"sha1":"ee6319595e13bf7bd7c2f67c4904f93308a3b553","tasks":{"sass":{"name":"sass","dependencies":""},"html":{"name":"html","dependencies":""},"watch":{"name":"watch","dependencies":"sass html "},"build":{"name":"build","dependencies":"sass html"}}}}

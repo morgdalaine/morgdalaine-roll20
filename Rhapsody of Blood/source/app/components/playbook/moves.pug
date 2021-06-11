@@ -1,0 +1,55 @@
+
+mixin playbook_move_title(name)
+  div.playbook-move-title
+    h3(data-i18n=name)=locals[name]
+    div.move-select
+      label
+        input(
+          type='checkbox'
+          name=`attr_playbook_${name}`
+          class='move-selector')
+        span.move-square
+
+mixin playbook_move(bloodline, move)
+  div(class=`playbook-move ${bloodlines_class_list[bloodline]}-color`)
+    +playbook_move_title(move.name)
+    div.playbook-reverse-rotate
+      if move.name = 'bloodline_move_shelter'
+        p
+          +move_trigger(move.trigger)
+        textarea(name='attr_move_open_shelter')
+      else
+        p
+          +move_trigger(move.trigger)
+          if move.text_before_action
+            if move.text
+              +simple_span(move.text)
+            if move.action
+              +roll_action(move.action)
+          else
+            if move.action
+              +roll_action(move.action)
+            if move.text
+              +simple_span(move.text)
+        if move.results
+          p
+            +simple_span(move.results)
+        if move.li
+          ul
+            each l in move.li
+              +simple_li(l)
+        if move.final
+          p
+            +simple_span(move.final)
+
+mixin bloodline_moves
+  div.bloodline-moves-container
+    h2(data-i18n='bloodline_moves')=locals['bloodline_moves']
+    input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+    each bloodline in bloodlines_list
+      input(type='checkbox' name='attr_bloodline_select' value=bloodline hidden)
+      div(class=bloodlines_class_list[bloodline])
+        div.bloodline-move-container
+          each move in bloodline_playbook_moves[bloodline]
+            +playbook_move(bloodline, move)
+

@@ -1,0 +1,19 @@
+
+mixin stat_title(stat)
+  h4
+    button.roll-button(
+      type='roll'
+      name=`roll_${stat}`
+      value=bloodline_stat_details[stat].roll)
+      +simple_span(stat)
+
+mixin bloodline_stats
+  div.bloodline-stats
+    each stat in bloodline_stat_list
+      div.stat
+        +stat_title(stat)
+        input(
+          type='number'
+          name=`attr_${stat}`
+          min=bloodline_stat_details[stat].min_val
+          max=bloodline_stat_details[stat].max_val)

@@ -1,0 +1,1868 @@
+
+<input type="hidden" name="attr_sheet_version" version=""/>
+<input class="modes-show hide-element" type="checkbox" name="attr_modes_choice" checked="checked"/>
+<div class="modes-show hide-element">
+  <div class="mode-title">
+    <div class="mode-title"><img src="https://img.itch.zone/aW1nLzMxMzE2ODgucG5n/original/XMiee1.png" data-i18n-title="rhapsody_of_blood" data-i18n-alt="wol_rhapsody_of_blood"/></div>
+    <h2 class="mode-title" data-i18n="page_select"></h2>
+  </div>
+  <div class="modes">
+    <label class="mode">
+      <h4 class="bloodline" data-i18n="bloodline_mode">Bloodline Mode</h4>
+      <div class="mode">
+        <input class="hide-element" type="radio" name="attr_mode_button" value="bloodline"/>
+        <div class="move-image"><img src="https://via.placeholder.com/200x60?text=bloodline_mode"/></div>
+      </div>
+    </label>
+    <label class="mode">
+      <h4 class="explorer" data-i18n="explorer_mode">Explorer Mode</h4>
+      <div class="mode">
+        <input class="hide-element" type="radio" name="attr_mode_button" value="explorer"/>
+        <div class="move-image"><img src="https://via.placeholder.com/200x60?text=explorer_mode"/></div>
+      </div>
+    </label>
+  </div>
+</div>
+<input class="bloodline-mode hide-element" type="radio" name="attr_mode" value="bloodline"/>
+<div class="bloodline-mode hide-element">
+  <div class="header">
+    <div class="nav-bar-bloodline">
+      <div class="nav-row">
+        <div class="nav-child">
+          <div class="nav-title">
+            <div class="reverse-skew">
+              <h2 data-i18n="bloodline">Bloodline</h2>
+            </div>
+          </div>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_bloodline_page_button" value="playbook" checked="checked"/>
+            <div class="page-button-bloodline" data-i18n="playbook">Playbook</div>
+          </label>
+        </div>
+        <div class="nav-child">
+          <label class="page-label">
+            <input class="hide-element page-button" type="radio" name="attr_bloodline_page_button" value="moves"/>
+            <div class="page-button-bloodline" data-i18n="moves">Moves</div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="page-container">
+      <input class="playbook hide-element" type="radio" name="attr_bloodline_page" value="playbook" checked="checked"/>
+      <div class="playbook showhide">
+          <div class="bloodline-basics">
+            <div class="bloodline-info">
+              <div class="bloodline-name">
+                <label data-i18n="bloodline_name">Bloodline Name</label>
+                <input type="text" name="attr_character_name"/>
+              </div>
+              <div class="bloodline-select">
+                <label data-i18n="playbook">Playbook</label>
+                <select class="playbook-select" name="attr_bloodline_select">
+                  <option value="bnull">Choose a Bloodline</option>
+                  <option value="legendary_heroes">The Legendary Heroes</option>
+                  <option value="half_damned">The Half-Damned</option>
+                  <option value="holy_church">The Holy Church</option>
+                  <option value="hidden_hand">The Hidden Hand</option>
+                  <option value="magi">The Magi</option>
+                  <option value="guardians_of_nature">The Guardians Of Nature</option>
+                  <option value="fate_dealers">The Fate Dealers</option>
+                  <option value="defenders_of_tomorrow">The Defenders Of Tomorrow</option>
+                  <option value="open_bloodline">The Open Bloodline</option>
+                </select>
+              </div>
+              <div class="bloodline-style">
+                <label data-i18n="style">Style</label>
+                <input type="text" name="attr_style"/>
+              </div>
+              <div class="bloodline-lore">
+                <label data-i18n="lore">Lore</label>
+                <input type="text" name="attr_lore"/>
+              </div>
+            </div>
+          </div>
+          <div class="bloodline-creation">
+            <details open="open">
+              <summary>
+                <h3 data-i18n="making_your_heroes">Making Your Heroes</h3>
+              </summary>
+              <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+              <div class="bnull">
+                <h2 data-i18n="select_playbook">Select a Playbook to get started</h2>
+              </div>
+              <div class="legendary-heroes">
+                <div class="creation-container legendary-heroes-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="pick_one">Pick one:</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="legendary_heroes_starting_array_1">Chalices 1 Swords 1 Coins 0 Wands -1</span><span data-i18n="legendary_heroes_starting_array_1_desc">if fate and coincidence keep bringing your bloodline to the castle despite their ignorance of mystical matters.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="legendary_heroes_starting_array_2">Chalices 0 Swords 1 Coins -1 Wands 1</span><span data-i18n="legendary_heroes_starting_array_2_desc">if your bloodline is tested from childhood for martial aptitude and trained to face the castle.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="legendary_heroes_starting_array_3">Chalices 0 Swords 1 Coins 1 Wands -1</span><span data-i18n="legendary_heroes_starting_array_3_desc">if your bloodline are world travellers with a fortune built on castle raids.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="legendary_heroes_style">Stylish contemporary fashion; bloodline crests and heirlooms; rustic or utilitarian clothing.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="legendary_heroes_lore">Picking it up as they go along; ancestor’s crumbling journals; oral history passed from parent to child.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="legendary_heroes_bloodline_name">A noble title; an inherited naming convention; bearers of the _.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="legendary_heroes_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline’s legends taught you how to be heroes.&lt;/span&gt; Set your pact with them to 1. You say what legend you’ve heard, they say what secret failure the legend left out.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="half-damned">
+                <div class="creation-container half-damned-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="pick_one">Pick one:</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="half_damned_starting_array_1">Chalices 0 Swords 1 Coins -1 Wands 1</span><span data-i18n="half_damned_starting_array_1_desc">if your bloodline is cursed with obvious signs of damnation and must live on the fringes of society.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="half_damned_starting_array_2">Chalices -1 Swords 1 Coins 1 Wands 0</span><span data-i18n="half_damned_starting_array_2_desc">if your bloodline is cursed with terrible hungers or a lingering blight, even as they appear completely human.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="half_damned_starting_array_3">Chalices 1 Swords 0 Coins -1 Wands 1</span><span data-i18n="half_damned_starting_array_3_desc">if one bloodline member in each generation shows the physical gifts of the curse, while the rest suffer the frailties imposed.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="half_damned_style">Ragged fabrics and animal skins; fastidiously clean and modern clothing; anonymous peasant or low class clothing.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="half_damned_lore">Ancient immortals with flawed memories; a voice whispering in your nightmares; religious texts that damn you but offer advice.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="half_damned_bloodline_name">A shared mark or feature; after your progenitor; what zealots and bigots call you.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="half_damned_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline hunted you as monsters before you forged a treaty.&lt;/span&gt; Set your pact each other to 1. You say how you proved your humanity, they say how they made amends.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="holy-church">
+                <div class="creation-container holy-church-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="pick_one">Pick one:</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="holy_church_starting_array_1">Chalices 1 Swords 0 Coins -1 Wands 1</span><span data-i18n="holy_church_starting_array_1_desc">if you act as a mystery cult, revealing deeper truths to those who have earned them.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="holy_church_starting_array_2">Chalices 1 Swords 0 Coins 1 Wands -1</span><span data-i18n="holy_church_starting_array_2_desc">if you are part of a grander church, trading freedom to dabble in the occult for temporal influence.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="holy_church_starting_array_3">Chalices 1 Swords 1 Coins -1 Wands 0</span><span data-i18n="holy_church_starting_array_3_desc">if you're a scattered group of devotees resisting persecution in pursuit of righteousness.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="holy_church_style">A simple symbol of faith, fastidious clerical robes, joyous flowing colours.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="holy_church_lore">Dreams of whispering martyrs, a holy book filled with ecstatic visions, accumulated folkGlass from your flock.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="holy_church_bloodline_name">The virtue you follow, the mark you wear, your hope for the future.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="holy_church_history">&lt;span class=&quot;move-trigger&quot;&gt;You saved another bloodline from falling to darkness.&lt;/span&gt; Set your pact with them to 1. They say what dark temptation was twisting them into servants of the castle; you say what you did to redeem them.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden-hand">
+                <div class="creation-container hidden-hand-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="pick_one">Pick one:</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="hidden_hand_starting_array_1">Chalices 1 Swords 0 Coins 1 Wands -1</span><span data-i18n="hidden_hand_starting_array_1_desc">if you live lives of luxury and try not to think too hard about the source of your wealth.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="hidden_hand_starting_array_2">Chalices -1 Swords 1 Coins 1 Wands 0</span><span data-i18n="hidden_hand_starting_array_2_desc">if you act as a mercenary group, guiding the world’s conflicts in a direction that benefits you.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="hidden_hand_starting_array_3">Chalices 0 Swords -1 Coins 1 Wands 1</span><span data-i18n="hidden_hand_starting_array_3_desc">if you’ve suborned the world’s elite into a secret society bound by occult rituals and mutual blackmail.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="hidden_hand_style">Formal wear and subtle marks of membership, opulent clothes and impractical accessories, state-of-the-art arms and armour.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="hidden_hand_lore">Reports from agents scattered around the world, an iron grip on the rare book market, a private institution of scholars probing the boundaries of knowledge.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="hidden_hand_bloodline_name">a mythical creature, an alchemical process, a feudal role.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="hidden_hand_history">&lt;span class=&quot;move-trigger&quot;&gt;You split the fabulous wealth you found with another bloodline.&lt;/span&gt; Gain 1 pact on them. They say what they used the wealth for; you say how entropy and betrayal robbed them of it.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="magi">
+                <div class="creation-container magi-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="pick_one">Pick one:</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="magi_starting_array_1">Chalices 0 Swords -1 Coins 1 Wands 1</span><span data-i18n="magi_starting_array_1_desc">if you’re a selective academic institution teaching occult rituals to those that can afford your fees.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="magi_starting_array_2">Chalices 0 Swords 1 Coins -1 Wands 1</span><span data-i18n="magi_starting_array_2_desc">if you’re hands-on learners, extracting occult wisdom from the beasts and devils you hunt.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="magi_starting_array_3">Chalices 1 Swords 0 Coins -1 Wands 1</span><span data-i18n="magi_starting_array_3_desc">if you’re occultists without borders, travelling the world and pushing back blights wherever you find them.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="magi_style">Skin covered in arcane glyphs, thick robes of strange fabrics, bags and bandoleers loaded with reagents.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="magi_lore">A bag full of scholarly texts, drilled-in mnemonics, a chorus of spirits bound into your gear to offer advice.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="magi_bloodline_name">The name of your school, The _ Way, The Path of _ .</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="magi_history">&lt;span class=&quot;move-trigger&quot;&gt;You taught another bloodline how to use the castle’s power safely.&lt;/span&gt; Gain 1 pact on them. They say what the ritual allows them to do; you say what it costs them instead of their souls. </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guardians-of-nature">
+                <div class="creation-container guardians-of-nature-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="pick_one">Pick one:</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="guardians_of_nature_starting_array_1">Chalices 1 Swords -1 Coins 0 Wands 1</span><span data-i18n="guardians_of_nature_starting_array_1_desc">if you focus on caring for people while the castle corrupts the outskirts.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="guardians_of_nature_starting_array_2">Chalices 0 Swords 1 Coins -1 Wands 0</span><span data-i18n="guardians_of_nature_starting_array_2_desc">if you focus on fighting the corruption at the source, caring little for material gain.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="guardians_of_nature_starting_array_3">Chalices -1 Swords 1 Coins 0 Wands 1</span><span data-i18n="guardians_of_nature_starting_array_3_desc">if you focus on defending your territory at the cost of personal relations.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="guardians_of_nature_style">Rustic clothing; furs and pelts; barely any clothing.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="guardians_of_nature_lore">Secret meetings; whispers of nature; hidden enclaves.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="guardians_of_nature_bloodline_name">A sacred tree or animal; the name the whispers give you; no given name.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="guardians_of_nature_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline taught you how to fit in with the rest of society.&lt;/span&gt; Set your pact with them to 1. You say what social expectation they taught you. They say how it has changed since.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fate-dealers">
+                <div class="creation-container fate-dealers-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="pick_one">Pick one:</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="fate_dealers_starting_array_1">Chalices 1 Swords -1 Coins 0 Wands 1</span><span data-i18n="fate_dealers_starting_array_1_desc">if you advise people against the coming harm but lack the military strength to save them alone.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="fate_dealers_starting_array_2">Chalices -1 Swords 0 Coins 1 Wands 1</span><span data-i18n="fate_dealers_starting_array_2_desc">if you defy Fate by gathering as many resources as possible at the expense of others.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="fate_dealers_starting_array_3">Chalices -1 Swords 1 Coins 0 Wands 1</span><span data-i18n="fate_dealers_starting_array_3_desc">if you stare death in the face, everything else be damned.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="fate_dealers_style">Ostentatious clothing; simple robes; unrecognizable from common folk.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="fate_dealers_lore">Cartomancy; astrology; runecasting.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="fate_dealers_bloodline_name">A mystical name; a defiant name; Keepers of _.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="fate_dealers_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline goes to you for prophecies and omens.&lt;/span&gt; Raise your pact with them by 1. They say what fate you saved them from. You say what ill fortune you haven’t told them about yet.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="defenders-of-tomorrow">
+                <div class="creation-container defenders-of-tomorrow-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3><span class="help" data-i18n="pick_one">Pick one:</span>
+                    <div class="stat-options">
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="defenders_of_tomorrow_starting_array_1">Chalices -1 Swords 1 Coins 1 Wands 0</span><span data-i18n="defenders_of_tomorrow_starting_array_1_desc">if your military might is unparalleled, but you stick out like a sore thumb.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="defenders_of_tomorrow_starting_array_2">Chalices 1 Swords 1 Coins -1 Wands 0</span><span data-i18n="defenders_of_tomorrow_starting_array_2_desc">if you’re stranded in this world with no resources to get back.</span>
+                      </div>
+                      <div>
+                        <input type="radio" name="attr_starting_stat"/><span class="starting-stat" data-i18n="defenders_of_tomorrow_starting_array_3">Chalices 0 Swords 1 Coins 1 Wands -1</span><span data-i18n="defenders_of_tomorrow_starting_array_3_desc">if your knowledge of technology is vast, but know next to nothing about the supernatural.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3><span class="help" data-i18n="traditions_help">Choose one of each or invent your own</span>
+                      <ul>
+                        <li><span class="tradition" data-i18n="style">Style</span><span data-i18n="defenders_of_tomorrow_style">Flowing robes; skin-tight suits; trench coats.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="lore">Lore</span><span data-i18n="defenders_of_tomorrow_lore">Notes on the other Bloodlines; technology of a time to be; scraps of knowledge.</span>
+                        </li>
+                        <li><span class="tradition" data-i18n="name">Name</span><span data-i18n="defenders_of_tomorrow_bloodline_name">The name of a future organization; a numeric designation; an unknown name.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <p><span data-i18n="defenders_of_tomorrow_history">&lt;span class=&quot;move-trigger&quot;&gt;One bloodline told you about current events… to them.&lt;/span&gt; Raise your pact with them by 1. They say how this event is significant now. You say why it doesn’t matter in the future. </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="open-bloodline">
+                <div class="creation-container open-bloodline-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3>
+                    <textarea name="attr_open_start_stats"></textarea>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3>
+                      <textarea name="attr_open_tradition"></textarea>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <textarea name="attr_open_history"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="bloodline-stats">
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_chalices" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-chalices=1}} {{title=^{chalices}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Chalices}}]]}}"><span data-i18n="chalices">Chalices</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_chalices" min="-1" max="3"/>
+            </div>
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_swords" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-swords=1}} {{title=^{swords}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Swords}}]]}}"><span data-i18n="swords">Swords</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_swords" min="-1" max="3"/>
+            </div>
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_coins" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-coins=1}} {{title=^{coins}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Coins}}]]}}"><span data-i18n="coins">Coins</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_coins" min="-1" max="3"/>
+            </div>
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_wands" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-wands=1}} {{title=^{wands}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Wands}}]]}}"><span data-i18n="wands">Wands</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_wands" min="-1" max="3"/>
+            </div>
+            <div class="stat">
+                <h4>
+                  <button class="roll-button" type="roll" name="roll_relics" value="&amp;{template:rhapsody} {{charname=@{CharName}}} {{type=action}} {{subtitle=^{rolls}}} {{title-relics=1}} {{title=^{relics}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+@{Relics}}]]}}"><span data-i18n="relics">Relics</span>
+                  </button>
+                </h4>
+              <input type="number" name="attr_relics" min="0" max="99"/>
+            </div>
+          </div>
+          <div class="bloodline-pacts">
+            <details open="open">
+              <summary>
+                <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+                <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+                <h3 class="legendary-heroes"><span data-i18n="pact">Pact: </span><span data-i18n="legendary_heroes_pact_name">The Way of Gold</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+                <h3 class="half-damned"><span data-i18n="pact">Pact: </span><span data-i18n="half_damned_pact_name">The Way of Red</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+                <h3 class="holy-church"><span data-i18n="pact">Pact: </span><span data-i18n="holy_church_pact_name">The Way of White</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+                <h3 class="hidden-hand"><span data-i18n="pact">Pact: </span><span data-i18n="hidden_hand_pact_name">The Way of Silver</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+                <h3 class="magi"><span data-i18n="pact">Pact: </span><span data-i18n="magi_pact_name">The Way of Blue</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+                <h3 class="guardians-of-nature"><span data-i18n="pact">Pact: </span><span data-i18n="guardians_of_nature_pact_name">The Way of Green</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+                <h3 class="fate-dealers"><span data-i18n="pact">Pact: </span><span data-i18n="fate_dealers_pact_name">The Way of Violet</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+                <h3 class="defenders-of-tomorrow"><span data-i18n="pact">Pact: </span><span data-i18n="defenders_of_tomorrow_pact_name">The Way of Chrome</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+                <h3 class="open-bloodline"><span data-i18n="pact">Pact: </span>
+                  <input type="text" name="attr_open_pact"/>
+                </h3>
+              </summary>
+              <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+              <div class="legendary-heroes">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="legendary_heroes_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize heroism and valour.&lt;/span&gt; At the end of each play session, pick the explorer whose heroism most impressed you and raise their pact with your bloodline by 1.</span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="legendary_heroes_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; members of other bloodlines can spend 1-&lt;strong&gt;Pact&lt;/strong&gt; to gain a weapon from your stores. Give it two perks and a flaw, and describe its history.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+              <div class="half-damned">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="half_damned_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize integrity and sacrifice.&lt;/span&gt; At the end of each play session, pick the explorer whose mercy most impressed you and raise their bloodline’s pact with you by 1.</span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="half_damned_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1-&lt;strong&gt;Pact&lt;/strong&gt; to transfer a point of contamination to a member of your bloodline. Say how the recipient is further twisted.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+              <div class="holy-church">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="holy_church_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize self-sacrifice.&lt;/span&gt; At the end of each play session, pick the explorer who risked the most to help others and raise their bloodline’s pact with you by 1. </span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="holy_church_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1-&lt;strong&gt;Pact&lt;/strong&gt; on you to take a Relic from your stores. Describe it, and suggest how it came to be owned by your order.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+              <div class="hidden-hand">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="hidden_hand_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize entrepreneurship.&lt;/span&gt; At the end of each play session, pick the explorer who most increased their wealth or power and raise their bloodline’s pact with you by 1.</span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="hidden_hand_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1-&lt;strong&gt;Pact&lt;/strong&gt; on you to get access to more luxurious supplies, giving them advantage on Shelter until they return to a safe camp.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+              <div class="magi">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="magi_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize arcane insight.&lt;/span&gt; At the end of each session, pick the explorer who wielded the most supernatural power and raise their pact with your bloodline by 1. </span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="magi_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1 pact on you to get an item of power from your stores. They can destroy it to cast a spell as per &lt;span class=&quot;move-trigger&quot;&gt;Drink Deep&lt;/span&gt;.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+              <div class="guardians-of-nature">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="guardians_of_nature_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize the natural order.&lt;/span&gt; At the end of each session, pick the explorer who went out of their way to destroy the castle, and raise their pact with your bloodline by 1.</span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="guardians_of_nature_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; members of other bloodlines can spend 1-&lt;strong&gt;Pact&lt;/strong&gt; to gain an animal companion. While the animal is alive, they share one of your explorer’s moves.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+              <div class="fate-dealers">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="fate_dealers_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize the struggle against Fate.&lt;/span&gt; At the end of each session, pick the explorer who had the worst luck and yet prevailed against it, and raise their pact with your bloodline by 1. </span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="fate_dealers_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; other bloodlines can spend 1-&lt;strong&gt;Pact&lt;/strong&gt; on you to get a glimpse of what might kill them. They hold 1. They may spend that hold to declare that this is the vision that they saw, and gain advantage on the roll. On a miss, they cannot avoid the noose: they die.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+              <div class="defenders-of-tomorrow">
+                <div class="pact-container">
+                  <div class="prizes"><span data-i18n="defenders_of_tomorrow_prizes">&lt;span class=&quot;move-trigger&quot;&gt;You prize the preservation of the future.&lt;/span&gt; At the end of each session, pick the explorer who was most interested in events to come and raise their pact with your bloodline by 1. </span>
+                  </div>
+                  <div class="at-camp"><span data-i18n="defenders_of_tomorrow_at_camp">&lt;span class=&quot;move-trigger&quot;&gt;While at one of your camps,&lt;/span&gt; members of other bloodlines can spend 1-&lt;strong&gt;Pact&lt;/strong&gt; to gain a strange, yet useful device. They hold 2. They may spend hold 1-for-1 to ask any question in the &lt;span class=&quot;move-trigger&quot;&gt;See Clear&lt;/span&gt; list.</span>
+                  </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+              <div class="open-bloodline">
+                <div class="pact-container">
+                  <div class="prizes"><span></span>
+                  </div>
+                  <div class="at-camp"><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="pact-with-container-title">
+                <div class="with-bloodline-title">
+                  <h4 data-i18n="bloodline">Bloodline</h4>
+                </div>
+                <div class="pact-rating-title">
+                  <h4 data-i18n="rating">Rating</h4>
+                </div>
+                <div class="pact-with-them-title">
+                  <h4 data-i18n="pact_with_them">Pact With Them</h4>
+                </div>
+              </div>
+              <fieldset class="repeating_pacts">
+                  <div class="pact-with-container">
+                    <div class="with-bloodline">
+                      <input type="text" name="attr_pact_with_bloodline"/>
+                    </div>
+                    <div class="pact-rating">
+                      <input type="number" name="attr_pact_rating"/>
+                    </div>
+                    <div class="pact-with-them">
+                      <input type="text" name="attr_pact_with_them"/>
+                    </div>
+                  </div>
+              </fieldset>
+            </details>
+          </div>
+          <div class="bloodline-moves-container">
+            <h2 data-i18n="bloodline_moves">Bloodline Moves</h2>
+            <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+            <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+            <div class="legendary-heroes">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move legendary-heroes-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_audacious">Audacious†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_audacious"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_audacious_trigger">When your explorer confronts the Regent</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move legendary-heroes-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_defeat_means_friendship">Defeat Means Friendship†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_defeat_means_friendship"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_defeat_means_friendship_trigger">When your explorer would inflict the killing blow on an Acolyte,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move legendary-heroes-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_our_town">Our Town</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_our_town"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_our_town_trigger">When you ask for aid in a community that knows your legend</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move legendary-heroes-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_secret_technique">Secret Technique†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_secret_technique"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move legendary-heroes-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_the_will_to_fight">The Will to Fight†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_the_will_to_fight"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move legendary-heroes-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+            <div class="half-damned">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move half-damned-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_dark_legacy">Dark Legacy†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_dark_legacy"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move half-damned-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shadows_of_humanity">Shadows of Humanity</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shadows_of_humanity"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shadows_of_humanity_trigger">If you intimidate people into helping you or appeal to their baser urges,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move half-damned-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_more_than_human">More Than Human</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_more_than_human"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move half-damned-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_one_of_the_horde">One of the Horde</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_one_of_the_horde"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_one_of_the_horde_trigger">When you send your family members to blend in with the castle's denizens,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move half-damned-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_voice_of_the_regent">Voice of the Regent</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_voice_of_the_regent"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move half-damned-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+            <div class="holy-church">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move holy-church-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_holy_vanguard">Holy Vanguard†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_holy_vanguard"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_holy_vanguard_trigger">When an Acolyte ventures out to attack the mortal world,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move holy-church-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shield_of_faith">Shield of Faith†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shield_of_faith"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shield_of_faith_trigger">When your explorer attempts to manifest this shield,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move holy-church-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_stoke_the_flame">Stoke the Flame</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_stoke_the_flame"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_stoke_the_flame_trigger">When an explorer on the verge of death is brought back to one of your camps,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move holy-church-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_martyrdom">Martyrdom</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_martyrdom"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_martyrdom_trigger">When you Resist Doom,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move holy-church-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_the_flesh_is_weak">The Flesh is Weak†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_the_flesh_is_weak"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move holy-church-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+            <div class="hidden-hand">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move hidden-hand-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_avarice">Avarice</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_avarice"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_avarice_trigger">When you would spend a relic,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move hidden-hand-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_experimental_weaponry">Experimental Weaponry</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_experimental_weaponry"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_experimental_weaponry_trigger">When your scholars bring their most recent creation to your camp,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move hidden-hand-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_bodyguard">Bodyguard†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_bodyguard"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move hidden-hand-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_opulence">Opulence</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_opulence"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_opulence_trigger">When you shower luxury on a party of explorers,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move hidden-hand-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_a_web_of_influence">A Web of Influence</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_a_web_of_influence"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_a_web_of_influence_trigger">When you roll a 7+ on Reinforcements,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move hidden-hand-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+            <div class="magi">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move magi-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_dimensional_relocation">Dimensional Relocation</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_dimensional_relocation"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_dimensional_relocation_trigger">When you warp space to move explorers between two safe camps,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move magi-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_arcane_library">Arcane Library†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_arcane_library"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_arcane_library_trigger">While at your safe camps,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move magi-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_empowered_wards">Empowered Wards</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_empowered_wards"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move magi-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_eldritch_insight">Eldritch Insight</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_eldritch_insight"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_eldritch_insight_trigger">Whenever the Regent's clock ticks down,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move magi-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_a_miracle_of_science">A Miracle of Science</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_a_miracle_of_science"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_a_miracle_of_science_trigger">When your explorer dissects a defeated Acolyte,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move magi-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+            <div class="guardians-of-nature">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move guardians-of-nature-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_plant_whisperer">Plant Whisperer†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_plant_whisperer"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_plant_whisperer_trigger">When you seek Shelter near a tree,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move guardians-of-nature-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_medicinal_herbs">Medicinal Herbs</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_medicinal_herbs"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_medicinal_herbs_trigger">When you have access to natural herbs and poultices,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move guardians-of-nature-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_natural_vigour">Natural Vigour†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_natural_vigour"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move guardians-of-nature-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_panacea">Panacea</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_panacea"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_panacea_trigger">When you claim a Forward Base,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move guardians-of-nature-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_phases_of_the_moon">Phases Of The Moon </h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_phases_of_the_moon"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_phases_of_the_moon_trigger">At the beginning of a generation,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move guardians-of-nature-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+            <div class="fate-dealers">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move fate-dealers-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_good_measure">Good Measure</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_good_measure"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_good_measure_trigger">When you use Rest and Relaxation,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move fate-dealers-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_grim_portents">Grim Portents</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_grim_portents"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_grim_portents_trigger">When you Resist Doom,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move fate-dealers-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_soothsayers_for_hire">Soothsayers for Hire</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_soothsayers_for_hire"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_soothsayers_for_hire_trigger">When you sell your fortune-telling services while calling for Reinforcements,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move fate-dealers-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_switcheroo">Switcheroo†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_switcheroo"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_switcheroo_trigger">When an explorer passes on their misfortune onto you,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move fate-dealers-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_two_faced_coin">Two-Faced Coin† </h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_two_faced_coin"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_two_faced_coin_trigger">When your explorer rolls a miss, hold 1.</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move fate-dealers-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+            <div class="defenders-of-tomorrow">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move defenders-of-tomorrow-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_communication_devices">Communication Devices†</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_communication_devices"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger"></span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move defenders-of-tomorrow-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_death_ray">Death Ray</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_death_ray"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_death_ray_trigger">Exactly once, when Darkness Falls,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move defenders-of-tomorrow-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_electric_eye">Electric Eye</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_electric_eye"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_electric_eye_trigger">When you claim a Forward Base,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move defenders-of-tomorrow-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_out_of_this_world">Out of This World</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_out_of_this_world"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_out_of_this_world_trigger">When you call for Reinforcements,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move defenders-of-tomorrow-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_science">Science</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_science"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_science_trigger">When you Resist Doom by replacing occult resources and ceremonial paraphernalia with technological baubles and devices,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+                  <div class="playbook-move defenders-of-tomorrow-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+            <div class="open-bloodline">
+              <div class="bloodline-move-container">
+                  <div class="playbook-move open-bloodline-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-moves-container">
+            <h2 data-i18n="custom_moves">Custom Moves</h2>
+            <div class="custom-move-container">
+              <fieldset class="repeating_custommove">
+                <div class="playbook-move">
+                  <div class="playbook-move-title">
+                    <h3>
+                      <input type="text" name="attr_move_custom_name"/>
+                    </h3>
+                    <div class="move-select">
+                      <label>
+                        <input class="move-selector" type="checkbox" name="attr_move_custom"/><span class="move-square"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="playbook-reverse-rotate">
+                    <textarea name="attr_move_custom_desc"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="bloodline-context">
+            <details open="open">
+              <summary>
+                <h3><span data-i18n="context">Context</span>
+                </h3><span data-i18n="context_subtitle">Each generation, pick or invent one from each:</span>
+              </summary>
+              <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
+              <input type="checkbox" name="attr_bloodline_select" value="legendary_heroes" hidden="hidden"/>
+              <div class="legendary-heroes">
+                <div class="context-container">
+                    <div class="context-column legendary-heroes-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="legendary_heroes_refuge_1">An inn or cafe where your sister plays music.</li>
+                          <li data-i18n="legendary_heroes_refuge_2">A general shop run by your grandfather.</li>
+                          <li data-i18n="legendary_heroes_refuge_3">A club, park or back alley where friendly gangs hang out</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column legendary-heroes-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="legendary_heroes_drive_1">Your love, kidnapped by the Regent.</li>
+                          <li data-i18n="legendary_heroes_drive_2">Your parent, cursed to waste away</li>
+                          <li data-i18n="legendary_heroes_drive_3">A neighbourhood, devastated by monsters.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column legendary-heroes-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="legendary_heroes_breach_1">A grand door and a sturdy boot.</li>
+                          <li data-i18n="legendary_heroes_breach_2">A great stained glass window and a hefted brick.</li>
+                          <li data-i18n="legendary_heroes_breach_3">A high wall and a knotted rope</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="half_damned" hidden="hidden"/>
+              <div class="half-damned">
+                <div class="context-container">
+                    <div class="context-column half-damned-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="half_damned_refuge_1">A graveyard where your peers shelter.</li>
+                          <li data-i18n="half_damned_refuge_2">An aerie overlooking the land.</li>
+                          <li data-i18n="half_damned_refuge_3">Underground tunnels forgotten by man.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column half-damned-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="half_damned_drive_1">The beast that turned you, serving the Regent.</li>
+                          <li data-i18n="half_damned_drive_2">Your sibling, called to the castle by an irresistible compulsion.</li>
+                          <li data-i18n="half_damned_drive_3">A mob whipped into a frenzy by fear of the Regent.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column half-damned-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="half_damned_breach_1">The regent's menagerie, using yourself as bait for the game wardens.</li>
+                          <li data-i18n="half_damned_breach_2">The servant's quarters, and a stolen uniform.</li>
+                          <li data-i18n="half_damned_breach_3">The barracks, and notes on the patrol schedule.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="holy_church" hidden="hidden"/>
+              <div class="holy-church">
+                <div class="context-container">
+                    <div class="context-column holy-church-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="holy_church_refuge_1">An old church warded against malign influences.</li>
+                          <li data-i18n="holy_church_refuge_2">A memorial remembering the dead of the last great war.</li>
+                          <li data-i18n="holy_church_refuge_3">The home of a believer, where the faithful are waiting out the horrors.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column holy-church-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="holy_church_drive_1">A saint's relics stolen from a desecrated grave.</li>
+                          <li data-i18n="holy_church_drive_2">A great demon only vulnerable to the righteous.</li>
+                          <li data-i18n="holy_church_drive_3">A sin that only martyrdom can wash clean.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column holy-church-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="holy_church_breach_1">The tainted chapel, and the supply wagons that bring in sacraments.</li>
+                          <li data-i18n="holy_church_breach_2">The burial catacombs, and a crevasse that's opened them to the world.</li>
+                          <li data-i18n="holy_church_breach_3">A marble-floored museum, and its skylights.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="hidden_hand" hidden="hidden"/>
+              <div class="hidden-hand">
+                <div class="context-container">
+                    <div class="context-column hidden-hand-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="hidden_hand_refuge_1">A mansion filled with helpful servants.</li>
+                          <li data-i18n="hidden_hand_refuge_2">A watch station, barricaded up against the darkness.</li>
+                          <li data-i18n="hidden_hand_refuge_3">A scholar's laboratory, fizzing with strange chemicals.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column hidden-hand-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="hidden_hand_drive_1">A treasure rumoured to bring eternal life.</li>
+                          <li data-i18n="hidden_hand_drive_2">Your political rival, empowered by the regent's corruption.</li>
+                          <li data-i18n="hidden_hand_drive_3">Rare reagents created by abhorrent rites.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column hidden-hand-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="hidden_hand_breach_1">The deeper vaults, and a brace of explosives.</li>
+                          <li data-i18n="hidden_hand_breach_2">A grand soiree, and a forged invitation.</li>
+                          <li data-i18n="hidden_hand_breach_3">The clock tower, and a zip line from great height.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="magi" hidden="hidden"/>
+              <div class="magi">
+                <div class="context-container">
+                    <div class="context-column magi-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="magi_refuge_1">A caravan on the city's outskirts selling charms and occult paraphernalia.</li>
+                          <li data-i18n="magi_refuge_2">A visionary doctor's surgery-laboratory.</li>
+                          <li data-i18n="magi_refuge_3">A cafe where the intelligentsia gather and debate.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column magi-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="magi_drive_1">A celestial conjunction promising great change.</li>
+                          <li data-i18n="magi_drive_2">A chance to fix a mistake made in your training.</li>
+                          <li data-i18n="magi_drive_3">An unnatural plague infesting the city's slums.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column magi-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="magi_breach_1">A garden of perfect geometric statuary, and a hole in its iron fence.</li>
+                          <li data-i18n="magi_breach_2">A pocket dimension outside reality, and a ritual to transport you there.</li>
+                          <li data-i18n="magi_breach_3">An alchemical storage vault, and the combination for the vault door.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="guardians_of_nature" hidden="hidden"/>
+              <div class="guardians-of-nature">
+                <div class="context-container">
+                    <div class="context-column guardians-of-nature-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="guardians_of_nature_refuge_1">A great tree, untouched by the castle’s corruption.</li>
+                          <li data-i18n="guardians_of_nature_refuge_2">The forest closest to the castle.</li>
+                          <li data-i18n="guardians_of_nature_refuge_3">A place the civilized dare not enter.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column guardians-of-nature-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="guardians_of_nature_drive_1">The dying wildlife in the local area.</li>
+                          <li data-i18n="guardians_of_nature_drive_2">A great beast turned evil by the Regent.</li>
+                          <li data-i18n="guardians_of_nature_drive_3">The encroaching industry of the castle.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column guardians-of-nature-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="guardians_of_nature_breach_1">The worn pelt of a beast of the castle.</li>
+                          <li data-i18n="guardians_of_nature_breach_2">A growing branch tearing through a wall.</li>
+                          <li data-i18n="guardians_of_nature_breach_3">The wind which carries you to the roof.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="fate_dealers" hidden="hidden"/>
+              <div class="fate-dealers">
+                <div class="context-container">
+                    <div class="context-column fate-dealers-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="fate_dealers_refuge_1">A souvenir shop of trinkets and accessories.</li>
+                          <li data-i18n="fate_dealers_refuge_2">The local fortune-teller’s tent.</li>
+                          <li data-i18n="fate_dealers_refuge_3">Your house, strangely untouched by evil.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column fate-dealers-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="fate_dealers_drive_1">Ill omens through your readings.</li>
+                          <li data-i18n="fate_dealers_drive_2">Strange happenings in your local neighborhood.</li>
+                          <li data-i18n="fate_dealers_drive_3">A traveller from the most likely future.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column fate-dealers-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="fate_dealers_breach_1">Hidden away in a caravan transporting goods.</li>
+                          <li data-i18n="fate_dealers_breach_2">A false pact with an Acolyte.</li>
+                          <li data-i18n="fate_dealers_breach_3">The right place at the right time.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
+              <div class="defenders-of-tomorrow">
+                <div class="context-container">
+                    <div class="context-column defenders-of-tomorrow-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="defenders_of_tomorrow_refuge_1">An orbital satellite.</li>
+                          <li data-i18n="defenders_of_tomorrow_refuge_2">The machine which brought you here.</li>
+                          <li data-i18n="defenders_of_tomorrow_refuge_3">The ruins of an ancient civilization.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column defenders-of-tomorrow-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="defenders_of_tomorrow_drive_1">The future, lost to the castle.</li>
+                          <li data-i18n="defenders_of_tomorrow_drive_2">An individual that must survive until the end.</li>
+                          <li data-i18n="defenders_of_tomorrow_drive_3">Knowledge of historical events.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="context-column defenders-of-tomorrow-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <ul>
+                          <li data-i18n="defenders_of_tomorrow_breach_1">Beaming technology.</li>
+                          <li data-i18n="defenders_of_tomorrow_breach_2">A time machine.</li>
+                          <li data-i18n="defenders_of_tomorrow_breach_3">An anomaly in the space-time continuum.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+              <div class="open-bloodline">
+                <div class="context-container">
+                    <div class="context-column open-bloodline-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <textarea name="attr_open_refuge"></textarea>
+                      </div>
+                    </div>
+                    <div class="context-column open-bloodline-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <textarea name="attr_open_drive"></textarea>
+                      </div>
+                    </div>
+                    <div class="context-column open-bloodline-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <textarea name="attr_open_breach"></textarea>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </details>
+          </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <input class="moves hide-element" type="radio" name="attr_bloodline_page" value="moves"/>
+      <div class="moves showhide">
+        <div class="moves-container-alt">
+            <div class="shared-move">
+                <h3 class="roll-button" data-i18n="bloodline_move_arcane_power">Arcane Power</h3>
+              <p><span class="move-trigger" data-i18n="bloodline_move_arcane_power_trigger">When you use the castle’s cast-offs to empower your bloodline’s actions,</span><span data-i18n="bloodline_move_arcane_power_text"> spend 1 Relic and get advantage on a roll.</span>
+              </p>
+            </div>
+            <div class="shared-move">
+                <h3 class="roll-button" data-i18n="bloodline_move_lend_aid">Lend Aid</h3>
+              <p><span class="move-trigger" data-i18n="bloodline_move_lend_aid_trigger">When you help another bloodline with a move,</span><span data-i18n="bloodline_move_lend_aid_text"> offer them a dice. If they take it, they roll it with their own as if they had advantage. If your dice is the highest, say how you made the difference and gain 1-&lt;strong&gt;Pact&lt;/strong&gt; on them. If it’s the lowest, the GM will say how helping them hurt you.</span>
+              </p>
+            </div>
+            <div class="shared-move">
+                <h3>
+                  <button class="roll-button" type="roll" name="roll_rest_and_relaxation" value="&amp;{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_rest_and_relaxation=1}} {{title=^{bloodline_move_rest_and_relaxation}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}"><span data-i18n="bloodline_move_rest_and_relaxation">Rest And Relaxation</span>
+                  </button>
+                </h3>
+              <p><span class="move-trigger" data-i18n="bloodline_move_rest_and_relaxation_trigger">When you provide aid to characters in a safe camp,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="chalices">Chalices</span><span>&amp;nbsp;</span>
+              </p>
+              <p><span data-i18n="pick_two_pick_three">On a 7-9, pick 2; on a 10+ pick 3:</span>
+              </p>
+              <ul>
+                <li data-i18n="bloodline_move_rest_and_relaxation_li_1">Each explorer may heal all harm.</li>
+                <li data-i18n="bloodline_move_rest_and_relaxation_li_2">Each explorer may heal all wounds.</li>
+                <li data-i18n="bloodline_move_rest_and_relaxation_li_3">Each explorer can repair and resupply their weaponry.</li>
+                <li data-i18n="bloodline_move_rest_and_relaxation_li_4">Each explorer may form a new covenant, or raise an existing covenant by a step.</li>
+                <li data-i18n="bloodline_move_rest_and_relaxation_li_5">The regent’s clock doesn’t tick down</li>
+              </ul>
+              <p><span data-i18n="bloodline_move_rest_and_relaxation_final">Each explorer checks over their covenant strengthen/betrayal triggers, and see if any have been hit since they last rested.</span>
+              </p>
+            </div>
+            <div class="shared-move">
+                <h3>
+                  <button class="roll-button" type="roll" name="roll_resist_doom" value="&amp;{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_resist_doom=1}} {{title=^{bloodline_move_resist_doom}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}"><span data-i18n="bloodline_move_resist_doom">Resist Doom</span>
+                  </button>
+                </h3>
+              <p><span class="move-trigger" data-i18n="bloodline_move_resist_doom_trigger">When you work a grand ritual,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="wands">Wands</span><span>&amp;nbsp;</span><span data-i18n="bloodline_move_resist_doom_text">spend 1-3 Relics on occult resources and ceremonial paraphernalia and</span>
+              </p>
+              <p><span data-i18n="bloodline_move_resist_doom_on_hit">On a hit, choose one for each Relic spent:</span>
+              </p>
+              <ul>
+                <li data-i18n="bloodline_move_resist_doom_li_1">Reduce the Regent’s clock by 1.</li>
+                <li data-i18n="bloodline_move_resist_doom_li_2">Bless a weapon to strike true against one Acolyte, giving it the Holy perk.</li>
+                <li data-i18n="bloodline_move_resist_doom_li_3">Reduce a character’s Blood rating by one - they lose a Blood Advance.</li>
+              </ul>
+              <p><span data-i18n="bloodline_move_resist_doom_final">On a 7-9, the Regent weaves a counter-spell; you’ll need to defeat an Acolyte before anyone can work further rituals.</span>
+              </p>
+            </div>
+            <div class="shared-move">
+                <h3>
+                  <button class="roll-button" type="roll" name="roll_forward_base" value="&amp;{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_forward_base=1}} {{title=^{bloodline_move_forward_base}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}"><span data-i18n="bloodline_move_forward_base">Forward Base</span>
+                  </button>
+                </h3>
+              <p><span class="move-trigger" data-i18n="bloodline_move_forward_base_trigger">When you claim a place of power as a forward base in the castle,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="swords">Swords</span><span>&amp;nbsp;</span><span data-i18n="bloodline_move_forward_base_text">On a hit it’s yours, and you can use it as a safe camp for the purposes of &lt;span class=&quot;move-trigger&quot;&gt;Rest and Relaxation&lt;/span&gt; and &lt;strong&gt;Travel the Labyrinth&lt;/strong&gt;.</span>
+              </p>
+              <p><span data-i18n="pick_one_bonus">On a 10+ pick one bonus:</span>
+              </p>
+              <ul>
+                <li data-i18n="bloodline_move_forward_base_li_1">There’s room for more: it counts as another Bloodline’s camp too. Get 1-&lt;strong&gt;Pact&lt;/strong&gt; on them.</li>
+                <li data-i18n="bloodline_move_forward_base_li_2">It’s well-located: explorers leaving the camp get 1-&lt;strong&gt;Travel the Labyrinth&lt;/strong&gt; hold.</li>
+                <li data-i18n="bloodline_move_forward_base_li_3">It’s comfortable and secure: get advantage on &lt;span class=&quot;move-trigger&quot;&gt;Rest and Relaxation&lt;/span&gt; here.</li>
+              </ul>
+              <p><span data-i18n="bloodline_move_forward_base_final">On a 7-9, the Regent weaves a counter-spell; you’ll need to defeat an Acolyte before anyone can work further rituals.</span>
+              </p>
+            </div>
+            <div class="shared-move">
+                <h3>
+                  <button class="roll-button" type="roll" name="roll_reinforcements" value="&amp;{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_reinforcements=1}} {{title=^{bloodline_move_reinforcements}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}"><span data-i18n="bloodline_move_reinforcements">Reinforcements</span>
+                  </button>
+                </h3>
+              <p><span class="move-trigger" data-i18n="bloodline_move_reinforcements_trigger">When you Bloodline members search for rumours or resources in the mortal world,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="coins">Coins</span><span>&amp;nbsp;</span>
+              </p>
+              <p><span data-i18n="pick_one_pick_two">On a 7-9 choose 1, on a 10+ choose 2:</span>
+              </p>
+              <ul>
+                <li data-i18n="bloodline_move_reinforcements_li_1">They find resources worth 1 Relic.</li>
+                <li data-i18n="bloodline_move_reinforcements_li_2">They hear tales of a ward’s acolyte, and clues to how they’re helping the regent.</li>
+                <li data-i18n="bloodline_move_reinforcements_li_3">They learn what the regent plans next, and which clock segment it’ll trigger on.</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<input class="explorer-mode hide-element" type="radio" name="attr_mode" value="explorer"/>
+<div class="explorer-mode hide-element">
+  <div class="header">
+      <div class="nav-bar-explorer">
+        <div class="nav-row">
+          <div class="nav-child">
+            <div class="nav-title">
+              <div class="reverse-skew">
+                <h2 data-i18n="explorer">Explorer</h2>
+              </div>
+            </div>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_explorer_page_button" value="playbook" checked="checked"/>
+              <div class="page-button-explorer" data-i18n="playbook">Playbook</div>
+            </label>
+          </div>
+          <div class="nav-child">
+            <label class="page-label">
+              <input class="hide-element page-button" type="radio" name="attr_explorer_page_button" value="moves"/>
+              <div class="page-button-explorer" data-i18n="moves">Moves</div>
+            </label>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="explorer-mode">
+    <div class="explorer">
+      <h2>explorer text and stuff here</h2>
+    </div>
+  </div>
+</div>
+<rolltemplate class="sheet-rolltemplate-sheetname">
+  {{#rollName}}
+  {{/rollName}}
+</rolltemplate>
+<script type="text/worker">
+on('change:bloodline_page_button', function(eventinfo) {
+  console.log({bloodline_page: eventinfo.newValue})
+  setAttrs({
+    bloodline_page: eventinfo.newValue
+  });
+});
+
+
+on('change:explorer_page_button', function(eventinfo) {
+  console.log({explorer_page: eventinfo.newValue})
+  setAttrs({
+    explorer_page: eventinfo.newValue
+  });
+});
+
+
+on('change:mode_button', function(eventinfo) {
+  console.log('mode fired')
+  setAttrs({
+    mode: eventinfo.newValue,
+    modes_choice: 'off'
+  });
+});
+
+</script>

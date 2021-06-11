@@ -1,0 +1,28 @@
+
+mixin bloodline_context
+  div.bloodline-context
+    details(open)
+      summary
+        h3
+          +simple_span('context')
+        +simple_span('context_subtitle')
+      input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+      each bloodline in bloodline_creation_list
+        input(type='checkbox' name='attr_bloodline_select' value=bloodline.name hidden)
+        div(class=`${bloodlines_class_list[bloodline.name]}`)
+          div.context-container
+            +context_list(bloodline.name, 'refuge', bloodline.refuge)
+            +context_list(bloodline.name, 'drive', bloodline.drives)
+            +context_list(bloodline.name, 'breach', bloodline.breach)
+
+mixin context_list(bloodline, name, context)
+  div(class=`context-column ${bloodlines_class_list[bloodline]}-color`)
+    h3(data-i18n=name)=locals[name]
+    div.context-reverse
+      if bloodline != 'open_bloodline'
+        ul
+          each l in context
+            +simple_li(l)
+      else
+        textarea(
+          name=`attr_open_${name}`)

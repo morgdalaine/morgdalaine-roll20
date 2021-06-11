@@ -1,0 +1,84 @@
+// header
+//   display: inline-grid
+//   text-transform: uppercase
+//   justify-content: space-evenly
+//   @include fill-available()
+
+.nav-row
+  display: flex
+
+.nav-bar-bloodline,
+.nav-bar-explorer
+  background-color: none
+  border: none
+  margin: 1em 0
+  // border-top: 2px solid transparent
+  // border-bottom: 2px solid transparent
+
+// .nav-bar-explorer
+//   background-color: $blue
+//   border-top: 3px solid $blue
+//   border-bottom: 3px solid $blue
+
+.nav-child
+  width: 100%
+  text-align-last: center
+  margin: 0.1em
+
+  label
+    margin: 0
+    padding: 0
+    cursor: pointer
+    height: 36px
+    line-height: 36px
+
+    &:hover
+      background: $light-gray
+      @include rotate(-2.5deg)
+      // transition: 0.5s ease
+
+.nav-title
+  width: 100%
+  // background-color: $red
+  @include std-font($spectral)
+  // @include skew(-45deg, 0deg)
+
+  .reverse-skew
+    // @include skew(45deg, 0deg)
+
+    h2
+      color: $red
+      letter-spacing: 4px
+      text-transform: uppercase
+
+.page-button-bloodline,
+.page-button-explorer
+  padding: 0.1em 0em 0.1em 0em
+  font-weight: 600
+  @include std-font($inknut)
+  color: $red
+  text-transform: uppercase
+  // border: none
+  // border-bottom: 2px solid $black
+
+
+.page-button-bloodline,
+.page-button-explorer
+  background-color: none
+
+
+.page-button
+  &:checked
+    & ~ div
+      &.page-button-bloodline,
+      &.page-button-explorer
+        color: $white
+        background-color: $black
+        @include rotate(-0.5deg)
+
+        // border: 2px solid $black
+        // border-bottom: 2px solid transparent
+        // transition: 0.5s ease
+
+label.page-label
+  text-align: center

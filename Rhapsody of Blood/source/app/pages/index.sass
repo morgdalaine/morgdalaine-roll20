@@ -1,0 +1,53 @@
+
+.modes
+  display: flex
+  justify-content: space-evenly
+
+h2.mode-title
+  text-align: center
+
+div.mode-title
+  margin-bottom: 2em
+  @include std-font($text-font)
+
+label.mode
+  text-align: center
+  margin: 0.5em
+  padding: 0
+  cursor: pointer
+  box-shadow: 1px 1px 19px 6px rgba(0,0,0,0.15)
+  opacity: 1
+  z-index: 5
+  width: auto
+
+  &:hover
+    h4
+      color: white
+      background-color: $red
+      transition: .5s ease
+
+    .mode-image
+      opacity: 0.7
+      transition: .5s ease
+
+input[type=radio].bloodline-mode:checked ~ div.bloodline-mode,
+input[type=radio].explorer-mode:checked ~ div.explorer-mode
+  display: block
+
+input[type=checkbox].modes-show:checked ~ div.modes-show
+  display: block
+
+div.mode
+  display: flex
+  margin: 0
+  justify-content: center
+  width: fit-content
+  width: -moz-fit-content
+
+.mode-image
+  display: flex
+
+input[type=radio].playbook:checked ~ div.playbook,
+input[type=radio].moves:checked ~ div.moves
+  display: inline-grid
+  @include show-hide

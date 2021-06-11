@@ -1,0 +1,23 @@
+
+mixin custom_moves
+  div.custom-moves-container
+    h2(data-i18n='custom_moves')=locals['custom_moves']
+    //- h2='FUCK'
+    //- previously repeating_CustomBloodlineMoves
+    div.custom-move-container
+      fieldset.repeating_custommove
+        div.playbook-move
+          div.playbook-move-title
+            h3
+              input(
+                type='text'
+                name='attr_move_custom_name')
+            div.move-select
+              label
+                input(
+                  type='checkbox'
+                  name=`attr_move_custom`
+                  class='move-selector')
+                span.move-square
+          div.playbook-reverse-rotate
+            textarea(name='attr_move_custom_desc')

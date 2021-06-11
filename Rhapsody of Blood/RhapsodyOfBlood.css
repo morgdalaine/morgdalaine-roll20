@@ -1,0 +1,1128 @@
+@import url(https://fonts.googleapis.com/css2?family=Adamina&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Inknut+Antiqua:wght@400;600;700&family=Oswald:wght@400;700&family=Spectral:ital,wght@0,400;0,700;1,400&display=swap);
+.align-left {
+  text-align: left !important;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.dotted-number input[type=number], .dotted-number input[type=number].stat-input {
+  border: 2px dotted #ff00ff;
+}
+
+.current-max-block {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 2px solid #333;
+  padding: 2px;
+}
+
+.current-max-block .current-max-text {
+  grid-column-end: span 2;
+}
+
+.current-max-block .stat-current-col, .current-max-block .stat-max-col {
+  flex-direction: column;
+}
+
+.current-max-block .stat-current-col label, .current-max-block .stat-max-col label {
+  text-align: center;
+  font-size: 0.8em !important;
+}
+
+.current-max-block .stat-current-col input, .current-max-block .stat-max-col input {
+  display: block;
+  margin: 0 auto;
+}
+
+.current-max-block .stat-current-col input[type=number], .current-max-block .stat-current-col input[type=number].stat-input, .current-max-block .stat-max-col input[type=number], .current-max-block .stat-max-col input[type=number].stat-input {
+  border: 2px dotted #ff00ff;
+}
+
+.current-max-block .stat-current-right-border {
+  border-right: 2px dotted #ff00ff;
+}
+
+.charsheet {
+  margin: 0 auto !important;
+  padding: 15px;
+  font-weight: normal;
+  background-color: none;
+  font-family: Adamina, serif, serif;
+}
+
+.charsheet h2, .charsheet h3, .charsheet h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Oswald, sans-serif, serif;
+}
+
+.charsheet p {
+  font-family: Adamina, serif, serif;
+}
+
+.charsheet .move-trigger {
+  font-style: italic;
+  font-weight: bold;
+  font-family: Adamina, serif, serif;
+}
+
+.charsheet .thecastle {
+  color: #be1716;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: Almendra, serif, serif;
+}
+
+.charsheet button[type=roll].roll-button {
+  background: none;
+  background-color: none;
+  text-shadow: none;
+  display: flex;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.charsheet h2.roll-button, .charsheet h3.roll-button {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.charsheet .plus-action {
+  font-weight: bold;
+}
+
+.charsheet .plus-action:before {
+  content: ' +';
+}
+
+.charsheet .page-container {
+  display: flex;
+}
+
+.charsheet .hide-element {
+  display: none;
+}
+
+.charsheet input[type='checkbox'].hide-element,
+.charsheet input[type='radio'].hide-element,
+.charsheet div.hide-element {
+  display: none;
+}
+
+.charsheet span.showhide:checked {
+  background-color: #575756;
+  color: white;
+  transition: .5s ease;
+}
+
+.charsheet span.showhide {
+  display: inline;
+  border: 1px solid #ccc;
+  margin-right: 11px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.charsheet span.showhide:hover {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background-color: #ccc;
+  color: #575756;
+  transition: .5s ease;
+}
+
+.charsheet div.showhide {
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.charsheet input::-webkit-outer-spin-button,
+.charsheet input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.charsheet input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.charsheet input[type=number], .charsheet input[type=text], .charsheet textarea, .charsheet select {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 0;
+  font-family: Oswald, sans-serif, serif;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.charsheet input[type=number] {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.charsheet input[type=text] {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet input[type=checkbox] {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #fafafa;
+  border: none;
+  border-bottom: 1px dotted #333;
+  border-radius: 0;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 0.8em;
+  text-decoration: none;
+  width: auto;
+}
+
+.charsheet textarea {
+  resize: none;
+  line-height: 2em;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.charsheet label {
+  margin: 0;
+}
+
+.charsheet button.btn.repcontrol_edit,
+.charsheet button.btn.repcontrol_add {
+  width: auto;
+  height: auto;
+  border: 1px solid #333;
+  border-radius: 0;
+  font-size: 0em;
+  text-shadow: none;
+  text-transform: uppercase;
+  padding: 0.2em;
+  margin: 0.3em;
+  font-family: Adamina, serif, serif;
+  color: #333;
+  background: #fafafa;
+}
+
+.charsheet button.btn.repcontrol_edit:hover,
+.charsheet button.btn.repcontrol_add:hover {
+  color: #ffffff;
+  background: #ff00ff;
+}
+
+.charsheet button.btn.repcontrol_edit:focus,
+.charsheet button.btn.repcontrol_add:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 1px;
+}
+
+.charsheet .repcontrol button.repcontrol_add:before {
+  font-family: pictos;
+  font-size: 13px;
+  margin: 1em;
+  content: '&';
+}
+
+.charsheet .repcontrol button.repcontrol_edit:before {
+  font-family: pictos;
+  font-size: 13px;
+  margin: 1em;
+  content: '(';
+}
+
+.charsheet .repcontainer.editmode + .repcontrol button.repcontrol_edit:before {
+  content: ')';
+}
+
+.charsheet button.btn.repcontrol_edit {
+  margin-right: 3px;
+}
+
+.charsheet button.btn.repcontrol_add {
+  margin-left: 3px;
+}
+
+.charsheet .modes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.charsheet h2.mode-title {
+  text-align: center;
+}
+
+.charsheet div.mode-title {
+  margin-bottom: 2em;
+  font-family: Adamina, serif, serif;
+}
+
+.charsheet label.mode {
+  text-align: center;
+  margin: 0.5em;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 1px 1px 19px 6px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  z-index: 5;
+  width: auto;
+}
+
+.charsheet label.mode:hover h4 {
+  color: white;
+  background-color: #be1716;
+  transition: .5s ease;
+}
+
+.charsheet label.mode:hover .mode-image {
+  opacity: 0.7;
+  transition: .5s ease;
+}
+
+.charsheet input[type=radio].bloodline-mode:checked ~ div.bloodline-mode,
+.charsheet input[type=radio].explorer-mode:checked ~ div.explorer-mode {
+  display: block;
+}
+
+.charsheet input[type=checkbox].modes-show:checked ~ div.modes-show {
+  display: block;
+}
+
+.charsheet div.mode {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.charsheet .mode-image {
+  display: flex;
+}
+
+.charsheet input[type=radio].playbook:checked ~ div.playbook,
+.charsheet input[type=radio].moves:checked ~ div.moves {
+  display: inline-grid;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
+.charsheet .component {
+  display: block;
+}
+
+.charsheet .nav-row {
+  display: flex;
+}
+
+.charsheet .nav-bar-bloodline,
+.charsheet .nav-bar-explorer {
+  background-color: none;
+  border: none;
+  margin: 1em 0;
+}
+
+.charsheet .nav-child {
+  width: 100%;
+  text-align-last: center;
+  margin: 0.1em;
+}
+
+.charsheet .nav-child label {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 36px;
+  line-height: 36px;
+}
+
+.charsheet .nav-child label:hover {
+  background: #fafafa;
+  transform: rotate(-2.5deg);
+  -webkit-transform: rotate(-2.5deg);
+  -moz-transform: rotate(-2.5deg);
+  -ms-transform: rotate(-2.5deg);
+  -o-transform: rotate(-2.5deg);
+}
+
+.charsheet .nav-title {
+  width: 100%;
+  font-family: Spectral, serif, serif;
+}
+
+.charsheet .nav-title .reverse-skew h2 {
+  color: #be1716;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.charsheet .page-button-bloodline,
+.charsheet .page-button-explorer {
+  padding: 0.1em 0em 0.1em 0em;
+  font-weight: 600;
+  font-family: "Inknut Antiqua", serif, serif;
+  color: #be1716;
+  text-transform: uppercase;
+}
+
+.charsheet .page-button-bloodline,
+.charsheet .page-button-explorer {
+  background-color: none;
+}
+
+.charsheet .page-button:checked ~ div.page-button-bloodline, .charsheet .page-button:checked ~ div.page-button-explorer {
+  color: #ffffff;
+  background-color: #333;
+  transform: rotate(-0.5deg);
+  -webkit-transform: rotate(-0.5deg);
+  -moz-transform: rotate(-0.5deg);
+  -ms-transform: rotate(-0.5deg);
+  -o-transform: rotate(-0.5deg);
+}
+
+.charsheet label.page-label {
+  text-align: center;
+}
+
+.charsheet .moves-container {
+  display: flex;
+}
+
+.charsheet .moves-container-alt {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+.charsheet .moves-left, .charsheet .moves-right {
+  width: 50%;
+  margin: 0 5px;
+}
+
+.charsheet .shared-move h3 {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.charsheet .shared-move h3 button[type=roll] {
+  display: inline;
+  background-image: none;
+}
+
+.charsheet .shared-move h3 button[type=roll] span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.charsheet .bloodline-moves-container,
+.charsheet .custom-moves-container {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.charsheet .bloodline-moves-container h2, .charsheet .bloodline-moves-container h3, .charsheet .bloodline-moves-container h4,
+.charsheet .custom-moves-container h2,
+.charsheet .custom-moves-container h3,
+.charsheet .custom-moves-container h4 {
+  margin-bottom: 1em;
+}
+
+.charsheet .bloodline-move-container {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .playbook-move {
+  background-color: #575756;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+}
+
+.charsheet .playbook-move.legendary-heroes-color {
+  background-color: #34748c;
+}
+
+.charsheet .playbook-move.half-damned-color {
+  background-color: #a76559;
+}
+
+.charsheet .playbook-move.holy-church-color {
+  background-color: #385d5c;
+}
+
+.charsheet .playbook-move.hidden-hand-color {
+  background-color: #a76559;
+}
+
+.charsheet .playbook-move.magi-color {
+  background-color: #194641;
+}
+
+.charsheet .playbook-move.guardians-of-nature-color {
+  background-color: #2e572f;
+}
+
+.charsheet .playbook-move.fate-dealers-color {
+  background-color: #6834ac;
+}
+
+.charsheet .playbook-move.defenders-of-tomorrow-color {
+  background-color: #575756;
+}
+
+.charsheet .playbook-move.open-bloodline-color {
+  background-color: #ac5792;
+}
+
+.charsheet .playbook-move .playbook-move-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: -1em;
+  margin-left: -1em;
+}
+
+.charsheet .playbook-move .playbook-move-title h2, .charsheet .playbook-move .playbook-move-title h3, .charsheet .playbook-move .playbook-move-title h4 {
+  color: #ffffff;
+  white-space: nowrap;
+  background-color: #333;
+  padding: 0.25em 1em;
+  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.charsheet .playbook-move .playbook-reverse-rotate {
+  padding: 0.5em 1em;
+  margin-top: -1em;
+  color: #ffffff;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+}
+
+.charsheet .playbook-move-title input[type=text] {
+  color: #ffffff;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.charsheet .playbook-reverse-rotate textarea {
+  margin-top: 1em;
+  height: 7em;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.charsheet .move-select {
+  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  margin-top: 1em;
+}
+
+.charsheet .move-select label {
+  display: block;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.charsheet .move-select label input[type=checkbox] {
+  display: none;
+}
+
+.charsheet .move-select label input[type=checkbox]:checked + .move-square {
+  background-color: #333;
+}
+
+.charsheet .move-select .move-square {
+  border: 4px solid #333;
+  background-color: #ffffff;
+  height: 10px;
+  width: 10px;
+  padding: 0.25em 1em;
+  margin-right: 1em;
+}
+
+.charsheet .custom-move-container .repcontrol {
+  margin-top: 1em;
+}
+
+.charsheet .custom-move-container .repcontainer {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+}
+
+.charsheet .legendary-heroes, .charsheet .half-damned, .charsheet .holy-church, .charsheet .hidden-hand,
+.charsheet .magi, .charsheet .guardians-of-nature, .charsheet .fate-dealers, .charsheet .defenders-of-tomorrow,
+.charsheet .open-bloodline, .charsheet .bnull {
+  display: none;
+}
+
+.charsheet input[type=checkbox][value='bnull']:checked ~ .bnull,
+.charsheet input[type=checkbox][value='legendary_heroes']:checked ~ .legendary-heroes,
+.charsheet input[type=checkbox][value='half_damned']:checked ~ .half-damned,
+.charsheet input[type=checkbox][value='holy_church']:checked ~ .holy-church,
+.charsheet input[type=checkbox][value='hidden_hand']:checked ~ .hidden-hand,
+.charsheet input[type=checkbox][value='magi']:checked ~ .magi,
+.charsheet input[type=checkbox][value='guardians_of_nature']:checked ~ .guardians-of-nature,
+.charsheet input[type=checkbox][value='fate_dealers']:checked ~ .fate-dealers,
+.charsheet input[type=checkbox][value='defenders_of_tomorrow']:checked ~ .defenders-of-tomorrow,
+.charsheet input[type=checkbox][value='open_bloodline']:checked ~ .open-bloodline {
+  display: block;
+}
+
+.charsheet details > summary {
+  display: list-item;
+}
+
+.charsheet details > summary h2, .charsheet details > summary h3 {
+  float: left;
+  font-family: Oswald, sans-serif, serif;
+}
+
+.charsheet .bloodline-basics, .charsheet .explorer-basics {
+  background-color: #333;
+  transform: skew(0deg, 4deg);
+  -webkit-transform: skew(0deg, 4deg);
+  -moz-transform: skew(0deg, 4deg);
+  -ms-transform: skew(0deg, 4deg);
+  -o-transform: skew(0deg, 4deg);
+}
+
+.charsheet .bloodline-info, .charsheet .explorer-info {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1em;
+  grid-gap: 1em;
+  transform: skew(0deg, -4deg);
+  -webkit-transform: skew(0deg, -4deg);
+  -moz-transform: skew(0deg, -4deg);
+  -ms-transform: skew(0deg, -4deg);
+  -o-transform: skew(0deg, -4deg);
+}
+
+.charsheet .bloodline-info input[type='text'], .charsheet .bloodline-info select, .charsheet .explorer-info input[type='text'], .charsheet .explorer-info select {
+  border: 2px solid #333;
+  font-family: Adamina, serif, serif;
+}
+
+.charsheet .bloodline-info label, .charsheet .explorer-info label {
+  font-family: Oswald, sans-serif, serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.charsheet .bloodline-info .bloodline-name, .charsheet .explorer-info .bloodline-name {
+  grid-column: span 3;
+}
+
+.charsheet .bloodline-info .bloodline-select, .charsheet .explorer-info .bloodline-select {
+  padding: 0.5em;
+  padding-top: 1em;
+  margin-top: -1em;
+  background-color: #575756;
+}
+
+.charsheet .bloodline-info .bloodline-style, .charsheet .bloodline-info .bloodline-lore, .charsheet .explorer-info .bloodline-style, .charsheet .explorer-info .bloodline-lore {
+  grid-column: span 2;
+}
+
+.charsheet .bloodline-creation {
+  margin: 1em 0;
+  padding: 1em;
+  text-align: justify;
+}
+
+.charsheet .bloodline-creation h2, .charsheet .bloodline-creation h3 {
+  font-family: Oswald, sans-serif, serif;
+}
+
+.charsheet .bloodline-creation .bnull {
+  margin: 3em;
+  background-color: #575756;
+  transform: skew(0deg, 3deg);
+  -webkit-transform: skew(0deg, 3deg);
+  -moz-transform: skew(0deg, 3deg);
+  -ms-transform: skew(0deg, 3deg);
+  -o-transform: skew(0deg, 3deg);
+}
+
+.charsheet .bloodline-creation .bnull h2, .charsheet .bloodline-creation .bnull h3 {
+  color: #ffffff;
+  background-color: #333;
+  padding: 1em;
+  text-align: center;
+  width: fit-content;
+  width: -moz-fit-content;
+  font-family: Adamina, serif, serif;
+  transform: skew(0deg, -3deg);
+  -webkit-transform: skew(0deg, -3deg);
+  -moz-transform: skew(0deg, -3deg);
+  -ms-transform: skew(0deg, -3deg);
+  -o-transform: skew(0deg, -3deg);
+}
+
+.charsheet .bloodline-creation .help {
+  font-family: Adamina, serif, serif;
+  text-transform: none;
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #ffffff;
+  font-style: italic;
+  margin-left: 0.5em;
+}
+
+.charsheet .creation-container {
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  background-color: #575756;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .creation-container.legendary-heroes-color {
+  background-color: #34748c;
+}
+
+.charsheet .creation-container.half-damned-color {
+  background-color: #a76559;
+}
+
+.charsheet .creation-container.holy-church-color {
+  background-color: #385d5c;
+}
+
+.charsheet .creation-container.hidden-hand-color {
+  background-color: #a76559;
+}
+
+.charsheet .creation-container.magi-color {
+  background-color: #194641;
+}
+
+.charsheet .creation-container.guardians-of-nature-color {
+  background-color: #2e572f;
+}
+
+.charsheet .creation-container.fate-dealers-color {
+  background-color: #6834ac;
+}
+
+.charsheet .creation-container.defenders-of-tomorrow-color {
+  background-color: #575756;
+}
+
+.charsheet .creation-container.open-bloodline-color {
+  background-color: #ac5792;
+}
+
+.charsheet .creation-container .creation-right {
+  display: flex;
+  flex-direction: column;
+  color: #fafafa;
+  padding: 1em;
+}
+
+.charsheet .creation-container .creation-right textarea {
+  margin-top: 1em;
+  height: 7em;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.charsheet .creation-container h2, .charsheet .creation-container h3 {
+  color: #ffffff;
+}
+
+.charsheet .starting-stats {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  background-color: #333;
+  padding: 1em;
+  transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+}
+
+.charsheet .starting-stats h2, .charsheet .starting-stats h3 {
+  color: #ffffff;
+}
+
+.charsheet .starting-stats textarea {
+  margin-top: 1em;
+  height: 18em;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.charsheet .starting-stats .help {
+  color: #ffffff;
+}
+
+.charsheet .starting-stats .starting-stat {
+  margin: 0 0.5em;
+  font-weight: bold;
+}
+
+.charsheet .starting-stats .stat-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.charsheet .starting-traditions {
+  margin-left: -1em;
+}
+
+.charsheet .starting-traditions .tradition {
+  font-weight: bold;
+}
+
+.charsheet .starting-traditions .tradition:after {
+  content: ':';
+  margin-right: 0.5em;
+}
+
+.charsheet .bloodline-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.charsheet .stat {
+  display: flex;
+  flex-direction: row;
+  margin-left: -1em;
+}
+
+.charsheet .stat h3, .charsheet .stat h4 {
+  margin-bottom: 0.5em;
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  background-color: #333;
+}
+
+.charsheet .stat h3 button[type=roll], .charsheet .stat h4 button[type=roll] {
+  display: inline;
+  background-image: none;
+  color: #ffffff;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+.charsheet .stat h3 button[type=roll] span, .charsheet .stat h4 button[type=roll] span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.charsheet .stat input[type=number] {
+  margin-left: -0.5em;
+  background-color: #575756;
+  background: #575756;
+  border: none;
+  color: #ffffff;
+  width: 3em;
+}
+
+.charsheet .bloodline-pacts {
+  padding: 1em;
+}
+
+.charsheet .pact-container {
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+}
+
+.charsheet .pact-container .prizes, .charsheet .pact-container .at-camp {
+  padding: 1em;
+  text-align: justify;
+}
+
+.charsheet .pact-with-container, .charsheet .pact-with-container-title {
+  display: inline-grid;
+  grid-template-columns: 45% 10% 45%;
+  margin-bottom: 0.5em;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .pact-with-container-title {
+  background-color: #575756;
+}
+
+.charsheet .pact-with-container-title.legendary-heroes-color {
+  background-color: #34748c;
+}
+
+.charsheet .pact-with-container-title.half-damned-color {
+  background-color: #a76559;
+}
+
+.charsheet .pact-with-container-title.holy-church-color {
+  background-color: #385d5c;
+}
+
+.charsheet .pact-with-container-title.hidden-hand-color {
+  background-color: #a76559;
+}
+
+.charsheet .pact-with-container-title.magi-color {
+  background-color: #194641;
+}
+
+.charsheet .pact-with-container-title.guardians-of-nature-color {
+  background-color: #2e572f;
+}
+
+.charsheet .pact-with-container-title.fate-dealers-color {
+  background-color: #6834ac;
+}
+
+.charsheet .pact-with-container-title.defenders-of-tomorrow-color {
+  background-color: #575756;
+}
+
+.charsheet .pact-with-container-title.open-bloodline-color {
+  background-color: #ac5792;
+}
+
+.charsheet .pact-with-container-title h2, .charsheet .pact-with-container-title h3, .charsheet .pact-with-container-title h4 {
+  color: #ffffff;
+}
+
+.charsheet .pact-rating-title h2, .charsheet .pact-rating-title h3, .charsheet .pact-rating-title h4, .charsheet .pact-with-them-title h2, .charsheet .pact-with-them-title h3, .charsheet .pact-with-them-title h4 {
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.charsheet .with-bloodline-title {
+  transform: rotate(-1.5deg);
+  -webkit-transform: rotate(-1.5deg);
+  -moz-transform: rotate(-1.5deg);
+  -ms-transform: rotate(-1.5deg);
+  -o-transform: rotate(-1.5deg);
+  background-color: #333;
+}
+
+.charsheet .with-bloodline-title h2, .charsheet .with-bloodline-title h3, .charsheet .with-bloodline-title h4 {
+  padding: 0.5em 0;
+  padding-left: 1.2em;
+}
+
+.charsheet .pact-rating {
+  text-align: center;
+}
+
+.charsheet .bloodline-context summary {
+  margin-bottom: 2em;
+}
+
+.charsheet .context-container {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.charsheet .context-container .context-column {
+  transform: skew(0deg, 2deg);
+  -webkit-transform: skew(0deg, 2deg);
+  -moz-transform: skew(0deg, 2deg);
+  -ms-transform: skew(0deg, 2deg);
+  -o-transform: skew(0deg, 2deg);
+}
+
+.charsheet .context-container .context-column.legendary-heroes-color {
+  background-color: #34748c;
+}
+
+.charsheet .context-container .context-column.half-damned-color {
+  background-color: #a76559;
+}
+
+.charsheet .context-container .context-column.holy-church-color {
+  background-color: #385d5c;
+}
+
+.charsheet .context-container .context-column.hidden-hand-color {
+  background-color: #a76559;
+}
+
+.charsheet .context-container .context-column.magi-color {
+  background-color: #194641;
+}
+
+.charsheet .context-container .context-column.guardians-of-nature-color {
+  background-color: #2e572f;
+}
+
+.charsheet .context-container .context-column.fate-dealers-color {
+  background-color: #6834ac;
+}
+
+.charsheet .context-container .context-column.defenders-of-tomorrow-color {
+  background-color: #575756;
+}
+
+.charsheet .context-container .context-column.open-bloodline-color {
+  background-color: #ac5792;
+}
+
+.charsheet .context-container .context-column h2, .charsheet .context-container .context-column h3, .charsheet .context-container .context-column h4 {
+  background-color: #333;
+  padding: 0.5em 0;
+  padding-left: 0.5em;
+  margin-top: -1em;
+  color: #ffffff;
+  transform: skew(0deg, -2deg);
+  -webkit-transform: skew(0deg, -2deg);
+  -moz-transform: skew(0deg, -2deg);
+  -ms-transform: skew(0deg, -2deg);
+  -o-transform: skew(0deg, -2deg);
+}
+
+.charsheet .context-container .context-reverse {
+  transform: skew(0deg, -2deg);
+  -webkit-transform: skew(0deg, -2deg);
+  -moz-transform: skew(0deg, -2deg);
+  -ms-transform: skew(0deg, -2deg);
+  -o-transform: skew(0deg, -2deg);
+}
+
+.charsheet .context-container .context-reverse textarea {
+  margin-top: 1em;
+  height: 7em;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.charsheet .context-container .context-reverse ul {
+  color: #ffffff;
+  padding: 0.5em;
+}
+
+.charsheet .context-container .context-reverse ul li {
+  padding: 0.5em 0;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem {
+  margin: 5px;
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .btn {
+  font-size: 0.8em;
+  border-radius: 0;
+  border: 1px solid #ff00ff;
+  color: #ff00ff;
+  background: #ffffff;
+  text-shadow: 0;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol {
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .btn-danger {
+  background-color: #be1716;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del, .ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  text-shadow: none;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {
+  float: right;
+  width: auto;
+  margin: 0;
+  height: auto;
+}
+
+.ui-dialog .charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  cursor: move;
+  width: auto;
+  margin: 0;
+  height: auto;
+}
+
+input[type=text].repeating-input {
+  border-bottom: 2px dotted #ff00ff !important;
+  margin: 0;
+}
+
+.sheet-rolltemplate-sheetname {
+  display: block;
+}

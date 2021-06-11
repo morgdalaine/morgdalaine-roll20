@@ -1,0 +1,55 @@
+include ../../data/creation
+
+mixin bloodline_creation
+  div.bloodline-creation
+    details(open)
+      summary
+        h3(data-i18n='making_your_heroes')=locals['making_your_heroes']
+      input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
+      each bloodline in bloodlines_list
+        input(type='checkbox' name='attr_bloodline_select' value=bloodline hidden)
+      div.bnull
+        h2(data-i18n='select_playbook')=locals['select_playbook']
+      each bloodline in bloodline_creation_list
+        div(class=bloodlines_class_list[bloodline.name])
+          div(class=`creation-container ${bloodlines_class_list[bloodline.name]}-color`)
+            div.starting-stats
+              h3(data-i18n='starting_stats')=locals['starting_stats']
+              if bloodline.name != 'open_bloodline'
+                span.help(data-i18n='pick_one')=locals['pick_one']
+                div.stat-options
+                  each stat in bloodline.starting_stats
+                    div
+                      input(
+                        type='radio'
+                        name='attr_starting_stat'
+                        value=index)
+                      span.starting-stat(data-i18n=stat)=locals[stat]
+                      +simple_span(`${stat}_desc`)
+              else
+                textarea(name='attr_open_start_stats')
+            div.creation-right
+              div.starting-traditions
+                h3
+                  +simple_span('traditions')
+                if bloodline.name != 'open_bloodline'
+                  span.help(data-i18n='traditions_help')=locals['traditions_help']
+                  ul
+                    li
+                      span.tradition(data-i18n='style')=locals['style']
+                      +simple_span(bloodline.style)
+                    li
+                      span.tradition(data-i18n='lore')=locals['lore']
+                      +simple_span(bloodline.lore)
+                    li
+                      span.tradition(data-i18n='name')=locals['name']
+                      +simple_span(bloodline.names)
+                else
+                  textarea(name='attr_open_tradition')
+              div.starting-history
+                h3(data-i18n='history')=locals['history']
+                if bloodline.name != 'open_bloodline'
+                  p
+                    +simple_span(bloodline.history)
+                else
+                  textarea(name='attr_open_history')

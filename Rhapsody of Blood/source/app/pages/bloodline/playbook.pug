@@ -1,0 +1,24 @@
+include ../../components/moves/custom
+include ../../components/playbook/basics
+include ../../components/playbook/context
+include ../../components/playbook/creation
+include ../../components/playbook/moves
+include ../../components/playbook/pacts
+include ../../components/shared/stats
+
+mixin bloodline_playbook
+  div.page-container
+    input(
+      type='radio'
+      name='attr_bloodline_page'
+      class='playbook hide-element'
+      value='playbook'
+      checked)
+    div.playbook.showhide
+      +bloodline_basics
+      +bloodline_creation
+      +bloodline_stats
+      +bloodline_pact
+      +bloodline_moves
+      +custom_moves
+      +bloodline_context

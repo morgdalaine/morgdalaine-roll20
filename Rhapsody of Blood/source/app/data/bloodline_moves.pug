@@ -1,0 +1,423 @@
+-
+  var
+    bloodline_shared_rolls = {
+      arcane_power: '',
+      rest_and_relaxation: '&{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_rest_and_relaxation=1}} {{title=^{bloodline_move_rest_and_relaxation}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}',
+      forward_base: '&{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_forward_base=1}} {{title=^{bloodline_move_forward_base}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}',
+      lend_aid: '',
+      resist_doom: '&{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_resist_doom=1}} {{title=^{bloodline_move_resist_doom}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}',
+      reinforcements: '&{template:rhapsody} {{charname=@{FamName}}} {{type=action}} {{subtitle=^{roll}}} {{title-bloodline_move_reinforcements=1}} {{title=^{bloodline_move_reinforcements}}} {{result=[[?{Roll Type|Standard, 2d6|Advantage, 3d6kh2|Disadvantage, 3d6kl2}+?{Modifiers|None, 0|+2, +2|+1, +1|-1, -1|-2, -2}+?{Choose Stat|Chalices, @{Chalices}| Swords, @{Swords}| Coins, @{Coins}| Wands, @{Wands}}]]}}',
+    }
+
+-
+  var
+    bloodline_shared_moves = {
+      arcane_power: {
+        trigger: 'bloodline_move_arcane_power_trigger',
+        text: 'bloodline_move_arcane_power_text',
+      },
+      rest_and_relaxation: {
+        trigger: 'bloodline_move_rest_and_relaxation_trigger',
+        action: 'chalices',
+        results: 'pick_two_pick_three',
+        li: [
+          'bloodline_move_rest_and_relaxation_li_1',
+          'bloodline_move_rest_and_relaxation_li_2',
+          'bloodline_move_rest_and_relaxation_li_3',
+          'bloodline_move_rest_and_relaxation_li_4',
+          'bloodline_move_rest_and_relaxation_li_5'
+        ],
+        final: 'bloodline_move_rest_and_relaxation_final'
+      },
+      forward_base: {
+        trigger: 'bloodline_move_forward_base_trigger',
+        action: 'swords',
+        text: 'bloodline_move_forward_base_text',
+        results: 'pick_one_bonus',
+        li: [
+          'bloodline_move_forward_base_li_1',
+          'bloodline_move_forward_base_li_2',
+          'bloodline_move_forward_base_li_3'
+        ],
+        final: 'bloodline_move_forward_base_final'
+      },
+      lend_aid: {
+        trigger: 'bloodline_move_lend_aid_trigger',
+        text: 'bloodline_move_lend_aid_text',
+      },
+      resist_doom: {
+        trigger: 'bloodline_move_resist_doom_trigger',
+        action: 'wands',
+        text: 'bloodline_move_resist_doom_text',
+        results: 'bloodline_move_resist_doom_on_hit',
+        li: [
+          'bloodline_move_resist_doom_li_1',
+          'bloodline_move_resist_doom_li_2',
+          'bloodline_move_resist_doom_li_3'
+        ],
+        final: 'bloodline_move_resist_doom_final'
+      },
+      reinforcements: {
+        trigger: 'bloodline_move_reinforcements_trigger',
+        action: 'coins',
+        results: 'pick_one_pick_two',
+        li: [
+          'bloodline_move_reinforcements_li_1',
+          'bloodline_move_reinforcements_li_2',
+          'bloodline_move_reinforcements_li_3'
+        ],
+      },
+    }
+
+-
+  var
+    bloodline_playbook_moves = {
+      legendary_heroes: {
+        audacious: {
+          name: 'bloodline_move_audacious',
+          trigger: 'bloodline_move_audacious_trigger',
+          text: '',
+          action: 'swords',
+          results: 'pick_one_pick_two',
+          li: [
+            'bloodline_move_audacious_li_1',
+            'bloodline_move_audacious_li_2',
+            'bloodline_move_audacious_li_3'
+          ],
+        },
+        defeat_means_friendship: {
+          name: 'bloodline_move_defeat_means_friendship',
+          trigger: 'bloodline_move_defeat_means_friendship_trigger',
+          text: 'bloodline_move_defeat_means_friendship_text',
+          action: 'chalices',
+          results: 'bloodline_move_defeat_means_friendship_on_hit',
+          li: [
+            'bloodline_move_defeat_means_friendship_li_1',
+            'bloodline_move_defeat_means_friendship_li_2',
+            'bloodline_move_defeat_means_friendship_li_3'
+          ],
+          final: 'bloodline_move_defeat_means_friendship_final',
+          text_before_action: true
+        },
+        our_town: {
+          name: 'bloodline_move_our_town',
+          trigger: 'bloodline_move_our_town_trigger',
+          text: 'bloodline_move_our_town_text',
+          action: 'chalices',
+        },
+        secret_technique: {
+          name: 'bloodline_move_secret_technique',
+          text: 'bloodline_move_secret_technique_text',
+          results: 'pick_one',
+          li: [
+            'bloodline_move_secret_technique_li_1',
+            'bloodline_move_secret_technique_li_2',
+            'bloodline_move_secret_technique_li_3',
+          ],
+        },
+        the_will_to_fight: {
+          name: 'bloodline_move_the_will_to_fight',
+          text: 'bloodline_move_the_will_to_fight_text',
+        },
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger",
+          text: "bloodline_move_shelter_legendary_heroes",
+        }
+      },
+      half_damned: {
+        dark_legacy: {
+          name: 'bloodline_move_dark_legacy',
+          text: 'bloodline_move_dark_legacy_text',
+        },
+        shadows_of_humanity: {
+          name: 'bloodline_move_shadows_of_humanity',
+          trigger: 'bloodline_move_shadows_of_humanity_trigger',
+          text: 'bloodline_move_shadows_of_humanity_text',
+          action: 'swords',
+          final: 'bloodline_move_shadows_of_humanity_final',
+        },
+        more_than_human: {
+          name: 'bloodline_move_more_than_human',
+          text: 'bloodline_move_more_than_human_text',
+          li: [
+            'bloodline_move_more_than_human_li_1',
+            'bloodline_move_more_than_human_li_2',
+            'bloodline_move_more_than_human_li_3',
+          ],
+        },
+        one_of_the_horde: {
+          name: 'bloodline_move_one_of_the_horde',
+          trigger: 'bloodline_move_one_of_the_horde_trigger',
+          action: 'wands',
+          results: 'bloodline_move_one_of_the_horde_on_hit',
+          li: [
+            'bloodline_move_one_of_the_horde_li_1',
+            'bloodline_move_one_of_the_horde_li_2',
+            'bloodline_move_one_of_the_horde_li_3',
+          ],
+        },
+        voice_of_the_regent: {
+          name: 'bloodline_move_voice_of_the_regent',
+          text: 'bloodline_move_voice_of_the_regent_text',
+          final: 'bloodline_move_voice_of_the_regent_final',
+        },
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger",
+          text: "bloodline_move_shelter_half_damned",
+        }
+      },
+      holy_church: {
+        holy_vanguard: {
+          name: 'bloodline_move_holy_vanguard',
+          trigger: 'bloodline_move_holy_vanguard_trigger',
+          text: 'bloodline_move_holy_vanguard_text',
+          results: 'bloodline_move_holy_vanguard_on_hit',
+          final: 'bloodline_move_holy_vanguard_final',
+        },
+        shield_of_faith: {
+          name: 'bloodline_move_shield_of_faith',
+          trigger: 'bloodline_move_shield_of_faith_trigger',
+          text: 'bloodline_move_shield_of_faith_text',
+          action: 'sulphur',
+          results: 'pick_two_pick_one',
+          li: [
+            'bloodline_move_shield_of_faith_li_1',
+            'bloodline_move_shield_of_faith_li_2',
+            'bloodline_move_shield_of_faith_li_3',
+          ],
+          final: 'bloodline_move_shield_of_faith_final',
+        },
+        stoke_the_flame: {
+          name: 'bloodline_move_stoke_the_flame',
+          trigger: 'bloodline_move_stoke_the_flame_trigger',
+          action: 'chalices',
+          li: [
+            'bloodline_move_stoke_the_flame_li_1',
+            'bloodline_move_stoke_the_flame_li_2',
+            'bloodline_move_stoke_the_flame_li_3',
+          ],
+        },
+        martyrdom: {
+          name: 'bloodline_move_martyrdom',
+          trigger: 'bloodline_move_martyrdom_trigger',
+          text: 'bloodline_move_martyrdom_text',
+        },
+        the_flesh_is_weak: {
+          name: 'bloodline_move_the_flesh_is_weak',
+          text: 'bloodline_move_the_flesh_is_weak_text',
+        },
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger",
+          text: "bloodline_move_shelter_holy_church",
+        }
+      },
+      hidden_hand: {
+        avarice: {
+          name: 'bloodline_move_avarice',
+          trigger: 'bloodline_move_avarice_trigger',
+          text: 'bloodline_move_avarice_text',
+          final: 'bloodline_move_avarice_final',
+        },
+        experimental_weaponry: {
+          name: 'bloodline_move_experimental_weaponry',
+          trigger: 'bloodline_move_experimental_weaponry_trigger',
+          action: 'coins',
+          results: 'pick_one_pick_two',
+          li: [
+            'bloodline_move_experimental_weaponry_li_1',
+            'bloodline_move_experimental_weaponry_li_2',
+            'bloodline_move_experimental_weaponry_li_3',
+          ],
+          final: 'bloodline_move_experimental_weaponry_final',
+        },
+        bodyguard: {
+          name: 'bloodline_move_bodyguard',
+          text: 'bloodline_move_bodyguard_text',
+          li: [
+            'bloodline_move_bodyguard_li_1',
+            'bloodline_move_bodyguard_li_2',
+            'bloodline_move_bodyguard_li_3',
+          ],
+        },
+        opulence: {
+          name: 'bloodline_move_opulence',
+          trigger: 'bloodline_move_opulence_trigger',
+          text: 'bloodline_move_opulence_text',
+          action: 'coins',
+        },
+        a_web_of_influence: {
+          name: 'bloodline_move_a_web_of_influence',
+          trigger: 'bloodline_move_a_web_of_influence_trigger',
+          text: 'bloodline_move_a_web_of_influence_text',
+          final: 'bloodline_move_a_web_of_influence_final',
+        },
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger",
+          text: "bloodline_move_shelter_hidden_hand",
+        }
+      },
+      magi: {
+        dimensional_relocation: {
+          name: 'bloodline_move_dimensional_relocation',
+          trigger: 'bloodline_move_dimensional_relocation_trigger',
+          action: 'wands',
+          results: 'bloodline_move_dimensional_relocation_on_hit',
+          li: [
+            'bloodline_move_dimensional_relocation_li_1',
+            'bloodline_move_dimensional_relocation_li_2',
+          ],
+        },
+        arcane_library: {
+          name: 'bloodline_move_arcane_library',
+          trigger: 'bloodline_move_arcane_library_trigger',
+          text: 'bloodline_move_arcane_library_text',
+          results: 'bloodline_move_arcane_library_on_hit',
+          li: [
+            'bloodline_move_arcane_library_li_1',
+            'bloodline_move_arcane_library_li_2',
+            'bloodline_move_arcane_library_li_3',
+          ],
+        },
+        empowered_wards: {
+          name: 'bloodline_move_empowered_wards',
+          text: 'bloodline_move_empowered_wards_text',
+        },
+        eldritch_insight: {
+          name: 'bloodline_move_eldritch_insight',
+          trigger: 'bloodline_move_eldritch_insight_trigger',
+          text: 'bloodline_move_eldritch_insight_text',
+          final: 'bloodline_move_eldritch_insight_final',
+        },
+        a_miracle_of_science: {
+          name: 'bloodline_move_a_miracle_of_science',
+          trigger: 'bloodline_move_a_miracle_of_science_trigger',
+          text: 'bloodline_move_a_miracle_of_science_text',
+          results: 'bloodline_move_a_miracle_of_science_on_hit',
+          li: [
+            'bloodline_move_a_miracle_of_science_li_1',
+            'bloodline_move_a_miracle_of_science_li_2',
+            'bloodline_move_a_miracle_of_science_li_3',
+            'bloodline_move_a_miracle_of_science_li_4',
+          ],
+        },
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger",
+          text: "bloodline_move_shelter_magi",
+        }
+      },
+      guardians_of_nature: {
+        plant_whisperer: {
+          name: 'bloodline_move_plant_whisperer',
+          trigger: 'bloodline_move_plant_whisperer_trigger',
+          text: 'bloodline_move_plant_whisperer_text',
+          final: 'bloodline_move_plant_whisperer_final',
+        },
+        medicinal_herbs: {
+          name: 'bloodline_move_medicinal_herbs',
+          trigger: 'bloodline_move_medicinal_herbs_trigger',
+          text: 'bloodline_move_medicinal_herbs_text',
+        },
+        natural_vigour: {
+          name: 'bloodline_move_natural_vigour',
+          text: 'bloodline_move_natural_vigour_text',
+        },
+        panacea: {
+          name: 'bloodline_move_panacea',
+          trigger: 'bloodline_move_panacea_trigger',
+          text: 'bloodline_move_panacea_text',
+        },
+        phases_of_the_moon: {
+          name: 'bloodline_move_phases_of_the_moon',
+          trigger: 'bloodline_move_phases_of_the_moon_trigger',
+          text: 'bloodline_move_phases_of_the_moon_text',
+          final: 'bloodline_move_phases_of_the_moon_final',
+        },
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger",
+          text: "bloodline_move_shelter_guardians_of_nature",
+        }
+      },
+      fate_dealers: {
+        good_measure: {
+          name: 'bloodline_move_good_measure',
+          trigger: 'bloodline_move_good_measure_trigger',
+          text: 'bloodline_move_good_measure_text',
+        },
+        grim_portents: {
+          name: 'bloodline_move_grim_portents',
+          trigger: 'bloodline_move_grim_portents_trigger',
+          text: 'bloodline_move_grim_portents_text',
+          li: [
+            'bloodline_move_grim_portents_li_1',
+          ],
+        },
+        soothsayers_for_hire: {
+          name: 'bloodline_move_soothsayers_for_hire',
+          trigger: 'bloodline_move_soothsayers_for_hire_trigger',
+          text: 'bloodline_move_soothsayers_for_hire_text',
+        },
+        switcheroo: {
+          name: 'bloodline_move_switcheroo',
+          trigger: 'bloodline_move_switcheroo_trigger',
+          text: 'bloodline_move_switcheroo_text',
+          final: 'bloodline_move_switcheroo_final',
+        },
+        two_faced_coin: {
+          name: 'bloodline_move_two_faced_coin',
+          trigger: 'bloodline_move_two_faced_coin_trigger',
+          text: 'bloodline_move_two_faced_coin_text',
+        },
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger",
+          text: "bloodline_move_shelter_fate_dealers",
+        }
+      },
+      defenders_of_tomorrow: {
+        communication_devices: {
+          name: 'bloodline_move_communication_devices',
+          text: 'bloodline_move_communication_devices_text',
+        },
+        death_ray: {
+          name: 'bloodline_move_death_ray',
+          trigger: 'bloodline_move_death_ray_trigger',
+          text: 'bloodline_move_death_ray_text',
+        },
+        electric_eye: {
+          name: 'bloodline_move_electric_eye',
+          trigger: 'bloodline_move_electric_eye_trigger',
+          text: 'bloodline_move_electric_eye_text',
+        },
+        out_of_this_world: {
+          name: 'bloodline_move_out_of_this_world',
+          trigger: 'bloodline_move_out_of_this_world_trigger',
+          text: 'bloodline_move_out_of_this_world_text',
+          li: [
+            'bloodline_move_out_of_this_world_li_1',
+          ],
+        },
+        science: {
+          name: 'bloodline_move_science',
+          trigger: 'bloodline_move_science_trigger',
+          text: 'bloodline_move_science_text',
+          action: 'swords',
+        },
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger",
+          text: "bloodline_move_shelter_defenders_of_tomorrow",
+        }
+      },
+      open_bloodline: {
+        shelter: {
+          name: 'bloodline_move_shelter',
+          trigger: "bloodline_move_shelter_trigger"
+        }
+      }
+    }

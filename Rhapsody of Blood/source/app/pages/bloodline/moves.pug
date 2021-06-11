@@ -1,0 +1,17 @@
+include ../../components/moves/moves
+
+mixin bloodline_shared_moves
+  div.page-container
+    input(
+      type='radio'
+      name='attr_bloodline_page'
+      class='moves hide-element'
+      value='moves')
+    div.moves.showhide
+      div.moves-container-alt
+        +shared_move('arcane_power')
+        +shared_move('lend_aid')
+        +shared_move('rest_and_relaxation')
+        +shared_move('resist_doom')
+        +shared_move('forward_base')
+        +shared_move('reinforcements')

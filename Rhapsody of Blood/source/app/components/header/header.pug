@@ -1,0 +1,28 @@
+
+mixin nav_bar(mode)
+  div(class=`nav-bar-${mode}`)
+    div.nav-row
+      div.nav-child
+        div.nav-title
+          div.reverse-skew
+            h2(data-i18n=mode)=locals[mode]
+      - var pages = [ { text: 'playbook', checked: true }, { text: 'moves' } ]
+      each page in pages
+        div.nav-child
+          label.page-label
+            if page.checked
+              input(
+                type='radio'
+                name=`attr_${mode}_page_button`
+                class='hide-element page-button'
+                value=page.text
+                checked)
+            else
+              input(
+                type='radio'
+                name=`attr_${mode}_page_button`
+                class='hide-element page-button'
+                value=page.text)
+            div(
+              class=`page-button-${mode}`
+              data-i18n=`${page.text}`)=locals[`${page.text}`]

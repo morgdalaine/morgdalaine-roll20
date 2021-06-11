@@ -1,0 +1,34 @@
+include ../../data/bloodline_moves
+
+mixin shared_move_title(move)
+  if bloodline_shared_rolls[move]
+    h3
+      button.roll-button(
+        type='roll'
+        name=`roll_${move}`
+        value=bloodline_shared_rolls[move])
+        +simple_span(`bloodline_move_${move}`)
+  else
+    h3.roll-button(data-i18n=`bloodline_move_${move}`)=locals[`bloodline_move_${move}`]
+
+mixin shared_move(move)
+  - var move_object = bloodline_shared_moves[move]
+  div.shared-move
+    +shared_move_title(move)
+    p
+      +move_trigger(move_object.trigger)
+      if move_object.action
+        +roll_action(move_object.action)
+      if move_object.text
+        +simple_span(move_object.text)
+    if move_object.results
+      p
+        +simple_span(move_object.results)
+    if move_object.li
+      ul
+        each l in move_object.li
+          +simple_li(l)
+    if move_object.final
+      p
+        +simple_span(move_object.final)
+
