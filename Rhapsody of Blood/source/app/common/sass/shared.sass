@@ -17,6 +17,8 @@
     color: $fate-dealers
   &.defenders-of-tomorrow-color
     color: $defenders-of-tomorrow
+  &.open-bloodline-color
+    color: $open-bloodline
 
 @mixin playbook-background-color()
   &.legendary-heroes-color
@@ -35,6 +37,8 @@
     background-color: $fate-dealers
   &.defenders-of-tomorrow-color
     background-color: $defenders-of-tomorrow
+  &.open-bloodline-color
+    background-color: $open-bloodline
 
 @mixin fit-content
   width: -moz-fit-content
@@ -98,6 +102,13 @@
   -moz-transform: skew($deg, $skew)    // Firefox
   -ms-transform: skew($deg, $skew)     // IE
   -o-transform: skew($deg, $skew)      // Opera
+
+@mixin open-textarea($height: 7em)
+  textarea
+    margin-top: 1em
+    height: $height
+    color: $white
+    background-color: transparent
 
 .align-left
   text-align: left !important

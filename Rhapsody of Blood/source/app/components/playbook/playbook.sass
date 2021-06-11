@@ -71,6 +71,7 @@ details > summary
 
   .bloodline-select
     padding: 0.5em
+    padding-top: 1em
     margin-top: -1em
     background-color: $dark-gray
 
@@ -115,12 +116,14 @@ details > summary
   grid-template-columns: 50% 50%
   background-color: $dark-gray
   @include playbook-background-color
+  @include fill-available
 
   .creation-right
     display: flex
     flex-direction: column
     color: $light-gray
     padding: 1em
+    @include open-textarea
 
   h2, h3
     color: $white
@@ -135,6 +138,8 @@ details > summary
 
   h2, h3
     color: $white
+
+  @include open-textarea(18em)
 
   .help
     color: $white
@@ -247,6 +252,7 @@ details > summary
   grid-template-columns: repeat(3, 1fr)
   grid-gap: 1em
   padding: 1em
+  @include fill-available
 
   .context-column
     @include playbook-background-color
@@ -263,6 +269,8 @@ details > summary
 
   .context-reverse
     @include skew(0deg, -2deg)
+
+    @include open-textarea
 
     ul
       color: $white

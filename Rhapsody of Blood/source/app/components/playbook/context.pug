@@ -19,7 +19,10 @@ mixin context_list(bloodline, name, context)
   div(class=`context-column ${bloodlines_class_list[bloodline]}-color`)
     h3(data-i18n=name)=locals[name]
     div.context-reverse
-      ul
-        each l in context
-          +simple_li(l)
-
+      if bloodline != 'open_bloodline'
+        ul
+          each l in context
+            +simple_li(l)
+      else
+        textarea(
+          name=`attr_open_${name}`)

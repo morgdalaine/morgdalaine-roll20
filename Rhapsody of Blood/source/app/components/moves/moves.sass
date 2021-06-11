@@ -28,12 +28,11 @@
         text-transform: uppercase
         letter-spacing: 2px
 
-.bloodline-moves-container
+.bloodline-moves-container,
+.custom-moves-container
   margin-bottom: 1em
   padding: 1em
 
-
-.bloodline-moves-container
   h2, h3, h4
     margin-bottom: 1em
 
@@ -41,6 +40,7 @@
   display: inline-grid
   grid-template-columns: repeat(2, 1fr)
   grid-gap: 2em
+  @include fill-available
 
 .playbook-move
   background-color: $dark-gray
@@ -68,7 +68,16 @@
     padding: 0.5em 1em
     margin-top: -1em
     color: $white
+    @include fill-available
     @include rotate(2deg)
+
+.playbook-move-title input[type=text]
+  color: $white
+  background-color: transparent
+  text-transform: uppercase
+
+.playbook-reverse-rotate
+  @include open-textarea
 
 .move-select
   @include rotate(2deg)
@@ -95,4 +104,11 @@
     padding: 0.25em 1em
     margin-right: 1em
 
-
+.custom-move-container
+  .repcontrol
+    margin-top: 1em
+  .repcontainer
+    width: 100%
+    display: inline-grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 2em

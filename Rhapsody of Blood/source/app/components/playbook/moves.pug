@@ -14,28 +14,33 @@ mixin playbook_move(bloodline, move)
   div(class=`playbook-move ${bloodlines_class_list[bloodline]}-color`)
     +playbook_move_title(move.name)
     div.playbook-reverse-rotate
-      p
-        +move_trigger(move.trigger)
-        if move.text_before_action
-          if move.text
-            +simple_span(move.text)
-          if move.action
-            +roll_action(move.action)
-        else
-          if move.action
-            +roll_action(move.action)
-          if move.text
-            +simple_span(move.text)
-      if move.results
+      if move.name = 'bloodline_move_shelter'
         p
-          +simple_span(move.results)
-      if move.li
-        ul
-          each l in move.li
-            +simple_li(l)
-      if move.final
+          +move_trigger(move.trigger)
+        textarea(name='attr_move_open_shelter')
+      else
         p
-          +simple_span(move.final)
+          +move_trigger(move.trigger)
+          if move.text_before_action
+            if move.text
+              +simple_span(move.text)
+            if move.action
+              +roll_action(move.action)
+          else
+            if move.action
+              +roll_action(move.action)
+            if move.text
+              +simple_span(move.text)
+        if move.results
+          p
+            +simple_span(move.results)
+        if move.li
+          ul
+            each l in move.li
+              +simple_li(l)
+        if move.final
+          p
+            +simple_span(move.final)
 
 mixin bloodline_moves
   div.bloodline-moves-container

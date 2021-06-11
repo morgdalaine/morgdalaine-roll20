@@ -8,7 +8,12 @@ mixin bloodline_pact
           input(type='checkbox' name='attr_bloodline_select' value=bloodline.name hidden)
           h3(class=bloodlines_class_list[bloodline.name])
             +simple_span('pact')
-            +simple_span(bloodline.pact)
+            if bloodline.name != 'open_bloodline'
+              +simple_span(bloodline.pact)
+            else
+              input(
+                type='text'
+                name='attr_open_pact')
       input(type='checkbox' name='attr_bloodline_select' value='bnull' hidden)
       each bloodline in bloodline_creation_list
         input(type='checkbox' name='attr_bloodline_select' value=bloodline.name hidden)

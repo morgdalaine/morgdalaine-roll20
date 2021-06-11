@@ -439,12 +439,16 @@
   letter-spacing: 2px;
 }
 
-.charsheet .bloodline-moves-container {
+.charsheet .bloodline-moves-container,
+.charsheet .custom-moves-container {
   margin-bottom: 1em;
   padding: 1em;
 }
 
-.charsheet .bloodline-moves-container h2, .charsheet .bloodline-moves-container h3, .charsheet .bloodline-moves-container h4 {
+.charsheet .bloodline-moves-container h2, .charsheet .bloodline-moves-container h3, .charsheet .bloodline-moves-container h4,
+.charsheet .custom-moves-container h2,
+.charsheet .custom-moves-container h3,
+.charsheet .custom-moves-container h4 {
   margin-bottom: 1em;
 }
 
@@ -452,6 +456,9 @@
   display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2em;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
 }
 
 .charsheet .playbook-move {
@@ -497,6 +504,10 @@
   background-color: #575756;
 }
 
+.charsheet .playbook-move.open-bloodline-color {
+  background-color: #ac5792;
+}
+
 .charsheet .playbook-move .playbook-move-title {
   display: flex;
   width: 100%;
@@ -523,11 +534,27 @@
   padding: 0.5em 1em;
   margin-top: -1em;
   color: #ffffff;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
   transform: rotate(2deg);
   -webkit-transform: rotate(2deg);
   -moz-transform: rotate(2deg);
   -ms-transform: rotate(2deg);
   -o-transform: rotate(2deg);
+}
+
+.charsheet .playbook-move-title input[type=text] {
+  color: #ffffff;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.charsheet .playbook-reverse-rotate textarea {
+  margin-top: 1em;
+  height: 7em;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 .charsheet .move-select {
@@ -564,6 +591,17 @@
   width: 10px;
   padding: 0.25em 1em;
   margin-right: 1em;
+}
+
+.charsheet .custom-move-container .repcontrol {
+  margin-top: 1em;
+}
+
+.charsheet .custom-move-container .repcontainer {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
 }
 
 .charsheet .legendary-heroes, .charsheet .half-damned, .charsheet .holy-church, .charsheet .hidden-hand,
@@ -635,6 +673,7 @@
 
 .charsheet .bloodline-info .bloodline-select, .charsheet .explorer-info .bloodline-select {
   padding: 0.5em;
+  padding-top: 1em;
   margin-top: -1em;
   background-color: #575756;
 }
@@ -692,6 +731,9 @@
   display: inline-grid;
   grid-template-columns: 50% 50%;
   background-color: #575756;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
 }
 
 .charsheet .creation-container.legendary-heroes-color {
@@ -726,11 +768,22 @@
   background-color: #575756;
 }
 
+.charsheet .creation-container.open-bloodline-color {
+  background-color: #ac5792;
+}
+
 .charsheet .creation-container .creation-right {
   display: flex;
   flex-direction: column;
   color: #fafafa;
   padding: 1em;
+}
+
+.charsheet .creation-container .creation-right textarea {
+  margin-top: 1em;
+  height: 7em;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 .charsheet .creation-container h2, .charsheet .creation-container h3 {
@@ -752,6 +805,13 @@
 
 .charsheet .starting-stats h2, .charsheet .starting-stats h3 {
   color: #ffffff;
+}
+
+.charsheet .starting-stats textarea {
+  margin-top: 1em;
+  height: 18em;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 .charsheet .starting-stats .help {
@@ -890,6 +950,10 @@
   background-color: #575756;
 }
 
+.charsheet .pact-with-container-title.open-bloodline-color {
+  background-color: #ac5792;
+}
+
 .charsheet .pact-with-container-title h2, .charsheet .pact-with-container-title h3, .charsheet .pact-with-container-title h4 {
   color: #ffffff;
 }
@@ -926,6 +990,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
   padding: 1em;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
 }
 
 .charsheet .context-container .context-column {
@@ -968,6 +1035,10 @@
   background-color: #575756;
 }
 
+.charsheet .context-container .context-column.open-bloodline-color {
+  background-color: #ac5792;
+}
+
 .charsheet .context-container .context-column h2, .charsheet .context-container .context-column h3, .charsheet .context-container .context-column h4 {
   background-color: #333;
   padding: 0.5em 0;
@@ -987,6 +1058,13 @@
   -moz-transform: skew(0deg, -2deg);
   -ms-transform: skew(0deg, -2deg);
   -o-transform: skew(0deg, -2deg);
+}
+
+.charsheet .context-container .context-reverse textarea {
+  margin-top: 1em;
+  height: 7em;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 .charsheet .context-container .context-reverse ul {

@@ -398,6 +398,25 @@
                   </div>
                 </div>
               </div>
+              <div class="open-bloodline">
+                <div class="creation-container open-bloodline-color">
+                  <div class="starting-stats">
+                    <h3 data-i18n="starting_stats">Starting Stats</h3>
+                    <textarea name="attr_open_start_stats"></textarea>
+                  </div>
+                  <div class="creation-right">
+                    <div class="starting-traditions">
+                      <h3><span data-i18n="traditions">Traditions</span>
+                      </h3>
+                      <textarea name="attr_open_tradition"></textarea>
+                    </div>
+                    <div class="starting-history">
+                      <h3 data-i18n="history">History</h3>
+                      <textarea name="attr_open_history"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </details>
           </div>
           <div class="bloodline-stats">
@@ -464,6 +483,10 @@
                 </h3>
                 <input type="checkbox" name="attr_bloodline_select" value="defenders_of_tomorrow" hidden="hidden"/>
                 <h3 class="defenders-of-tomorrow"><span data-i18n="pact">Pact: </span><span data-i18n="defenders_of_tomorrow_pact_name">The Way of Chrome</span>
+                </h3>
+                <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+                <h3 class="open-bloodline"><span data-i18n="pact">Pact: </span>
+                  <input type="text" name="attr_open_pact"/>
                 </h3>
               </summary>
               <input type="checkbox" name="attr_bloodline_select" value="bnull" hidden="hidden"/>
@@ -539,6 +562,15 @@
                   </div>
                 </div>
               </div>
+              <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+              <div class="open-bloodline">
+                <div class="pact-container">
+                  <div class="prizes"><span></span>
+                  </div>
+                  <div class="at-camp"><span></span>
+                  </div>
+                </div>
+              </div>
               <div class="pact-with-container-title">
                 <div class="with-bloodline-title">
                   <h4 data-i18n="bloodline">Bloodline</h4>
@@ -581,15 +613,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_audacious_trigger">When your explorer confronts the Regent</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="swords">Swords</span><span>&amp;nbsp;</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_audacious_trigger">When your explorer confronts the Regent</span>
                       </p>
-                      <p><span data-i18n="pick_one_pick_two">On a 7-9 choose 1, on a 10+ choose 2:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_audacious_li_1">They’ll talk for a time before attacking or leaving.</li>
-                        <li data-i18n="bloodline_move_audacious_li_2">They let slip a weakness of their plans.</li>
-                        <li data-i18n="bloodline_move_audacious_li_3">They focus on your explorer and ignore the others.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move legendary-heroes-color">
@@ -602,17 +628,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_defeat_means_friendship_trigger">When your explorer would inflict the killing blow on an Acolyte,</span><span data-i18n="bloodline_move_defeat_means_friendship_text"> they may stay their hand. If you do,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="chalices">Chalices</span><span>&amp;nbsp;</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_defeat_means_friendship_trigger">When your explorer would inflict the killing blow on an Acolyte,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_defeat_means_friendship_on_hit">On a 7-9, before they retreat they get enough control to tell you one of:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_defeat_means_friendship_li_1">How the Regent’s ritual can be set back.</li>
-                        <li data-i18n="bloodline_move_defeat_means_friendship_li_2">How the Acolyte can be saved.</li>
-                        <li data-i18n="bloodline_move_defeat_means_friendship_li_3">A secret weakness of another Acolyte.</li>
-                      </ul>
-                      <p><span data-i18n="bloodline_move_defeat_means_friendship_final">On a 10+ they gain enough control to change sides and work alongside you.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move legendary-heroes-color">
@@ -625,8 +643,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_our_town_trigger">When you ask for aid in a community that knows your legend</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="chalices">Chalices</span><span>&amp;nbsp;</span><span data-i18n="bloodline_move_our_town_text">on &lt;strong&gt;Reinforcements&lt;/strong&gt; instead of &lt;strong&gt;+Coins&lt;/strong&gt;</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_our_town_trigger">When you ask for aid in a community that knows your legend</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move legendary-heroes-color">
@@ -639,15 +658,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_secret_technique_text">There’s a fighting style passed down your bloodline through training, genetics, or mystical empowerment.</span>
+                      <p><span class="move-trigger"></span>
                       </p>
-                      <p><span data-i18n="pick_one">Pick one:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_secret_technique_li_1">&lt;strong&gt;Cheating Death:&lt;/strong&gt; The first time your explorer triggers their Death Move, they take a mortal wound instead of dying.</li>
-                        <li data-i18n="bloodline_move_secret_technique_li_2">&lt;strong&gt;Consecrated Blood:&lt;/strong&gt; Any monster that tastes your blood feels agonising pain. Your explorer can take 1 Harm to give one Strike the Holy perk.</li>
-                        <li data-i18n="bloodline_move_secret_technique_li_3">&lt;strong&gt;Accelerate Perceptions:&lt;/strong&gt; Can take 1 Harm to move incredibly fast for a few seconds, at the cost of being exhausted and unable to move for a few seconds after.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move legendary-heroes-color">
@@ -660,8 +673,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_the_will_to_fight_text">Your bloodline has a tenacity that lets them cheat death so long as they have something to fight for. All of your explorers start with +1 Armour. Whenever they take a blow for another explorer, they can refresh the Armour box.</span>
+                      <p><span class="move-trigger"></span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move legendary-heroes-color">
@@ -674,8 +688,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span><span data-i18n="bloodline_move_shelter_legendary_heroes"> they can inspire the others with tales of selfless heroism. The next time their allies would mark contamination while trying to aid or protect another explorer, they ignore it.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
               </div>
@@ -693,8 +708,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_dark_legacy_text">All your explorers bear the curse of the castle, starts with a Blood Move; when using it, you may choose to take 1 harm instead of marking contamination.</span>
+                      <p><span class="move-trigger"></span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move half-damned-color">
@@ -707,10 +723,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shadows_of_humanity_trigger">If you intimidate people into helping you or appeal to their baser urges,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="swords">Swords</span><span>&amp;nbsp;</span><span data-i18n="bloodline_move_shadows_of_humanity_text"> on &lt;strong&gt;Reinforcements&lt;/strong&gt; instead of &lt;strong&gt;+Coins&lt;/strong&gt;.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shadows_of_humanity_trigger">If you intimidate people into helping you or appeal to their baser urges,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_shadows_of_humanity_final">Human society may recoil from you, but that doesn't mean you're powerless.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move half-damned-color">
@@ -723,13 +738,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_more_than_human_text">When you make an explorer, choose one:</span>
+                      <p><span class="move-trigger"></span>
                       </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_more_than_human_li_1">They have natural weapons: claws, spines, etc. Give them a perk and a flaw.</li>
-                        <li data-i18n="bloodline_move_more_than_human_li_2">They have resistance to harm: fur, chitin, thick skin etc. Get 1 Armour.</li>
-                        <li data-i18n="bloodline_move_more_than_human_li_3">They have unnatural agility. They can climb walls, run on water or leap dozens of metres, and get advantage on Dodge.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move half-damned-color">
@@ -742,15 +753,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_one_of_the_horde_trigger">When you send your family members to blend in with the castle's denizens,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="wands">Wands</span><span>&amp;nbsp;</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_one_of_the_horde_trigger">When you send your family members to blend in with the castle's denizens,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_one_of_the_horde_on_hit">On a 7-9 hold one, on a 10+ hold three. Spend the hold 1-for-1 to get them to:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_one_of_the_horde_li_1">Strike from within a group of castle denizens, sending them into disarray.</li>
-                        <li data-i18n="bloodline_move_one_of_the_horde_li_2">Help you navigate, giving you 1-&lt;strong&gt;Travel the Labyrinth&lt;/strong&gt; hold.</li>
-                        <li data-i18n="bloodline_move_one_of_the_horde_li_3">Smuggle you a useful item.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move half-damned-color">
@@ -763,10 +768,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_voice_of_the_regent_text">Add the following option to &lt;strong&gt;Resist Doom&lt;/strong&gt;:</span>
+                      <p><span class="move-trigger"></span>
                       </p>
-                      <p><span data-i18n="bloodline_move_voice_of_the_regent_final">&lt;strong&gt;When they use this&lt;/strong&gt;, the denizens become their loyal servants. When they fight alongside you, your attacks gain the cleave tag. When you send them to act independently of you, the GM will decide how well they do. When you take Harm, you can choose to have the denizens be destroyed instead.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move half-damned-color">
@@ -779,8 +783,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span><span data-i18n="bloodline_move_shelter_half_damned"> they can use the power of the blood to push back death. Anyone in the party can mark contamination to heal 1d6 Harm.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
               </div>
@@ -798,12 +803,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_holy_vanguard_trigger">When an Acolyte ventures out to attack the mortal world,</span><span data-i18n="bloodline_move_holy_vanguard_text"> your explorer can spend 1-&lt;strong&gt;Travel the Labyrinth&lt;/strong&gt; hold to immediately intervene and confront them.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_holy_vanguard_trigger">When an Acolyte ventures out to attack the mortal world,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_holy_vanguard_on_hit"></span>
-                      </p>
-                      <p><span data-i18n="bloodline_move_holy_vanguard_final">You are vigilant protectors of the mundane.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move holy-church-color">
@@ -816,17 +818,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shield_of_faith_trigger">When your explorer attempts to manifest this shield,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="sulphur">Sulphur</span><span>&amp;nbsp;</span><span data-i18n="bloodline_move_shield_of_faith_text">On a hit, radiant light prevents creatures of the castle from coming within a few metres of you.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shield_of_faith_trigger">When your explorer attempts to manifest this shield,</span>
                       </p>
-                      <p><span data-i18n="pick_two_pick_one">On a 7-9 pick two, on a 10+ pick one:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_shield_of_faith_li_1">Moving breaks the shield.</li>
-                        <li data-i18n="bloodline_move_shield_of_faith_li_2">Attacking breaks the shield.</li>
-                        <li data-i18n="bloodline_move_shield_of_faith_li_3">No-one else can shelter under the shield.</li>
-                      </ul>
-                      <p><span data-i18n="bloodline_move_shield_of_faith_final">&lt;strong&gt;So long as your camps maintain a constant vigil of prayer&lt;/strong&gt;, they will not come under attack.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move holy-church-color">
@@ -839,13 +833,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_stoke_the_flame_trigger">When an explorer on the verge of death is brought back to one of your camps,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="chalices">Chalices</span><span>&amp;nbsp;</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_stoke_the_flame_trigger">When an explorer on the verge of death is brought back to one of your camps,</span>
                       </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_stoke_the_flame_li_1">On a 7-9 the deadly wound is stepped down to a major wound</li>
-                        <li data-i18n="bloodline_move_stoke_the_flame_li_2">On a 10+ it's gone entirely</li>
-                        <li data-i18n="bloodline_move_stoke_the_flame_li_3">On a 6- their soul gutters out entirely, replaced by something dark: they'll die and become an undead Acolyte, unless 1 Relic is sacrificed to stop it</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move holy-church-color">
@@ -858,8 +848,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_martyrdom_trigger">When you Resist Doom,</span><span data-i18n="bloodline_move_martyrdom_text"> your character can sacrifice some of their lifespan to channel greater power. You may substitute a minor wound for 1 relic, a major wound for 2 relics, or a deadly wound for 3 relics.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_martyrdom_trigger">When you Resist Doom,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move holy-church-color">
@@ -872,8 +863,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_the_flesh_is_weak_text">You can concentrate the castle's corruption in one part of an explorer's body. Actions using the body part have advantage, but the explorer marks an additional point every time they mark contamination. Amputating the node of corruption deals the explorer a major wound, and they lose a point of Blood and a Blood Gift. The removed body part counts as 1 relic.</span>
+                      <p><span class="move-trigger"></span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move holy-church-color">
@@ -886,8 +878,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span><span data-i18n="bloodline_move_shelter_holy_church"> they may lead the group in prayer. They each hold 1: spend it to miraculously avoid a curse, spell or mystical attack.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
               </div>
@@ -905,10 +898,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_avarice_trigger">When you would spend a relic,</span><span data-i18n="bloodline_move_avarice_text"> you may mark contamination to keep it in your bloodline's stocks.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_avarice_trigger">When you would spend a relic,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_avarice_final">The strange by-products of the castle's intrusion into our reality retain their power, if you let them feed from you.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move hidden-hand-color">
@@ -921,17 +913,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_experimental_weaponry_trigger">When your scholars bring their most recent creation to your camp,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="coins">Coins</span><span>&amp;nbsp;</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_experimental_weaponry_trigger">When your scholars bring their most recent creation to your camp,</span>
                       </p>
-                      <p><span data-i18n="pick_one_pick_two">On a 7-9 choose 1, on a 10+ choose 2:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_experimental_weaponry_li_1">You can sacrifice it to Strike without needing an Opening.</li>
-                        <li data-i18n="bloodline_move_experimental_weaponry_li_2">You may spend a relic to give it the holy tag for the rest of the fight.</li>
-                        <li data-i18n="bloodline_move_experimental_weaponry_li_3">It has three perks and a flaw, or two perks and no flaw.</li>
-                      </ul>
-                      <p><span data-i18n="bloodline_move_experimental_weaponry_final">Your family's resources are devoted to the creation of new weapons to be used against darkness. Once a generation, you can gain one of these weapons for your struggle.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move hidden-hand-color">
@@ -944,13 +928,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_bodyguard_text">Your explorer has a skilled companion to back them up in the castle. Pick one when you make your explorer:</span>
+                      <p><span class="move-trigger"></span>
                       </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_bodyguard_li_1">Your companion fights beside you, giving your attacks the &lt;em&gt;cleave&lt;/em&gt; tag.</li>
-                        <li data-i18n="bloodline_move_bodyguard_li_2">Your companion protects you, giving you advantage on &lt;strong&gt;Confront&lt;/strong&gt;.</li>
-                        <li data-i18n="bloodline_move_bodyguard_li_3">Your companion heals you: whenever you Shelter, heal 4 &lt;strong&gt;Harm&lt;/strong&gt;.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move hidden-hand-color">
@@ -963,8 +943,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_opulence_trigger">When you shower luxury on a party of explorers,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="coins">Coins</span><span>&amp;nbsp;</span><span data-i18n="bloodline_move_opulence_text"> to give them &lt;strong&gt;Rest &amp; Relaxation&lt;/strong&gt;.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_opulence_trigger">When you shower luxury on a party of explorers,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move hidden-hand-color">
@@ -977,10 +958,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_a_web_of_influence_trigger">When you roll a 7+ on Reinforcements,</span><span data-i18n="bloodline_move_a_web_of_influence_text"> you may pick one extra option.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_a_web_of_influence_trigger">When you roll a 7+ on Reinforcements,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_a_web_of_influence_final">Your contacts stand ready to support your war against evil.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move hidden-hand-color">
@@ -993,8 +973,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span><span data-i18n="bloodline_move_shelter_hidden_hand"> they may upgrade and reinforce their party's gear. They each hold 1: spend it to get fleeting advantage on &lt;strong&gt;Strike&lt;/strong&gt; or &lt;strong&gt;Confront&lt;/strong&gt;.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
               </div>
@@ -1012,14 +993,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_dimensional_relocation_trigger">When you warp space to move explorers between two safe camps,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="wands">Wands</span><span>&amp;nbsp;</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_dimensional_relocation_trigger">When you warp space to move explorers between two safe camps,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_dimensional_relocation_on_hit">On a hit, they make the journey successfully; on a 7-9, pick one:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_dimensional_relocation_li_1">They leave something important behind.</li>
-                        <li data-i18n="bloodline_move_dimensional_relocation_li_2">They bring something nasty with them.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move magi-color">
@@ -1032,15 +1008,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_arcane_library_trigger">While at your safe camps,</span><span data-i18n="bloodline_move_arcane_library_text"> any explorer can archive a spell (learned via Drink Deep) and receive a Relic in return. At any later point anyone can spend a Relic to learn a spell from the archive.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_arcane_library_trigger">While at your safe camps,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_arcane_library_on_hit">Choose two spells to have in your archive already:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_arcane_library_li_1">See your foes with perfect clarity.</li>
-                        <li data-i18n="bloodline_move_arcane_library_li_2">Charge your weapon with lightning (add perk: stun).</li>
-                        <li data-i18n="bloodline_move_arcane_library_li_3">Float gently down instead of falling.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move magi-color">
@@ -1053,8 +1023,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_empowered_wards_text">When you roll 10+ on &lt;strong&gt;Resist Doom&lt;/strong&gt;, your ritual lingers providing active opposition to the Regent. The next time their clock would tick down, it's stopped from doing so.</span>
+                      <p><span class="move-trigger"></span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move magi-color">
@@ -1067,10 +1038,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_eldritch_insight_trigger">Whenever the Regent's clock ticks down,</span><span data-i18n="bloodline_move_eldritch_insight_text"> gain a Relic.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_eldritch_insight_trigger">Whenever the Regent's clock ticks down,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_eldritch_insight_final">You have learned how to turn the castle's burgeoning power towards your own ends.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move magi-color">
@@ -1083,16 +1053,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_a_miracle_of_science_trigger">When your explorer dissects a defeated Acolyte,</span><span data-i18n="bloodline_move_a_miracle_of_science_text"> gain 1-&lt;strong&gt;Organ&lt;/strong&gt;. With a few minutes of preparation, they may spend 1-&lt;strong&gt;Organ&lt;/strong&gt; to:</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_a_miracle_of_science_trigger">When your explorer dissects a defeated Acolyte,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_a_miracle_of_science_on_hit">With a few minutes of preparation, they may spend 1-&lt;strong&gt;Organ&lt;/strong&gt; to:</span>
-                      </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_a_miracle_of_science_li_1">Craft a healing salve and remove a minor or major wound.</li>
-                        <li data-i18n="bloodline_move_a_miracle_of_science_li_2">Merge it with a weapon and give the weapon a new perk.</li>
-                        <li data-i18n="bloodline_move_a_miracle_of_science_li_3">Graft it on and raise Blood by 1.</li>
-                        <li data-i18n="bloodline_move_a_miracle_of_science_li_4">Inspire those around them, restoring 4 harm to all explorers nearby or rejuvenating any wraiths.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move magi-color">
@@ -1105,8 +1068,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span><span data-i18n="bloodline_move_shelter_magi"> they may lead the group in a ritual of controlled corruption. Each explorer may transfer 1 point of contamination to another explorer, with that explorer's consent.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
               </div>
@@ -1124,10 +1088,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_plant_whisperer_trigger">When you seek Shelter near a tree,</span><span data-i18n="bloodline_move_plant_whisperer_text"> you may treat it as a contact of your choice.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_plant_whisperer_trigger">When you seek Shelter near a tree,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_plant_whisperer_final">You can communicate with trees and other flora.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move guardians-of-nature-color">
@@ -1140,8 +1103,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_medicinal_herbs_trigger">When you have access to natural herbs and poultices,</span><span data-i18n="bloodline_move_medicinal_herbs_text"> choose one more option from &lt;strong&gt;Rest &amp; Relaxation&lt;/strong&gt;, even on a miss.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_medicinal_herbs_trigger">When you have access to natural herbs and poultices,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move guardians-of-nature-color">
@@ -1154,8 +1118,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_natural_vigour_text">Your explorers have an extra Minor Wound box.</span>
+                      <p><span class="move-trigger"></span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move guardians-of-nature-color">
@@ -1168,8 +1133,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_panacea_trigger">When you claim a Forward Base,</span><span data-i18n="bloodline_move_panacea_text"> you may mark contamination to reduce the Regent’s Clock by 1.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_panacea_trigger">When you claim a Forward Base,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move guardians-of-nature-color">
@@ -1182,10 +1148,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_phases_of_the_moon_trigger">At the beginning of a generation,</span><span data-i18n="bloodline_move_phases_of_the_moon_text"> the GM will tell you if there are any Acolytes that speed the world’s blight, what blight they bring, and on what ticks.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_phases_of_the_moon_trigger">At the beginning of a generation,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_phases_of_the_moon_final">You can tell what is wrong with the world by looking at the moon.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move guardians-of-nature-color">
@@ -1198,8 +1163,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span><span data-i18n="bloodline_move_shelter_guardians_of_nature"> they cleanse the area of the castle’s evil. Each explorer may clear their contamination track. Their Blood remains the same.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
               </div>
@@ -1217,8 +1183,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_good_measure_trigger">When you use Rest and Relaxation,</span><span data-i18n="bloodline_move_good_measure_text"> you may spend 1 Relic to pick an additional option from the list.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_good_measure_trigger">When you use Rest and Relaxation,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move fate-dealers-color">
@@ -1231,11 +1198,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_grim_portents_trigger">When you Resist Doom,</span><span data-i18n="bloodline_move_grim_portents_text"> you add the following option to the list:</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_grim_portents_trigger">When you Resist Doom,</span>
                       </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_grim_portents_li_1">You learn what the world’s blight will be. All Acolytes that speed the world’s blight will act on the clock tick after they’re initially supposed to.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move fate-dealers-color">
@@ -1248,8 +1213,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_soothsayers_for_hire_trigger">When you sell your fortune-telling services while calling for Reinforcements,</span><span data-i18n="bloodline_move_soothsayers_for_hire_text"> you always get 1 Relic in addition to any other choice.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_soothsayers_for_hire_trigger">When you sell your fortune-telling services while calling for Reinforcements,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move fate-dealers-color">
@@ -1262,10 +1228,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_switcheroo_trigger">When an explorer passes on their misfortune onto you,</span><span data-i18n="bloodline_move_switcheroo_text"> they mark contamination.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_switcheroo_trigger">When an explorer passes on their misfortune onto you,</span>
                       </p>
-                      <p><span data-i18n="bloodline_move_switcheroo_final">&lt;strong&gt;&lt;em&gt;When your explorer forces their misfortune onto someone else,&lt;/em&gt;&lt;/strong&gt; mark contamination.</span>
-                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move fate-dealers-color">
@@ -1278,8 +1243,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_two_faced_coin_trigger">When your explorer rolls a miss, hold 1.</span><span data-i18n="bloodline_move_two_faced_coin_text"> Spend that hold to gain advantage on a roll.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_two_faced_coin_trigger">When your explorer rolls a miss, hold 1.</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move fate-dealers-color">
@@ -1292,8 +1258,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span><span data-i18n="bloodline_move_shelter_fate_dealers">they may conduct a divination. They gain a glimpse of an Acolyte’s activities in the castle and thus their role.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
               </div>
@@ -1311,8 +1278,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger"></span><span data-i18n="bloodline_move_communication_devices_text">You have effective means of long-distance communication. Your explorer and their allies can communicate with each other through great distances without having to &lt;strong&gt;Summon Aid&lt;/strong&gt;.</span>
+                      <p><span class="move-trigger"></span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move defenders-of-tomorrow-color">
@@ -1325,8 +1293,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_death_ray_trigger">Exactly once, when Darkness Falls,</span><span data-i18n="bloodline_move_death_ray_text"> you may declare that you have a final solution. Negate the effects of Darkness Falling, but it will cost you a fragment of your souls. Your future characters start at Blood 1, as if you had left the castle without claiming the grail and with Blood 4+.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_death_ray_trigger">Exactly once, when Darkness Falls,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move defenders-of-tomorrow-color">
@@ -1339,8 +1308,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_electric_eye_trigger">When you claim a Forward Base,</span><span data-i18n="bloodline_move_electric_eye_text"> you may spend 1 Relic to install hidden cameras that will warn you when the base is about to come under attack.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_electric_eye_trigger">When you claim a Forward Base,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move defenders-of-tomorrow-color">
@@ -1353,11 +1323,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_out_of_this_world_trigger">When you call for Reinforcements,</span><span data-i18n="bloodline_move_out_of_this_world_text"> add the following to the list:</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_out_of_this_world_trigger">When you call for Reinforcements,</span>
                       </p>
-                      <ul>
-                        <li data-i18n="bloodline_move_out_of_this_world_li_1">You hear about otherworldly friends trapped in the castle. Free them, and they will aid you for the rest of this generation.</li>
-                      </ul>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move defenders-of-tomorrow-color">
@@ -1370,8 +1338,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_science_trigger">When you Resist Doom by replacing occult resources and ceremonial paraphernalia with technological baubles and devices,</span><span>&amp;nbsp;</span><span data-i18n="roll">roll</span><span class="plus-action" data-i18n="swords">Swords</span><span>&amp;nbsp;</span><span data-i18n="bloodline_move_science_text"> instead of &lt;strong&gt;+Wands&lt;/strong&gt;.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_science_trigger">When you Resist Doom by replacing occult resources and ceremonial paraphernalia with technological baubles and devices,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
                   <div class="playbook-move defenders-of-tomorrow-color">
@@ -1384,8 +1353,9 @@
                         </div>
                       </div>
                     <div class="playbook-reverse-rotate">
-                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span><span data-i18n="bloodline_move_shelter_defenders_of_tomorrow"> they may send scouts ahead. Gain 1 hold to &lt;strong&gt;Travel the Labyrinth&lt;/strong&gt;.</span>
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
                       </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
                     </div>
                   </div>
               </div>
@@ -1393,10 +1363,46 @@
             <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
             <div class="open-bloodline">
               <div class="bloodline-move-container">
+                  <div class="playbook-move open-bloodline-color">
+                      <div class="playbook-move-title">
+                        <h3 data-i18n="bloodline_move_shelter">Shelter Move</h3>
+                        <div class="move-select">
+                          <label>
+                            <input class="move-selector" type="checkbox" name="attr_playbook_bloodline_move_shelter"/><span class="move-square"></span>
+                          </label>
+                        </div>
+                      </div>
+                    <div class="playbook-reverse-rotate">
+                      <p><span class="move-trigger" data-i18n="bloodline_move_shelter_trigger">When your explorer finds Shelter in the castle,</span>
+                      </p>
+                      <textarea name="attr_move_open_shelter"></textarea>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
-          <div class="custom-moves"></div>
+          <div class="custom-moves-container">
+            <h2 data-i18n="custom_moves">Custom Moves</h2>
+            <div class="custom-move-container">
+              <fieldset class="repeating_custommove">
+                <div class="playbook-move">
+                  <div class="playbook-move-title">
+                    <h3>
+                      <input type="text" name="attr_move_custom_name"/>
+                    </h3>
+                    <div class="move-select">
+                      <label>
+                        <input class="move-selector" type="checkbox" name="attr_move_custom"/><span class="move-square"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="playbook-reverse-rotate">
+                    <textarea name="attr_move_custom_desc"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
           <div class="bloodline-context">
             <details open="open">
               <summary>
@@ -1680,6 +1686,29 @@
                           <li data-i18n="defenders_of_tomorrow_breach_2">A time machine.</li>
                           <li data-i18n="defenders_of_tomorrow_breach_3">An anomaly in the space-time continuum.</li>
                         </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <input type="checkbox" name="attr_bloodline_select" value="open_bloodline" hidden="hidden"/>
+              <div class="open-bloodline">
+                <div class="context-container">
+                    <div class="context-column open-bloodline-color">
+                      <h3 data-i18n="refuge">Refuge</h3>
+                      <div class="context-reverse">
+                        <textarea name="attr_open_refuge"></textarea>
+                      </div>
+                    </div>
+                    <div class="context-column open-bloodline-color">
+                      <h3 data-i18n="drive">Drive</h3>
+                      <div class="context-reverse">
+                        <textarea name="attr_open_drive"></textarea>
+                      </div>
+                    </div>
+                    <div class="context-column open-bloodline-color">
+                      <h3 data-i18n="breach">Breach</h3>
+                      <div class="context-reverse">
+                        <textarea name="attr_open_breach"></textarea>
                       </div>
                     </div>
                 </div>
