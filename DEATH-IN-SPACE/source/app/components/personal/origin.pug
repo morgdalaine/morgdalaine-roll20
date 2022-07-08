@@ -1,15 +1,5 @@
-- var origins = ['void', 'punk', 'solpod', 'chrome', 'carbon', 'velocity_cursed']
-
 mixin origin_block
   div.origin-row
     div.origin-label(data-i18n='origin')=locals['origin']
     div.origin-radios
-      each orig in origins
-        div.origin-check
-          label
-            input(
-              type='radio'
-              name='attr_origin'
-              value=orig)
-            div.origin-square
-            div.origin-name(data-i18n=orig)=locals[orig]
+      +stat_no_label('text', 'origin')

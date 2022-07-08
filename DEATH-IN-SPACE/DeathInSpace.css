@@ -76,6 +76,39 @@
   display: none;
 }
 
+.charsheet span.showhide:checked {
+  background-color: #4c4d4f;
+  color: white;
+  transition: .5s ease;
+}
+
+.charsheet span.showhide {
+  display: inline;
+  border: 1px solid #ccc;
+  margin-right: 11px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.charsheet span.showhide:hover {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background-color: #ccc;
+  color: #4c4d4f;
+  transition: .5s ease;
+}
+
+.charsheet div.showhide {
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .charsheet input::-webkit-outer-spin-button,
 .charsheet input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -133,55 +166,6 @@
 
 .charsheet label {
   margin: 0;
-}
-
-.charsheet span.showhide:checked {
-  background-color: #4c4d4f;
-  color: white;
-  transition: .5s ease;
-}
-
-.charsheet span.showhide {
-  display: inline;
-  border: 1px solid #ccc;
-  margin-right: 11px;
-  border-radius: 4px;
-  padding: 2px 4px;
-  font-weight: bold;
-  font-size: 1em;
-}
-
-.charsheet span.showhide:hover {
-  cursor: pointer;
-  border-radius: 4px;
-  padding: 2px 4px;
-  background-color: #ccc;
-  color: #4c4d4f;
-  transition: .5s ease;
-}
-
-.charsheet div.showhide {
-  visibility: hidden;
-  transition: opacity 1s ease-out;
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.charsheet .hide-element {
-  display: none;
-}
-
-.charsheet input[type='checkbox'].hide-element {
-  display: none;
-}
-
-.charsheet input[type='radio'].hide-element {
-  display: none;
-}
-
-.charsheet div.hide-element {
-  display: none;
 }
 
 .charsheet button.btn.repcontrol_edit,
@@ -420,6 +404,22 @@
   border-bottom: 2px dotted #333 !important;
 }
 
+.charsheet .nav-row {
+  display: flex;
+}
+
+.charsheet .nav-bar-character {
+  background-color: #eb1c26;
+  border-top: 3px solid #eb1c26;
+  border-bottom: 3px solid #eb1c26;
+}
+
+.charsheet .nav-bar-hub {
+  background-color: #32a6d2;
+  border-top: 3px solid #32a6d2;
+  border-bottom: 3px solid #32a6d2;
+}
+
 .charsheet .nav-child {
   width: 100%;
   text-align-last: center;
@@ -468,22 +468,6 @@
 
 .charsheet .summary {
   margin-top: 1em;
-}
-
-.charsheet .nav-bar-character {
-  background-color: #eb1c26;
-  border-top: 3px solid #eb1c26;
-  border-bottom: 3px solid #eb1c26;
-}
-
-.charsheet .nav-bar-hub {
-  background-color: #32a6d2;
-  border-top: 3px solid #32a6d2;
-  border-bottom: 3px solid #32a6d2;
-}
-
-.charsheet .nav-row {
-  display: flex;
 }
 
 .charsheet label.page-label {

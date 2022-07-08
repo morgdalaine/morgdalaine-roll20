@@ -9,14 +9,14 @@
       <h4 class="character-h4" data-i18n="page_name_character">CHARACTER</h4>
       <div class="mode">
         <input class="hide-element" type="radio" name="attr_mode_button" value="0"/>
-        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/main/DEATH-IN-SPACE/assets/character_page.png"></div>
+        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/death-in-space/Death%20in%20Space/assets/character_page.png"/></div>
       </div>
     </label>
     <label class="mode">
       <h4 class="hub-h4" data-i18n="page_name_hub">HUB</h4>
       <div class="mode">
         <input class="hide-element" type="radio" name="attr_mode_button" value="1"/>
-        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/main/DEATH-IN-SPACE/assets/hub_page.png"/></div>
+        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/death-in-space/Death%20in%20Space/assets/hub_page.png"/></div>
       </div>
     </label>
   </div>
@@ -76,48 +76,7 @@
           <div class="origin-row">
             <div class="origin-label" data-i18n="origin">Origin</div>
             <div class="origin-radios">
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="void"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="void">void</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="punk"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="punk">punk</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="solpod"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="solpod">solpod</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="chrome"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="chrome">chrome</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="carbon"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="carbon">carbon</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="velocity_cursed"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="velocity_cursed">velocity cursed</div>
-                </label>
-              </div>
+                <input class="stat-input" type="text" name="attr_origin"/>
             </div>
           </div>
           <div class="name-row">
@@ -928,12 +887,6 @@ on('change:mode_button', function(eventinfo) {
 on('change:stat_mode_button', function(eventinfo) {
   setAttrs({
     stat_mode: eventinfo.newValue,
-  });
-});
-
-on('change:close_changelog', function() {
-  setAttrs({
-    'changelog_2.2.1': 'on',
   });
 });
   
