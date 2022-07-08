@@ -404,6 +404,13 @@
   border-bottom: 2px dotted #333 !important;
 }
 
+.charsheet textarea.stat-input {
+  background-attachment: local;
+  background-image: linear-gradient(to right, #fafafa 5px, transparent 5px), linear-gradient(to left, #fafafa 5px, transparent 5px), repeating-linear-gradient(#fafafa, #fafafa 26px, #ccc 26px, #ccc 27px, #fafafa 27px);
+  line-height: 27px;
+  padding: 8px 10px;
+}
+
 .charsheet .nav-row {
   display: flex;
 }
@@ -764,7 +771,7 @@
 .charsheet .situation {
   display: inline-grid;
   grid-template-columns: 65% 35%;
-  grid-template-rows: 6em 14em repeat(2, auto);
+  grid-template-rows: 6em 12em 14em;
   width: 100%;
 }
 

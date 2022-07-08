@@ -2,3 +2,16 @@
 .dotted-line {
   border-bottom: 2px dotted $black !important;
 }
+
+$textarea-bg: #fafafa;
+$textarea-line: #ccc;
+
+textarea.stat-input {
+  background-attachment: local;
+  background-image:
+      linear-gradient(to right, $textarea-bg 5px, transparent 5px),
+      linear-gradient(to left, $textarea-bg 5px, transparent 5px),
+      repeating-linear-gradient($textarea-bg, $textarea-bg 26px, $textarea-line 26px, $textarea-line 27px, $textarea-bg 27px);
+  line-height: 27px;
+  padding: 8px 10px;  
+}

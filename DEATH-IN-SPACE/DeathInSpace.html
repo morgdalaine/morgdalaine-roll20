@@ -32,7 +32,7 @@
         <div class="header-col2">
             <div data-i18n="player_information">Section 0. Player Information</div>
               <label data-i18n="player_name">Player Name</label>
-              <input class="dotted-line" type="text" name="attr_player_name"/>
+              <input class="dotted-line" type="text" name="attr_player_name" spellcheck="false"/>
         </div>
       </header>
       <div class="nav-bar-character">
@@ -76,46 +76,46 @@
           <div class="origin-row">
             <div class="origin-label" data-i18n="origin">Origin</div>
             <div class="origin-radios">
-                <input class="stat-input" type="text" name="attr_origin"/>
+                <input class="stat-input" type="text" name="attr_origin" spellcheck="false"/>
             </div>
           </div>
           <div class="name-row">
             <div class="stat-block name-block">
                 <label data-i18n="character_name">Name</label>
-                <input class="stat-input" type="text" name="attr_character_name"/>
+                <input class="stat-input" type="text" name="attr_character_name" spellcheck="false"/>
             </div>
             <div class="stat-block name-block">
                 <label data-i18n="nickname">Nickname</label>
-                <input class="stat-input" type="text" name="attr_nickname"/>
+                <input class="stat-input" type="text" name="attr_nickname" spellcheck="false"/>
             </div>
           </div>
           <div class="stat-block origin-benefit-block">
               <label data-i18n="origin_benefit">Origin Benefit</label>
-              <textarea class="stat-input" rows="10" name="attr_origin_benefit"></textarea>
+              <textarea class="stat-input" rows="8" name="attr_origin_benefit" spellcheck="false"></textarea>
           </div>
           <div class="stat-block xp-block">
               <label data-i18n="xp">XP</label>
-              <input class="stat-input" type="number" name="attr_xp"/>
+              <input class="stat-input" type="number" name="attr_xp" spellcheck="false"/>
           </div>
           <div class="stat-block background-block">
               <label data-i18n="background">Background</label>
-              <input class="stat-input" type="text" name="attr_background"/>
+              <input class="stat-input" type="text" name="attr_background" spellcheck="false"/>
           </div>
           <div class="stat-block past-allegiance-block">
               <label data-i18n="past_allegiance">Past Allegiance</label>
-              <input class="stat-input" type="text" name="attr_past_allegiance"/>
+              <input class="stat-input" type="text" name="attr_past_allegiance" spellcheck="false"/>
           </div>
           <div class="stat-block trait-block">
               <label data-i18n="trait">Trait</label>
-              <input class="stat-input" type="text" name="attr_trait"/>
+              <input class="stat-input" type="text" name="attr_trait" spellcheck="false"/>
           </div>
           <div class="stat-block drive-block">
               <label data-i18n="drive">Drive</label>
-              <input class="stat-input" type="text" name="attr_drive"/>
+              <input class="stat-input" type="text" name="attr_drive" spellcheck="false"/>
           </div>
           <div class="stat-block looks-block">
               <label data-i18n="looks">Looks</label>
-              <textarea class="stat-input" rows="4" name="attr_looks"></textarea>
+              <textarea class="stat-input" rows="3" name="attr_looks" spellcheck="false"></textarea>
           </div>
           <div class="stat-block ability-block">
             <label data-i18n="ability">Ability</label>
@@ -152,7 +152,7 @@
                 <div class="subtitle" data-i18n="defense_subtitle">12+DEX UNARMORED</div>
             </div>
             <div class="stat-block defense-value">
-                <input class="stat-input" type="number" name="attr_defense"/>
+                <input class="stat-input" type="number" name="attr_defense" spellcheck="false"/>
             </div>
           </div>
           <div class="hit-points-row">
@@ -163,17 +163,17 @@
             </div>
             <div class="stat-block hit-points-current-col">
                 <label data-i18n="hp_current">Current</label>
-                <input class="stat-input" type="number" name="attr_hp"/>
+                <input class="stat-input" type="number" name="attr_hp" spellcheck="false"/>
             </div>
             <div class="stat-block hit-points-max-col">
                 <label data-i18n="hp_max">Max</label>
-                <input class="stat-input" type="number" name="attr_hp_max"/>
+                <input class="stat-input" type="number" name="attr_hp_max" spellcheck="false"/>
             </div>
           </div>
           <div class="stat-block portrait-block">
               <label data-i18n="portrait">Portrait</label>
               <div class="subtitle" data-i18n="portrait_subtitle">To show alongside chat rolls</div>
-              <input class="stat-input" type="text" name="attr_portrait"/>
+              <input class="stat-input" type="text" name="attr_portrait" spellcheck="false"/>
             <div class="portrait">
               <div class="portrait-image"><img name="attr_character_avatar" width="100" height="100"/></div>
             </div>
@@ -218,21 +218,17 @@
               </div>
             </div>
           </div>
-          <div class="cosmic-mutations-block">
+          <div class="cosmic-mutations-block">   
             <div class="stat-block mutations-title">
               <label data-i18n="cosmic_mutations">Cosmic Mutations</label>
+                <textarea class="stat-input" rows="4" name="attr_cosmic_mutation" spellcheck="false">   </textarea>
             </div>
-            <fieldset class="repeating_mutations">
-                <input class="repeating-input" type="text" name="attr_cosmic_mutation"/>
-            </fieldset>
           </div>
           <div class="void-corruption-block">
             <div class="stat-block corruption-title">
               <label data-i18n="void_corruption">Void Corruption</label>
+                <textarea class="stat-input" rows="5" name="attr_void_corruption" spellcheck="false">   </textarea>
             </div>
-            <fieldset class="repeating_corruptions">
-                <input class="repeating-input" type="text" name="attr_void_corruption"/>
-            </fieldset>
           </div>
           <div class="life-support-block">
             <div class="stat-block life-support-title">
@@ -303,7 +299,7 @@
               <label data-i18n="belongings">Belongings</label>
             </div>
             <fieldset class="repeating_belongings">
-                <input class="repeating-input" type="text" name="attr_belongings"/>
+                <input class="repeating-input" type="text" name="attr_belongings" spellcheck="false"/>
             </fieldset>
             <div class="belongings-note">
               <div class="exclamation">!</div>
@@ -312,7 +308,7 @@
           </div>
           <div class="stat-block small-items-block">
               <label data-i18n="small_items">Small Items</label>
-              <textarea class="stat-input" rows="2" name="attr_small_items"></textarea>
+              <textarea class="stat-input" rows="2" name="attr_small_items" spellcheck="false"></textarea>
           </div>
       </div>
     </div>
@@ -322,65 +318,65 @@
           <div class="equipment">
             <div class="stat-block weapon-name">
                 <label data-i18n="weapon_1">Weapon 1</label>
-                <input class="stat-input" type="text" name="attr_weapon_1"/>
+                <input class="stat-input" type="text" name="attr_weapon_1" spellcheck="false"/>
             </div>
             <div class="stat-block weapon-damage">
                 <label data-i18n="damage">Damage</label>
-                <input class="stat-input" type="text" name="attr_damage"/>
+                <input class="stat-input" type="text" name="attr_damage" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-units">
                 <label data-i18n="units">Units</label>
-                <input class="stat-input" type="text" name="attr_units"/>
+                <input class="stat-input" type="text" name="attr_units" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-condition">
                 <label data-i18n="condition">Condition</label>
-                <input class="stat-input" type="text" name="attr_condition"/>
+                <input class="stat-input" type="text" name="attr_condition" spellcheck="false"/>
             </div>
           </div>
           <div class="equipment">
             <div class="stat-block weapon-name">
                 <label data-i18n="weapon_2">Weapon 2</label>
-                <input class="stat-input" type="text" name="attr_weapon_2"/>
+                <input class="stat-input" type="text" name="attr_weapon_2" spellcheck="false"/>
             </div>
             <div class="stat-block weapon-damage">
                 <label data-i18n="damage">Damage</label>
-                <input class="stat-input" type="text" name="attr_damage"/>
+                <input class="stat-input" type="text" name="attr_damage" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-units">
                 <label data-i18n="units">Units</label>
-                <input class="stat-input" type="text" name="attr_units"/>
+                <input class="stat-input" type="text" name="attr_units" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-condition">
                 <label data-i18n="condition">Condition</label>
-                <input class="stat-input" type="text" name="attr_condition"/>
+                <input class="stat-input" type="text" name="attr_condition" spellcheck="false"/>
             </div>
           </div>
           <div class="equipment">
             <div class="stat-block armor-name">
                 <label data-i18n="armor">Armor</label>
-                <input class="stat-input" type="text" name="attr_armor"/>
+                <input class="stat-input" type="text" name="attr_armor" spellcheck="false"/>
             </div>
             <div class="stat-block armor-protects-against">
                 <label data-i18n="protects_against">Protects Against</label>
-                <input class="stat-input" type="text" name="attr_protects_against"/>
+                <input class="stat-input" type="text" name="attr_protects_against" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-units">
                 <label data-i18n="dr_bonus">DR Bonus</label>
-                <input class="stat-input" type="text" name="attr_dr_bonus"/>
+                <input class="stat-input" type="text" name="attr_dr_bonus" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-condition">
                 <label data-i18n="condition">Condition</label>
-                <input class="stat-input" type="text" name="attr_condition"/>
+                <input class="stat-input" type="text" name="attr_condition" spellcheck="false"/>
             </div>
           </div>
           <div class="holds-debt">
             <div class="stat-block holds">
                 <label data-i18n="holds">Holds</label>
-                <input class="stat-input" type="number" name="attr_holds"/>
+                <input class="stat-input" type="number" name="attr_holds" spellcheck="false"/>
             </div>
             <div class="stat-block debt">
                 <label data-i18n="debt">Debt</label>
-                <input class="stat-input" type="number" name="attr_debt"/>
+                <input class="stat-input" type="number" name="attr_debt" spellcheck="false"/>
             </div>
           </div>
       </div>
@@ -390,7 +386,7 @@
       <div class="notes showhide">
           <div class="stat-block notes-block">
               <label data-i18n="notes">Notes</label>
-              <textarea class="stat-input" rows="18" name="attr_notes"></textarea>
+              <textarea class="stat-input" rows="18" name="attr_notes" spellcheck="false"></textarea>
           </div>
       </div>
     </div>
@@ -406,7 +402,7 @@
         <div class="header-col2">
             <div data-i18n="owner_information">Section 0. Owner Information</div>
               <label data-i18n="owner_signature">Owner Signature</label>
-              <input class="dotted-line" type="text" name="attr_owner_signature"/>
+              <input class="dotted-line" type="text" name="attr_owner_signature" spellcheck="false"/>
         </div>
       </header>
       <div class="nav-bar-hub">
@@ -450,26 +446,26 @@
           <div class="nickname-row">
             <div class="stat-block nickname-block">
                 <label data-i18n="nickname">Nickname</label>
-                <input class="stat-input" type="text" name="attr_nickname"/>
+                <input class="stat-input" type="text" name="attr_nickname" spellcheck="false"/>
             </div>
           </div>
           <div class="hub-frame-type-row">
             <div class="stat-block hub-frame-type-block">
                 <label data-i18n="hub_type_and_frame">Hub Type and Frame</label>
-                <input class="stat-input" type="text" name="attr_hub_type_and_frame"/>
+                <input class="stat-input" type="text" name="attr_hub_type_and_frame" spellcheck="false"/>
             </div>
           </div>
           <div class="stat-block hub-background-block">
               <label data-i18n="background">Background</label>
-              <textarea class="stat-input" rows="4" name="attr_background"></textarea>
+              <textarea class="stat-input" rows="4" name="attr_background" spellcheck="false"></textarea>
           </div>
           <div class="stat-block appearance-block">
               <label data-i18n="appearance">Appearance</label>
-              <textarea class="stat-input" rows="4" name="attr_appearance"></textarea>
+              <textarea class="stat-input" rows="4" name="attr_appearance" spellcheck="false"></textarea>
           </div>
           <div class="stat-block quirks-block">
               <label data-i18n="quirks">Quirks</label>
-              <input class="stat-input" type="text" name="attr_quirks"/>
+              <input class="stat-input" type="text" name="attr_quirks" spellcheck="false"/>
           </div>
       </div>
     </div>
@@ -558,7 +554,7 @@
             <div class="frame-defense-rating">
               <div class="stat-block frame-defense-rating-block dotted-number">
                   <label data-i18n="defense">Defense Rating</label>
-                  <input class="stat-input" type="number" name="attr_defense"/>
+                  <input class="stat-input" type="number" name="attr_defense" spellcheck="false"/>
               </div>
             </div>
           </div>
@@ -578,11 +574,11 @@
                 </div>
                 <div class="stat-block stat-current-col">
                     <label data-i18n="current">Current</label>
-                    <input class="stat-input" type="number" name="attr_condition"/>
+                    <input class="stat-input" type="number" name="attr_condition" spellcheck="false"/>
                 </div>
                 <div class="stat-block stat-max-col">
                     <label data-i18n="max">Max</label>
-                    <input class="stat-input" type="number" name="attr_condition_max"/>
+                    <input class="stat-input" type="number" name="attr_condition_max" spellcheck="false"/>
                 </div>
               </div>
               <div class="current-max-block">
@@ -591,11 +587,11 @@
                 </div>
                 <div class="stat-block stat-current-col">
                     <label data-i18n="current">Current</label>
-                    <input class="stat-input" type="number" name="attr_fuel"/>
+                    <input class="stat-input" type="number" name="attr_fuel" spellcheck="false"/>
                 </div>
                 <div class="stat-block stat-max-col">
                     <label data-i18n="max">Max</label>
-                    <input class="stat-input" type="number" name="attr_fuel_max"/>
+                    <input class="stat-input" type="number" name="attr_fuel_max" spellcheck="false"/>
                 </div>
               </div>
               <div class="power-source-block">
@@ -622,7 +618,7 @@
               </div>
               <div class="stat-block output-power-block dotted-number">
                   <label data-i18n="output_power">Output Power</label>
-                  <input class="stat-input" type="number" name="attr_output_power"/>
+                  <input class="stat-input" type="number" name="attr_output_power" spellcheck="false"/>
               </div>
           </div>
           <div class="modules-wrapper">
@@ -638,10 +634,10 @@
               <fieldset class="repeating_modules">
                   <div class="modules-item">
                     <div class="modules-name">
-                        <input class="repeating-input" type="text" name="attr_module_name"/>
+                        <input class="repeating-input" type="text" name="attr_module_name" spellcheck="false"/>
                     </div>
                     <div class="stat-block modules-power-cost">
-                        <input class="stat-input" type="number" name="attr_power_cost"/>
+                        <input class="stat-input" type="number" name="attr_power_cost" spellcheck="false"/>
                     </div>
                   </div>
               </fieldset>
@@ -652,14 +648,14 @@
                 </div>
                 <div class="modules-total-power-cost">
                   <div class="stat-block modules-name">
-                      <input class="stat-input" type="number" name="attr_total_power_cost" readonly="readonly"/>
+                      <input class="stat-input" type="number" name="attr_total_power_cost" readonly="readonly" spellcheck="false"/>
                   </div>
                 </div>
               </div>
             </div>
             <div class="power-output-formula-column">
               <div class="stat-block output-power-block">
-                  <input class="stat-input" type="number" name="attr_output_power" readonly="readonly"/>
+                  <input class="stat-input" type="number" name="attr_output_power" readonly="readonly" spellcheck="false"/>
               </div>
             </div>
           </div>
@@ -673,7 +669,7 @@
               <label data-i18n="cargo">Cargo</label>
             </div>
             <fieldset class="repeating_cargo">
-                <input class="repeating-input" type="text" name="attr_cargo"/>
+                <input class="repeating-input" type="text" name="attr_cargo" spellcheck="false"/>
             </fieldset>
           </div>
       </div>
@@ -694,7 +690,7 @@
       <div class="notes showhide">
           <div class="stat-block notes-block">
               <label data-i18n="notes">Notes</label>
-              <textarea class="stat-input" rows="18" name="attr_notes"></textarea>
+              <textarea class="stat-input" rows="18" name="attr_notes" spellcheck="false"></textarea>
           </div>
       </div>
     </div>

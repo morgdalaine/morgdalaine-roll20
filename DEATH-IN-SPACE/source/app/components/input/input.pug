@@ -29,7 +29,7 @@ mixin stat(inp, attr, i18n=attr)
     type=inp,
     class='stat-input'
     name=`attr_${attr}`
-    spellcheck=false)
+    spellcheck='false')
 
 mixin dotted_line(inp, attr, i18n=attr)
   label(data-i18n=i18n)=locals[i18n]
@@ -37,14 +37,14 @@ mixin dotted_line(inp, attr, i18n=attr)
     type=inp,
     class='dotted-line'
     name=`attr_${attr}`
-    spellcheck=false)
+    spellcheck='false')
 
 mixin stat_no_label(inp, attr)
   input(
     type=inp,
     class='stat-input'
     name=`attr_${attr}`
-    spellcheck=false)
+    spellcheck='false')
 
 mixin const_stat_no_label(inp, attr)
   input(
@@ -52,14 +52,14 @@ mixin const_stat_no_label(inp, attr)
     class='stat-input'
     name=`attr_${attr}`
     readonly
-    spellcheck=false)
+    spellcheck='false')
 
 mixin repeating_input(inp, attr)
   input(
     type=inp,
     class='repeating-input'
     name=`attr_${attr}`
-    spellcheck=false)
+    spellcheck='false')
 
 mixin stat_area(attr, rows)
   label(data-i18n=attr)=locals[attr]
@@ -67,4 +67,11 @@ mixin stat_area(attr, rows)
     class='stat-input'
     rows=rows
     name=`attr_${attr}`
-    spellcheck=false)
+    spellcheck='false')
+
+mixin stat_area_no_label(attr, rows)
+  textarea(
+    class='stat-input'
+    rows=rows
+    name=`attr_${attr}`
+    spellcheck='false')    
