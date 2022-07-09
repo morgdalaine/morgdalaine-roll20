@@ -1,7 +1,7 @@
 
 mixin origin_benefit_block
   div.stat-block.origin-benefit-block
-    +stat_area('origin_benefit', 8)
+    +stat_area('origin_benefit', 5)
 
 mixin xp_block
   div.stat-block.xp-block
@@ -29,11 +29,7 @@ mixin looks_block
 
 mixin portrait_block
   div.stat-block.portrait-block
-    +label_with_subtitle('portrait', 'portrait_subtitle')
-    +stat_no_label('text', 'portrait')
+    +label('portrait')
     div.portrait
       div.portrait-image
-        img(
-          name='attr_character_avatar'
-          width='100'
-          height='100')
+        img(name='attr_character_avatar')

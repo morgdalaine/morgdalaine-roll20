@@ -89,7 +89,7 @@
   border-bottom: 2px solid $black;
   grid-column-start: 3;
   grid-row-start: 2;
-  grid-row-end: 6;
+  grid-row-end: 5;
 }
 
 .xp-block {
@@ -256,17 +256,22 @@
 
 .portrait-block {
   grid-column-start: 3;
-  grid-row-start: 6;
+  grid-row-start: 5;
   grid-row-end: 9;
   text-transform: uppercase;
 
   .portrait {
+    // TODO: why is border necessary to make img appear?
+    border: 1px solid white;
     display: flex;
     justify-content: center;
-
     .portrait-image {
-      height: 100px;
-      width: 100px;
+      img {
+        display: block;
+        height: auto;
+        max-height: 17em;
+        width: 100%;      
+      }
     }
   }
 }
