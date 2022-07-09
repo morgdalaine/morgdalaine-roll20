@@ -297,9 +297,17 @@
           <div class="belongings-block">
             <div class="stat-block belonging-title">
               <label data-i18n="belongings">Belongings</label>
+              <label data-i18n="condition">Condition</label>
             </div>
             <fieldset class="repeating_belongings">
-                <input class="repeating-input" type="text" name="attr_belongings" spellcheck="false"/>
+              <div class="belongings-row">
+                <div class="belongings">
+                  <input class="repeating-input belongings" name="attr_belongings" spellcheck="false"/>
+                </div>
+                <div class="condition">
+                  <input class="repeating-input condition" name="attr_condition" spellcheck="false"/>
+                </div>
+              </div>
             </fieldset>
             <div class="belongings-note">
               <div class="exclamation">!</div>
@@ -308,7 +316,7 @@
           </div>
           <div class="stat-block small-items-block">
               <label data-i18n="small_items">Small Items</label>
-              <textarea class="stat-input" rows="2" name="attr_small_items" spellcheck="false"></textarea>
+              <textarea class="stat-input" rows="3" name="attr_small_items" spellcheck="false"></textarea>
           </div>
       </div>
     </div>
@@ -386,7 +394,7 @@
       <div class="notes showhide">
           <div class="stat-block notes-block">
               <label data-i18n="notes">Notes</label>
-              <textarea class="stat-input" rows="18" name="attr_notes" spellcheck="false"></textarea>
+              <textarea class="stat-input" rows="16" name="attr_notes" spellcheck="false"></textarea>
           </div>
       </div>
     </div>
@@ -690,7 +698,7 @@
       <div class="notes showhide">
           <div class="stat-block notes-block">
               <label data-i18n="notes">Notes</label>
-              <textarea class="stat-input" rows="18" name="attr_notes" spellcheck="false"></textarea>
+              <textarea class="stat-input" rows="16" name="attr_notes" spellcheck="false"></textarea>
           </div>
       </div>
     </div>
