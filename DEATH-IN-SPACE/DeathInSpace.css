@@ -1007,15 +1007,22 @@
 
 .charsheet .belongings-block .belongings-header-row {
   display: flex;
+  font-size: 0.8em;
   height: 1.5em;
 }
 
-.charsheet .belongings-block .belongings-header-row .belonging-name {
-  flex: 1;
+.charsheet .belongings-block .belongings-header-row .belongings-col {
+  padding-right: 5px;
+  width: 50%;
 }
 
-.charsheet .belongings-block .belongings-header-row .belonging-condition {
-  flex: 0 0 3em;
+.charsheet .belongings-block .belongings-header-row .belongings-col label {
+  text-align: right;
+}
+
+.charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem {
+  display: inline-block;
+  width: calc(50% - 10px);
 }
 
 .charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belonging-row {
@@ -1029,8 +1036,8 @@
 }
 
 .charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belonging-row div.belonging-condition {
-  flex: 0 0 80px;
-  margin-left: 1em;
+  flex: 0 0 60px;
+  margin-left: 5px;
 }
 
 .charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belonging-row div.belonging-condition input[type="number"] {
@@ -1067,6 +1074,11 @@
 
 .charsheet .belongings-block .belongings-note .carry:after {
   content: ')';
+}
+
+.charsheet .small-items-block .repcontainer[data-groupname="repeating_smallitems"] > .repitem {
+  display: inline-block;
+  width: calc(50% - 10px);
 }
 
 .charsheet .weaponry {

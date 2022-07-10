@@ -10,15 +10,19 @@
   border-bottom: 2px solid $black;
   .belongings-header-row {
     display: flex;
+    font-size: 0.8em;
     height: 1.5em;
-    .belonging-name {
-      flex: 1;
-    }
-    .belonging-condition {
-      flex: 0 0 3em;
+    .belongings-col {
+      padding-right: 5px;
+      label {
+        text-align: right;      
+      }
+      width: 50%;
     }
   }
   .repcontainer[data-groupname="repeating_belongings"] > .repitem {
+    display: inline-block;
+    width: calc(50% - 10px);    
     .belonging-row {
       display: flex;
       height: 2.5em;
@@ -27,8 +31,8 @@
         flex: 1;
       }
       div.belonging-condition {
-        flex: 0 0 80px;
-        margin-left: 1em;
+        flex: 0 0 60px;
+        margin-left: 5px;
         input[type="number"] {
           border: 2px dotted $dead-gray;
           width: 100%;
@@ -69,4 +73,8 @@
 }
 
 .small-items-block {
+  .repcontainer[data-groupname="repeating_smallitems"] > .repitem {
+    display: inline-block;
+    width: calc(50% - 10px);
+  }
 }
