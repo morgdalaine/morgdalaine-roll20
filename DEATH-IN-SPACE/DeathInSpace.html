@@ -624,7 +624,7 @@
           </div>
           <div class="modules-wrapper">
             <div class="modules-block">
-              <div class="stat-block modules-item">
+              <div class="stat-block modules-header">
                 <div class="modules-name">
                     <label data-i18n="modules">Modules</label>
                 </div>
@@ -633,18 +633,17 @@
                 </div>
               </div>
               <fieldset class="repeating_modules">
-                  <div class="modules-item">
-                    <div class="modules-name">
-                        <input class="repeating-input" type="text" name="attr_module_name" spellcheck="false"/>
-                    </div>
-                    <div class="stat-block modules-power-cost">
-                        <input class="stat-input" type="number" name="attr_power_cost" spellcheck="false"/>
-                    </div>
+                <div class="module-row">
+                  <div class="module-name">
+                      <input class="repeating-input" type="text" name="attr_modulename" spellcheck="false"/>
                   </div>
+                  <div class="module-power-cost">
+                      <input class="repeating-input" type="number" name="attr_modulepowercost" spellcheck="false"/>
+                  </div>
+                </div>
               </fieldset>
-              <div class="stat-block modules-item">
+              <div class="stat-block modules-footer">
                 <div class="stat-block modules-name">
-                  <label class="subtitle align-right" data-i18n="power_formula">Power cost &gt; power output = overheated</label>
                   <label class="subtitle align-right" data-i18n="power_note">The POWER COST sum should not exceed the output power</label>
                 </div>
                 <div class="modules-total-power-cost">
@@ -652,11 +651,6 @@
                       <input class="stat-input" type="number" name="attr_total_power_cost" readonly="readonly" spellcheck="false"/>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="power-output-formula-column">
-              <div class="stat-block output-power-block">
-                  <input class="stat-input" type="number" name="attr_output_power" readonly="readonly" spellcheck="false"/>
               </div>
             </div>
           </div>
@@ -846,8 +840,12 @@ const repeatingSum = (destinations, section, fields) => {
     });
 };
 
-on('change:repeating_modules:power_cost remove:repeating_modules', function() {
-  repeatingSum('total_power_cost','modules','power_cost');
+// TODO: fix, was previouslhy
+    // div.stat-block.modules-power-cost
+    //   +stat_no_label('number', 'power_cost')
+
+on('change:repeating_modules:modulepowercost remove:repeating_modules', function() {
+  repeatingSum('total_power_cost','modules','modulepowercost');
 });
 
 </script>

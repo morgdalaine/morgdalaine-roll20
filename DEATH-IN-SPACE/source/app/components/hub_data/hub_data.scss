@@ -181,57 +181,59 @@
 
 .modules-block {
   @include fill-available();
-  // border-right: 2px dashed $black;
-}
 
-.modules-item {
-  display: flex;
-  margin: 2px 5px;
+  .modules-header, .modules-footer {
+    display: flex;
+    padding-left: 5px;
+    width: 100%;
 
-  .modules-name {
-    @include fill-available();
-  }
+    .modules-name {
+      flex: 85%;
+    }
 
-  .modules-power-cost, .modules-total-power-cost {
-    width: 3.5em;
-    margin-left: 5px;
-
-    label {
+    .modules-power-cost, .modules-total-power-cost {
+      flex: 15%;
+  //    margin-left: 5px;
+      margin-right: 5px;
       text-align: center;
-      font-size: 0.8em;
-    }
 
-    input[type=number] {
-      width: 2.5em;
-      border: 2px dotted $dead-gray;
+      label {
+        text-align: center;
+        font-size: 0.8em;
+      }
+
+      input[type=number] {
+        width: 60px;
+        border: 2px dotted $dead-gray;
+      }
     }
   }
 
-  .modules-total-power-cost {
-    margin-top: 0.5em;
+  .repcontainer[data-groupname="repeating_modules"] > .repitem {
+    .module-row {
+      display: flex;
+      .module-name {
+        flex: 1;
+      }
+      .module-power-cost {
+        flex: 0 0 100px;
+        text-align: center;
+        input[type="number"] {
+          border: 2px dotted $dead-gray;
+          font-size: 0.8em;
+          width: 60px;
+        }        
+      }
+    }
+  }
+
+  .modules-footer {
+    .modules-total-power-cost {
+      input[type=number] {
+        width: 60px;
+        border: 2px dotted $dead-gray;
+      }      
+    }  
   }
 }
 
-.power-output-formula-column {
-  width: 6em;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-
-  input[type=number] {
-    width: 2.5em;
-    border: 2px dotted $dead-gray;
-    margin-bottom: 11px;
-  }
-
-  .output-power-block:before {
-    content: '\2264';
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-  label {
-    @include rotate();
-    @include fill-available-height();
-  }
-}
