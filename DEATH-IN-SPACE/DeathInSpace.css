@@ -1431,7 +1431,7 @@
 }
 
 .charsheet .modules-block .modules-header .modules-power-cost input[type=number], .charsheet .modules-block .modules-header .modules-total-power-cost input[type=number], .charsheet .modules-block .modules-footer .modules-power-cost input[type=number], .charsheet .modules-block .modules-footer .modules-total-power-cost input[type=number] {
-  width: 60px;
+  width: 55px;
   border: 2px dotted #7a7971;
 }
 
@@ -1451,7 +1451,7 @@
 .charsheet .modules-block .repcontainer[data-groupname="repeating_modules"] > .repitem .module-row .module-power-cost input[type="number"] {
   border: 2px dotted #7a7971;
   font-size: 0.8em;
-  width: 60px;
+  width: 55px;
 }
 
 .charsheet .modules-block .modules-footer .module-name {
@@ -1494,8 +1494,16 @@
   background-image: radial-gradient(#3a8db9 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
+  display: flex;
+  height: 32em;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 30em;
+}
+
+.charsheet .layout-grid img {
+  height: auto;
+  width: auto;
 }
 
 .ui-dialog .charsheet .repcontainer .repitem {
