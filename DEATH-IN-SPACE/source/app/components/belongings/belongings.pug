@@ -20,4 +20,6 @@ mixin belongings_block
 
 mixin small_items_block
   div.stat-block.small-items-block
-    +stat_area('small_items', 3)
+    +label('small_items')
+    fieldset.repeating_smallitems
+      +repeating_input('text', 'smallitemname')

@@ -1014,13 +1014,14 @@
 
 .charsheet .belongings-block .belongings-note {
   display: flex;
+  justify-content: center;
   padding: 5px;
 }
 
 .charsheet .belongings-block .belongings-note .exclamation {
-  font-size: 2.5em;
+  font-size: 1.5em;
   text-align: right;
-  width: 100%;
+  width: 2em;
   font-weight: bold;
 }
 
