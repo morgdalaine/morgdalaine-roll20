@@ -29,10 +29,20 @@ mixin frame_integrity_row
 
   //- second row
   div.frame-integrity-row-bottom
-    div.frame-roll-on-damage(data-i18n='condition0')=locals['condition0']
+    div.frame-condition0
+      span.frame-integrity-arrow
+        | &darr;
+      br
+      span(data-i18n='condition0')=locals['condition0'] 
     div.frame-spacer
     div.frame-spacer
-    div.frame-roll-on-damage(data-i18n='roll_disasters_table')=locals['roll_disasters_table']
+    div.frame-spacer
+    div.frame-roll-on-disasters
+      span.frame-integrity-arrow
+        | &darr;
+      br
+      span(data-i18n='roll_disasters_table')=locals['roll_disasters_table']
     div
+    div.frame-spacer
     div.frame-spacer
     div.frame-all-is-calm(data-i18n='all_is_calm')=locals['all_is_calm']

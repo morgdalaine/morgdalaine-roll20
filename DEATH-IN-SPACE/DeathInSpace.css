@@ -1314,16 +1314,30 @@
   margin-left: 2px;
 }
 
-.charsheet .frame-roll-on-damage {
+.charsheet .frame-integrity-arrow {
+  color: #3a8db9;
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+.charsheet .frame-condition0 {
   font-size: 0.7em;
   padding: 0 0.5em;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   grid-column-end: span 2;
 }
 
+.charsheet .frame-roll-on-disasters {
+  font-size: 0.7em;
+  padding: 0 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  grid-column-end: span 3;
+}
+
 .charsheet .frame-spacer {
-  grid-column-end: span 2;
+  grid-column-end: span 1;
 }
 
 .charsheet .frame-all-is-calm {
@@ -1438,6 +1452,16 @@
   border: 2px dotted #7a7971;
   font-size: 0.8em;
   width: 60px;
+}
+
+.charsheet .modules-block .modules-footer .module-name {
+  border: 2px solid black;
+}
+
+.charsheet .modules-block .modules-footer .module-name label.subtitle {
+  border: 1px solid red;
+  font-style: italic;
+  text-transform: capitalize;
 }
 
 .charsheet .modules-block .modules-footer .modules-total-power-cost input[type=number] {

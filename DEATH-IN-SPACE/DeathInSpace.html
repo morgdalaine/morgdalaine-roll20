@@ -560,11 +560,13 @@
             </div>
           </div>
           <div class="frame-integrity-row-bottom">
-            <div class="frame-roll-on-damage" data-i18n="condition0"></div>
+            <div class="frame-condition0"><span class="frame-integrity-arrow">&darr;</span><br/><span data-i18n="condition0"></span></div>
             <div class="frame-spacer"></div>
             <div class="frame-spacer"></div>
-            <div class="frame-roll-on-damage" data-i18n="roll_disasters_table"></div>
+            <div class="frame-spacer"></div>
+            <div class="frame-roll-on-disasters"><span class="frame-integrity-arrow">&darr;</span><br/><span data-i18n="roll_disasters_table"></span></div>
             <div></div>
+            <div class="frame-spacer"></div>
             <div class="frame-spacer"></div>
             <div class="frame-all-is-calm" data-i18n="all_is_calm">When all is calm the hub regains 1d4×10% frame integrity on a calm night up to maximum</div>
           </div>
@@ -839,10 +841,6 @@ const repeatingSum = (destinations, section, fields) => {
         });
     });
 };
-
-// TODO: fix, was previouslhy
-    // div.stat-block.modules-power-cost
-    //   +stat_no_label('number', 'power_cost')
 
 on('change:repeating_modules:modulepowercost remove:repeating_modules', function() {
   repeatingSum('total_power_cost','modules','modulepowercost');
