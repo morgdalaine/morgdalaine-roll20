@@ -411,6 +411,31 @@
   padding: 8px 10px;
 }
 
+.charsheet ui.dialog.charsheet button[type="roll"].sheet-blank-button::before {
+  content: '';
+}
+
+.charsheet button[type="roll"].sheet-blank-button:before {
+  content: ' ';
+}
+
+.charsheet button[type="roll"].sheet-blank-button {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  font-weight: bold;
+  font-family: Cairo;
+  height: 22px;
+  margin-left: 5px;
+  padding: 2px 5px 4px 5px;
+  text-transform: uppercase;
+}
+
+.charsheet button[type="roll"].sheet-blank-button :hover {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
 .charsheet .nav-row {
   display: flex;
 }
@@ -660,6 +685,7 @@
 
 .charsheet .ability-block .ability-col .ability-row {
   display: flex;
+  justify-content: space-between;
 }
 
 .charsheet .ability-block .ability-col .ability-name {

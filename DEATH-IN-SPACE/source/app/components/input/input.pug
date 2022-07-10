@@ -16,7 +16,7 @@ mixin label_with_subtitle(i18n, ...subtitles)
 
 mixin ability(attr)
   div.ability-row
-    div.ability-name(data-i18n=attr)=locals[attr]
+    button(name=`${attr}` type="roll" value=`/r 1d20+@{${attr}}` class="sheet-blank-button")=attr
     div.ability-value
       input(
         type='number'

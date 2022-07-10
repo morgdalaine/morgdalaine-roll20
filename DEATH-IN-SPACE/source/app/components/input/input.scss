@@ -15,3 +15,28 @@ textarea.stat-input {
   line-height: 27px;
   padding: 8px 10px;  
 }
+
+ui.dialog.charsheet button[type="roll"].sheet-blank-button::before {
+  content: '';
+}
+
+button[type="roll"].sheet-blank-button:before {
+  content: ' ';
+}
+
+button[type="roll"].sheet-blank-button {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  font-weight: bold;
+  font-family: Cairo;
+  height: 22px;
+  margin-left: 5px;
+  padding: 2px 5px 4px 5px;
+  text-transform: uppercase;
+}
+
+button[type="roll"].sheet-blank-button :hover {
+  background-color: transparent;
+  border-radius: 10px;
+}
