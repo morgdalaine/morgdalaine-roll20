@@ -979,10 +979,37 @@
   border-bottom: 2px solid #333;
 }
 
-.charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belongings-row {
-  border: 1px solid green;
+.charsheet .belongings-block .belongings-header-row {
+  display: flex;
+  height: 1.5em;
+}
+
+.charsheet .belongings-block .belongings-header-row .belonging-name {
+  flex: 1;
+}
+
+.charsheet .belongings-block .belongings-header-row .belonging-condition {
+  flex: 0 0 3em;
+}
+
+.charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belonging-row {
   display: flex;
   height: 2.5em;
+  width: 100%;
+}
+
+.charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belonging-row div.belonging-name {
+  flex: 1;
+}
+
+.charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belonging-row div.belonging-condition {
+  flex: 0 0 80px;
+  margin-left: 1em;
+}
+
+.charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belonging-row div.belonging-condition input[type="number"] {
+  border: 2px dotted #7a7971;
+  width: 100%;
 }
 
 .charsheet .belongings-block .belongings-note {

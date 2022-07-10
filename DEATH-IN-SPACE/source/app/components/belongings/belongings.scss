@@ -8,15 +8,34 @@
 
 .belongings-block {
   border-bottom: 2px solid $black;
-
-  .repcontainer[data-groupname="repeating_belongings"] > .repitem {
-    .belongings-row {
-      border: 1px solid green;
-      display: flex;
-      height: 2.5em;    
+  .belongings-header-row {
+    display: flex;
+    height: 1.5em;
+    .belonging-name {
+      flex: 1;
+    }
+    .belonging-condition {
+      flex: 0 0 3em;
     }
   }
-
+  .repcontainer[data-groupname="repeating_belongings"] > .repitem {
+    .belonging-row {
+      display: flex;
+      height: 2.5em;
+      width: 100%;
+      div.belonging-name {
+        flex: 1;
+      }
+      div.belonging-condition {
+        flex: 0 0 80px;
+        margin-left: 1em;
+        input[type="number"] {
+          border: 2px dotted $dead-gray;
+          width: 100%;
+        }
+      }
+    }
+  }
   .belongings-note {
     display: flex;
     padding: 5px;

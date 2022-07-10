@@ -293,17 +293,21 @@
       <input class="belongings hide-element" type="radio" name="attr_character_page" value="3" checked="checked"/>
       <div class="belongings showhide">
           <div class="belongings-block">
-            <div class="stat-block belonging-title">
-              <label data-i18n="belongings">Belongings</label>
-              <label data-i18n="condition">Condition</label>
+            <div class="stat-block belongings-header-row">
+              <div class="belonging-name">
+                  <label data-i18n="belongings">Belongings</label>
+              </div>
+              <div class="belonging-condition">
+                  <label data-i18n="condition">Condition</label>
+              </div>
             </div>
             <fieldset class="repeating_belongings">
-              <div class="belongings-row">
-                <div class="belongings">
-                  <input class="repeating-input belongings" name="attr_belongings" spellcheck="false"/>
+              <div class="belonging-row">
+                <div class="belonging-name">
+                    <input class="repeating-input" type="text" name="attr_belongingname" spellcheck="false"/>
                 </div>
-                <div class="condition">
-                  <input class="repeating-input condition" name="attr_condition" spellcheck="false"/>
+                <div class="belonging-condition">
+                    <input class="repeating-input" type="number" name="attr_belongingcondition" spellcheck="false"/>
                 </div>
               </div>
             </fieldset>

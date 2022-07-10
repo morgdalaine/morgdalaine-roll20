@@ -1,23 +1,17 @@
 
 mixin belongings_block
   div.belongings-block
-    div.stat-block.belonging-title
-      label(data-i18n='belongings')=locals['belongings']
-      label(data-i18n='condition')=locals['condition']
+    div.stat-block.belongings-header-row
+      div.belonging-name
+        +label('belongings')
+      div.belonging-condition
+        +label('condition')
     fieldset.repeating_belongings
-      div.belongings-row
-        div.belongings
-          input(
-            type=text,
-            name='attr_belongings'
-            class='repeating-input belongings'
-            spellcheck='false')
-        div.condition
-          input(
-            type=text,
-            name='attr_condition'
-            class='repeating-input condition'
-            spellcheck='false')
+      div.belonging-row
+        div.belonging-name
+          +repeating_input('text', 'belongingname')
+        div.belonging-condition
+          +repeating_input('number', 'belongingcondition')
     div.belongings-note
       div.exclamation='!'
       div.note
