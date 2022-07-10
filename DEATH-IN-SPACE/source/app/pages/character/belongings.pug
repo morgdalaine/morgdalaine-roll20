@@ -1,4 +1,5 @@
 include ../../components/belongings/belongings
+include ../../components/weaponry/equipment
 
 mixin belongings_page
   div.page-container
@@ -10,3 +11,7 @@ mixin belongings_page
     div.belongings.showhide
       +belongings_block
       +small_items_block
+      +weapon_block(1)
+      +weapon_block(2)
+      +armor_block
+      +holds_debt

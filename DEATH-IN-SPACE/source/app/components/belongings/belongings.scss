@@ -35,6 +35,7 @@
         margin-left: 5px;
         input[type="number"] {
           border: 2px dotted $dead-gray;
+          font-size: 0.8em;
           width: 100%;
         }
       }
@@ -43,10 +44,9 @@
   .belongings-note {
     display: flex;
     justify-content: center;
-    padding: 5px;
 
     .exclamation {
-      font-size: 1.5em;
+      font-size: 1.4em;
       text-align: right;
       width: 2em;
       font-weight: bold;
@@ -73,6 +73,7 @@
 }
 
 .small-items-block {
+  border-bottom: 2px solid black;
   .repcontainer[data-groupname="repeating_smallitems"] > .repitem {
     display: inline-block;
     width: calc(50% - 10px);

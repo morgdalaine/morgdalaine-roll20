@@ -1042,17 +1042,17 @@
 
 .charsheet .belongings-block .repcontainer[data-groupname="repeating_belongings"] > .repitem .belonging-row div.belonging-condition input[type="number"] {
   border: 2px dotted #7a7971;
+  font-size: 0.8em;
   width: 100%;
 }
 
 .charsheet .belongings-block .belongings-note {
   display: flex;
   justify-content: center;
-  padding: 5px;
 }
 
 .charsheet .belongings-block .belongings-note .exclamation {
-  font-size: 1.5em;
+  font-size: 1.4em;
   text-align: right;
   width: 2em;
   font-weight: bold;
@@ -1074,6 +1074,10 @@
 
 .charsheet .belongings-block .belongings-note .carry:after {
   content: ')';
+}
+
+.charsheet .small-items-block {
+  border-bottom: 2px solid black;
 }
 
 .charsheet .small-items-block .repcontainer[data-groupname="repeating_smallitems"] > .repitem {
@@ -1104,13 +1108,28 @@
   border-right: 2px dotted #7a7971;
 }
 
+.charsheet .equipment .weapon-damage input, .charsheet .equipment .weapon-damage label {
+  font-size: 0.8em;
+  text-align: center;
+}
+
 .charsheet .equipment .equipment-uses {
   padding-left: 5px;
   border-right: 2px dotted #7a7971;
 }
 
+.charsheet .equipment .equipment-uses input, .charsheet .equipment .equipment-uses label {
+  font-size: 0.8em;
+  text-align: center;
+}
+
 .charsheet .equipment .equipment-condition {
   padding-left: 5px;
+}
+
+.charsheet .equipment .equipment-condition input, .charsheet .equipment .equipment-condition label {
+  font-size: 0.8em;
+  text-align: center;
 }
 
 .charsheet .equipment .armor-name {
