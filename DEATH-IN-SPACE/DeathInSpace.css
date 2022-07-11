@@ -1472,7 +1472,7 @@
 
 .charsheet .cargo {
   display: inline-grid;
-  grid-template-rows: auto 10em;
+  grid-template-rows: auto 1em;
   width: 100%;
 }
 
