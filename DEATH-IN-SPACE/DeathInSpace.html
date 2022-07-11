@@ -370,7 +370,7 @@
                 <input class="stat-input" type="text" name="attr_condition" spellcheck="false"/>
             </div>
           </div>
-          <div class="holds-debt">
+          <div class="holos-debt">
             <div class="stat-block holos">
                 <label data-i18n="holos">Holos</label>
                 <input class="stat-input" type="number" name="attr_holos" spellcheck="false"/>
@@ -411,7 +411,7 @@
           <div class="nav-child">
             <label class="page-label">
               <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="6" checked="checked"/>
-              <div class="page-button-hub" data-i18n="nav_specifics">Hub Info</div>
+              <div class="page-button-hub" data-i18n="nav_specifics">Specifics</div>
             </label>
           </div>
           <div class="nav-child">
@@ -560,28 +560,28 @@
             </div>
           </div>
           <div class="frame-integrity-row-bottom">
-            <div class="frame-condition0"><span class="frame-integrity-arrow">&darr;</span><br/><span data-i18n="condition0"></span></div>
+            <div class="frame-condition0"><span class="frame-integrity-arrow">&darr;</span><br/><span data-i18n="condition0">Condition 0</span></div>
             <div class="frame-spacer"></div>
             <div class="frame-spacer"></div>
             <div class="frame-spacer"></div>
-            <div class="frame-roll-on-disasters"><span class="frame-integrity-arrow">&darr;</span><br/><span data-i18n="roll_disasters_table"></span></div>
+            <div class="frame-roll-on-disasters"><span class="frame-integrity-arrow">&darr;</span><br/><span data-i18n="roll_disasters_table">Roll on the spacecraft disasters table</span></div>
             <div></div>
             <div class="frame-spacer"></div>
             <div class="frame-spacer"></div>
-            <div class="frame-all-is-calm" data-i18n="all_is_calm">When all is calm the hub regains 1d4×10% frame integrity on a calm night up to maximum</div>
+            <div class="frame-all-is-calm" data-i18n="all_is_calm">When all is calm, recover 1d6&amp;#10005;10% frame integrity. A calm night restores to 100%.</div>
           </div>
           <div class="systems-row">
               <div class="current-max-block">
                 <div class="stat-block current-max-text">
-                  <label data-i18n="condition">Condition</label>
+                  <label data-i18n="hubcondition"></label>
                 </div>
                 <div class="stat-block stat-current-col">
                     <label data-i18n="current">Current</label>
-                    <input class="stat-input" type="number" name="attr_condition" spellcheck="false"/>
+                    <input class="stat-input" type="number" name="attr_hubcondition" spellcheck="false"/>
                 </div>
                 <div class="stat-block stat-max-col">
                     <label data-i18n="max">Max</label>
-                    <input class="stat-input" type="number" name="attr_condition_max" spellcheck="false"/>
+                    <input class="stat-input" type="number" name="attr_hubcondition_max" spellcheck="false"/>
                 </div>
               </div>
               <div class="current-max-block">
@@ -646,7 +646,7 @@
               </fieldset>
               <div class="stat-block modules-footer">
                 <div class="stat-block modules-name">
-                  <label class="subtitle align-right" data-i18n="power_note">The POWER COST sum should not exceed the output power</label>
+                  <label class="subtitle align-right" data-i18n="power_note">The power cost sum should not exceed the output power.</label>
                 </div>
                 <div class="modules-total-power-cost">
                   <div class="stat-block modules-name">

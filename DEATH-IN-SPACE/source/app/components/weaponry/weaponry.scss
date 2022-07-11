@@ -53,11 +53,11 @@
   }
 }
 
-.holds-debt {
+.holos-debt {
   display: inline-grid;
   grid-template-columns: repeat(7, 1fr);
 
-  .holds {
+  .holos {
     padding-left: 5px;
     grid-column: span 2;
     border-right: 2px dotted $dead-gray;

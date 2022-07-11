@@ -996,8 +996,6 @@
 }
 
 .charsheet .belongings {
-  display: inline-grid;
-  grid-template-rows: auto 10em;
   width: 100%;
 }
 
@@ -1078,6 +1076,9 @@
 
 .charsheet .small-items-block {
   border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .charsheet .small-items-block .repcontainer[data-groupname="repeating_smallitems"] > .repitem {
@@ -1143,23 +1144,23 @@
   border-right: 2px dotted #7a7971;
 }
 
-.charsheet .holds-debt {
+.charsheet .holos-debt {
   display: inline-grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-.charsheet .holds-debt .holds {
+.charsheet .holos-debt .holos {
   padding-left: 5px;
   grid-column: span 2;
   border-right: 2px dotted #7a7971;
 }
 
-.charsheet .holds-debt .debt {
+.charsheet .holos-debt .debt {
   padding-left: 5px;
   grid-column: span 2;
 }
 
-.charsheet .holds-debt input[type=number] {
+.charsheet .holos-debt input[type=number] {
   text-align: center;
   width: -moz-available;
   width: -webkit-fill-available;
@@ -1471,12 +1472,8 @@
 
 .charsheet .cargo {
   display: inline-grid;
-  grid-template-rows: 10em auto;
+  grid-template-rows: auto 10em;
   width: 100%;
-}
-
-.charsheet .cargo-block {
-  border-bottom: 2px solid #333;
 }
 
 .charsheet .cargo-block .cargo-note {

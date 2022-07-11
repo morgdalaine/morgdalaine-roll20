@@ -1,8 +1,8 @@
 
 .belongings {
-  display: inline-grid;
+  //display: inline-grid;
   // grid-template-columns: 50% 50%;
-  grid-template-rows: auto 10em;
+  //grid-template-rows: auto 10em;
   width: 100%
 }
 
@@ -74,6 +74,10 @@
 
 .small-items-block {
   border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
   .repcontainer[data-groupname="repeating_smallitems"] > .repitem {
     display: inline-block;
     width: calc(50% - 10px);
