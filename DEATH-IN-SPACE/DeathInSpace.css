@@ -530,64 +530,30 @@
 }
 
 .charsheet .origin-row {
+  align-items: center;
   border-bottom: 2px solid #333;
   display: flex;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
-  padding: 5px;
 }
 
 .charsheet .origin-row .origin-label {
-  border-right: 1px dotted #333;
   text-transform: uppercase;
   flex: 0 0 60px;
-  text-align: center;
+  padding-left: 2px;
 }
 
-.charsheet .origin-radios {
+.charsheet .origin-row .origin-input {
+  border-left: 1px dotted #333;
   display: flex;
   justify-content: space-around;
   width: 100%;
   padding: 0 5px;
 }
 
-.charsheet .origin-radios .origin-check {
-  text-align: center;
-  display: inline-grid;
-  grid-template-columns: repeat(6, auto);
-}
-
-.charsheet .origin-radios .origin-check label {
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-.charsheet .origin-radios .origin-check label input[type=radio] {
-  display: none;
-}
-
-.charsheet .origin-radios .origin-check label input[type=radio]:checked + .origin-square {
-  background: #333;
-  color: #ffffff;
-}
-
-.charsheet .origin-radios .origin-check .origin-square {
-  border: 2px solid #333;
-  height: 10px;
-  margin-top: 3px;
-  width: 10px;
-  text-align: center;
-}
-
-.charsheet .origin-radios .origin-check .origin-name {
-  font-size: 0.8em;
-  font-style: italic;
-  font-weight: normal;
-  margin-left: 5px;
-  text-align: left;
-  white-space: nowrap;
+.charsheet .origin-row .origin-input input[type="text"] {
+  width: 100%;
 }
 
 .charsheet .name-row {
