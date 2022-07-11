@@ -16,7 +16,7 @@ mixin label_with_subtitle(i18n, ...subtitles)
 
 mixin ability(attr)
   div.ability-row
-    button(name=`${attr}` type="roll" value=`&{template:default} {{name=${attr.toUpperCase()} check}} {{roll=[[?{Roll Type|Normal, 1d20+@{${attr}}|Advantage, 2d20kh1+@{${attr}}|Disadvantage, 2d20kl1+@{${attr}}} ]] }}` class="sheet-blank-button")=attr
+    button(name=`${attr}` type="roll" value=`&{template:default} {{name=${attr.toUpperCase()} check}} {{roll=[[?{Roll Type|Normal, 1d20|Advantage, 2d20kh1|Disadvantage, 2d20kl1}+@{${attr}}]] }}` class="sheet-blank-button")=attr
 
     div.ability-value
       input(
