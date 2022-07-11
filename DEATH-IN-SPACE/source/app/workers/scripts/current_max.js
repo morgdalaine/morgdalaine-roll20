@@ -15,14 +15,15 @@ const currentMax = (attr) => {
   });
 };
 
-on('change:hp change:hp_max', function() {
-  currentMax('hp');
-});
+// TODO: disabling this auto-set feature for now, as it makes initial data entry (when max might be 0) confusing
+// on('change:hp change:hp_max', function() {
+//   currentMax('hp');
+// });
 
-on('change:condition change:condition_max', function() {
-  currentMax('condition');
-});
+// on('change:condition change:condition_max', function() {
+//   currentMax('condition');
+// });
 
-on('change:fuel change:fuel_max', function() {
-  currentMax('fuel');
-});
+// on('change:fuel change:fuel_max', function() {
+//   currentMax('fuel');
+// });
