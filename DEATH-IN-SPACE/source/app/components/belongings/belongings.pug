@@ -1,10 +1,17 @@
 
 mixin belongings_block
   div.belongings-block
-    div.stat-block.belonging-title
-      label(data-i18n='belongings')=locals['belongings']
+    div.stat-block.belongings-header-row
+      div.belongings-col
+        +label('condition')
+      div.belongings-col
+        +label('condition')      
     fieldset.repeating_belongings
-      +repeating_input('text', 'belongings')
+      div.belonging-row
+        div.belonging-name
+          +repeating_input('text', 'belongingname')
+        div.belonging-condition
+          +repeating_input('number', 'belongingcondition')
     div.belongings-note
       div.exclamation='!'
       div.note
@@ -13,4 +20,6 @@ mixin belongings_block
 
 mixin small_items_block
   div.stat-block.small-items-block
-    +stat_area('small_items', 2)
+    +label('small_items')
+    fieldset.repeating_smallitems
+      +repeating_input('text', 'smallitemname')

@@ -7,63 +7,28 @@
 }
 
 .origin-row {
+  align-items: center;
   border-bottom: 2px solid $black;
   display: flex;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
-  padding: 5px;
 
   .origin-label {
-    border-right: 1px dotted $black;
     text-transform: uppercase;
     flex: 0 0 60px;
-    text-align: center;
+    //text-align: center;
+    padding-left: 2px;
   }
-}
 
-.origin-radios {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  padding: 0 5px;
-
-  .origin-check {
-    text-align: center;
-    display: inline-grid;
-    grid-template-columns: repeat(6, auto);
-
-    label {
-      display: flex;
-      padding: 0;
-      margin: 0;
-
-      input[type=radio] {
-        display: none;
-
-        &:checked + .origin-square {
-          background: $black;
-          color: $white;
-        }
-      }
-    }
-
-    .origin-square {
-      border: 2px solid $black;
-      // font-family: $item-font;
-      height: 10px;
-      margin-top: 3px;
-      width: 10px;
-      text-align: center;
-    }
-
-    .origin-name {
-      font-size: 0.8em;
-      font-style: italic;
-      font-weight: normal;
-      margin-left: 5px;
-      text-align: left;
-      white-space: nowrap;
+  .origin-input {
+    border-left: 1px dotted $black;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 5px;
+    input[type="text"] {
+      width: 100%;
     }
   }
 }
@@ -89,7 +54,7 @@
   border-bottom: 2px solid $black;
   grid-column-start: 3;
   grid-row-start: 2;
-  grid-row-end: 6;
+  grid-row-end: 5;
 }
 
 .xp-block {
@@ -161,6 +126,7 @@
 
     .ability-row {
       display: flex;
+      justify-content: space-between;
     }
 
     .ability-name {
@@ -256,17 +222,22 @@
 
 .portrait-block {
   grid-column-start: 3;
-  grid-row-start: 6;
+  grid-row-start: 5;
   grid-row-end: 9;
   text-transform: uppercase;
 
   .portrait {
+    // TODO: why is border necessary to make img appear?
+    border: 1px solid white;
     display: flex;
     justify-content: center;
-
     .portrait-image {
-      height: 100px;
-      width: 100px;
+      img {
+        display: block;
+        height: auto;
+        max-height: 17em;
+        width: 100%;      
+      }
     }
   }
 }

@@ -3,5 +3,4 @@ mixin void_corruption_block
   div.void-corruption-block
     div.stat-block.corruption-title
       label(data-i18n='void_corruption')=locals['void_corruption']
-    fieldset.repeating_corruptions
-      +repeating_input('text', 'void_corruption')
+      +stat_area_no_label('void_corruption', 5)

@@ -9,14 +9,14 @@
       <h4 class="character-h4" data-i18n="page_name_character">CHARACTER</h4>
       <div class="mode">
         <input class="hide-element" type="radio" name="attr_mode_button" value="0"/>
-        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/main/DEATH-IN-SPACE/assets/character_page.png"></div>
+        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/death-in-space/Death%20in%20Space/assets/character_page.png"/></div>
       </div>
     </label>
     <label class="mode">
       <h4 class="hub-h4" data-i18n="page_name_hub">HUB</h4>
       <div class="mode">
         <input class="hide-element" type="radio" name="attr_mode_button" value="1"/>
-        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/main/DEATH-IN-SPACE/assets/hub_page.png"/></div>
+        <div class="mode-image"><img src="https://raw.githubusercontent.com/morgdalaine/morgdalaine-roll20/death-in-space/Death%20in%20Space/assets/hub_page.png"/></div>
       </div>
     </label>
   </div>
@@ -32,7 +32,7 @@
         <div class="header-col2">
             <div data-i18n="player_information">Section 0. Player Information</div>
               <label data-i18n="player_name">Player Name</label>
-              <input class="dotted-line" type="text" name="attr_player_name"/>
+              <input class="dotted-line" type="text" name="attr_player_name" spellcheck="false"/>
         </div>
       </header>
       <div class="nav-bar-character">
@@ -57,12 +57,6 @@
           </div>
           <div class="nav-child">
             <label class="page-label">
-              <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="4"/>
-              <div class="page-button-character" data-i18n="nav_weaponry">Weaponry</div>
-            </label>
-          </div>
-          <div class="nav-child">
-            <label class="page-label">
               <input class="hide-element page-button" type="radio" name="attr_character_page_button" value="5"/>
               <div class="page-button-character" data-i18n="nav_notes">Notes</div>
             </label>
@@ -75,112 +69,71 @@
       <div class="personal showhide">
           <div class="origin-row">
             <div class="origin-label" data-i18n="origin">Origin</div>
-            <div class="origin-radios">
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="void"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="void">void</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="punk"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="punk">punk</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="solpod"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="solpod">solpod</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="chrome"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="chrome">chrome</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="carbon"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="carbon">carbon</div>
-                </label>
-              </div>
-              <div class="origin-check">
-                <label>
-                  <input type="radio" name="attr_origin" value="velocity_cursed"/>
-                  <div class="origin-square"></div>
-                  <div class="origin-name" data-i18n="velocity_cursed">velocity cursed</div>
-                </label>
-              </div>
+            <div class="origin-input">
+                <input class="stat-input" type="text" name="attr_origin" spellcheck="false"/>
             </div>
           </div>
           <div class="name-row">
             <div class="stat-block name-block">
                 <label data-i18n="character_name">Name</label>
-                <input class="stat-input" type="text" name="attr_character_name"/>
+                <input class="stat-input" type="text" name="attr_character_name" spellcheck="false"/>
             </div>
             <div class="stat-block name-block">
                 <label data-i18n="nickname">Nickname</label>
-                <input class="stat-input" type="text" name="attr_nickname"/>
+                <input class="stat-input" type="text" name="attr_nickname" spellcheck="false"/>
             </div>
           </div>
           <div class="stat-block origin-benefit-block">
               <label data-i18n="origin_benefit">Origin Benefit</label>
-              <textarea class="stat-input" rows="10" name="attr_origin_benefit"></textarea>
+              <textarea class="stat-input" rows="5" name="attr_origin_benefit" spellcheck="false"></textarea>
           </div>
           <div class="stat-block xp-block">
               <label data-i18n="xp">XP</label>
-              <input class="stat-input" type="number" name="attr_xp"/>
+              <input class="stat-input" type="number" name="attr_xp" spellcheck="false"/>
           </div>
           <div class="stat-block background-block">
               <label data-i18n="background">Background</label>
-              <input class="stat-input" type="text" name="attr_background"/>
+              <input class="stat-input" type="text" name="attr_background" spellcheck="false"/>
           </div>
           <div class="stat-block past-allegiance-block">
               <label data-i18n="past_allegiance">Past Allegiance</label>
-              <input class="stat-input" type="text" name="attr_past_allegiance"/>
+              <input class="stat-input" type="text" name="attr_past_allegiance" spellcheck="false"/>
           </div>
           <div class="stat-block trait-block">
               <label data-i18n="trait">Trait</label>
-              <input class="stat-input" type="text" name="attr_trait"/>
+              <input class="stat-input" type="text" name="attr_trait" spellcheck="false"/>
           </div>
           <div class="stat-block drive-block">
               <label data-i18n="drive">Drive</label>
-              <input class="stat-input" type="text" name="attr_drive"/>
+              <input class="stat-input" type="text" name="attr_drive" spellcheck="false"/>
           </div>
           <div class="stat-block looks-block">
               <label data-i18n="looks">Looks</label>
-              <textarea class="stat-input" rows="4" name="attr_looks"></textarea>
+              <textarea class="stat-input" rows="3" name="attr_looks" spellcheck="false"></textarea>
           </div>
           <div class="stat-block ability-block">
             <label data-i18n="ability">Ability</label>
             <div class="ability-col">
                 <div class="ability-row">
-                  <div class="ability-name" data-i18n="body">Body</div>
+                  <button class="sheet-blank-button" name="body" type="roll" value="&amp;{template:default} {{name=BODY check}} {{roll=[[?{Roll Type|Normal, 1d20|Advantage, 2d20kh1|Disadvantage, 2d20kl1}+@{body}]]}} {{success on= 12+}}">body</button>
                   <div class="ability-value">
                     <input class="stat-input" type="number" name="attr_body"/>
                   </div>
                 </div>
                 <div class="ability-row">
-                  <div class="ability-name" data-i18n="dexterity">Dexterity</div>
+                  <button class="sheet-blank-button" name="dexterity" type="roll" value="&amp;{template:default} {{name=DEXTERITY check}} {{roll=[[?{Roll Type|Normal, 1d20|Advantage, 2d20kh1|Disadvantage, 2d20kl1}+@{dexterity}]]}} {{success on= 12+}}">dexterity</button>
                   <div class="ability-value">
                     <input class="stat-input" type="number" name="attr_dexterity"/>
                   </div>
                 </div>
                 <div class="ability-row">
-                  <div class="ability-name" data-i18n="savvy">Savvy</div>
+                  <button class="sheet-blank-button" name="savvy" type="roll" value="&amp;{template:default} {{name=SAVVY check}} {{roll=[[?{Roll Type|Normal, 1d20|Advantage, 2d20kh1|Disadvantage, 2d20kl1}+@{savvy}]]}} {{success on= 12+}}">savvy</button>
                   <div class="ability-value">
                     <input class="stat-input" type="number" name="attr_savvy"/>
                   </div>
                 </div>
                 <div class="ability-row">
-                  <div class="ability-name" data-i18n="tech">Tech</div>
+                  <button class="sheet-blank-button" name="tech" type="roll" value="&amp;{template:default} {{name=TECH check}} {{roll=[[?{Roll Type|Normal, 1d20|Advantage, 2d20kh1|Disadvantage, 2d20kl1}+@{tech}]]}} {{success on= 12+}}">tech</button>
                   <div class="ability-value">
                     <input class="stat-input" type="number" name="attr_tech"/>
                   </div>
@@ -193,7 +146,7 @@
                 <div class="subtitle" data-i18n="defense_subtitle">12+DEX UNARMORED</div>
             </div>
             <div class="stat-block defense-value">
-                <input class="stat-input" type="number" name="attr_defense"/>
+                <input class="stat-input" type="number" name="attr_defense" spellcheck="false"/>
             </div>
           </div>
           <div class="hit-points-row">
@@ -204,19 +157,17 @@
             </div>
             <div class="stat-block hit-points-current-col">
                 <label data-i18n="hp_current">Current</label>
-                <input class="stat-input" type="number" name="attr_hp"/>
+                <input class="stat-input" type="number" name="attr_hp" spellcheck="false"/>
             </div>
             <div class="stat-block hit-points-max-col">
                 <label data-i18n="hp_max">Max</label>
-                <input class="stat-input" type="number" name="attr_hp_max"/>
+                <input class="stat-input" type="number" name="attr_hp_max" spellcheck="false"/>
             </div>
           </div>
           <div class="stat-block portrait-block">
               <label data-i18n="portrait">Portrait</label>
-              <div class="subtitle" data-i18n="portrait_subtitle">To show alongside chat rolls</div>
-              <input class="stat-input" type="text" name="attr_portrait"/>
             <div class="portrait">
-              <div class="portrait-image"><img name="attr_character_avatar" width="100" height="100"/></div>
+              <div class="portrait-image"><img name="attr_character_avatar"/></div>
             </div>
           </div>
       </div>
@@ -246,103 +197,30 @@
                     <label>
                       <input type="radio" name="attr_void_points" value="4"/><span>4</span>
                     </label>
-                    <label>
-                      <input type="radio" name="attr_void_points" value="5"/><span class="invert">5</span>
-                    </label>
                   </div>
                 </div>
-              <div class="void-points-roll"><span><span data-i18n="roll_corruption">Roll corruption effects</span><span class="void-points-up-arrow">&amp;#8593;</span></span></div>
             </div>
             <div class="void-points-right">
-              <div class="void-points-text-top" data-i18n="use_void_point">The player can use 1 void point to:</div>
+              <div class="void-points-text-top" data-i18n="use_void_point">Void Points can be used to:</div>
               <div class="void-points-text-bottom">
                 <ul>
-                  <li data-i18n="void_point_use_1">Get advantage on an ability check</li>
-                  <li data-i18n="void_point_use_2">Activate a cosmic mutation</li>
+                  <li data-i18n="void_point_use_1">Get advantage on an ability check or attack roll.</li>
+                  <li data-i18n="void_point_use_2">Activate a cosmic mutation.</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="addiction-block">
-            <div class="stat-block addiction-title">
-              <label data-i18n="addiction">Addiction</label>
-            </div>
-            <div class="days-without" data-i18n="days_without">Days Without Substance</div>
-              <div class="days-checkboxes">
-                <div class="day-check">
-                  <label>
-                    <input type="radio" name="attr_days_without_substance" value="1"/>
-                    <div class="days-square"></div>
-                    <div class="days-plus">+1</div>
-                  </label>
-                </div>
-                <div class="day-check">
-                  <label>
-                    <input type="radio" name="attr_days_without_substance" value="2"/>
-                    <div class="days-square"></div>
-                    <div class="days-plus">+2</div>
-                  </label>
-                </div>
-                <div class="day-check">
-                  <label>
-                    <input type="radio" name="attr_days_without_substance" value="3"/>
-                    <div class="days-square"></div>
-                    <div class="days-plus">+3</div>
-                  </label>
-                </div>
-                <div class="day-check">
-                  <label>
-                    <input type="radio" name="attr_days_without_substance" value="4"/>
-                    <div class="days-square"></div>
-                    <div class="days-plus">+4</div>
-                  </label>
-                </div>
-                <div class="day-check">
-                  <label>
-                    <input type="radio" name="attr_days_without_substance" value="5"/>
-                    <div class="days-square"></div>
-                    <div class="days-plus">+5</div>
-                  </label>
-                </div>
-                <div class="day-check">
-                  <label>
-                    <input type="radio" name="attr_days_without_substance" value="6"/>
-                    <div class="days-square"></div>
-                    <div class="days-plus">+6</div>
-                  </label>
-                </div>
-                <div class="day-check">
-                  <label>
-                    <input type="radio" name="attr_days_without_substance" value="7"/>
-                    <div class="days-square"></div>
-                    <div class="days-plus">+7</div>
-                  </label>
-                </div>
-              </div>
-            <div class="stat-block substance-title">
-              <label data-i18n="substance">Substance</label>
-            </div>
-            <fieldset class="repeating_substances">
-                <input class="repeating-input" type="text" name="attr_substance"/>
-            </fieldset>
-            <div class="substance-row"></div>
-            <div class="addiction-text subtitle" data-i18n="addiction_subtitle">When using an addictive substance, such as virtual reality stimulants, medical drugs, or similar, roll a BDY ability check.</div>
-          </div>
-          <div class="cosmic-mutations-block">
+          <div class="cosmic-mutations-block">   
             <div class="stat-block mutations-title">
               <label data-i18n="cosmic_mutations">Cosmic Mutations</label>
+                <textarea class="stat-input" rows="4" name="attr_cosmic_mutation" spellcheck="false">   </textarea>
             </div>
-            <fieldset class="repeating_mutations">
-                <input class="repeating-input" type="text" name="attr_cosmic_mutation"/>
-            </fieldset>
           </div>
           <div class="void-corruption-block">
             <div class="stat-block corruption-title">
               <label data-i18n="void_corruption">Void Corruption</label>
+                <textarea class="stat-input" rows="5" name="attr_void_corruption" spellcheck="false">   </textarea>
             </div>
-            <fieldset class="repeating_corruptions">
-                <input class="repeating-input" type="text" name="attr_void_corruption"/>
-            </fieldset>
           </div>
           <div class="life-support-block">
             <div class="stat-block life-support-title">
@@ -409,11 +287,23 @@
       <input class="belongings hide-element" type="radio" name="attr_character_page" value="3" checked="checked"/>
       <div class="belongings showhide">
           <div class="belongings-block">
-            <div class="stat-block belonging-title">
-              <label data-i18n="belongings">Belongings</label>
+            <div class="stat-block belongings-header-row">
+              <div class="belongings-col">
+                  <label data-i18n="condition">Condition</label>
+              </div>
+              <div class="belongings-col">
+                  <label data-i18n="condition">Condition</label>
+              </div>
             </div>
             <fieldset class="repeating_belongings">
-                <input class="repeating-input" type="text" name="attr_belongings"/>
+              <div class="belonging-row">
+                <div class="belonging-name">
+                    <input class="repeating-input" type="text" name="attr_belongingname" spellcheck="false"/>
+                </div>
+                <div class="belonging-condition">
+                    <input class="repeating-input" type="number" name="attr_belongingcondition" spellcheck="false"/>
+                </div>
+              </div>
             </fieldset>
             <div class="belongings-note">
               <div class="exclamation">!</div>
@@ -422,75 +312,72 @@
           </div>
           <div class="stat-block small-items-block">
               <label data-i18n="small_items">Small Items</label>
-              <textarea class="stat-input" rows="2" name="attr_small_items"></textarea>
+            <fieldset class="repeating_smallitems">
+                <input class="repeating-input" type="text" name="attr_smallitemname" spellcheck="false"/>
+            </fieldset>
           </div>
-      </div>
-    </div>
-    <div class="page-container">
-      <input class="weaponry hide-element" type="radio" name="attr_character_page" value="4"/>
-      <div class="weaponry showhide">
           <div class="equipment">
             <div class="stat-block weapon-name">
                 <label data-i18n="weapon_1">Weapon 1</label>
-                <input class="stat-input" type="text" name="attr_weapon_1"/>
+                <input class="stat-input" type="text" name="attr_weapon_1" spellcheck="false"/>
             </div>
             <div class="stat-block weapon-damage">
-                <label data-i18n="damage">Damage</label>
-                <input class="stat-input" type="text" name="attr_damage"/>
+                <label data-i18n="damage_1">Damage</label>
+                <input class="stat-input" type="text" name="attr_damage_1" spellcheck="false"/>
             </div>
-            <div class="stat-block equipment-units">
-                <label data-i18n="units">Units</label>
-                <input class="stat-input" type="text" name="attr_units"/>
+            <div class="stat-block equipment-uses">
+                <label data-i18n="uses_1">Uses</label>
+                <input class="stat-input" type="text" name="attr_uses_1" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-condition">
-                <label data-i18n="condition">Condition</label>
-                <input class="stat-input" type="text" name="attr_condition"/>
+                <label data-i18n="condition_1">Condition</label>
+                <input class="stat-input" type="text" name="attr_condition_1" spellcheck="false"/>
             </div>
           </div>
           <div class="equipment">
             <div class="stat-block weapon-name">
                 <label data-i18n="weapon_2">Weapon 2</label>
-                <input class="stat-input" type="text" name="attr_weapon_2"/>
+                <input class="stat-input" type="text" name="attr_weapon_2" spellcheck="false"/>
             </div>
             <div class="stat-block weapon-damage">
-                <label data-i18n="damage">Damage</label>
-                <input class="stat-input" type="text" name="attr_damage"/>
+                <label data-i18n="damage_2">Damage</label>
+                <input class="stat-input" type="text" name="attr_damage_2" spellcheck="false"/>
             </div>
-            <div class="stat-block equipment-units">
-                <label data-i18n="units">Units</label>
-                <input class="stat-input" type="text" name="attr_units"/>
+            <div class="stat-block equipment-uses">
+                <label data-i18n="uses_2">Uses</label>
+                <input class="stat-input" type="text" name="attr_uses_2" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-condition">
-                <label data-i18n="condition">Condition</label>
-                <input class="stat-input" type="text" name="attr_condition"/>
+                <label data-i18n="condition_2">Condition</label>
+                <input class="stat-input" type="text" name="attr_condition_2" spellcheck="false"/>
             </div>
           </div>
           <div class="equipment">
             <div class="stat-block armor-name">
                 <label data-i18n="armor">Armor</label>
-                <input class="stat-input" type="text" name="attr_armor"/>
+                <input class="stat-input" type="text" name="attr_armor" spellcheck="false"/>
             </div>
             <div class="stat-block armor-protects-against">
                 <label data-i18n="protects_against">Protects Against</label>
-                <input class="stat-input" type="text" name="attr_protects_against"/>
+                <input class="stat-input" type="text" name="attr_protects_against" spellcheck="false"/>
             </div>
-            <div class="stat-block equipment-units">
+            <div class="stat-block equipment-uses">
                 <label data-i18n="dr_bonus">DR Bonus</label>
-                <input class="stat-input" type="text" name="attr_dr_bonus"/>
+                <input class="stat-input" type="text" name="attr_dr_bonus" spellcheck="false"/>
             </div>
             <div class="stat-block equipment-condition">
                 <label data-i18n="condition">Condition</label>
-                <input class="stat-input" type="text" name="attr_condition"/>
+                <input class="stat-input" type="text" name="attr_condition" spellcheck="false"/>
             </div>
           </div>
-          <div class="holds-debt">
-            <div class="stat-block holds">
-                <label data-i18n="holds">Holds</label>
-                <input class="stat-input" type="number" name="attr_holds"/>
+          <div class="holos-debt">
+            <div class="stat-block holos">
+                <label data-i18n="holos">Holos</label>
+                <input class="stat-input" type="number" name="attr_holos" spellcheck="false"/>
             </div>
             <div class="stat-block debt">
                 <label data-i18n="debt">Debt</label>
-                <input class="stat-input" type="number" name="attr_debt"/>
+                <input class="stat-input" type="number" name="attr_debt" spellcheck="false"/>
             </div>
           </div>
       </div>
@@ -500,7 +387,7 @@
       <div class="notes showhide">
           <div class="stat-block notes-block">
               <label data-i18n="notes">Notes</label>
-              <textarea class="stat-input" rows="18" name="attr_notes"></textarea>
+              <textarea class="stat-input" rows="13" name="attr_notes" spellcheck="false"></textarea>
           </div>
       </div>
     </div>
@@ -516,7 +403,7 @@
         <div class="header-col2">
             <div data-i18n="owner_information">Section 0. Owner Information</div>
               <label data-i18n="owner_signature">Owner Signature</label>
-              <input class="dotted-line" type="text" name="attr_owner_signature"/>
+              <input class="dotted-line" type="text" name="attr_owner_signature" spellcheck="false"/>
         </div>
       </header>
       <div class="nav-bar-hub">
@@ -524,7 +411,7 @@
           <div class="nav-child">
             <label class="page-label">
               <input class="hide-element page-button" type="radio" name="attr_hub_page_button" value="6" checked="checked"/>
-              <div class="page-button-hub" data-i18n="nav_specifics">Hub Info</div>
+              <div class="page-button-hub" data-i18n="nav_specifics">Specifics</div>
             </label>
           </div>
           <div class="nav-child">
@@ -560,26 +447,26 @@
           <div class="nickname-row">
             <div class="stat-block nickname-block">
                 <label data-i18n="nickname">Nickname</label>
-                <input class="stat-input" type="text" name="attr_nickname"/>
+                <input class="stat-input" type="text" name="attr_nickname" spellcheck="false"/>
             </div>
           </div>
           <div class="hub-frame-type-row">
             <div class="stat-block hub-frame-type-block">
                 <label data-i18n="hub_type_and_frame">Hub Type and Frame</label>
-                <input class="stat-input" type="text" name="attr_hub_type_and_frame"/>
+                <input class="stat-input" type="text" name="attr_hub_type_and_frame" spellcheck="false"/>
             </div>
           </div>
           <div class="stat-block hub-background-block">
               <label data-i18n="background">Background</label>
-              <textarea class="stat-input" rows="4" name="attr_background"></textarea>
+              <textarea class="stat-input" rows="4" name="attr_background" spellcheck="false"></textarea>
           </div>
           <div class="stat-block appearance-block">
               <label data-i18n="appearance">Appearance</label>
-              <textarea class="stat-input" rows="4" name="attr_appearance"></textarea>
+              <textarea class="stat-input" rows="4" name="attr_appearance" spellcheck="false"></textarea>
           </div>
           <div class="stat-block quirks-block">
               <label data-i18n="quirks">Quirks</label>
-              <input class="stat-input" type="text" name="attr_quirks"/>
+              <textarea class="stat-input" rows="3" name="attr_quirks" spellcheck="false"></textarea>
           </div>
       </div>
     </div>
@@ -589,42 +476,42 @@
           <div class="frame-integrity-row">
             <div class="frame-integrity">
               <div class="stat-block frame-integrity-title">
-                <label data-i18n="frame_integrity">Frame Integrity</label>
+                  <label data-i18n="frame_integrity">Frame Integrity</label>
               </div>
               <div class="integrity-percent">0%</div>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_0" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="0"/>
                 </div>
               </label>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_1" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="1"/>
                 </div>
               </label>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_2" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="2"/>
                 </div>
               </label>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_3" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="3"/>
                 </div>
               </label>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_4" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="4"/>
                 </div>
               </label>
               <div class="integrity-percent">50%</div>
@@ -632,35 +519,35 @@
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_5" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="5"/>
                 </div>
               </label>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_6" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="6"/>
                 </div>
               </label>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_7" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="7"/>
                 </div>
               </label>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_8" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="8"/>
                 </div>
               </label>
             </div>
             <div class="integrity-increment">
               <label>
                 <div class="integrity-checkbox">
-                  <input type="checkbox" name="attr_frame_integrity_9" value="1"/>
+                  <input type="radio" name="attr_frame_integrity" value="9"/>
                 </div>
               </label>
               <div class="integrity-percent">100%</div>
@@ -668,18 +555,20 @@
             <div class="frame-defense-rating">
               <div class="stat-block frame-defense-rating-block dotted-number">
                   <label data-i18n="defense">Defense Rating</label>
-                  <input class="stat-input" type="number" name="attr_defense"/>
+                  <input class="stat-input" type="number" name="attr_defense" spellcheck="false"/>
               </div>
             </div>
           </div>
           <div class="frame-integrity-row-bottom">
-            <div class="frame-roll-on-damage" data-i18n="roll_damage_table">Roll on damage table</div>
+            <div class="frame-condition0"><span class="frame-integrity-arrow">&darr;</span><br/><span data-i18n="condition0">Condition 0</span></div>
             <div class="frame-spacer"></div>
             <div class="frame-spacer"></div>
-            <div class="frame-roll-on-damage" data-i18n="roll_damage_table">Roll on damage table</div>
+            <div class="frame-spacer"></div>
+            <div class="frame-roll-on-disasters"><span class="frame-integrity-arrow">&darr;</span><br/><span data-i18n="roll_disasters_table">Roll on the spacecraft disasters table</span></div>
             <div></div>
             <div class="frame-spacer"></div>
-            <div class="frame-all-is-calm" data-i18n="all_is_calm">When all is calm the hub regains 1d4×10% frame integrity on a calm night up to maximum</div>
+            <div class="frame-spacer"></div>
+            <div class="frame-all-is-calm" data-i18n="all_is_calm">When all is calm, recover 1d6&amp;#10005;10% frame integrity. A calm night restores to 100%.</div>
           </div>
           <div class="systems-row">
               <div class="current-max-block">
@@ -688,11 +577,11 @@
                 </div>
                 <div class="stat-block stat-current-col">
                     <label data-i18n="current">Current</label>
-                    <input class="stat-input" type="number" name="attr_condition"/>
+                    <input class="stat-input" type="number" name="attr_condition" spellcheck="false"/>
                 </div>
                 <div class="stat-block stat-max-col">
                     <label data-i18n="max">Max</label>
-                    <input class="stat-input" type="number" name="attr_condition_max"/>
+                    <input class="stat-input" type="number" name="attr_condition_max" spellcheck="false"/>
                 </div>
               </div>
               <div class="current-max-block">
@@ -701,11 +590,11 @@
                 </div>
                 <div class="stat-block stat-current-col">
                     <label data-i18n="current">Current</label>
-                    <input class="stat-input" type="number" name="attr_fuel"/>
+                    <input class="stat-input" type="number" name="attr_fuel" spellcheck="false"/>
                 </div>
                 <div class="stat-block stat-max-col">
                     <label data-i18n="max">Max</label>
-                    <input class="stat-input" type="number" name="attr_fuel_max"/>
+                    <input class="stat-input" type="number" name="attr_fuel_max" spellcheck="false"/>
                 </div>
               </div>
               <div class="power-source-block">
@@ -732,12 +621,12 @@
               </div>
               <div class="stat-block output-power-block dotted-number">
                   <label data-i18n="output_power">Output Power</label>
-                  <input class="stat-input" type="number" name="attr_output_power"/>
+                  <input class="stat-input" type="number" name="attr_output_power" spellcheck="false"/>
               </div>
           </div>
           <div class="modules-wrapper">
             <div class="modules-block">
-              <div class="stat-block modules-item">
+              <div class="stat-block modules-header">
                 <div class="modules-name">
                     <label data-i18n="modules">Modules</label>
                 </div>
@@ -746,30 +635,24 @@
                 </div>
               </div>
               <fieldset class="repeating_modules">
-                  <div class="modules-item">
-                    <div class="modules-name">
-                        <input class="repeating-input" type="text" name="attr_module_name"/>
-                    </div>
-                    <div class="stat-block modules-power-cost">
-                        <input class="stat-input" type="number" name="attr_power_cost"/>
-                    </div>
+                <div class="module-row">
+                  <div class="module-name">
+                      <input class="repeating-input" type="text" name="attr_modulename" spellcheck="false"/>
                   </div>
+                  <div class="module-power-cost">
+                      <input class="repeating-input" type="number" name="attr_modulepowercost" spellcheck="false"/>
+                  </div>
+                </div>
               </fieldset>
-              <div class="stat-block modules-item">
+              <div class="stat-block modules-footer">
                 <div class="stat-block modules-name">
-                  <label class="subtitle align-right" data-i18n="power_formula">Power cost &gt; power output = overheated</label>
-                  <label class="subtitle align-right" data-i18n="power_note">The POWER COST sum should not exceed the output power</label>
+                  <label class="subtitle align-right" data-i18n="power_note">The power cost sum should not exceed the output power.</label>
                 </div>
                 <div class="modules-total-power-cost">
                   <div class="stat-block modules-name">
-                      <input class="stat-input" type="number" name="attr_total_power_cost" readonly="readonly"/>
+                      <input class="stat-input" type="number" name="attr_total_power_cost" readonly="readonly" spellcheck="false"/>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="power-output-formula-column">
-              <div class="stat-block output-power-block">
-                  <input class="stat-input" type="number" name="attr_output_power" readonly="readonly"/>
               </div>
             </div>
           </div>
@@ -783,7 +666,7 @@
               <label data-i18n="cargo">Cargo</label>
             </div>
             <fieldset class="repeating_cargo">
-                <input class="repeating-input" type="text" name="attr_cargo"/>
+                <input class="repeating-input" type="text" name="attr_cargo" spellcheck="false"/>
             </fieldset>
           </div>
       </div>
@@ -791,12 +674,7 @@
     <div class="page-container">
       <input class="layout hide-element" type="radio" name="attr_hub_page" value="8" checked="checked"/>
       <div class="layout showhide">
-          <div class="layout-splash">
-            <div class="stat-block cargo-title">
-              <label data-i18n="hub_design">Design your hub layout</label>
-            </div>
-          </div>
-          <div class="layout-grid"></div>
+          <div class="layout-grid"><img name="attr_character_avatar"/></div>
       </div>
     </div>
     <div class="page-container">
@@ -804,7 +682,7 @@
       <div class="notes showhide">
           <div class="stat-block notes-block">
               <label data-i18n="notes">Notes</label>
-              <textarea class="stat-input" rows="18" name="attr_notes"></textarea>
+              <textarea class="stat-input" rows="13" name="attr_notes" spellcheck="false"></textarea>
           </div>
       </div>
     </div>
@@ -838,21 +716,22 @@ const currentMax = (attr) => {
     updateAttrs[attr] = fin_val;
     updateAttrs[`${attr}_max`] = Math.max(0, maximum);
     setAttrs(updateAttrs);
-    console.log(updateAttrs);
+    // console.log(updateAttrs);
   });
 };
 
-on('change:hp change:hp_max', function() {
-  currentMax('hp');
-});
+// TODO: disabling this auto-set feature for now, as it makes initial data entry (when max might be 0) confusing
+// on('change:hp change:hp_max', function() {
+//   currentMax('hp');
+// });
 
-on('change:condition change:condition_max', function() {
-  currentMax('condition');
-});
+// on('change:condition change:condition_max', function() {
+//   currentMax('condition');
+// });
 
-on('change:fuel change:fuel_max', function() {
-  currentMax('fuel');
-});
+// on('change:fuel change:fuel_max', function() {
+//   currentMax('fuel');
+// });
   
 // update frame integrity
 const frame_integrity = ['frame_integrity_0', 'frame_integrity_1', 'frame_integrity_2', 'frame_integrity_3', 'frame_integrity_4', 'frame_integrity_5', 'frame_integrity_6', 'frame_integrity_7', 'frame_integrity_8', 'frame_integrity_9'];
@@ -908,14 +787,14 @@ on('change:character_page_button', function(eventinfo) {
   setAttrs({
     character_page: eventinfo.newValue
   });
-  console.log({character_page: eventinfo.newValue});
+  // console.log({character_page: eventinfo.newValue});
 });
 
 on('change:hub_page_button', function(eventinfo) {
   setAttrs({
     hub_page: eventinfo.newValue
   });
-  console.log({hub_page: eventinfo.newValue});
+  // console.log({hub_page: eventinfo.newValue});
 });
 
 on('change:mode_button', function(eventinfo) {
@@ -928,12 +807,6 @@ on('change:mode_button', function(eventinfo) {
 on('change:stat_mode_button', function(eventinfo) {
   setAttrs({
     stat_mode: eventinfo.newValue,
-  });
-});
-
-on('change:close_changelog', function() {
-  setAttrs({
-    'changelog_2.2.1': 'on',
   });
 });
   
@@ -965,8 +838,8 @@ const repeatingSum = (destinations, section, fields) => {
     });
 };
 
-on('change:repeating_modules:power_cost remove:repeating_modules', function() {
-  repeatingSum('total_power_cost','modules','power_cost');
+on('change:repeating_modules:modulepowercost remove:repeating_modules', function() {
+  repeatingSum('total_power_cost','modules','modulepowercost');
 });
 
 </script>

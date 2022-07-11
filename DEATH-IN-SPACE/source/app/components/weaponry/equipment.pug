@@ -4,11 +4,11 @@ mixin weapon_block(index)
     div.stat-block.weapon-name
       +stat('text', `weapon_${index}`)
     div.stat-block.weapon-damage
-      +stat('text', 'damage')
-    div.stat-block.equipment-units
-      +stat('text', 'units')
+      +stat('text', `damage_${index}`)
+    div.stat-block.equipment-uses
+      +stat('text', `uses_${index}`)
     div.stat-block.equipment-condition
-      +stat('text', 'condition')
+      +stat('text', `condition_${index}`)
 
 mixin armor_block
   div.equipment
@@ -16,14 +16,14 @@ mixin armor_block
       +stat('text', 'armor')
     div.stat-block.armor-protects-against
       +stat('text', 'protects_against')
-    div.stat-block.equipment-units
+    div.stat-block.equipment-uses
       +stat('text', 'dr_bonus')
     div.stat-block.equipment-condition
       +stat('text', 'condition')
 
-mixin holds_debt
-  div.holds-debt
-    div.stat-block.holds
-      +stat('number', 'holds')
+mixin holos_debt
+  div.holos-debt
+    div.stat-block.holos
+      +stat('number', 'holos')
     div.stat-block.debt
       +stat('number', 'debt')

@@ -2,7 +2,7 @@
 .specifics {
   display: inline-grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(4, 5em);
+  grid-template-rows: 5em, 9em, 6em;
   width: 100%;
 }
 
@@ -26,18 +26,16 @@
   border-right: 2px solid $black;
   grid-column-start: 1;
   grid-row-start: 2;
-  grid-row-end: 4;
 }
 
 .appearance-block {
   border-bottom: 2px solid $black;
   grid-column-start: 2;
   grid-row-start: 2;
-  grid-row-end: 4;
 }
 
 .quirks-block {
   grid-column-start: 1;
   grid-column-end: 3;
-  grid-row-start: 4;
+  grid-row-start: 3;
 }

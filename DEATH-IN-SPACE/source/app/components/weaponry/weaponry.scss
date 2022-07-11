@@ -18,15 +18,27 @@
   .weapon-damage {
     padding-left: 5px;
     border-right: 2px dotted $dead-gray;
+    input, label {
+      font-size: 0.8em;    
+      text-align: center;
+    }
   }
 
-  .equipment-units {
+  .equipment-uses {
     padding-left: 5px;
     border-right: 2px dotted $dead-gray;
+    input, label {
+      font-size: 0.8em;    
+      text-align: center;
+    }
   }
 
   .equipment-condition {
     padding-left: 5px;
+    input, label {
+      font-size: 0.8em;    
+      text-align: center;
+    }
   }
 
   .armor-name {
@@ -41,11 +53,11 @@
   }
 }
 
-.holds-debt {
+.holos-debt {
   display: inline-grid;
   grid-template-columns: repeat(7, 1fr);
 
-  .holds {
+  .holos {
     padding-left: 5px;
     grid-column: span 2;
     border-right: 2px dotted $dead-gray;

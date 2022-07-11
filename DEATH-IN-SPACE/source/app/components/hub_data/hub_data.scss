@@ -95,25 +95,44 @@
 .frame-defense-rating {
   grid-column-end: span 3;
   border-left: 2px solid $black;
-
+  text-align: center;
+  label {
+    text-align: center;
+  }
   input[type=number] {
     margin-left: 2px;
   }
 }
 
-.frame-roll-on-damage {
+.frame-integrity-arrow {
+  color: $blue;
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+.frame-condition0 {
   font-size: 0.7em;
   padding: 0 0.5em;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
-  grid-column-end: span 2;
+  grid-column-end: span 2;  
+}
+
+.frame-roll-on-disasters {
+  font-size: 0.7em;
+  padding: 0 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  grid-column-end: span 3;
 }
 
 .frame-spacer {
-  grid-column-end: span 2;
+  grid-column-end: span 1;
 }
 
 .frame-all-is-calm {
+  border-left: 2px dotted $black;
+  padding-left: 2px;
   font-size: 0.7em;
   text-transform: uppercase;
   grid-column-end: span 4;
@@ -122,7 +141,7 @@
 // systems
 .systems-row {
   display: inline-grid;
-  grid-template-columns: repeat(2, 30%) 25% 15%;
+  grid-template-columns: 30% 25% 30% 15%;
   width: 100%;
   border-bottom: 2px solid $black;
 }
@@ -138,7 +157,7 @@
 
   .power-source-radios {
     display: flex;
-    flex: 0 0 80px;
+    flex: 0 0 70px;
     flex-direction: column;
     font-size: 0.8em;
     justify-content: space-around;
@@ -149,12 +168,22 @@
     label {
       display: flex;
       justify-content: space-between;
+      span {
+        font-style: italic;
+        padding-right: 5px;
+        text-align: right;
+        text-transform: capitalize;      
+        width: 100%;
+      }
     }
   }
 }
 
 .output-power-block {
-
+  text-align: center;
+  label {
+    text-align: center;
+  }
   input[type=number] {
     margin-left: 2px
   }
@@ -166,57 +195,66 @@
 
 .modules-block {
   @include fill-available();
-  // border-right: 2px dashed $black;
-}
 
-.modules-item {
-  display: flex;
-  margin: 2px 5px;
+  .modules-header, .modules-footer {
+    display: flex;
+    padding-left: 5px;
+    width: 100%;
 
-  .modules-name {
-    @include fill-available();
-  }
+    .modules-name {
+      flex: 85%;
+    }
 
-  .modules-power-cost, .modules-total-power-cost {
-    width: 3.5em;
-    margin-left: 5px;
-
-    label {
+    .modules-power-cost, .modules-total-power-cost {
+      flex: 15%;
+      margin-right: 5px;
       text-align: center;
-      font-size: 0.8em;
-    }
 
-    input[type=number] {
-      width: 2.5em;
-      border: 2px dotted $dead-gray;
+      label {
+        text-align: center;
+        font-size: 0.8em;
+      }
+
+      input[type=number] {
+        width: 55px;
+        border: 2px dotted $dead-gray;
+      }
     }
   }
 
-  .modules-total-power-cost {
-    margin-top: 0.5em;
+  .repcontainer[data-groupname="repeating_modules"] > .repitem {
+    .module-row {
+      display: flex;
+      .module-name {
+        flex: 1;
+      }
+      .module-power-cost {
+        flex: 0 0 100px;
+        text-align: center;
+        input[type="number"] {
+          border: 2px dotted $dead-gray;
+          font-size: 0.8em;
+          width: 55px;
+        }        
+      }
+    }
+  }
+
+  .modules-footer {
+    .module-name {
+      border: 2px solid black;
+      label.subtitle {
+        border: 1px solid red;
+        font-style: italic;
+        text-transform: capitalize;
+      }    
+    }
+    .modules-total-power-cost {
+      input[type=number] {
+        width: 60px;
+        border: 2px dotted $dead-gray;
+      }      
+    }  
   }
 }
 
-.power-output-formula-column {
-  width: 6em;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-
-  input[type=number] {
-    width: 2.5em;
-    border: 2px dotted $dead-gray;
-    margin-bottom: 11px;
-  }
-
-  .output-power-block:before {
-    content: '\2264';
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-  label {
-    @include rotate();
-    @include fill-available-height();
-  }
-}

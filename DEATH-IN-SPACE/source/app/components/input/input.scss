@@ -2,3 +2,41 @@
 .dotted-line {
   border-bottom: 2px dotted $black !important;
 }
+
+$textarea-bg: #fafafa;
+$textarea-line: #ccc;
+
+textarea.stat-input {
+  background-attachment: local;
+  background-image:
+      linear-gradient(to right, $textarea-bg 5px, transparent 5px),
+      linear-gradient(to left, $textarea-bg 5px, transparent 5px),
+      repeating-linear-gradient($textarea-bg, $textarea-bg 26px, $textarea-line 26px, $textarea-line 27px, $textarea-bg 27px);
+  line-height: 27px;
+  padding: 8px 10px;  
+}
+
+ui.dialog.charsheet button[type="roll"].sheet-blank-button::before {
+  content: '';
+}
+
+button[type="roll"].sheet-blank-button:before {
+  content: ' ';
+}
+
+button[type="roll"].sheet-blank-button {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  font-weight: bold;
+  font-family: Cairo;
+  height: 22px;
+  margin-left: 5px;
+  padding: 2px 5px 4px 5px;
+  text-transform: uppercase;
+}
+
+button[type="roll"].sheet-blank-button :hover {
+  background-color: transparent;
+  border-radius: 10px;
+}

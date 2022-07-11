@@ -1,22 +1,51 @@
 
 .belongings {
-  display: inline-grid;
-  // grid-template-columns: 50% 50%;
-  grid-template-rows: 10em auto;
   width: 100%
 }
 
 .belongings-block {
   border-bottom: 2px solid $black;
-
+  .belongings-header-row {
+    display: flex;
+    font-size: 0.8em;
+    height: 1.5em;
+    .belongings-col {
+      padding-right: 5px;
+      label {
+        text-align: right;      
+      }
+      width: 50%;
+    }
+  }
+  .repcontainer[data-groupname="repeating_belongings"] > .repitem {
+    display: inline-block;
+    width: calc(50% - 10px);    
+    .belonging-row {
+      display: flex;
+      height: 2.5em;
+      width: 100%;
+      div.belonging-name {
+        flex: 1;
+      }
+      div.belonging-condition {
+        flex: 0 0 60px;
+        margin-left: 5px;
+        input[type="number"] {
+          border: 2px dotted $dead-gray;
+          font-size: 0.8em;
+          width: 100%;
+        }
+      }
+    }
+  }
   .belongings-note {
     display: flex;
-    padding: 5px;
+    justify-content: center;
 
     .exclamation {
-      font-size: 2.5em;
+      font-size: 1.4em;
       text-align: right;
-      width: 100%;
+      width: 2em;
       font-weight: bold;
     }
 
@@ -37,5 +66,17 @@
         content: ')';
       }
     }
+  }
+}
+
+.small-items-block {
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .repcontainer[data-groupname="repeating_smallitems"] > .repitem {
+    display: inline-block;
+    width: calc(50% - 10px);
   }
 }

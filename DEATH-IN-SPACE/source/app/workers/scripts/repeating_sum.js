@@ -27,6 +27,6 @@ const repeatingSum = (destinations, section, fields) => {
     });
 };
 
-on('change:repeating_modules:power_cost remove:repeating_modules', function() {
-  repeatingSum('total_power_cost','modules','power_cost');
+on('change:repeating_modules:modulepowercost remove:repeating_modules', function() {
+  repeatingSum('total_power_cost','modules','modulepowercost');
 });
