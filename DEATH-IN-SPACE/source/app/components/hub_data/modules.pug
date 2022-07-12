@@ -15,7 +15,7 @@ mixin modules_block
             +repeating_input('number', 'modulepowercost')
       //- total power cost and formula
       div.stat-block.modules-footer
-        div.stat-block.modules-name
+        div.stat-block.modules-name.power-note
           label.subtitle.align-right(data-i18n='power_note')=locals['power_note']
         div.modules-total-power-cost
           div.stat-block.modules-name

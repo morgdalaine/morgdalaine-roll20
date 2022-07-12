@@ -716,6 +716,7 @@
 }
 
 .charsheet .hit-points-row .hit-points-text {
+  font-style: italic;
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -860,6 +861,7 @@
 
 .charsheet .void-points-block .void-points-text-bottom {
   font-size: 0.8em;
+  font-style: italic;
 }
 
 .charsheet .cosmic-mutations-block {
@@ -1402,6 +1404,11 @@
 .charsheet .modules-block .modules-header .modules-power-cost input[type=number], .charsheet .modules-block .modules-header .modules-total-power-cost input[type=number], .charsheet .modules-block .modules-footer .modules-power-cost input[type=number], .charsheet .modules-block .modules-footer .modules-total-power-cost input[type=number] {
   width: 55px;
   border: 2px dotted #7a7971;
+}
+
+.charsheet .modules-block .modules-header .power-note label, .charsheet .modules-block .modules-footer .power-note label {
+  font-style: italic;
+  text-transform: none;
 }
 
 .charsheet .modules-block .repcontainer[data-groupname="repeating_modules"] > .repitem .module-row {
