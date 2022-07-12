@@ -10,8 +10,8 @@ header {
 }
 
 .sheet-info-character, .sheet-info-hub {
-  padding-top: 1em;
   padding-left: 1em;
+  padding-top: 1.3em;
 }
 
 .sheet-info-character { color: $red; }
@@ -19,7 +19,12 @@ header {
 
 .game-title {
   @include std-font($title-font);
-  font-size: 3em;
+  font-size: 3.5em;
+  line-height: 0.8em;
+}
+.mode-title {
+  @include std-font($text-font);
+  font-size: 1.1em;
 }
 
 .header-col2 {
@@ -27,9 +32,11 @@ header {
   border-left: 2px solid $black;
   display: flex;
   flex-direction: column;
-  flex: 1;
   justify-content: space-between;
   margin: 0;
   padding: 10px;
   text-transform: uppercase;
+  label {
+    font-weight: normal;
+  }
 }
