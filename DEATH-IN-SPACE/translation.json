@@ -38,7 +38,7 @@
   "game_title": "Death In Space",
   "hit_points": "Hit Points",
   "hit_points_subtitle_1": "Start with 1d8",
-  "hit_points_subtitle_2": "Recover 1d4+BDY",
+  "hit_points_subtitle_2": "Recover 1d8+BDY",
   "holos": "Holos",
   "hp": "Hit Points",
   "hp_current": "Current",

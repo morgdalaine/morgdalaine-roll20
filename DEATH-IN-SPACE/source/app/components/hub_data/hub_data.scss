@@ -220,6 +220,13 @@
         border: 2px dotted $dead-gray;
       }
     }
+
+    .power-note {
+      label {
+        font-style: italic;
+        text-transform: none;
+      }
+    }
   }
 
   .repcontainer[data-groupname="repeating_modules"] > .repitem {
