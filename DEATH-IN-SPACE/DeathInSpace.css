@@ -1463,18 +1463,18 @@
 }
 
 .charsheet .layout-grid {
+  align-items: center;
   background-image: radial-gradient(#3a8db9 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
   display: flex;
   height: 32em;
-  align-items: center;
   justify-content: center;
   width: 100%;
 }
 
 .charsheet .layout-grid img {
-  height: auto;
+  height: 100%;
   width: auto;
 }
 
