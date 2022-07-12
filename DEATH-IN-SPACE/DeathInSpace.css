@@ -267,11 +267,6 @@
   text-align: center;
 }
 
-.charsheet div.mode-title {
-  margin-bottom: 2em;
-  font-family: "IBM Plex Mono", monospace, monospace;
-}
-
 .charsheet label.mode {
   text-align: center;
   margin: 0.5em;
@@ -371,8 +366,8 @@
 }
 
 .charsheet .sheet-info-character, .charsheet .sheet-info-hub {
-  padding-top: 1em;
   padding-left: 1em;
+  padding-top: 1.3em;
 }
 
 .charsheet .sheet-info-character {
@@ -385,7 +380,13 @@
 
 .charsheet .game-title {
   font-family: Cairo, monospace;
-  font-size: 3em;
+  font-size: 3.5em;
+  line-height: 0.8em;
+}
+
+.charsheet .mode-title {
+  font-family: "IBM Plex Mono", monospace, monospace;
+  font-size: 1.1em;
 }
 
 .charsheet .header-col2 {
@@ -393,11 +394,14 @@
   border-left: 2px solid #333;
   display: flex;
   flex-direction: column;
-  flex: 1;
   justify-content: space-between;
   margin: 0;
   padding: 10px;
   text-transform: uppercase;
+}
+
+.charsheet .header-col2 label {
+  font-weight: normal;
 }
 
 .charsheet .dotted-line {
